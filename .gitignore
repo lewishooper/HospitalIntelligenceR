@@ -1,0 +1,13 @@
+# Outputs — large data files, not for version control
+roles/*/outputs/
+
+# Dev/sandbox
+dev/
+
+# R environment
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+# Sensitive Config (api keys)
