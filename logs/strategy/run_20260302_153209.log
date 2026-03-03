@@ -1,0 +1,27 @@
+[2026-03-02 15:32:09] [INFO] Logger initialised | role: strategy | run_id: 20260302_153209
+[2026-03-02 15:32:09] [INFO] Strategy Phase 1 — locate & download | mode: facs | run_id: 20260302_153209
+[2026-03-02 15:32:09] [INFO] STEP 1: Loading hospital list from registry
+[2026-03-02 15:32:09] [INFO] Hospitals to process: 1
+[2026-03-02 15:32:09] [INFO] ============================================================
+[2026-03-02 15:32:09] [INFO] STEP 3: Beginning locate-and-download loop
+[2026-03-02 15:32:09] [INFO] ============================================================
+[2026-03-02 15:32:09] [INFO] --- Hospital 1/1: FAC 644 — Cornwall Hospital  CORNWALL HOTEL DIEU ---
+[2026-03-02 15:34:23] [INFO] FAC 644: best candidate — https://www.cornwallhospital.ca/en/strategic-plan (score: 4, is_pdf: FALSE)
+[2026-03-02 15:34:23] [WARNING] FAC 644: top candidate appears to be HTML, not a PDF — flagging for review: https://www.cornwallhospital.ca/en/strategic-plan
+[2026-03-02 15:34:23] [ERROR] FAC 644 (Cornwall Hospital  CORNWALL HOTEL DIEU) — FAILURE | type: no_pdf_found | Top candidate is HTML; HTML extraction not yet implemented
+[2026-03-02 15:34:23] [INFO] ============================================================
+[2026-03-02 15:34:23] [INFO] STEP 4: Run complete
+========================================================================
+  RUN SUMMARY — role: strategy | run_id: 20260302_153209
+========================================================================
+  Attempted : 1
+  Succeeded : 0
+  Failed    : 1
+  Skipped   : 0
+  Success%  : 0%
+  Total cost: $0.0000
+  Elapsed   : 2.2 minutes
+  Log file  : logs/strategy/run_20260302_153209.log
+  Failures  : logs/strategy/failures_20260302_153209.csv
+========================================================================
+[2026-03-02 15:34:23] [WARNING] Success rate 0.0% is below the 80% threshold — review failure log: logs/strategy/failures_20260302_153209.csv

@@ -1,0 +1,28 @@
+[2026-03-02 20:30:22] [INFO] Logger initialised | role: strategy | run_id: 20260302_203022
+[2026-03-02 20:30:22] [INFO] Strategy Phase 1 — locate & download | mode: facs | run_id: 20260302_203022
+[2026-03-02 20:30:22] [INFO] STEP 1: Loading hospital list from registry
+[2026-03-02 20:30:22] [INFO] Hospitals to process: 1
+[2026-03-02 20:30:22] [INFO] ============================================================
+[2026-03-02 20:30:22] [INFO] STEP 3: Beginning locate-and-download loop
+[2026-03-02 20:30:22] [INFO] ============================================================
+[2026-03-02 20:30:22] [INFO] --- Hospital 1/1: FAC 596 — Alliston Stevenson Memorial Hospital ---
+[2026-03-02 20:31:24] [INFO] FAC 596: best candidate — https://www.stevensonhospital.ca/strategic-plan (score: 4, is_pdf: FALSE)
+[2026-03-02 20:31:24] [INFO] FAC 596: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.stevensonhospital.ca/strategic-plan
+[2026-03-02 20:31:26] [INFO] FAC 596: found 1 PDF link(s) on landing page — using top: https://www.stevensonhospital.ca/uploads/Stevenson%20HSP-PDF-Final-Novideos.pdf
+[2026-03-02 20:31:26] [INFO] FAC 596: downloading PDF to roles/strategy/outputs/pdfs/596_ALLISTON_STEVENSON_MEMORIAL_HOSPITAL/596_20260302.pdf
+[2026-03-02 20:31:29] [INFO] FAC 596 (Alliston Stevenson Memorial Hospital) — SUCCESS | cost: $0.0000
+[2026-03-02 20:31:29] [INFO] ============================================================
+[2026-03-02 20:31:29] [INFO] STEP 4: Run complete
+========================================================================
+  RUN SUMMARY — role: strategy | run_id: 20260302_203022
+========================================================================
+  Attempted : 1
+  Succeeded : 1
+  Failed    : 0
+  Skipped   : 0
+  Success%  : 100%
+  Total cost: $0.0000
+  Elapsed   : 1.1 minutes
+  Log file  : logs/strategy/run_20260302_203022.log
+  Failures  : logs/strategy/failures_20260302_203022.csv
+========================================================================

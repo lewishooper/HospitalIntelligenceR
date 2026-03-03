@@ -1,0 +1,5466 @@
+hospitals:
+- FAC: '592'
+  name: NAPANEE LENNOX & ADDINGTON
+  hospital_type: Small Hospital
+  base_url: https://web.lacgh.napanee.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://web.lacgh.napanee.on.ca/about/governance/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://web.lacgh.napanee.on.ca/wp-content/uploads/2025/06/LAH0004-Strat-Plan-Layout-and-Design-DIGITAL.pdf
+      content_type: pdf
+      local_folder: 592_NAPANEE_LENNOX_ADDINGTON
+      local_filename: Strategy_202601_592.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: '2026-03-01'
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '593'
+  name: Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV.
+  hospital_type: Small Hospital
+  base_url: https://mhalliance.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://mhalliance.on.ca/about/administration/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-03-02'
+      content_url: https://mhalliance.on.ca/about/strategic-plan
+      content_type: html
+      local_folder: 593_Middlesex_Hospital_Alliance_NEWBURY_FOUR_COUNTIES_HEALTH_SERV
+      local_filename: Strategy_202601_593.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: needs_review
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: yes
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '596'
+  name: Alliston Stevenson Memorial Hospital
+  hospital_type: Small Hospital
+  base_url: https://www.stevensonhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.stevensonhospital.ca/senior-leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-03-02'
+      content_url: https://www.stevensonhospital.ca/uploads/Stevenson%20HSP-PDF-Final-Novideos.pdf
+      content_type: pdf
+      local_folder: 596_ALLISTON_STEVENSON_MEMORIAL_HOSPITAL
+      local_filename: 596_20260302.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: downloaded
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.stevensonhospital.ca/strategic-plan
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '597'
+  name: ALMONTE GENERAL
+  hospital_type: Small Hospital
+  base_url: https://www.mrha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mrha.ca/seniorteam
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.mrha.ca/uploads/Common/MHR%20Strategic%20Plan%20Draft%20V4%20January%202023.pdf
+      content_type: pdf
+      local_folder: 597_ALMONTE_GENERAL
+      local_filename: Strategy_202512_597.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.mrha.ca/strategicplan?t=1
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '599'
+  name: ARNPRIOR & DISTRICT MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://www.arnpriorregionalhealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.arnpriorregionalhealth.ca/about-us/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.arnpriorregionalhealth.ca/wp-content/uploads/2023/04/Strategic-Plan-Snapshot_2023-26_WEBSITE_FINAL.pdf
+      content_type: pdf
+      local_folder: 599_ARNPRIOR_DISTRICT_MEMORIAL
+      local_filename: Strategy_202512_599.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.arnpriorregionalhealth.ca/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '606'
+  name: BARRIE ROYAL VICTORIA REG HC
+  hospital_type: Large Community Hospital
+  base_url: https://www.rvh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.rvh.on.ca/about-rvh/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.rvh.on.ca/wp-content/uploads/2024/06/RVH-Strategic-Plan-DOWNLOADABLE.pdf
+      content_type: pdf
+      local_folder: 606_BARRIE_ROYAL_VICTORIA_REG_HC
+      local_filename: Strategy_202512_606.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.rvh.on.ca/wp-content/uploads/2024/06/RVH-Strategic-Plan-DOWNLOADABLE.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '611'
+  name: BLIND RIVER NORTH SHORE HN
+  hospital_type: Small Hospital
+  base_url: https://www.nshn.care
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.nshn.care/senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.nshn.care/_files/ugd/329c84_8075469a4cd8486184bb720f83d7a02c.pdf
+      content_type: pdf
+      local_folder: 611_BLIND_RIVER_NORTH_SHORE_HN
+      local_filename: Strategy_202512_611.psd
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.nshn.care/strategicplan
+        (confidence: high) | HTML page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '619'
+  name: BROCKVILLE GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.brockvillegeneralhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.brockvillegeneralhospital.ca/who-we-are/executive-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://strategicplan.cmh.ca/5-year-priorities/
+      content_type: html
+      local_folder: 619_BROCKVILLE_GENERAL
+      local_filename: Strategy_202512_619_HTML.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
+        URL: https://www.brockvillegeneralhospital.ca/who-we-are/strategic-plan/ |
+        HTML page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '624'
+  name: Campbellford Memorial Hospital
+  hospital_type: Small Hospital
+  base_url: https://cmh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://cmh.ca/our-executive-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://strategicplan.cmh.ca
+      content_type: pdf
+      local_folder: 624_Campbellford_Memorial_Hospital
+      local_filename: Strategy_202512_624_HTML.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 5 pages.
+        URL: https://strategicplan.cmh.ca | HTML page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '626'
+  name: 'MRHA CARLETON PLACE & DISTRICT '
+  hospital_type: Small Hospital
+  base_url: https://www.mrha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mrha.ca/seniorteam
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.mrha.ca/uploads/Common/MHR%20Strategic%20Plan%20Draft%20V4%20January%202023.pdf
+      content_type: pdf
+      local_folder: 626_MRHA_CARLETON_PLACE_DISTRICT
+      local_filename: Strategy_202512_626.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.mrha.ca/strategicplan?t=1
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '627'
+  name: CHAPLEAU SER DE SANTÉ DE CHAPLEAU
+  hospital_type: Small Hospital
+  base_url: https://www.sschs.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sschs.ca/general/board.html
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: none
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Timeout was reached [none]:
+        Connection timed out after 10017 milliseconds
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '632'
+  name: North York General Hospital
+  hospital_type: Large Community Hospital
+  base_url: https://www.nygh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.nygh.on.ca/about-us/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '638'
+  name: MICS GROUP COCHRANE LADY MINTO
+  hospital_type: Small Hospital
+  base_url: https://www.micsgroup.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.micsgroup.com/governance/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.micsgroup.com/wp-content/uploads/2023/08/Strategic-Plan-2023-2026.pdf
+      content_type: pdf
+      local_folder: 638_MICS_GROUP_COCHRANE_LADY_MINTO
+      local_filename: Strategy_202601_638.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '640'
+  name: COLLINGWOOD GENERAL AND MARINE HOSP
+  hospital_type: Large Community Hospital
+  base_url: https://cgmh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://cgmh.on.ca/team/senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '644'
+  name: Cornwall Hospital  CORNWALL HOTEL DIEU
+  hospital_type: Small Hospital
+  base_url: https://www.cornwallhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.cornwallhospital.ca/en/SeniorAdmin
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-03-02'
+      content_url: https://www.cornwallhospital.ca/uploads/CCH%20Strategic%20Plan%202022-2027_Leading%20Innovative%20Transformation.pdf
+      content_type: pdf
+      local_folder: 644_CORNWALL_HOSPITAL_CORNWALL_HOTEL_DIEU
+      local_filename: 644_20260302.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: downloaded
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.cornwallhospital.ca/en/strategic-plan
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '646'
+  name: DEEP RIVER AND DISTRICT
+  hospital_type: Small Hospital
+  base_url: https://www.drdh.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.drdh.org/leadershipteam
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.drdh.org/uploads/Common/2023-2027-DRDH%20Strategic%20Plan.pdf
+      content_type: pdf
+      local_folder: 646_DEEP_RIVER_AND_DISTRICT
+      local_filename: Strategy_202512_646.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.drdh.org/uploads/Common/2023-2027-DRDH%20Strategic%20Plan.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '647'
+  name: DRYDEN REGIONAL HEALTH CENTRE
+  hospital_type: Small Hospital
+  base_url: https://www.drhc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.drhc.on.ca/board
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.drhc.on.ca/wcm-docs/docs/about_section/drhc_stratplan_final.pdf
+      content_type: pdf
+      local_folder: 647_DRYDEN_REGIONAL_HEALTH_CENTRE
+      local_filename: Strategy_202512_647.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.drhc.on.ca/strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '648'
+  name: DUNNVILLE HALDIMAND WAR MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://www.hwmh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hwmh.ca/about-us/senior-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.hwmh.ca/wp-content/uploads/2024/07/Strat-Plan-Page-2.pdf
+      content_type: pdf
+      local_folder: 648_DUNNVILLE_HALDIMAND_WAR_MEMORIAL
+      local_filename: Strategy_202512_648.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.hwmh.ca/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '650'
+  name: ELLIOT LAKE ST JOSEPH'S
+  hospital_type: Small Hospital
+  base_url: https://sjghel.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://sjghel.ca/about/governance-board/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://sjghel.ca/wp-content/uploads/2022/11/SJGHEL-Strategic-Plan.pdf
+      content_type: pdf
+      local_folder: 650_ELLIOT_LAKE_ST_JOSEPH_S
+      local_filename: Strategy_202512_650.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://sjghel.ca/wp-content/uploads/2022/11/SJGHEL-Strategic-Plan.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '651'
+  name: OTTAWA ROYAL OTTAWA (PSYCH)
+  hospital_type: Specialty Mental Health Hospital
+  base_url: https://www.theroyal.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.theroyal.ca/about-royal/leadership/senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.theroyal.ca/wp-content/uploads/2025/10/SPARQ-Light-the-Way_EN.pdf
+      content_type: pdf
+      local_folder: 651_OTTAWA_ROYAL_OTTAWA_PSYCH
+      local_filename: Strategy_202512_651.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.theroyal.ca/strategic-plan/
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '653'
+  name: Blanche River ENGLEHART & DISTRICT
+  hospital_type: Small Hospital
+  base_url: https://www.blancheriverhealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
+      content_type: pdf
+      local_folder: 653_Blanche_River_ENGLEHART_DISTRICT
+      local_filename: Strategy_202512_653.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '654'
+  name: ESPANOLA GENERAL
+  hospital_type: Small Hospital
+  base_url: https://espanolaregionalhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://espanolaregionalhospital.ca/about-erhhc/governance-and-leadership/senior-management-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://espanolaregionalhospital.ca/images/Strategic_Plan_2020-2025.pdf
+      content_type: pdf
+      local_folder: 654_ESPANOLA_GENERAL
+      local_filename: Strategy_202601_654.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '655'
+  name: Huron Health EXETER SOUTH HURON
+  hospital_type: Small Hospital
+  base_url: https://www.huronhealthsystem.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.huronhealthsystem.ca/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.huronhealthsystem.ca/uploads/HHS%20Strategic%20Plan%202023-2026.pdf
+      content_type: pdf
+      local_folder: 655_Huron_Health_EXETER_SOUTH_HURON
+      local_filename: Strategy_202512_655.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-2): https://www.huronhealthsystem.ca/strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '656'
+  name: 'WHCA Grove community hospital '
+  hospital_type: Small Hospital
+  base_url: https://gmch.whca.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://gmch.whca.ca/board-of-directors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_58e4dada3289489ea08b1cc968415b1d.pdf
+      content_type: pdf
+      local_folder: 656_WHCA_Grove_community_hospital
+      local_filename: Strategy_202601_656.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '661'
+  name: Cambridge Memorial Hospital
+  hospital_type: Large Community Hospital
+  base_url: https://www.cmh.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.cmh.org/contacts
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.cmh.org/sites/default/files/2023-09/cmh%202022%20strategic%20plan.pdf
+      content_type: pdf
+      local_folder: 661_Cambridge_Memorial_Hospital
+      local_filename: Strategy_202512_661.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.cmh.org/hospital#stratplan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '662'
+  name: GERALDTON DISTRICT HOSPITAL
+  hospital_type: Small Hospital
+  base_url: https://www.geraldtondh.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.geraldtondh.com/board-of-directors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.geraldtondh.com/upload/documents/gdh-strategic-plan-2024-2028-english.pdf
+      content_type: pdf
+      local_folder: 662_GERALDTON_DISTRICT_HOSPITAL
+      local_filename: Strategy_202512_662.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.geraldtondh.com/strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '663'
+  name: Huron HealthGODERICH ALEXANDRA MARINE & GEN
+  hospital_type: Small Hospital
+  base_url: https://www.huronhealthsystem.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.huronhealthsystem.ca/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.huronhealthsystem.ca/uploads/HHS%20Strategic%20Plan%202023-2026.pdf
+      content_type: pdf
+      local_folder: 663_Huron_HealthGODERICH_ALEXANDRA_MARINE_GEN
+      local_filename: Strategy_202512_663.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-2): https://www.huronhealthsystem.ca/strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '665'
+  name: GUELPH GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.gghorg.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.gghorg.ca/about-ggh/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.gghorg.ca/wp-content/uploads/2023/07/GGH_StratPlan_Assets_OnePager_v2-NoCrops.pdf
+      content_type: pdf
+      local_folder: 665_GUELPH_GENERAL
+      local_filename: Strategy_202512_665.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.gghorg.ca/achieving-our-goals/strategic-plan-2022-2027/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '666'
+  name: GUELPH ST JOSEPH'S HEALTH CENTRE
+  hospital_type: Small Hospital
+  base_url: https://www.sjhcg.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sjhcg.ca/welcome/our-leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.sjhcg.ca/wp-content/uploads/2024/12/SJHCG_StratPlanBooklet_Final-2020-2023.pdf
+      content_type: pdf
+      local_folder: 666_GUELPH_ST_JOSEPH_S_HEALTH_CENTRE
+      local_filename: Strategy_202601_666.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '674'
+  name: HAMILTON ST JOSEPH'S
+  hospital_type: Teaching Hospital
+  base_url: https://www.stjoes.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.stjoes.ca/about/our-leadership/our-executive-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://sjhs.ca/wp-content/uploads/2023/12/SJHS-Strategic-Plan_Care-Redefined.-Teams-Reimagined.pdf
+      content_type: pdf
+      local_folder: 674_HAMILTON_ST_JOSEPH_S
+      local_filename: Strategy_202601_674.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '676'
+  name: HANOVER & DISTRICT
+  hospital_type: Small Hospital
+  base_url: https://www.hanoverhospital.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hanoverhospital.on.ca/our-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.hanoverhospital.on.ca/uploads/Common/Strategic%20Plan%20-%20Detailed%20Version.pdf
+      content_type: pdf
+      local_folder: 676_HANOVER_DISTRICT
+      local_filename: Strategy_202512_676.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.hanoverhospital.on.ca/uploads/Common/Strategic%20Plan%20-%20Detailed%20Version.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '681'
+  name: HEARST NOTRE DAME
+  hospital_type: Small Hospital
+  base_url: https://www.ndh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ndh.on.ca/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.ndh.on.ca/wp-content/uploads/2024/09/Strategic-Plan-HND-5-mars-2024.pdf
+      content_type: pdf
+      local_folder: 681_HEARST_NOTRE_DAME
+      local_filename: Strategy_202601_681.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '682'
+  name: HORNEPAYNE COMMUNITY
+  hospital_type: Small Hospital
+  base_url: https://www.hornepaynecommunityhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hornepaynecommunityhospital.ca/about-1
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: none
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Timeout was reached [none]:
+        Connection timed out after 10016 milliseconds
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '684'
+  name: Rural Roads Health servcies INGERSOLL ALEXANDRA
+  hospital_type: Small Hospital
+  base_url: https://www.ruralroadshealthservices.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ruralroadshealthservices.ca/about/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan/
+      content_type: pdf
+      local_folder: 684_Rural_Roads_Health_servcies_INGERSOLL_ALEXANDRA
+      local_filename: Strategy_202512_684_HTML.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
+        URL: https://www.ruralroadshealthservices.ca/about/strategic-plan/ | HTML
+        page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '685'
+  name: MICS Group IROQUOIS FALLS ANSON GENERAL
+  hospital_type: Small Hospital
+  base_url: https://www.micsgroup.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.micsgroup.com/governance/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.micsgroup.com/wp-content/uploads/2023/08/Strategic-Plan-2023-2026.pdf
+      content_type: pdf
+      local_folder: 685_MICS_Group_IROQUOIS_FALLS_ANSON_GENERAL
+      local_filename: Strategy_202601_685.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '686'
+  name: WAWA LADY DUNN HC
+  hospital_type: Small Hospital
+  base_url: https://ldhc.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://ldhc.com/About-Us/Board-of-Directors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://ldhc.com/About-Us/Strategic-Plan
+      content_type: pdf
+      local_folder: 686_WAWA_LADY_DUNN_HC
+      local_filename: Strategy_202512_686_HTML.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
+        URL: https://ldhc.com/About-Us/Strategic-Plan | HTML page converted to PDF
+        on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '695'
+  name: KINGSTON PROVIDENCE CARE HOSPITAL
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://providencecare.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://providencecare.ca/about-us/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '696'
+  name: KIRKLAND & DISTRICT
+  hospital_type: Small Hospital
+  base_url: https://www.blancheriverhealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
+      content_type: pdf
+      local_folder: 696_KIRKLAND_DISTRICT
+      local_filename: Strategy_202512_696.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '699'
+  name: WRHN-KITCHENER ST MARY'S
+  hospital_type: Large Community Hospital
+  base_url: https://www.smgh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.smgh.ca/about-us/our-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: ''
+      content_url: ''
+      content_type: unavailable
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '701'
+  name: RICHMOND HILL MACKENZIE HEALTH
+  hospital_type: Large Community Hospital
+  base_url: https://www.mackenziehealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mackenziehealth.ca/about-us/executive-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.mackenziehealth.ca/about-us/reports-performance-and-plans/strategic-plan/mackenzie-health-strategic-plan-2025-28-booklet-final.pdf
+      content_type: pdf
+      local_folder: 701_RICHMOND_HILL_MACKENZIE_HEALTH
+      local_filename: Strategy_202512_701.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.mackenziehealth.ca/about-us/reports-performance-and-plans/strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '704'
+  name: Erie Shores Leamington
+  hospital_type: Small Hospital
+  base_url: https://erie.bluelemonmedia.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://erie.bluelemonmedia.com/boardofdirectors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '707'
+  name: Ross Memorial Hospital
+  hospital_type: Large Community Hospital
+  base_url: https://rmh.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://rmh.org/about-ross-memorial/senior-leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://rmh.org/document/rmh-strategic-plan-brief-2023-final-web
+      content_type: pdf
+      local_folder: 707_Ross_Memorial_Hospital
+      local_filename: Strategy_202512_707.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '709'
+  name: Listowel Wingham LISTOWEL MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://lwha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://lwha.ca/about/board/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://lwha.ca/wp-content/uploads/2025/06/LWHA-Strategic-Refresh-Final-June-2025-1.pdf
+      content_type: pdf
+      local_folder: 709_Listowel_Wingham_LISTOWEL_MEMORIAL
+      local_filename: Strategy_202512_709.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://lwha.ca/news/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '714'
+  name: LONDON ST JOSEPHS
+  hospital_type: Teaching Hospital
+  base_url: https://www.sjhc.london.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sjhc.london.on.ca/about-us/about-st-josephs-health-care-london/leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '718'
+  name: BURLINGTON JOSEPH BRANT HOSPITAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.josephbranthospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.josephbranthospital.ca/about-us/our-team/senior-leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.josephbranthospital.ca/about-us/about-our-hospital/JBH-Strategic-Plan-2023-2026.pdf
+      content_type: pdf
+      local_folder: 718_BURLINGTON_JOSEPH_BRANT_HOSPITAL
+      local_filename: Strategy_202512_718.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-1): https://www.josephbranthospital.ca/about-us/about-our-hospital/JBH-Strategic-Plan-2023-2026.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '719'
+  name: MANITOUWADGE SANTE MANITOUWADGE
+  hospital_type: Small Hospital
+  base_url: https://www.mh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mh.on.ca/organizationalstructure
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: email sent
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: URL using bad/illegal format or missing URL:
+        URL rejected: Malformed input to a URL function
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '723'
+  name: MATHESON BINGHAM MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://www.micsgroup.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.micsgroup.com/governance/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.micsgroup.com/wp-content/uploads/2023/08/Strategic-Plan-2023-2026.pdf
+      content_type: pdf
+      local_folder: 723_MATHESON_BINGHAM_MEMORIAL
+      local_filename: Strategy_202601_723.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '724'
+  name: MATTAWA GENERAL
+  hospital_type: Small Hospital
+  base_url: https://www.mattawahealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mattawahealth.ca/About-Us/Senior-Team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '726'
+  name: MIDLAND GEORGIAN BAY
+  hospital_type: Large Community Hospital
+  base_url: https://gbgh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://gbgh.on.ca/about-us/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://gbgh.on.ca/gbghmedia/Strategic-Plan-Booklet-23-30-ENG-s.pdf
+      content_type: pdf
+      local_folder: 726_MIDLAND_GEORGIAN_BAY
+      local_filename: Strategy_202512_726.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://gbgh.on.ca/our-strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '732'
+  name: KEMPTVILLE DISTRICT
+  hospital_type: Small Hospital
+  base_url: https://kdh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://kdh.on.ca/about-kemptville-district-hospital/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://www.kdh.on.ca/about-kemptville-district-hospital/our-strategic-plan/
+      content_type: pdf
+      local_folder: 732_KEMPTVILLE_DISTRICT
+      local_filename: Strategy_202512_732_HTML.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
+        URL: https://www.kdh.on.ca/about-kemptville-district-hospital/our-strategic-plan/
+        | HTML page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '734'
+  name: HALDIMAND WEST HALDIMAND GENERAL
+  hospital_type: Small Hospital
+  base_url: https://www.whgh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.whgh.ca/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.whgh.ca/wp-content/uploads/2025/02/WHGH-Strategic-Plan-2024-2028_FA_Digital.pdf
+      content_type: pdf
+      local_folder: 734_HALDIMAND_WEST_HALDIMAND_GENERAL
+      local_filename: Strategy_202512_734.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.whgh.ca/west-haldimand-general-hospital-unveils-2025-2028-strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '736'
+  name: NEWMARKET SOUTHLAKE REGIONAL
+  hospital_type: Large Community Hospital
+  base_url: https://southlake.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://southlake.ca/about-southlake/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://southlake.ca/wp-content/uploads/2019/02/slf_strat-plan_fa_web.pdf
+      content_type: pdf
+      local_folder: 736_NEWMARKET_SOUTHLAKE_REGIONAL
+      local_filename: Strategy_202512_736.pdf
+      last_extraction_date: '2026-01-31'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://southlake.ca/foundation/about/strategic-plan-2019-2023/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '739'
+  name: NIPIGON DISTRICT MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://www.ndmh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ndmh.ca/about-our-hospital
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.ndmh.ca/care-2030-strategic-plan
+      content_type: html
+      local_folder: 739_NIPIGON_DISTRICT_MEMORIAL
+      local_filename: Strategy_202512_739.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.ndmh.ca/care-2030-strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '745'
+  name: ORILLIA SOLDIERS' MEMORIAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.osmh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.osmh.on.ca/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://www.osmh.on.ca/ourplan/
+      content_type: pdf
+      local_folder: 745_ORILLIA_SOLDIERS_MEMORIAL
+      local_filename: Strategy_202512_745_HTML.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
+        URL: https://www.osmh.on.ca/ourplan/ | HTML page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '751'
+  name: OTTAWA CHEO CTC
+  hospital_type: Specialty Children Hospital
+  base_url: https://www.cheo.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.cheo.on.ca/en/about-us/senior-leadership.aspx?_mid_=1829
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.cheo.on.ca/en/about-us/resources/Strategy-Renewal/CHEO-2024-2029-Strategy.pdf
+      content_type: pdf
+      local_folder: 751_OTTAWA_CHEO_CTC
+      local_filename: Strategy_202601_751.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '753'
+  name: OTTAWA MONTFORT
+  hospital_type: Teaching Hospital
+  base_url: https://hopitalmontfort.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://hopitalmontfort.com/en/corp/senior-leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://hopitalmontfort.com/sites/default/files/2024-11/Montfort_2024_28_Strategic_Plan.pdf
+      content_type: pdf
+      local_folder: 753_OTTAWA_MONTFORT
+      local_filename: Strategy_202601_753.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '763'
+  name: PEMBROKE REGIONAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.pemreghos.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.pemreghos.org/slt?m=1
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: html
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '768'
+  name: BARRYS BAY ST FRANCIS
+  hospital_type: Small Hospital
+  base_url: https://www.sfmhosp.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sfmhosp.com/about-us/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.sfmhosp.com/download.php?dl=YToyOntzOjI6ImlkIjtzOjI6IjQxIjtzOjM6ImtleSI7aTozO30=
+      content_type: pdf
+      local_folder: 768_BARRYS_BAY_ST_FRANCIS
+      local_filename: Strategy_202601_768.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '771'
+  name: PETERBOROUGH REGIONAL HEALTH CENTRE
+  hospital_type: Large Community Hospital
+  base_url: https://www.prhc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.prhc.on.ca/about-us/senior-leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.prhc.on.ca/wp-content/uploads/2024/09/PRHC-Strat-Plan-Report-2024-Singles.pdf
+      content_type: pdf
+      local_folder: 771_PETERBOROUGH_REGIONAL_HEALTH_CENTRE
+      local_filename: Strategy_202512_771.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.prhc.on.ca/about-us/strategic-planning/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '777'
+  name: Queensway Carleton Hospital
+  hospital_type: Large Community Hospital
+  base_url: https://www.qch.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.qch.on.ca/Leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.qch.on.ca/uploads/QCH_Strategic_Plan_October_2022.pdf
+      content_type: pdf
+      local_folder: 777_Queensway_Carleton_Hospital
+      local_filename: Strategy_202512_777.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.qch.on.ca/TrueNorth (confidence:
+        high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '781'
+  name: THUNDER BAY ST. JOSEPH'S
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://sjcg.net
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://sjcg.net/aboutus/leadership.aspx
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://sjcg.net/documents/strategy-in-action/SJCG-Strategic-Plan_EN.pdf
+      content_type: pdf
+      local_folder: 781_THUNDER_BAY_ST_JOSEPH_S
+      local_filename: Strategy_202601_781.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '784'
+  name: LITTLE CURRENT MANITOULIN
+  hospital_type: Small Hospital
+  base_url: https://www.mhc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mhc.on.ca/our-team/senior-management
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.mhc.on.ca/index.php?preview=1&option=com_dropfiles&format=&task=frontfile.download&catid=12&id=67&Itemid=1000000000000
+      content_type: pdf
+      local_folder: 784_LITTLE_CURRENT_MANITOULIN
+      local_filename: Strategy_202601_784.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '788'
+  name: RENFREW VICTORIA
+  hospital_type: Small Hospital
+  base_url: https://www.renfrewhosp.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.renfrewhosp.com/srmanagement
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.renfrewhosp.com/uploads/RVH%20Strategic%20Plan%202021-2026.pdf
+      content_type: pdf
+      local_folder: 788_RENFREW_VICTORIA
+      local_filename: Strategy_202512_788.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.renfrewhosp.com/strategic
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '790'
+  name: ST CATHARINES HOTEL DIEU
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://www.hoteldieushaver.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hoteldieushaver.org/site/team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.hoteldieushaver.org/files/HotelDieuShaver-2025-2030StrategicPlan-digital.pdf
+      content_type: pdf
+      local_folder: 790_ST_CATHARINES_HOTEL_DIEU
+      local_filename: Strategy_202601_790.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '793'
+  name: ST THOMAS ELGIN GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.stegh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.stegh.on.ca/about-us/our-leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.stegh.on.ca/wp-content/uploads/2024/11/Strategic-Plan-2024-2027-FINAL-1.pdf
+      content_type: pdf
+      local_folder: 793_ST_THOMAS_ELGIN_GENERAL
+      local_filename: Strategy_202512_793.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.stegh.on.ca/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '800'
+  name: HAWKESBURY & DISTRICT GENERAL
+  hospital_type: Small Hospital
+  base_url: https://hgh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://hgh.ca/about-hgh/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://hgh.ca/about-hgh/strategic-plan/
+      content_type: pdf
+      local_folder: 800_HAWKESBURY_DISTRICT_GENERAL
+      local_filename: Strategy_202512_800_HTML.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
+        URL: https://hgh.ca/about-hgh/strategic-plan/ | HTML page converted to PDF
+        on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '802'
+  name: ALEXANDRIA GLENGARRY
+  hospital_type: Small Hospital
+  base_url: https://www.hgmh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hgmh.on.ca/en/about-us-key/strategic-plan-leadership-and-board-of-directors#leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://cdn.prod.website-files.com/665e0a9e9b4be3573cfbf851/6660432796030021a551c490_HGMH%20Strategic%20Plan%20-%202023-2028.pdf
+      content_type: pdf
+      local_folder: 802_ALEXANDRIA_GLENGARRY
+      local_filename: Strategy_202512_802.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.hgmh.on.ca/en/about-us-key/strategic-plan-leadership-and-board-of-directors
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '804'
+  name: SIMCOE NORFOLK GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.ngh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ngh.on.ca/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.ngh.on.ca/wp-content/uploads/2025/02/NGH-Strategic-Plan-2024-2028_FA_Digital.pdf
+      content_type: pdf
+      local_folder: 804_SIMCOE_NORFOLK_GENERAL
+      local_filename: Strategy_202512_804.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.ngh.on.ca/wp-content/uploads/2025/02/NGH-Strategic-Plan-2024-2028_FA_Digital.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '809'
+  name: SMOOTH ROCK FALLS
+  hospital_type: Small Hospital
+  base_url: https://www.srfhosp.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.srfhosp.ca/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-03'
+      content_url: https://www.srfhosp.ca/wp-content/uploads/2021/09/Strategic_Energy_Management_Plan_EN_2020-2023.pdf
+      content_type: pdf
+      local_folder: 809_SMOOTH_ROCK_FALLS
+      local_filename: Strategy_202512_809.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.srfhosp.ca/wp-content/uploads/2021/09/Strategic_Energy_Management_Plan_EN_2020-2023.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '813'
+  name: HPHA STRATFORD GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.hpha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hpha.ca/ourorganization#accordion-38-2
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.hpha.ca/uploads/Common/Commitments%20to%20our%20Communities%20-%20Web.pdf
+      content_type: pdf
+      local_folder: 813_HPHA_STRATFORD_GENERAL
+      local_filename: Strategy_202601_813.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '814'
+  name: Middlesex Hosptial Alliance  STRATHROY MIDDLESEX GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://mhalliance.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://mhalliance.on.ca/about/administration/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://mhalliance.on.ca/wp-content/uploads/2024/07/MHA-Strategic-Plan-2024-Onward.pdf
+      content_type: pdf
+      local_folder: 814_Middlesex_Hosptial_Alliance_STRATHROY_MIDDLESEX_GENERAL
+      local_filename: Strategy_202601_814.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '824'
+  name: Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://www.ruralroadshealthservices.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ruralroadshealthservices.ca/about/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan/
+      content_type: pdf
+      local_folder: 824_Rural_Roads_Health_Services_TILLSONBURG_DISTRICT_MEMORIAL
+      local_filename: Strategy_202512_824_HTML.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
+        URL: https://www.ruralroadshealthservices.ca/about/strategic-plan/ | HTML
+        page converted to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '826'
+  name: KENORA LAKE OF THE WOODS
+  hospital_type: Medium Hospital
+  base_url: http://www.lwdh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: http://www.lwdh.on.ca/index.php/programs-and-services/administration.html
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: http://www.lwdh.on.ca/index.php/information/strategic-plan/file.html
+      content_type: pdf
+      local_folder: 826_KENORA_LAKE_OF_THE_WOODS
+      local_filename: Strategy_202601_826.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '827'
+  name: TORONTO BAYCREST CTR GERIATRIC CARE
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://www.baycrest.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.baycrest.org/Baycrest-Pages/About-Baycrest/Leadership/Baycrest-Hospital-Executive-Team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '837'
+  name: TORONTO HOSPITAL FOR SICK CHILDREN
+  hospital_type: Specialty Children Hospital
+  base_url: https://www.sickkids.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sickkids.ca/en/about/leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://2030.sickkids.ca
+      content_type: pdf
+      local_folder: 837_TORONTO_HOSPITAL_FOR_SICK_CHILDREN
+      local_filename: Strategy_202601_837.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '850'
+  name: TORONTO RUNNYMEDE HC
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://runnymedehc.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://runnymedehc.ca/runnymede-difference/about-runnymede/governance/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://runnymedehc.ca/newsroom/strategic-plan/
+      content_type: pdf
+      local_folder: 850_TORONTO_RUNNYMEDE_HC
+      local_filename: Strategy_202512_850_HTML.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
+        URL: https://runnymedehc.ca/newsroom/strategic-plan/ | HTML page converted
+        to PDF on 2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '854'
+  name: TORONTO SA GRACE
+  hospital_type: Small Hospital
+  base_url: https://www.torontograce.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.torontograce.org/about-tghc/senior-management-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.torontograce.org/wp-content/uploads/TGHC-Final-Strategic-Plan-2024-29.pdf
+      content_type: pdf
+      local_folder: 854_TORONTO_SA_GRACE
+      local_filename: Strategy_202512_854.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.torontograce.org/about-tghc/toronto-graces-strategic-plan-2024-2029/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '858'
+  name: Michael Garron TORONTO EAST GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.tehn.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.tehn.ca/about-us/our-team/executive-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.tehn.ca/sites/default/files/2025-04/MGH_StrategicPlan_2025-2035.pdf
+      content_type: pdf
+      local_folder: 858_Michael_Garron_TORONTO_EAST_GENERAL
+      local_filename: Strategy_202601_858.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '862'
+  name: TORONTO WOMENS COLLEGE
+  hospital_type: Teaching Hospital
+  base_url: https://www.womenscollegehospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.womenscollegehospital.ca/who-we-are/executive-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://wchstrategy.womenscollegehospital.ca/wp-content/uploads/2024/08/HealthcareRevolutionized2030-Magazine_DigitalDownload.pdf
+      content_type: pdf
+      local_folder: 862_TORONTO_WOMENS_COLLEGE
+      local_filename: Strategy_202601_862.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '881'
+  name: STURGEON FALLS WEST NIPISSING
+  hospital_type: Small Hospital
+  base_url: https://www.wngh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.wngh.ca/about-wngh/board/#gsc.tab=0
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-07'
+      content_url: https://www.wngh.ca/about-wngh/vision/
+      content_type: pdf
+      local_folder: 881_STURGEON_FALLS_WEST_NIPISSING
+      local_filename: Strategy_202512_881_HTML.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
+        URL: https://www.wngh.ca/about-wngh/vision/ | HTML page converted to PDF on
+        2025-12-07'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '882'
+  name: WINCHESTER DISTRICT MEMORIAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.wdmh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.wdmh.on.ca/ourleadershipteam
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.wdmh.on.ca/uploads/Common/StrategicPlan_electronic_June17.pdf
+      content_type: pdf
+      local_folder: 882_WINCHESTER_DISTRICT_MEMORIAL
+      local_filename: Strategy_202512_882.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.wdmh.on.ca/strategicplan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '888'
+  name: NEW LISKEARD TEMISKAMING HOSPITAL
+  hospital_type: Small Hospital
+  base_url: https://www.temiskaming-hospital.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.temiskaming-hospital.com/board-of-directors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.temiskaming-hospital.com/s/2022-102-Laridae-Hospital-Strat-Plan-PRINT-FRENCH.pdf
+      content_type: pdf
+      local_folder: 888_NEW_LISKEARD_TEMISKAMING_HOSPITAL
+      local_filename: Strategy_202512_888.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.temiskaming-hospital.com/strategic-planning
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '889'
+  name: WINGHAM & DISTRICT
+  hospital_type: Small Hospital
+  base_url: https://lwha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://lwha.ca/about/contact/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://lwha.ca/wp-content/uploads/2025/06/LWHA-Strategic-Refresh-Final-June-2025-1.pdf
+      content_type: pdf
+      local_folder: 889_WINGHAM_DISTRICT
+      local_filename: Strategy_202512_889.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://lwha.ca/news/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '890'
+  name: WOODSTOCK WOODSTOCK HOSPITAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.woodstockhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.woodstockhospital.ca/board-of-directors/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.woodstockhospital.ca/wp-content/uploads/2025/05/Strategic-Plan-2025-2028-resized.pdf
+      content_type: pdf
+      local_folder: 890_WOODSTOCK_WOODSTOCK_HOSPITAL
+      local_filename: Strategy_202512_890.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.woodstockhospital.ca/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '896'
+  name: RED LAKE MARG COCHENOUR MEMORIAL
+  hospital_type: Small Hospital
+  base_url: https://www.redlakehospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.redlakehospital.ca/leadershipteam?s=1
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.redlakehospital.ca/uploads/Common/RLMCMH%20Strategic%20Plan%2024-27.pdf
+      content_type: pdf
+      local_folder: 896_RED_LAKE_MARG_COCHENOUR_MEMORIAL
+      local_filename: Strategy_202601_896.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '900'
+  name: FORT FRANCES RIVERSIDE HEALTH CARE
+  hospital_type: Small Hospital
+  base_url: https://riversidehealthcare.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://riversidehealthcare.ca/communities
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-08'
+      content_url: https://riversidehealthcare.ca/mission-vision-values
+      content_type: pdf
+      local_folder: 900_FORT_FRANCES_RIVERSIDE_HEALTH_CARE
+      local_filename: Strategy_202512_900_HTML.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: No strategy pages found after depth-1 and depth-2 search. Checked
+        main page and 3 high-value sections | HTML page converted to PDF on 2025-12-08
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '905'
+  name: OAK VALLEY HEALTH
+  hospital_type: Large Community Hospital
+  base_url: https://www.oakvalleyhealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.oakvalleyhealth.ca/about-us/meet-our-team/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://cdn.prod.website-files.com/6598553b87f027053178fe7a/660f9b58db21ea9df7bbb1aa_OVH-Strat-Plan-Executive-Summary.pdf
+      content_type: pdf
+      local_folder: 905_OAK_VALLEY_HEALTH
+      local_filename: Strategy_202601_905.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '907'
+  name: TIMMINS & DISTRICT GENERAL
+  hospital_type: Large Community Hospital
+  base_url: https://tadh.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://tadh.com/about-us/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://tadh.com/wp-content/uploads/2024/08/2022-2027-strategic-plan.pdf
+      content_type: pdf
+      local_folder: 907_TIMMINS_DISTRICT_GENERAL
+      local_filename: Strategy_202512_907.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://tadh.com/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '910'
+  name: TORONTO CASEY HOUSE
+  hospital_type: Small Hospital
+  base_url: https://caseyhouse.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://caseyhouse.ca/about-us/leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '916'
+  name: HEADWATERS
+  hospital_type: Large Community Hospital
+  base_url: https://www.headwatershealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.headwatershealth.ca/who-we-are/governance/executive-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.headwatershealth.ca/media/gb4jufbn/2024-29_strategicplan_booklet_final-2-web-nocrops-spreads.pdf
+      content_type: pdf
+      local_folder: 916_HEADWATERS
+      local_filename: Strategy_202512_916.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-2): https://www.headwatershealth.ca/who-we-are/purpose-and-goals/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '927'
+  name: Windsor Hotel Dieu Grace
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://www.hdgh.org
+  base_url_validated: no
+  robots_allowed: no
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hdgh.org/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: ''
+      content_url: ''
+      content_type: ''
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '928'
+  name: PERTH SMITHS FALLS
+  hospital_type: Large Community Hospital
+  base_url: https://psfdh.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://psfdh.on.ca/leadershipteam
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://psfdh.on.ca/uploads/Staff_Strat_Plan_Jun_21_2023_F.pdf
+      content_type: pdf
+      local_folder: 928_PERTH_SMITHS_FALLS
+      local_filename: Strategy_202512_928.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://psfdh.on.ca/strategicplan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '930'
+  name: WRHN-KITCHENER GRAND RIVER
+  hospital_type: Large Community Hospital
+  base_url: https://www.grhosp.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.grhosp.on.ca/about/senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: ''
+      content_url: ''
+      content_type: unavailable
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '931'
+  name: PARRY SOUND WEST PARRY SOUND
+  hospital_type: Large Community Hospital
+  base_url: https://www.wpshc.com
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.wpshc.com/about-us/our-senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.wpshc.com/wp-content/uploads/2025/02/WPSHC-Strat-Plan-2023-25.pdf
+      content_type: pdf
+      local_folder: 931_PARRY_SOUND_WEST_PARRY_SOUND
+      local_filename: Strategy_202512_931.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.wpshc.com/wp-content/uploads/2025/02/WPSHC-Strat-Plan-2023-25.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '932'
+  name: Elizabeth Bruyere Hospital
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://www.bruyere.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.bruyere.org/en/leadership-team?v=1
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual download
+      content_type: html
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: URL using bad/illegal format or missing URL:
+        URL rejected: Malformed input to a URL function
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '933'
+  name: WINDSOR REGIONAL HOSPITAL
+  hospital_type: Large Community Hospital
+  base_url: https://www.wrh.on.ca
+  base_url_validated: no
+  robots_allowed: no
+  last_validated: '2025-11-28'
+  leadership_url: https://www.wrh.on.ca/ExecutiveCommittee
+  notes: ''
+  status:
+    strategy:
+      last_search_date: ''
+      content_url: ''
+      content_type: ''
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '935'
+  name: Thunder Bay Regional Health Sciences Centre
+  hospital_type: Teaching Hospital
+  base_url: https://tbrhsc.net
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://tbrhsc.net/tbrhsc/senior-leadership-council/senior-leadership-council-gallery/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://tbrhsc.net/wp-content/uploads/2022/06/TBRHSC-and-TBRHRI-Strategic-Plan-2026.pdf
+      content_type: pdf
+      local_folder: 935_Thunder_Bay_Regional_Health_Sciences_Centre
+      local_filename: Strategy_202512_935.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://tbrhsc.net/tbrhsc/strategic-plan-2026/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '936'
+  name: LONDON HEALTH SCIENCES
+  hospital_type: Teaching Hospital
+  base_url: https://www.lhsc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.lhsc.on.ca/about-lhsc/executive-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '938'
+  name: DYSART ET AL HALIBURTON HEALTH SER
+  hospital_type: Small Hospital
+  base_url: https://www.hhhs.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hhhs.ca/about/board
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.hhhs.ca/sites/default/files/2025-05/HHHA%20Strat%20Plan%20One%20Pg%202025%20FINAL%20.pdf
+      content_type: pdf
+      local_folder: 938_DYSART_ET_AL_HALIBURTON_HEALTH_SER
+      local_filename: Strategy_202512_938.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-2): https://www.hhhs.ca/about/strategic-plan
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '939'
+  name: TORONTO HOLLAND BLOORVIEW KIDS
+  hospital_type: Chronic/Rehab Hospital
+  base_url: https://hollandbloorview.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://hollandbloorview.ca/about-us/about-holland-bloorview/governance-and-leadership/hospital-executive-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://strategicplan.hollandbloorview.ca/wp-content/uploads/2023/06/StratPlan-HB2030-Report-Accessible-1.pdf
+      content_type: pdf
+      local_folder: 939_TORONTO_HOLLAND_BLOORVIEW_KIDS
+      local_filename: Strategy_202601_939.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '940'
+  name: COBOURG NORTHUMBERLAND HILLS
+  hospital_type: Large Community Hospital
+  base_url: https://nhh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://nhh.ca/AboutNHH/senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://nhh.ca/document/strategic-plan-framework
+      content_type: pdf
+      local_folder: 940_COBOURG_NORTHUMBERLAND_HILLS
+      local_filename: Strategy_202601_940.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '941'
+  name: Humber River Hospital
+  hospital_type: Large Community Hospital
+  base_url: https://www.hrh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hrh.ca/who-we-are/accountability/governance-leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.hrh.ca/wp-content/uploads/2023/04/HRH_Strategic-Plan-2023-April-13-2023-Digital.pdf
+      content_type: pdf
+      local_folder: 941_Humber_River_Hospital
+      local_filename: Strategy_202512_941.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.hrh.ca/who-we-are/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '942'
+  name: HAMILTON HEALTH SCIENCES CORP
+  hospital_type: Teaching Hospital
+  base_url: https://www.hamiltonhealthsciences.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hamiltonhealthsciences.ca/about-us/our-organization/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.hamiltonhealthsciences.ca/wp-content/uploads/2018/12/PDF-Strategy_booklet.pdf
+      content_type: pdf
+      local_folder: 942_HAMILTON_HEALTH_SCIENCES_CORP
+      local_filename: Strategy_202601_942.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '946'
+  name: KINCARDINE SOUTH BRUCE GREY
+  hospital_type: Small Hospital
+  base_url: https://www.sbghc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sbghc.on.ca/about-us/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '947'
+  name: TORONTO UNIVERSITY HEALTH NETWORK
+  hospital_type: Teaching Hospital
+  base_url: https://www.uhn.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.uhn.ca/corporate/AboutUHN/Governance_Leadership/Pages/Our_Leaders.aspx
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.uhn.ca/corporate/AboutUHN/Purpose_Performance/UHN_Strategic_Plan/Documents/UHN-Strategic-Plan.pdf
+      content_type: pdf
+      local_folder: 947_TORONTO_UNIVERSITY_HEALTH_NETWORK
+      local_filename: Strategy_202601_947.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '948'
+  name: TORONTO ADDICTION & MENTAL HEALTH
+  hospital_type: Specialty Mental Health Hospital
+  base_url: https://www.camh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.camh.ca/en/driving-change/about-camh/leadership-team-directory?facets=filter_tags:B1EC0C85877A430C82780319BF2F0774
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.camh.ca/-/media/driving-change-files/connected-camh-stratplan-2024-2030-pdf.pdf
+      content_type: pdf
+      local_folder: 948_TORONTO_ADDICTION_MENTAL_HEALTH
+      local_filename: Strategy_202512_948.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.camh.ca/en/driving-change/about-camh/connected-camh-strategic-plan-2024-2030
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '950'
+  name: HALTON HEALTHCARE
+  hospital_type: Large Community Hospital
+  base_url: https://www.haltonhealthcare.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.haltonhealthcare.on.ca/about/leadership-team/executive-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '951'
+  name: BRAMPTON WILLIAM OSLER
+  hospital_type: Large Community Hospital
+  base_url: https://www.williamoslerhs.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.williamoslerhs.ca/en/who-we-are/leadership-team.aspx?_mid_=102146
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.williamoslerhs.ca/en/who-we-are/resources/2024-29-SP_Remediated.pdf
+      content_type: pdf
+      local_folder: 951_BRAMPTON_WILLIAM_OSLER
+      local_filename: Strategy_202512_951.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-2): https://www.williamoslerhs.ca/en/who-we-are/strategic-plan.aspx
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '952'
+  name: Lakeridge Health
+  hospital_type: Large Community Hospital
+  base_url: https://www.lh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.lh.ca/about-us/leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.lh.ca/media/w4znqtaf/lh-strat-plan-v11-final.pdf
+      content_type: pdf
+      local_folder: 952_Lakeridge_Health
+      local_filename: Strategy_202512_952.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-2): https://www.lh.ca/about-us/our-future/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '953'
+  name: Sunnybrook Health Sciences Centre
+  hospital_type: Teaching Hospital
+  base_url: https://sunnybrook.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://sunnybrook.ca/content/?page=executive-leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://sunnybrook.ca/wp-content/uploads/2025/07/Invent2030_sunnybrook-stratplan_acc.pdf
+      content_type: pdf
+      local_folder: 953_Sunnybrook_Health_Sciences_Centre
+      local_filename: Strategy_202512_953.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://sunnybrook.ca/content/?page=invent-2030-sunnybrook-strategic-plan
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '955'
+  name: GREY BRUCE HEALTH SERVICES  Brightshores
+  hospital_type: Large Community Hospital
+  base_url: https://www.brightshores.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.brightshores.ca/about-us/executive-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.brightshores.ca/wp/wp-content/uploads/2021/04/GBHS-Strategic-Plan-2023_2025.pdf
+      content_type: pdf
+      local_folder: 955_GREY_BRUCE_HEALTH_SERVICES_Brightshores
+      local_filename: Strategy_202512_955.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.brightshores.ca/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '957'
+  name: BELLEVILLE QUINTE HEALTH CARE
+  hospital_type: Large Community Hospital
+  base_url: https://quintehealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://quintehealth.ca/about-quinte-health/leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://quintehealth.ca/wp-content/uploads/2024/06/Strategy-Booklet-Final-2024.pdf
+      content_type: pdf
+      local_folder: 957_BELLEVILLE_QUINTE_HEALTH_CARE
+      local_filename: Strategy_202512_957.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://quintehealth.ca/wp-content/uploads/2024/06/Strategy-Booklet-Final-2024.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '958'
+  name: OTTAWA THE OTTAWA HOSPITAL
+  hospital_type: Teaching Hospital
+  base_url: https://www.ottawahospital.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ottawahospital.on.ca/en/about-us/our-leadership-team/senior-management-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.ottawahospital.on.ca/en/documents/2023/02/strategic-plan-and-priorities-2023-and-beyond.pdf/
+      content_type: pdf
+      local_folder: 958_OTTAWA_THE_OTTAWA_HOSPITAL
+      local_filename: Strategy_202601_958.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '959'
+  name: SUDBURY HEALTH SCIENCES NORTH
+  hospital_type: Teaching Hospital
+  base_url: https://hsnsudbury.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://hsnsudbury.ca/en/About-Us/Leadership-at-HSN/Senior-Management-Team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://hsnsudbury.ca/Portals/1/About_Us/hsn-tfy2030-booklet-digital-en%20revised.pdf?ver=dafHQTB2VYu1B6dXBvtaiA%3d%3d
+      content_type: pdf
+      local_folder: 959_SUDBURY_HEALTH_SCIENCES_NORTH
+      local_filename: Strategy_202601_959.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '961'
+  name: OTTAWA HEART INSTITUTE
+  hospital_type: Teaching Hospital
+  base_url: https://www.ottawaheart.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ottawaheart.ca/who-we-are/governance-and-leadership/our-management-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.ottawaheart.ca/sites/default/files/legacy/uploads/documents/Researchers/oracle-strategic-directions-2018-24.pdf
+      content_type: pdf
+      local_folder: 961_OTTAWA_HEART_INSTITUTE
+      local_filename: Strategy_202512_961.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.ottawaheart.ca/sites/default/files/legacy/uploads/documents/Researchers/oracle-strategic-directions-2018-24.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '962'
+  name: ST CATHARINES NIAGARA HEALTH SYSTEM
+  hospital_type: Large Community Hospital
+  base_url: https://www.niagarahealth.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.niagarahealth.on.ca/site/leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.niagarahealth.on.ca/files/NHStrategicPlanTransformingCare.pdf
+      content_type: pdf
+      local_folder: 962_ST_CATHARINES_NIAGARA_HEALTH_SYSTEM
+      local_filename: Strategy_202512_962.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.niagarahealth.on.ca/site/strategic-plan
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '963'
+  name: MOUNT FOREST NORTH WELLINGTON HC
+  hospital_type: Small Hospital
+  base_url: https://gmch.whca.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://gmch.whca.ca/board-of-directors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_58e4dada3289489ea08b1cc968415b1d.pdf
+      content_type: pdf
+      local_folder: 963_MOUNT_FOREST_NORTH_WELLINGTON_HC
+      local_filename: Strategy_202601_963.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '964'
+  name: SIOUX LOOKOUT MENO-YA-WIN HC
+  hospital_type: Small Hospital
+  base_url: https://slmhc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://slmhc.on.ca/about/senior-executive-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://slmhc.on.ca/wp-content/uploads/2025/02/Strategic-Plan-2025-2028-Web-compressed.pdf
+      content_type: pdf
+      local_folder: 964_SIOUX_LOOKOUT_MENO_YA_WIN_HC
+      local_filename: Strategy_202512_964.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://slmhc.on.ca/about/strategic-planning/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '965'
+  name: SAULT STE MARIE SAULT AREA
+  hospital_type: Large Community Hospital
+  base_url: https://sah.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://sah.on.ca/about/hospital-leadership/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://sah.on.ca/wp-content/uploads/2025/09/StratPlan-2023-Full.pdf
+      content_type: pdf
+      local_folder: 965_SAULT_STE_MARIE_SAULT_AREA
+      local_filename: Strategy_202512_965.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://sah.on.ca/about/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '966'
+  name: SARNIA BLUEWATER HEALTH
+  hospital_type: Large Community Hospital
+  base_url: https://www.bluewaterhealth.ca
+  base_url_validated: no
+  robots_allowed: no
+  last_validated: '2025-11-28'
+  leadership_url: https://www.bluewaterhealth.ca/executive-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: ''
+      content_url: ''
+      content_type: ''
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '967'
+  name: CORNWALL COMMUNITY
+  hospital_type: Large Community Hospital
+  base_url: https://www.cornwallhospital.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.cornwallhospital.ca/en/SeniorAdmin
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.cornwallhospital.ca/uploads/CCH%20Strategic%20Plan%202022-2027_Leading%20Innovative%20Transformation.pdf
+      content_type: pdf
+      local_folder: 967_CORNWALL_COMMUNITY
+      local_filename: Strategy_202512_967.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.cornwallhospital.ca/en/strategic-plan
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '968'
+  name: HUNTSVILLE MUSKOKA ALGONQUIN HC
+  hospital_type: Large Community Hospital
+  base_url: https://www.mahc.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.mahc.ca/about-us/leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.mahc.ca/media/oiwfxbfy/strategic-plan-2025-2030.pdf
+      content_type: pdf
+      local_folder: 968_HUNTSVILLE_MUSKOKA_ALGONQUIN_HC
+      local_filename: Strategy_202512_968.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.mahc.ca/about-us/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '969'
+  name: WHITBY ONT SHORES CENTRE MH SCIENCE
+  hospital_type: Specialty Mental Health Hospital
+  base_url: https://www.ontarioshores.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ontarioshores.ca/aboutus/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '970'
+  name: Brantford Brant Community
+  hospital_type: Large Community Hospital
+  base_url: https://www.bchsys.org
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.bchsys.org/en/about-us/senior-leadership-team.aspx
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.bchsys.org/en/about-us/resources/Strategic-Plan/Strategic-Plan-2025-2030.pdf
+      content_type: pdf
+      local_folder: 970_Brantford_Brant_Community
+      local_filename: Strategy_202512_970.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.bchsys.org/en/about-us/Strategic_Plan.aspx
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '971'
+  name: SUDBURY ST.JOSEPHS CONTINUING CARE
+  hospital_type: Small Hospital
+  base_url: https://www.sjsudbury.com
+  base_url_validated: yes
+  robots_allowed: no
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sjsudbury.com/index.php/st-josephs-health-centre/our-leaders-sjhc/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.sjsudbury.com/wp-content/uploads/SJHCS-–-St-Josephs-Health-Centre-of-Sudbury-–-Strat-Plan-–-1-pager-Final_.pdf
+      content_type: pdf
+      local_folder: 971_SUDBURY_ST_JOSEPHS_CONTINUING_CARE
+      local_filename: Strategy_202512_971.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.sjsudbury.com/index.php/st-josephs-health-centre/strategic-plan-sjhc/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '972'
+  name: PENETANGUISHENE WAYPOINT
+  hospital_type: Specialty Mental Health Hospital
+  base_url: https://www.waypointcentre.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.waypointcentre.ca/about-waypoint/leadership#our-senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.waypointcentre.ca/wp-content/uploads/2025/06/Waypoint-10-Year-Strategy-2026-to-2035-Final_web.pdf
+      content_type: pdf
+      local_folder: 972_PENETANGUISHENE_WAYPOINT
+      local_filename: Strategy_202601_972.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '973'
+  name: MOOSE FACTORY WEENEEBAYKO AREA
+  hospital_type: Small Hospital
+  base_url: https://www.waha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.waha.ca/about/executive/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.waha.ca/wp-content/uploads/2018/03/WAHA-Strategic-Plan-2015-2018-vers-7.pdf
+      content_type: pdf
+      local_folder: 973_MOOSE_FACTORY_WEENEEBAYKO_AREA
+      local_filename: Strategy_202512_973.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.waha.ca/about/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '974'
+  name: NORTH BAY NORTH BAY REGIONAL HC
+  hospital_type: Large Community Hospital
+  base_url: https://nbrhc.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://nbrhc.on.ca/about-nbrhc/senior-leadership-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://nbrhc.on.ca/wp-content/uploads/2022/08/StrategicPlan_0822_Final.pdf
+      content_type: pdf
+      local_folder: 974_NORTH_BAY_NORTH_BAY_REGIONAL_HC
+      local_filename: Strategy_202512_974.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://nbrhc.on.ca/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '975'
+  name: MISSISSAUGA TRILLIUM HEALTH PARTNER
+  hospital_type: Large Community Hospital
+  base_url: https://www.thp.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.thp.ca/aboutus/Pages/Seniorleadership.aspx
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: manual_download
+      content_type: pdf
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: yes
+      override_reason: |-
+        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
+        Could not resolve host: manual_download
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '976'
+  name: TORONTO SINAI HEALTH SYSTEM
+  hospital_type: Teaching Hospital
+  base_url: https://www.sinaihealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.sinaihealth.ca/about-sinai-health/sinai-health-leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.sinaihealth.ca/media/20116/download?inline
+      content_type: pdf
+      local_folder: 976_TORONTO_SINAI_HEALTH_SYSTEM
+      local_filename: Strategy_202601_976.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '977'
+  name: TERRACE BAY NORTH OF SUPERIOR HC
+  hospital_type: Small Hospital
+  base_url: https://www.nosh.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.nosh.ca/board-of-directors
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.nosh.ca/upload/documents/strategic-plan-final--5-.pdf
+      content_type: pdf
+      local_folder: 977_TERRACE_BAY_NORTH_OF_SUPERIOR_HC
+      local_filename: Strategy_202512_977.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.nosh.ca/strategic-plan
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '978'
+  name: KINGSTON KINGSTON HEALTH SCIENCES
+  hospital_type: Teaching Hospital
+  base_url: https://kingstonhsc.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://kingstonhsc.ca/about-khsc/senior-leadership-team
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://kingstonhsc.ca/sites/default/files/documents/ACP%202025-26-Final%20EN.pdf
+      content_type: pdf
+      local_folder: 978_KINGSTON_KINGSTON_HEALTH_SCIENCES
+      local_filename: Strategy_202512_978.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://kingstonhsc.ca/about-khsc/our-strategy-2024-2027/our-strategic-directions
+        (confidence: medium) - Please verify this is the correct strategic plan'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '979'
+  name: TORONTO SCARBOROUGH HEALTH NETWORK
+  hospital_type: Large Community Hospital
+  base_url: https://www.shn.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.shn.ca/about-us/hospital-leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.shn.ca/wp-content/uploads/strategic-plan-placemat-11x17_WEB-1.pdf
+      content_type: pdf
+      local_folder: 979_TORONTO_SCARBOROUGH_HEALTH_NETWORK
+      local_filename: Strategy_202512_979.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://www.shn.ca/about-us/strategic-plan-2024-2029/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '980'
+  name: TORONTO UNITY HEALTH TORONTO
+  hospital_type: Teaching Hospital
+  base_url: https://unityhealth.to
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://unityhealth.to/about-unity-health/about-unity-health-toronto/leadership/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://unityhealth.to/wp-content/uploads/2023/03/UnityHealth-Strat-Plan.pdf
+      content_type: pdf
+      local_folder: 980_TORONTO_UNITY_HEALTH_TORONTO
+      local_filename: Strategy_202512_980.pdf
+      last_extraction_date: .na.character
+      extraction_status: pending_extraction
+      manual_override: no
+      override_reason: 'Found on page (depth-1): https://unityhealth.to/about-unity-health/strategic-plan/
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '981'
+  name: CHATHAM CHATHAM-KENT HEALTH ALLIANC
+  hospital_type: Large Community Hospital
+  base_url: https://www.ckha.on.ca
+  base_url_validated: no
+  robots_allowed: no
+  last_validated: '2025-11-28'
+  leadership_url: https://www.ckha.on.ca/senior-team/
+  notes: ''
+  status:
+    strategy:
+      last_search_date: ''
+      content_url: ''
+      content_type: ''
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '982'
+  name: Blanche River Health
+  hospital_type: Large Community Hospital
+  base_url: https://www.blancheriverhealth.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2025-12-05'
+      content_url: https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
+      content_type: pdf
+      local_folder: 982_Blanche_River_Health
+      local_filename: Strategy_202512_982.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: no
+      override_reason: 'Direct PDF link found (depth-2): https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
+        (confidence: high)'
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+- FAC: '983'
+  name: HURON PERTH HEALTHCARE ALLIANCE
+  hospital_type: Large Community Hospital
+  base_url: https://www.hpha.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2025-11-28'
+  leadership_url: https://www.hpha.ca/ourorganization#accordion-38-2
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-01-19'
+      content_url: https://www.hpha.ca/uploads/Common/Commitments%20to%20our%20Communities%20-%20Web.pdf
+      content_type: pdf
+      local_folder: 983_HURON_PERTH_HEALTHCARE_ALLIANCE
+      local_filename: Strategy_202601_983.pdf
+      last_extraction_date: '2026-02-03'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no

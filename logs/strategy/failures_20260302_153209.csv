@@ -1,0 +1,2 @@
+"timestamp","fac","hospital_name","failure_type","error_message","url","context"
+"2026-03-02 15:34:23","644","Cornwall Hospital  CORNWALL HOTEL DIEU","no_pdf_found","Top candidate is HTML; HTML extraction not yet implemented","https://www.cornwallhospital.ca/en/strategic-plan",""

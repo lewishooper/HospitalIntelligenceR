@@ -1,0 +1,27 @@
+[2026-03-02 15:37:09] [INFO] Logger initialised | role: strategy | run_id: 20260302_153709
+[2026-03-02 15:37:09] [INFO] Strategy Phase 1 — locate & download | mode: facs | run_id: 20260302_153709
+[2026-03-02 15:37:09] [INFO] STEP 1: Loading hospital list from registry
+[2026-03-02 15:37:09] [INFO] Hospitals to process: 1
+[2026-03-02 15:37:09] [INFO] ============================================================
+[2026-03-02 15:37:09] [INFO] STEP 3: Beginning locate-and-download loop
+[2026-03-02 15:37:09] [INFO] ============================================================
+[2026-03-02 15:37:09] [INFO] --- Hospital 1/1: FAC 593 — Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV. ---
+[2026-03-02 15:40:08] [INFO] FAC 593: best candidate — https://mhalliance.on.ca/about/strategic-plan (score: 5, is_pdf: FALSE)
+[2026-03-02 15:40:09] [WARNING] FAC 593: top candidate appears to be HTML, not a PDF — flagging for review: https://mhalliance.on.ca/about/strategic-plan
+[2026-03-02 15:40:09] [ERROR] FAC 593 (Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV.) — FAILURE | type: no_pdf_found | Top candidate is HTML; HTML extraction not yet implemented
+[2026-03-02 15:40:09] [INFO] ============================================================
+[2026-03-02 15:40:09] [INFO] STEP 4: Run complete
+========================================================================
+  RUN SUMMARY — role: strategy | run_id: 20260302_153709
+========================================================================
+  Attempted : 1
+  Succeeded : 0
+  Failed    : 1
+  Skipped   : 0
+  Success%  : 0%
+  Total cost: $0.0000
+  Elapsed   : 3.0 minutes
+  Log file  : logs/strategy/run_20260302_153709.log
+  Failures  : logs/strategy/failures_20260302_153709.csv
+========================================================================
+[2026-03-02 15:40:09] [WARNING] Success rate 0.0% is below the 80% threshold — review failure log: logs/strategy/failures_20260302_153709.csv

@@ -1,0 +1,1510 @@
+hospitals:
+  - FAC: '592'
+    name: NAPANEE LENNOX & ADDINGTON
+    hospital_type: Small Hospital
+    base_url: https://web.lacgh.napanee.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://web.lacgh.napanee.on.ca/about/governance/
+    notes: ''
+    status:
+
+  - FAC: '593'
+    name: Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV.
+    hospital_type: Small Hospital
+    base_url: https://mhalliance.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://mhalliance.on.ca/about/administration/
+    notes: ''
+    status:
+
+  - FAC: '596'
+    name: Alliston Stevenson Memorial Hospital
+    hospital_type: Small Hospital
+    base_url: https://www.stevensonhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.stevensonhospital.ca/senior-leadership
+    notes: ''
+    status:
+
+  - FAC: '597'
+    name: ALMONTE GENERAL
+    hospital_type: Small Hospital
+    base_url: https://www.mrha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mrha.ca/seniorteam
+    notes: ''
+    status:
+
+  - FAC: '599'
+    name: ARNPRIOR & DISTRICT MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://www.arnpriorregionalhealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.arnpriorregionalhealth.ca/about-us/
+    notes: ''
+    status:
+
+
+
+  - FAC: '606'
+    name: BARRIE ROYAL VICTORIA REG HC
+    hospital_type: Large Community Hospital
+    base_url: https://www.rvh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.rvh.on.ca/about-rvh/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '611'
+    name: BLIND RIVER NORTH SHORE HN
+    hospital_type: Small Hospital
+    base_url: https://www.nshn.care
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.nshn.care/senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '619'
+    name: BROCKVILLE GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.brockvillegeneralhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.brockvillegeneralhospital.ca/who-we-are/executive-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '624'
+    name: Campbellford Memorial Hospital
+    hospital_type: Small Hospital
+    base_url: https://cmh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://cmh.ca/our-executive-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '626'
+    name: 'MRHA CARLETON PLACE & DISTRICT '
+    hospital_type: Small Hospital
+    base_url: https://www.mrha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mrha.ca/seniorteam
+    notes: ''
+    status:
+
+  - FAC: '627'
+    name: CHAPLEAU SER DE SANTÉ DE CHAPLEAU
+    hospital_type: Small Hospital
+    base_url: https://www.sschs.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sschs.ca/general/board.html
+    notes: ''
+    status:
+
+  - FAC: '632'
+    name: North York General Hospital
+    hospital_type: Large Community Hospital
+    base_url: https://www.nygh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.nygh.on.ca/about-us/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '638'
+    name: MICS GROUP COCHRANE LADY MINTO
+    hospital_type: Small Hospital
+    base_url: https://www.micsgroup.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.micsgroup.com/governance/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '640'
+    name: COLLINGWOOD GENERAL AND MARINE HOSP
+    hospital_type: Large Community Hospital
+    base_url: https://cgmh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://cgmh.on.ca/team/senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '644'
+    name: Cornwall Hospital  CORNWALL HOTEL DIEU
+    hospital_type: Small Hospital
+    base_url: https://www.cornwallhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.cornwallhospital.ca/en/SeniorAdmin
+    notes: ''
+    status:
+
+  - FAC: '646'
+    name: DEEP RIVER AND DISTRICT
+    hospital_type: Small Hospital
+    base_url: https://www.drdh.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.drdh.org/leadershipteam
+    notes: ''
+    status:
+
+  - FAC: '647'
+    name: DRYDEN REGIONAL HEALTH CENTRE
+    hospital_type: Small Hospital
+    base_url: https://www.drhc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.drhc.on.ca/board
+    notes: ''
+    status:
+
+  - FAC: '648'
+    name: DUNNVILLE HALDIMAND WAR MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://www.hwmh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hwmh.ca/about-us/senior-team/
+    notes: ''
+    status:
+
+  - FAC: '650'
+    name: ELLIOT LAKE ST JOSEPH'S
+    hospital_type: Small Hospital
+    base_url: https://sjghel.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://sjghel.ca/about/governance-board/
+    notes: ''
+    status:
+
+  - FAC: '651'
+    name: OTTAWA ROYAL OTTAWA (PSYCH)
+    hospital_type: Specialty Mental Health Hospital
+    base_url: https://www.theroyal.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.theroyal.ca/about-royal/leadership/senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '653'
+    name: Blanche River ENGLEHART & DISTRICT
+    hospital_type: Small Hospital
+    base_url: https://www.blancheriverhealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
+    notes: ''
+    status:
+
+  - FAC: '654'
+    name: ESPANOLA GENERAL
+    hospital_type: Small Hospital
+    base_url: https://espanolaregionalhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://espanolaregionalhospital.ca/about-erhhc/governance-and-leadership/senior-management-team
+    notes: ''
+    status:
+
+  - FAC: '655'
+    name: Huron Health EXETER SOUTH HURON
+    hospital_type: Small Hospital
+    base_url: https://www.huronhealthsystem.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.huronhealthsystem.ca/leadership
+    notes: ''
+    status:
+
+  - FAC: '656'
+    name: 'WHCA Grove community hospital '
+    hospital_type: Small Hospital
+    base_url: https://gmch.whca.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://gmch.whca.ca/board-of-directors
+    notes: ''
+    status:
+
+  - FAC: '661'
+    name: Cambridge Memorial Hospital
+    hospital_type: Large Community Hospital
+    base_url: https://www.cmh.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.cmh.org/contacts
+    notes: ''
+    status:
+
+  - FAC: '662'
+    name: GERALDTON DISTRICT HOSPITAL
+    hospital_type: Small Hospital
+    base_url: https://www.geraldtondh.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.geraldtondh.com/board-of-directors
+    notes: ''
+    status:
+
+  - FAC: '663'
+    name: Huron HealthGODERICH ALEXANDRA MARINE & GEN
+    hospital_type: Small Hospital
+    base_url: https://www.huronhealthsystem.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.huronhealthsystem.ca/leadership
+    notes: ''
+    status:
+
+  - FAC: '665'
+    name: GUELPH GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.gghorg.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.gghorg.ca/about-ggh/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '666'
+    name: GUELPH ST JOSEPH'S HEALTH CENTRE
+    hospital_type: Small Hospital
+    base_url: https://www.sjhcg.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sjhcg.ca/welcome/our-leadership/
+    notes: ''
+    status:
+
+  - FAC: '674'
+    name: HAMILTON ST JOSEPH'S
+    hospital_type: Teaching Hospital
+    base_url: https://www.stjoes.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.stjoes.ca/about/our-leadership/our-executive-team
+    notes: ''
+    status:
+
+  - FAC: '676'
+    name: HANOVER & DISTRICT
+    hospital_type: Small Hospital
+    base_url: https://www.hanoverhospital.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hanoverhospital.on.ca/our-team
+    notes: ''
+    status:
+
+  - FAC: '681'
+    name: HEARST NOTRE DAME
+    hospital_type: Small Hospital
+    base_url: https://www.ndh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ndh.on.ca/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '682'
+    name: HORNEPAYNE COMMUNITY
+    hospital_type: Small Hospital
+    base_url: https://www.hornepaynecommunityhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hornepaynecommunityhospital.ca/about-1
+    notes: ''
+    status:
+
+  - FAC: '684'
+    name: Rural Roads Health servcies INGERSOLL ALEXANDRA
+    hospital_type: Small Hospital
+    base_url: https://www.ruralroadshealthservices.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ruralroadshealthservices.ca/about/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '685'
+    name: MICS Group IROQUOIS FALLS ANSON GENERAL
+    hospital_type: Small Hospital
+    base_url: https://www.micsgroup.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.micsgroup.com/governance/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '686'
+    name: WAWA LADY DUNN HC
+    hospital_type: Small Hospital
+    base_url: https://ldhc.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://ldhc.com/About-Us/Board-of-Directors
+    notes: ''
+    status:
+
+  - FAC: '695'
+    name: KINGSTON PROVIDENCE CARE HOSPITAL
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://providencecare.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://providencecare.ca/about-us/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '696'
+    name: KIRKLAND & DISTRICT
+    hospital_type: Small Hospital
+    base_url: https://www.blancheriverhealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
+    notes: ''
+    status:
+
+  - FAC: '699'
+    name: WRHN-KITCHENER ST MARY'S
+    hospital_type: Large Community Hospital
+    base_url: https://www.smgh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.smgh.ca/about-us/our-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '701'
+    name: RICHMOND HILL MACKENZIE HEALTH
+    hospital_type: Large Community Hospital
+    base_url: https://www.mackenziehealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mackenziehealth.ca/about-us/executive-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '704'
+    name: Erie Shores Leamington
+    hospital_type: Small Hospital
+    base_url: https://erie.bluelemonmedia.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://erie.bluelemonmedia.com/boardofdirectors
+    notes: ''
+    status:
+
+  - FAC: '707'
+    name: Ross Memorial Hospital
+    hospital_type: Large Community Hospital
+    base_url: https://rmh.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://rmh.org/about-ross-memorial/senior-leadership
+    notes: ''
+    status:
+
+  - FAC: '709'
+    name: Listowel Wingham LISTOWEL MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://lwha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://lwha.ca/about/board/
+    notes: ''
+    status:
+
+  - FAC: '714'
+    name: LONDON ST JOSEPHS
+    hospital_type: Teaching Hospital
+    base_url: https://www.sjhc.london.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sjhc.london.on.ca/about-us/about-st-josephs-health-care-london/leadership-team
+    notes: ''
+    status:
+
+  - FAC: '718'
+    name: BURLINGTON JOSEPH BRANT HOSPITAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.josephbranthospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.josephbranthospital.ca/about-us/our-team/senior-leadership
+    notes: ''
+    status:
+
+  - FAC: '719'
+    name: MANITOUWADGE SANTE MANITOUWADGE
+    hospital_type: Small Hospital
+    base_url: https://www.mh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mh.on.ca/organizationalstructure
+    notes: ''
+    status:
+
+  - FAC: '723'
+    name: MATHESON BINGHAM MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://www.micsgroup.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.micsgroup.com/governance/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '724'
+    name: MATTAWA GENERAL
+    hospital_type: Small Hospital
+    base_url: https://www.mattawahealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mattawahealth.ca/About-Us/Senior-Team
+    notes: ''
+    status:
+
+  - FAC: '726'
+    name: MIDLAND GEORGIAN BAY
+    hospital_type: Large Community Hospital
+    base_url: https://gbgh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://gbgh.on.ca/about-us/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '732'
+    name: KEMPTVILLE DISTRICT
+    hospital_type: Small Hospital
+    base_url: https://kdh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://kdh.on.ca/about-kemptville-district-hospital/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '734'
+    name: HALDIMAND WEST HALDIMAND GENERAL
+    hospital_type: Small Hospital
+    base_url: https://www.whgh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.whgh.ca/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '736'
+    name: NEWMARKET SOUTHLAKE REGIONAL
+    hospital_type: Large Community Hospital
+    base_url: https://southlake.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://southlake.ca/about-southlake/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '739'
+    name: NIPIGON DISTRICT MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://www.ndmh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ndmh.ca/about-our-hospital
+    notes: ''
+    status:
+
+  - FAC: '745'
+    name: ORILLIA SOLDIERS' MEMORIAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.osmh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.osmh.on.ca/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '751'
+    name: OTTAWA CHEO CTC
+    hospital_type: Specialty Children Hospital
+    base_url: https://www.cheo.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.cheo.on.ca/en/about-us/senior-leadership.aspx?_mid_=1829
+    notes: ''
+    status:
+
+  - FAC: '753'
+    name: OTTAWA MONTFORT
+    hospital_type: Teaching Hospital
+    base_url: https://hopitalmontfort.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://hopitalmontfort.com/en/corp/senior-leadership
+    notes: ''
+    status:
+
+  - FAC: '763'
+    name: PEMBROKE REGIONAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.pemreghos.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.pemreghos.org/slt?m=1
+    notes: ''
+    status:
+
+  - FAC: '768'
+    name: BARRYS BAY ST FRANCIS
+    hospital_type: Small Hospital
+    base_url: https://www.sfmhosp.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sfmhosp.com/about-us/
+    notes: ''
+    status:
+
+  - FAC: '771'
+    name: PETERBOROUGH REGIONAL HEALTH CENTRE
+    hospital_type: Large Community Hospital
+    base_url: https://www.prhc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.prhc.on.ca/about-us/senior-leadership/
+    notes: ''
+    status:
+
+  - FAC: '777'
+    name: Queensway Carleton Hospital
+    hospital_type: Large Community Hospital
+    base_url: https://www.qch.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.qch.on.ca/Leadership
+    notes: ''
+    status:
+
+  - FAC: '781'
+    name: THUNDER BAY ST. JOSEPH'S
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://sjcg.net
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://sjcg.net/aboutus/leadership.aspx
+    notes: ''
+    status:
+
+  - FAC: '784'
+    name: LITTLE CURRENT MANITOULIN
+    hospital_type: Small Hospital
+    base_url: https://www.mhc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mhc.on.ca/our-team/senior-management
+    notes: ''
+    status:
+
+  - FAC: '788'
+    name: RENFREW VICTORIA
+    hospital_type: Small Hospital
+    base_url: https://www.renfrewhosp.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.renfrewhosp.com/srmanagement
+    notes: ''
+    status:
+
+  - FAC: '790'
+    name: ST CATHARINES HOTEL DIEU
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://www.hoteldieushaver.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hoteldieushaver.org/site/team
+    notes: ''
+    status:
+
+  - FAC: '793'
+    name: ST THOMAS ELGIN GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.stegh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.stegh.on.ca/about-us/our-leadership/
+    notes: ''
+    status:
+
+  - FAC: '800'
+    name: HAWKESBURY & DISTRICT GENERAL
+    hospital_type: Small Hospital
+    base_url: https://hgh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://hgh.ca/about-hgh/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '802'
+    name: ALEXANDRIA GLENGARRY
+    hospital_type: Small Hospital
+    base_url: https://www.hgmh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hgmh.on.ca/en/about-us-key/strategic-plan-leadership-and-board-of-directors#leadership-team
+    notes: ''
+    status:
+
+  - FAC: '804'
+    name: SIMCOE NORFOLK GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.ngh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ngh.on.ca/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '809'
+    name: SMOOTH ROCK FALLS
+    hospital_type: Small Hospital
+    base_url: https://www.srfhosp.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.srfhosp.ca/
+    notes: ''
+    status:
+
+  - FAC: '813'
+    name: HPHA STRATFORD GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.hpha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hpha.ca/ourorganization#accordion-38-2
+    notes: ''
+    status:
+
+  - FAC: '814'
+    name: Middlesex Hosptial Alliance  STRATHROY MIDDLESEX GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://mhalliance.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://mhalliance.on.ca/about/administration/
+    notes: ''
+    status:
+
+  - FAC: '824'
+    name: Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://www.ruralroadshealthservices.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ruralroadshealthservices.ca/about/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '826'
+    name: KENORA LAKE OF THE WOODS
+    hospital_type: Medium Hospital
+    base_url: http://www.lwdh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: http://www.lwdh.on.ca/index.php/programs-and-services/administration.html
+    notes: ''
+    status:
+
+  - FAC: '827'
+    name: TORONTO BAYCREST CTR GERIATRIC CARE
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://www.baycrest.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.baycrest.org/Baycrest-Pages/About-Baycrest/Leadership/Baycrest-Hospital-Executive-Team
+    notes: ''
+    status:
+
+  - FAC: '837'
+    name: TORONTO HOSPITAL FOR SICK CHILDREN
+    hospital_type: Specialty Children Hospital
+    base_url: https://www.sickkids.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sickkids.ca/en/about/leadership/
+    notes: ''
+    status:
+
+  - FAC: '850'
+    name: TORONTO RUNNYMEDE HC
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://runnymedehc.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://runnymedehc.ca/runnymede-difference/about-runnymede/governance/
+    notes: ''
+    status:
+
+  - FAC: '854'
+    name: TORONTO SA GRACE
+    hospital_type: Small Hospital
+    base_url: https://www.torontograce.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.torontograce.org/about-tghc/senior-management-team/
+    notes: ''
+    status:
+
+  - FAC: '858'
+    name: Michael Garron TORONTO EAST GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.tehn.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.tehn.ca/about-us/our-team/executive-team
+    notes: ''
+    status:
+
+  - FAC: '862'
+    name: TORONTO WOMENS COLLEGE
+    hospital_type: Teaching Hospital
+    base_url: https://www.womenscollegehospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.womenscollegehospital.ca/who-we-are/executive-team/
+    notes: ''
+    status:
+
+  - FAC: '881'
+    name: STURGEON FALLS WEST NIPISSING
+    hospital_type: Small Hospital
+    base_url: https://www.wngh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.wngh.ca/about-wngh/board/#gsc.tab=0
+    notes: ''
+    status:
+
+  - FAC: '882'
+    name: WINCHESTER DISTRICT MEMORIAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.wdmh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.wdmh.on.ca/ourleadershipteam
+    notes: ''
+    status:
+
+  - FAC: '888'
+    name: NEW LISKEARD TEMISKAMING HOSPITAL
+    hospital_type: Small Hospital
+    base_url: https://www.temiskaming-hospital.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.temiskaming-hospital.com/board-of-directors
+    notes: ''
+    status:
+
+  - FAC: '889'
+    name: WINGHAM & DISTRICT
+    hospital_type: Small Hospital
+    base_url: https://lwha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://lwha.ca/about/contact/
+    notes: ''
+    status:
+
+  - FAC: '890'
+    name: WOODSTOCK WOODSTOCK HOSPITAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.woodstockhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.woodstockhospital.ca/board-of-directors/
+    notes: ''
+    status:
+
+  - FAC: '896'
+    name: RED LAKE MARG COCHENOUR MEMORIAL
+    hospital_type: Small Hospital
+    base_url: https://www.redlakehospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.redlakehospital.ca/leadershipteam?s=1
+    notes: ''
+    status:
+
+  - FAC: '900'
+    name: FORT FRANCES RIVERSIDE HEALTH CARE
+    hospital_type: Small Hospital
+    base_url: https://riversidehealthcare.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://riversidehealthcare.ca/communities
+    notes: ''
+    status:
+
+  - FAC: '905'
+    name: OAK VALLEY HEALTH
+    hospital_type: Large Community Hospital
+    base_url: https://www.oakvalleyhealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.oakvalleyhealth.ca/about-us/meet-our-team/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '907'
+    name: TIMMINS & DISTRICT GENERAL
+    hospital_type: Large Community Hospital
+    base_url: https://tadh.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://tadh.com/about-us/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '910'
+    name: TORONTO CASEY HOUSE
+    hospital_type: Small Hospital
+    base_url: https://caseyhouse.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://caseyhouse.ca/about-us/leadership/
+    notes: ''
+    status:
+
+  - FAC: '916'
+    name: HEADWATERS
+    hospital_type: Large Community Hospital
+    base_url: https://www.headwatershealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.headwatershealth.ca/who-we-are/governance/executive-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '927'
+    name: Windsor Hotel Dieu Grace
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://www.hdgh.org
+    base_url_validated: no
+    robots_allowed: no
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hdgh.org/leadership
+    notes: ''
+    status:
+
+  - FAC: '928'
+    name: PERTH SMITHS FALLS
+    hospital_type: Large Community Hospital
+    base_url: https://psfdh.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://psfdh.on.ca/leadershipteam
+    notes: ''
+    status:
+
+  - FAC: '930'
+    name: WRHN-KITCHENER GRAND RIVER
+    hospital_type: Large Community Hospital
+    base_url: https://www.grhosp.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.grhosp.on.ca/about/senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '931'
+    name: PARRY SOUND WEST PARRY SOUND
+    hospital_type: Large Community Hospital
+    base_url: https://www.wpshc.com
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.wpshc.com/about-us/our-senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '932'
+    name: Elizabeth Bruyere Hospital
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://www.bruyere.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.bruyere.org/en/leadership-team?v=1
+    notes: ''
+    status:
+
+  - FAC: '933'
+    name: WINDSOR REGIONAL HOSPITAL
+    hospital_type: Large Community Hospital
+    base_url: https://www.wrh.on.ca
+    base_url_validated: no
+    robots_allowed: no
+    last_validated: '2025-11-28'
+    leadership_url: https://www.wrh.on.ca/ExecutiveCommittee
+    notes: ''
+    status:
+
+  - FAC: '935'
+    name: Thunder Bay Regional Health Sciences Centre
+    hospital_type: Teaching Hospital
+    base_url: https://tbrhsc.net
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://tbrhsc.net/tbrhsc/senior-leadership-council/senior-leadership-council-gallery/
+    notes: ''
+    status:
+
+  - FAC: '936'
+    name: LONDON HEALTH SCIENCES
+    hospital_type: Teaching Hospital
+    base_url: https://www.lhsc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.lhsc.on.ca/about-lhsc/executive-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '938'
+    name: DYSART ET AL HALIBURTON HEALTH SER
+    hospital_type: Small Hospital
+    base_url: https://www.hhhs.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hhhs.ca/about/board
+    notes: ''
+    status:
+
+  - FAC: '939'
+    name: TORONTO HOLLAND BLOORVIEW KIDS
+    hospital_type: Chronic/Rehab Hospital
+    base_url: https://hollandbloorview.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://hollandbloorview.ca/about-us/about-holland-bloorview/governance-and-leadership/hospital-executive-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '940'
+    name: COBOURG NORTHUMBERLAND HILLS
+    hospital_type: Large Community Hospital
+    base_url: https://nhh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://nhh.ca/AboutNHH/senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '941'
+    name: Humber River Hospital
+    hospital_type: Large Community Hospital
+    base_url: https://www.hrh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hrh.ca/who-we-are/accountability/governance-leadership/
+    notes: ''
+    status:
+
+  - FAC: '942'
+    name: HAMILTON HEALTH SCIENCES CORP
+    hospital_type: Teaching Hospital
+    base_url: https://www.hamiltonhealthsciences.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hamiltonhealthsciences.ca/about-us/our-organization/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '946'
+    name: KINCARDINE SOUTH BRUCE GREY
+    hospital_type: Small Hospital
+    base_url: https://www.sbghc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sbghc.on.ca/about-us/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '947'
+    name: TORONTO UNIVERSITY HEALTH NETWORK
+    hospital_type: Teaching Hospital
+    base_url: https://www.uhn.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.uhn.ca/corporate/AboutUHN/Governance_Leadership/Pages/Our_Leaders.aspx
+    notes: ''
+    status:
+
+  - FAC: '948'
+    name: TORONTO ADDICTION & MENTAL HEALTH
+    hospital_type: Specialty Mental Health Hospital
+    base_url: https://www.camh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.camh.ca/en/driving-change/about-camh/leadership-team-directory?facets=filter_tags:B1EC0C85877A430C82780319BF2F0774
+    notes: ''
+    status:
+
+  - FAC: '950'
+    name: HALTON HEALTHCARE
+    hospital_type: Large Community Hospital
+    base_url: https://www.haltonhealthcare.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.haltonhealthcare.on.ca/about/leadership-team/executive-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '951'
+    name: BRAMPTON WILLIAM OSLER
+    hospital_type: Large Community Hospital
+    base_url: https://www.williamoslerhs.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.williamoslerhs.ca/en/who-we-are/leadership-team.aspx?_mid_=102146
+    notes: ''
+    status:
+
+  - FAC: '952'
+    name: Lakeridge Health
+    hospital_type: Large Community Hospital
+    base_url: https://www.lh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.lh.ca/about-us/leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '953'
+    name: Sunnybrook Health Sciences Centre
+    hospital_type: Teaching Hospital
+    base_url: https://sunnybrook.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://sunnybrook.ca/content/?page=executive-leadership
+    notes: ''
+    status:
+
+  - FAC: '955'
+    name: GREY BRUCE HEALTH SERVICES  Brightshores
+    hospital_type: Large Community Hospital
+    base_url: https://www.brightshores.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.brightshores.ca/about-us/executive-team/
+    notes: ''
+    status:
+
+  - FAC: '957'
+    name: BELLEVILLE QUINTE HEALTH CARE
+    hospital_type: Large Community Hospital
+    base_url: https://quintehealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://quintehealth.ca/about-quinte-health/leadership/
+    notes: ''
+    status:
+
+  - FAC: '958'
+    name: OTTAWA THE OTTAWA HOSPITAL
+    hospital_type: Teaching Hospital
+    base_url: https://www.ottawahospital.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ottawahospital.on.ca/en/about-us/our-leadership-team/senior-management-team/
+    notes: ''
+    status:
+
+  - FAC: '959'
+    name: SUDBURY HEALTH SCIENCES NORTH
+    hospital_type: Teaching Hospital
+    base_url: https://hsnsudbury.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://hsnsudbury.ca/en/About-Us/Leadership-at-HSN/Senior-Management-Team
+    notes: ''
+    status:
+
+  - FAC: '961'
+    name: OTTAWA HEART INSTITUTE
+    hospital_type: Teaching Hospital
+    base_url: https://www.ottawaheart.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ottawaheart.ca/who-we-are/governance-and-leadership/our-management-team
+    notes: ''
+    status:
+
+  - FAC: '962'
+    name: ST CATHARINES NIAGARA HEALTH SYSTEM
+    hospital_type: Large Community Hospital
+    base_url: https://www.niagarahealth.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.niagarahealth.on.ca/site/leadership-team
+    notes: ''
+    status:
+
+  - FAC: '963'
+    name: MOUNT FOREST NORTH WELLINGTON HC
+    hospital_type: Small Hospital
+    base_url: https://gmch.whca.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://gmch.whca.ca/board-of-directors
+    notes: ''
+    status:
+
+  - FAC: '964'
+    name: SIOUX LOOKOUT MENO-YA-WIN HC
+    hospital_type: Small Hospital
+    base_url: https://slmhc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://slmhc.on.ca/about/senior-executive-team/
+    notes: ''
+    status:
+
+  - FAC: '965'
+    name: SAULT STE MARIE SAULT AREA
+    hospital_type: Large Community Hospital
+    base_url: https://sah.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://sah.on.ca/about/hospital-leadership/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '966'
+    name: SARNIA BLUEWATER HEALTH
+    hospital_type: Large Community Hospital
+    base_url: https://www.bluewaterhealth.ca
+    base_url_validated: no
+    robots_allowed: no
+    last_validated: '2025-11-28'
+    leadership_url: https://www.bluewaterhealth.ca/executive-team
+    notes: ''
+    status:
+
+  - FAC: '967'
+    name: CORNWALL COMMUNITY
+    hospital_type: Large Community Hospital
+    base_url: https://www.cornwallhospital.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.cornwallhospital.ca/en/SeniorAdmin
+    notes: ''
+    status:
+
+  - FAC: '968'
+    name: HUNTSVILLE MUSKOKA ALGONQUIN HC
+    hospital_type: Large Community Hospital
+    base_url: https://www.mahc.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.mahc.ca/about-us/leadership/
+    notes: ''
+    status:
+
+  - FAC: '969'
+    name: WHITBY ONT SHORES CENTRE MH SCIENCE
+    hospital_type: Specialty Mental Health Hospital
+    base_url: https://www.ontarioshores.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ontarioshores.ca/aboutus/leadership
+    notes: ''
+    status:
+
+  - FAC: '970'
+    name: Brantford Brant Community
+    hospital_type: Large Community Hospital
+    base_url: https://www.bchsys.org
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.bchsys.org/en/about-us/senior-leadership-team.aspx
+    notes: ''
+    status:
+
+  - FAC: '971'
+    name: SUDBURY ST.JOSEPHS CONTINUING CARE
+    hospital_type: Small Hospital
+    base_url: https://www.sjsudbury.com
+    base_url_validated: yes
+    robots_allowed: no
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sjsudbury.com/index.php/st-josephs-health-centre/our-leaders-sjhc/
+    notes: ''
+    status:
+
+  - FAC: '972'
+    name: PENETANGUISHENE WAYPOINT
+    hospital_type: Specialty Mental Health Hospital
+    base_url: https://www.waypointcentre.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.waypointcentre.ca/about-waypoint/leadership#our-senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '973'
+    name: MOOSE FACTORY WEENEEBAYKO AREA
+    hospital_type: Small Hospital
+    base_url: https://www.waha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.waha.ca/about/executive/
+    notes: ''
+    status:
+
+  - FAC: '974'
+    name: NORTH BAY NORTH BAY REGIONAL HC
+    hospital_type: Large Community Hospital
+    base_url: https://nbrhc.on.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://nbrhc.on.ca/about-nbrhc/senior-leadership-team/
+    notes: ''
+    status:
+
+  - FAC: '975'
+    name: MISSISSAUGA TRILLIUM HEALTH PARTNER
+    hospital_type: Large Community Hospital
+    base_url: https://www.thp.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.thp.ca/aboutus/Pages/Seniorleadership.aspx
+    notes: ''
+    status:
+
+  - FAC: '976'
+    name: TORONTO SINAI HEALTH SYSTEM
+    hospital_type: Teaching Hospital
+    base_url: https://www.sinaihealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.sinaihealth.ca/about-sinai-health/sinai-health-leadership
+    notes: ''
+    status:
+
+  - FAC: '977'
+    name: TERRACE BAY NORTH OF SUPERIOR HC
+    hospital_type: Small Hospital
+    base_url: https://www.nosh.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.nosh.ca/board-of-directors
+    notes: ''
+    status:
+
+  - FAC: '978'
+    name: KINGSTON KINGSTON HEALTH SCIENCES
+    hospital_type: Teaching Hospital
+    base_url: https://kingstonhsc.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://kingstonhsc.ca/about-khsc/senior-leadership-team
+    notes: ''
+    status:
+
+  - FAC: '979'
+    name: TORONTO SCARBOROUGH HEALTH NETWORK
+    hospital_type: Large Community Hospital
+    base_url: https://www.shn.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.shn.ca/about-us/hospital-leadership/
+    notes: ''
+    status:
+
+  - FAC: '980'
+    name: TORONTO UNITY HEALTH TORONTO
+    hospital_type: Teaching Hospital
+    base_url: https://unityhealth.to
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://unityhealth.to/about-unity-health/about-unity-health-toronto/leadership/
+    notes: ''
+    status:
+
+  - FAC: '981'
+    name: CHATHAM CHATHAM-KENT HEALTH ALLIANC
+    hospital_type: Large Community Hospital
+    base_url: https://www.ckha.on.ca
+    base_url_validated: no
+    robots_allowed: no
+    last_validated: '2025-11-28'
+    leadership_url: https://www.ckha.on.ca/senior-team/
+    notes: ''
+    status:
+
+  - FAC: '982'
+    name: Blanche River Health
+    hospital_type: Large Community Hospital
+    base_url: https://www.blancheriverhealth.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
+    notes: ''
+    status:
+
+  - FAC: '983'
+    name: HURON PERTH HEALTHCARE ALLIANCE
+    hospital_type: Large Community Hospital
+    base_url: https://www.hpha.ca
+    base_url_validated: yes
+    robots_allowed: yes
+    last_validated: '2025-11-28'
+    leadership_url: https://www.hpha.ca/ourorganization#accordion-38-2
+    notes: ''
+    status:
+

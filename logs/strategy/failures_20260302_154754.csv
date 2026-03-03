@@ -1,0 +1,2 @@
+"timestamp","fac","hospital_name","failure_type","error_message","url","context"
+"2026-03-02 15:49:45","596","Alliston Stevenson Memorial Hospital","no_pdf_found","Top candidate is HTML; HTML extraction not yet implemented","https://www.stevensonhospital.ca/strategic-plan",""
