@@ -139,36 +139,51 @@ log_info(sprintf("Hospitals to process: %d", length(hospitals)))
 # Scan an already-fetched HTML page for PDF links.
 # Scores each PDF link against role keywords and returns them sorted
 # best-first. Returns character(0) if no PDF links are found.
-.find_pdfs_on_page <- function(html_content, page_url) {
+.find_pdfs_on_page <- function(html_content, page_url, hospital, fac) {
   tryCatch({
     nodes  <- html_content |> html_elements("a[href]")
     hrefs  <- html_attr(nodes, "href")
     labels <- html_text2(nodes)
-
     if (length(hrefs) == 0) return(character(0))
-
-    # Resolve all hrefs to absolute URLs
+    
     urls <- map_chr(seq_along(hrefs), function(i) {
       href <- hrefs[i]
-      if (is.na(href) || nchar(trimws(href)) == 0)    return(NA_character_)
-      if (str_detect(href, "^#|^mailto:|^tel:"))       return(NA_character_)
-      if (str_detect(href, "^https?://"))              return(href)
+      if (is.na(href) || nchar(trimws(href)) == 0)   return(NA_character_)
+      if (str_detect(href, "^#|^mailto:|^tel:"))      return(NA_character_)
+      if (str_detect(href, "^https?://"))             return(href)
       parsed    <- httr2::url_parse(page_url)
       base_root <- sprintf("%s://%s", parsed$scheme, parsed$hostname)
       if (str_starts(href, "/")) return(paste0(base_root, href))
       base_dir <- str_remove(page_url, "[^/]+$")
       paste0(base_dir, href)
     })
-
-    is_pdf   <- str_detect(tolower(urls), "\\.pdf(\\?|$)") & !is.na(urls)
+    
+    valid  <- !is.na(urls)
+    urls   <- urls[valid]
+    labels <- labels[valid]
+    
+    # --- Pass 1: direct .pdf links (fast, no HTTP) ---
+    is_pdf   <- str_detect(tolower(urls), "\\.pdf(\\?|$)")
     pdf_urls <- urls[is_pdf]
     pdf_lbls <- labels[is_pdf]
-
-    if (length(pdf_urls) == 0) return(character(0))
-
-    # Score each PDF link so the most relevant rises to the top
-    scores <- map_int(seq_along(pdf_urls), function(i) {
-      haystack <- tolower(paste(pdf_urls[i], pdf_lbls[i], sep = " "))
+    
+    if (length(pdf_urls) > 0) {
+      scores <- map_int(seq_along(pdf_urls), function(i) {
+        haystack <- tolower(paste(pdf_urls[i], pdf_lbls[i], sep = " "))
+        t1 <- sum(map_int(STRATEGY_CONFIG$keywords_tier1, function(kw) {
+          if (str_detect(haystack, fixed(tolower(kw)))) 2L else 0L
+        }))
+        t2 <- sum(map_int(STRATEGY_CONFIG$keywords_tier2, function(kw) {
+          if (str_detect(haystack, fixed(tolower(kw)))) 1L else 0L
+        }))
+        t1 + t2
+      })
+      return(pdf_urls[order(-scores)])
+    }
+    
+    # --- Pass 2: no direct PDF links — follow promising hrefs via HEAD ---
+    scores_all <- map_int(seq_along(urls), function(i) {
+      haystack <- tolower(paste(urls[i], labels[i], sep = " "))
       t1 <- sum(map_int(STRATEGY_CONFIG$keywords_tier1, function(kw) {
         if (str_detect(haystack, fixed(tolower(kw)))) 2L else 0L
       }))
@@ -177,9 +192,29 @@ log_info(sprintf("Hospitals to process: %d", length(hospitals)))
       }))
       t1 + t2
     })
-
-    pdf_urls[order(-scores)]
-
+    
+    promising_idx <- which(scores_all >= 1)
+    promising_idx <- promising_idx[order(-scores_all[promising_idx])]
+    promising_idx <- head(promising_idx, 6)
+    
+    if (length(promising_idx) == 0) return(character(0))
+    
+    message(sprintf("[INFO] FAC %s: no direct PDF links — following %d promising link(s) via HEAD",
+                    fac, length(promising_idx)))
+    
+    resolved_pdfs <- map_chr(promising_idx, function(i) {
+      ct <- tryCatch(detect_url_content_type(urls[i]), error = function(e) "unknown")
+      if (ct == "pdf") {
+        message(sprintf("[INFO] FAC %s: redirect resolves to PDF — %s", fac, urls[i]))
+        urls[i]
+      } else {
+        NA_character_
+      }
+    })
+    
+    resolved_pdfs <- resolved_pdfs[!is.na(resolved_pdfs)]
+    if (length(resolved_pdfs) > 0) resolved_pdfs else character(0)
+    
   }, error = function(e) character(0))
 }
 
@@ -295,8 +330,7 @@ for (i in seq_along(hospitals)) {
     landing_result <- fetch_html(fac, best_url, hospital)
 
     if (landing_result$success) {
-      pdf_candidates <- .find_pdfs_on_page(landing_result$content, best_url)
-
+      pdf_candidates <- .find_pdfs_on_page(landing_result$content, best_url, hospital, fac)
       if (length(pdf_candidates) > 0) {
         pdf_url <- pdf_candidates[1]
         log_info(sprintf(

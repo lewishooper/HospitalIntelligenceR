@@ -1,0 +1,45 @@
+[2026-03-03 10:21:35] [INFO] Logger initialised | role: strategy | run_id: 20260303_102135
+[2026-03-03 10:21:35] [INFO] Strategy Phase 1 — locate & download | mode: facs | run_id: 20260303_102135
+[2026-03-03 10:21:35] [INFO] STEP 1: Loading hospital list from registry
+[2026-03-03 10:21:35] [INFO] Hospitals to process: 4
+[2026-03-03 10:21:35] [INFO] ============================================================
+[2026-03-03 10:21:35] [INFO] STEP 3: Beginning locate-and-download loop
+[2026-03-03 10:21:35] [INFO] ============================================================
+[2026-03-03 10:21:35] [INFO] --- Hospital 1/4: FAC 592 — NAPANEE LENNOX & ADDINGTON ---
+[2026-03-03 10:23:55] [INFO] FAC 592: best candidate — https://web.lacgh.napanee.on.ca/long-term-care/about-our-home-amenities (score: 1, is_pdf: FALSE)
+[2026-03-03 10:23:55] [INFO] FAC 592: top candidate is an HTML landing page — scanning for embedded PDF links: https://web.lacgh.napanee.on.ca/long-term-care/about-our-home-amenities
+[2026-03-03 10:23:57] [WARNING] FAC 592: could not fetch landing page — [38;5;232mHTTP 404 Not Found.[39m
+[2026-03-03 10:23:57] [ERROR] FAC 592 (NAPANEE LENNOX & ADDINGTON) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 10:23:57] [INFO] --- Hospital 2/4: FAC 593 — Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV. ---
+[2026-03-03 10:25:35] [INFO] FAC 593: best candidate — https://mhalliance.on.ca/about/strategic-plan (score: 5, is_pdf: FALSE)
+[2026-03-03 10:25:35] [INFO] FAC 593: top candidate is an HTML landing page — scanning for embedded PDF links: https://mhalliance.on.ca/about/strategic-plan
+[2026-03-03 10:25:39] [WARNING] FAC 593: landing page fetched but contains no PDF links: https://mhalliance.on.ca/about/strategic-plan
+[2026-03-03 10:25:39] [ERROR] FAC 593 (Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV.) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 10:25:39] [INFO] --- Hospital 3/4: FAC 644 — Cornwall Hospital  CORNWALL HOTEL DIEU ---
+[2026-03-03 10:26:53] [INFO] FAC 644: best candidate — https://www.cornwallhospital.ca/en/strategic-plan (score: 4, is_pdf: FALSE)
+[2026-03-03 10:26:53] [INFO] FAC 644: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.cornwallhospital.ca/en/strategic-plan
+[2026-03-03 10:26:55] [INFO] FAC 644: found 1 PDF link(s) on landing page — using top: https://www.cornwallhospital.ca/uploads/CCH%20Strategic%20Plan%202022-2027_Leading%20Innovative%20Transformation.pdf
+[2026-03-03 10:26:55] [INFO] FAC 644: downloading PDF to roles/strategy/outputs/pdfs/644_CORNWALL_HOSPITAL_CORNWALL_HOTEL_DIEU/644_20260303.pdf
+[2026-03-03 10:26:58] [INFO] FAC 644 (Cornwall Hospital  CORNWALL HOTEL DIEU) — SUCCESS | cost: $0.0000
+[2026-03-03 10:26:58] [INFO] --- Hospital 4/4: FAC 952 — Lakeridge Health ---
+[2026-03-03 10:27:54] [INFO] FAC 952: best candidate — https://www.lh.ca/about-us/our-future/strategic-plan (score: 6, is_pdf: FALSE)
+[2026-03-03 10:27:54] [INFO] FAC 952: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.lh.ca/about-us/our-future/strategic-plan
+[2026-03-03 10:27:57] [INFO] FAC 952: found 3 PDF link(s) on landing page — using top: https://www.lh.ca/media/w4znqtaf/lh-strat-plan-v11-final.pdf
+[2026-03-03 10:27:57] [INFO] FAC 952: downloading PDF to roles/strategy/outputs/pdfs/952_LAKERIDGE_HEALTH/952_20260303.pdf
+[2026-03-03 10:27:59] [INFO] FAC 952 (Lakeridge Health) — SUCCESS | cost: $0.0000
+[2026-03-03 10:27:59] [INFO] ============================================================
+[2026-03-03 10:27:59] [INFO] STEP 4: Run complete
+========================================================================
+  RUN SUMMARY — role: strategy | run_id: 20260303_102135
+========================================================================
+  Attempted : 4
+  Succeeded : 2
+  Failed    : 2
+  Skipped   : 0
+  Success%  : 50%
+  Total cost: $0.0000
+  Elapsed   : 6.4 minutes
+  Log file  : logs/strategy/run_20260303_102135.log
+  Failures  : logs/strategy/failures_20260303_102135.csv
+========================================================================
+[2026-03-03 10:27:59] [WARNING] Success rate 50.0% is below the 80% threshold — review failure log: logs/strategy/failures_20260303_102135.csv

@@ -1,0 +1,126 @@
+[2026-03-03 11:11:39] [INFO] Logger initialised | role: strategy | run_id: 20260303_111139
+[2026-03-03 11:11:39] [INFO] Strategy Phase 1 — locate & download | mode: facs | run_id: 20260303_111139
+[2026-03-03 11:11:39] [INFO] STEP 1: Loading hospital list from registry
+[2026-03-03 11:11:39] [INFO] Hospitals to process: 21
+[2026-03-03 11:11:39] [INFO] ============================================================
+[2026-03-03 11:11:39] [INFO] STEP 3: Beginning locate-and-download loop
+[2026-03-03 11:11:39] [INFO] ============================================================
+[2026-03-03 11:11:39] [INFO] --- Hospital 1/21: FAC 592 — NAPANEE LENNOX & ADDINGTON ---
+[2026-03-03 11:11:42] [INFO] FAC 592: best candidate — https://lacgh.napanee.on.ca/about/about-lacgh-mission-vision-strategy (score: 4, is_pdf: FALSE)
+[2026-03-03 11:11:42] [INFO] FAC 592: top candidate is an HTML landing page — scanning for embedded PDF links: https://lacgh.napanee.on.ca/about/about-lacgh-mission-vision-strategy
+[2026-03-03 11:11:44] [INFO] FAC 592: found 3 PDF link(s) on landing page — using top: https://lacgh.napanee.on.ca/wp-content/uploads/2025/08/LAH0004-Strat-Plan-Layout-and-Design-DIGITAL.pdf
+[2026-03-03 11:11:44] [INFO] FAC 592: downloading PDF to roles/strategy/outputs/pdfs/592_NAPANEE_LENNOX_ADDINGTON/592_20260303.pdf
+[2026-03-03 11:11:47] [INFO] FAC 592 (NAPANEE LENNOX & ADDINGTON) — SUCCESS | cost: $0.0000
+[2026-03-03 11:11:47] [INFO] --- Hospital 2/21: FAC 606 — BARRIE ROYAL VICTORIA REG HC ---
+[2026-03-03 11:12:02] [INFO] FAC 606: best candidate — https://www.rvh.on.ca/wp-content/uploads/2024/06/RVH-Strategic-Plan-DOWNLOADABLE.pdf (score: 4, is_pdf: TRUE)
+[2026-03-03 11:12:02] [INFO] FAC 606: downloading PDF to roles/strategy/outputs/pdfs/606_BARRIE_ROYAL_VICTORIA_REG_HC/606_20260303.pdf
+[2026-03-03 11:12:04] [INFO] FAC 606 (BARRIE ROYAL VICTORIA REG HC) — SUCCESS | cost: $0.0000
+[2026-03-03 11:12:04] [INFO] --- Hospital 3/21: FAC 647 — DRYDEN REGIONAL HEALTH CENTRE ---
+[2026-03-03 11:12:07] [INFO] FAC 647: best candidate — https://www.drhc.on.ca/wcm-docs/docs/about_section/drhc_stratplan_final.pdf (score: 5, is_pdf: TRUE)
+[2026-03-03 11:12:07] [INFO] FAC 647: downloading PDF to roles/strategy/outputs/pdfs/647_DRYDEN_REGIONAL_HEALTH_CENTRE/647_20260303.pdf
+[2026-03-03 11:12:10] [INFO] FAC 647 (DRYDEN REGIONAL HEALTH CENTRE) — SUCCESS | cost: $0.0000
+[2026-03-03 11:12:10] [INFO] --- Hospital 4/21: FAC 656 — WHCA Grove community hospital  ---
+[2026-03-03 11:13:12] [INFO] FAC 656: best candidate — https://gmch.whca.ca/about-us (score: 2, is_pdf: FALSE)
+[2026-03-03 11:13:12] [INFO] FAC 656: top candidate is an HTML landing page — scanning for embedded PDF links: https://gmch.whca.ca/about-us
+[2026-03-03 11:13:14] [INFO] FAC 656: found 2 PDF link(s) on landing page — using top: https://gmch.whca.ca/_files/ugd/1c8d43_fc9433c380d04d11aa8ad88007555bb5.pdf
+[2026-03-03 11:13:14] [INFO] FAC 656: downloading PDF to roles/strategy/outputs/pdfs/656_WHCA_GROVE_COMMUNITY_HOSPITAL/656_20260303.pdf
+[2026-03-03 11:13:16] [INFO] FAC 656 (WHCA Grove community hospital ) — SUCCESS | cost: $0.0000
+[2026-03-03 11:13:16] [INFO] --- Hospital 5/21: FAC 704 — Erie Shores Leamington ---
+[2026-03-03 11:14:24] [INFO] FAC 704: best candidate — https://erie.bluelemonmedia.com/uploads/AboutESHC/Multi-Year%20Accessibility%20Plan-2024.pdf (score: 2, is_pdf: TRUE)
+[2026-03-03 11:14:24] [INFO] FAC 704: downloading PDF to roles/strategy/outputs/pdfs/704_ERIE_SHORES_LEAMINGTON/704_20260303.pdf
+[2026-03-03 11:14:27] [INFO] FAC 704 (Erie Shores Leamington) — SUCCESS | cost: $0.0000
+[2026-03-03 11:14:27] [INFO] --- Hospital 6/21: FAC 723 — MATHESON BINGHAM MEMORIAL ---
+[2026-03-03 11:15:53] [INFO] FAC 723: best candidate — https://www.micsgroup.com/wp-content/uploads/2023/08/Strategic-Plan-2023-2026.pdf (score: 2, is_pdf: TRUE)
+[2026-03-03 11:15:53] [INFO] FAC 723: downloading PDF to roles/strategy/outputs/pdfs/723_MATHESON_BINGHAM_MEMORIAL/723_20260303.pdf
+[2026-03-03 11:15:56] [INFO] FAC 723 (MATHESON BINGHAM MEMORIAL) — SUCCESS | cost: $0.0000
+[2026-03-03 11:15:56] [INFO] --- Hospital 7/21: FAC 724 — MATTAWA GENERAL ---
+[2026-03-03 11:15:58] [INFO] FAC 724: best candidate — https://www.mattawahealth.ca/Mattawa-Hospital/Strategic-Plan (score: 4, is_pdf: FALSE)
+[2026-03-03 11:15:58] [INFO] FAC 724: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.mattawahealth.ca/Mattawa-Hospital/Strategic-Plan
+[2026-03-03 11:16:01] [WARNING] FAC 724: landing page fetched but contains no PDF links: https://www.mattawahealth.ca/Mattawa-Hospital/Strategic-Plan
+[2026-03-03 11:16:01] [ERROR] FAC 724 (MATTAWA GENERAL) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 11:16:01] [INFO] --- Hospital 8/21: FAC 739 — NIPIGON DISTRICT MEMORIAL ---
+[2026-03-03 11:16:04] [INFO] FAC 739: best candidate — https://www.ndmh.ca/care-2030-strategic-plan (score: 4, is_pdf: FALSE)
+[2026-03-03 11:16:04] [INFO] FAC 739: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.ndmh.ca/care-2030-strategic-plan
+[2026-03-03 11:16:06] [INFO] FAC 739: found 2 PDF link(s) on landing page — using top: https://www.ndmh.ca/upload/documents/2025-10-30-ndmh-strategic-plan-2030-launch.pdf
+[2026-03-03 11:16:06] [INFO] FAC 739: downloading PDF to roles/strategy/outputs/pdfs/739_NIPIGON_DISTRICT_MEMORIAL/739_20260303.pdf
+[2026-03-03 11:16:09] [INFO] FAC 739 (NIPIGON DISTRICT MEMORIAL) — SUCCESS | cost: $0.0000
+[2026-03-03 11:16:09] [INFO] --- Hospital 9/21: FAC 788 — RENFREW VICTORIA ---
+[2026-03-03 11:16:12] [INFO] FAC 788: best candidate — https://www.renfrewhosp.com/strategic (score: 5, is_pdf: FALSE)
+[2026-03-03 11:16:12] [INFO] FAC 788: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.renfrewhosp.com/strategic
+[2026-03-03 11:16:14] [INFO] FAC 788: found 1 PDF link(s) on landing page — using top: https://www.renfrewhosp.com/uploads/RVH%20Strategic%20Plan%202021-2026.pdf
+[2026-03-03 11:16:14] [INFO] FAC 788: downloading PDF to roles/strategy/outputs/pdfs/788_RENFREW_VICTORIA/788_20260303.pdf
+[2026-03-03 11:16:17] [INFO] FAC 788 (RENFREW VICTORIA) — SUCCESS | cost: $0.0000
+[2026-03-03 11:16:17] [INFO] --- Hospital 10/21: FAC 824 — Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL ---
+[2026-03-03 11:16:19] [INFO] FAC 824: best candidate — https://www.ruralroadshealthservices.ca/about/strategic-plan (score: 5, is_pdf: FALSE)
+[2026-03-03 11:16:19] [INFO] FAC 824: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.ruralroadshealthservices.ca/about/strategic-plan
+[2026-03-03 11:16:23] [WARNING] FAC 824: landing page fetched but contains no PDF links: https://www.ruralroadshealthservices.ca/about/strategic-plan
+[2026-03-03 11:16:23] [ERROR] FAC 824 (Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 11:16:23] [INFO] --- Hospital 11/21: FAC 854 — TORONTO SA GRACE ---
+[2026-03-03 11:16:34] [INFO] FAC 854: best candidate — https://www.torontograce.org/toronto-graces-strategic-plan-2024-2029 (score: 4, is_pdf: FALSE)
+[2026-03-03 11:16:34] [INFO] FAC 854: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.torontograce.org/toronto-graces-strategic-plan-2024-2029
+[2026-03-03 11:16:46] [INFO] FAC 854: found 1 PDF link(s) on landing page — using top: https://www.torontograce.org/wp-content/uploads/TGHC-Final-Strategic-Plan-2024-29.pdf
+[2026-03-03 11:16:46] [INFO] FAC 854: downloading PDF to roles/strategy/outputs/pdfs/854_TORONTO_SA_GRACE/854_20260303.pdf
+[2026-03-03 11:16:46] [ERROR] FAC 854 (TORONTO SA GRACE) — FAILURE | type: fetch_error | robots_disallowed
+[2026-03-03 11:16:46] [INFO] --- Hospital 12/21: FAC 900 — FORT FRANCES RIVERSIDE HEALTH CARE ---
+[2026-03-03 11:17:46] [INFO] FAC 900: best candidate — https://riversidehealthcare.ca/aboutus (score: 2, is_pdf: FALSE)
+[2026-03-03 11:17:46] [INFO] FAC 900: top candidate is an HTML landing page — scanning for embedded PDF links: https://riversidehealthcare.ca/aboutus
+[2026-03-03 11:17:50] [WARNING] FAC 900: landing page fetched but contains no PDF links: https://riversidehealthcare.ca/aboutus
+[2026-03-03 11:17:50] [ERROR] FAC 900 (FORT FRANCES RIVERSIDE HEALTH CARE) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 11:17:50] [INFO] --- Hospital 13/21: FAC 905 — OAK VALLEY HEALTH ---
+[2026-03-03 11:17:52] [INFO] FAC 905: best candidate — https://www.oakvalleyhealth.ca/about-us/2024-2029-strategic-plan (score: 5, is_pdf: FALSE)
+[2026-03-03 11:17:52] [INFO] FAC 905: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.oakvalleyhealth.ca/about-us/2024-2029-strategic-plan
+[2026-03-03 11:17:56] [WARNING] FAC 905: landing page fetched but contains no PDF links: https://www.oakvalleyhealth.ca/about-us/2024-2029-strategic-plan
+[2026-03-03 11:17:56] [ERROR] FAC 905 (OAK VALLEY HEALTH) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 11:17:56] [INFO] --- Hospital 14/21: FAC 907 — TIMMINS & DISTRICT GENERAL ---
+[2026-03-03 11:17:58] [INFO] FAC 907: best candidate — https://tadh.com/about-us/strategic-plan (score: 5, is_pdf: FALSE)
+[2026-03-03 11:17:58] [INFO] FAC 907: top candidate is an HTML landing page — scanning for embedded PDF links: https://tadh.com/about-us/strategic-plan
+[2026-03-03 11:18:02] [INFO] FAC 907: found 1 PDF link(s) on landing page — using top: https://tadh.com/wp-content/uploads/2024/08/2022-2027-strategic-plan.pdf
+[2026-03-03 11:18:02] [INFO] FAC 907: downloading PDF to roles/strategy/outputs/pdfs/907_TIMMINS_DISTRICT_GENERAL/907_20260303.pdf
+[2026-03-03 11:18:04] [ERROR] FAC 907 (TIMMINS & DISTRICT GENERAL) — FAILURE | type: fetch_error | pdf_too_large
+[2026-03-03 11:18:04] [INFO] --- Hospital 15/21: FAC 930 — WRHN-KITCHENER GRAND RIVER ---
+[2026-03-03 11:18:06] [ERROR] FAC 930 (WRHN-KITCHENER GRAND RIVER) — FAILURE | type: crawl_no_candidate | Crawler returned no scored candidates
+[2026-03-03 11:18:07] [INFO] --- Hospital 16/21: FAC 952 — Lakeridge Health ---
+[2026-03-03 11:18:14] [INFO] FAC 952: best candidate — https://www.lh.ca/about-us/our-future/strategic-plan (score: 6, is_pdf: FALSE)
+[2026-03-03 11:18:14] [INFO] FAC 952: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.lh.ca/about-us/our-future/strategic-plan
+[2026-03-03 11:18:16] [INFO] FAC 952: found 3 PDF link(s) on landing page — using top: https://www.lh.ca/media/w4znqtaf/lh-strat-plan-v11-final.pdf
+[2026-03-03 11:18:16] [INFO] FAC 952: downloading PDF to roles/strategy/outputs/pdfs/952_LAKERIDGE_HEALTH/952_20260303.pdf
+[2026-03-03 11:18:19] [INFO] FAC 952 (Lakeridge Health) — SUCCESS | cost: $0.0000
+[2026-03-03 11:18:19] [INFO] --- Hospital 17/21: FAC 955 — GREY BRUCE HEALTH SERVICES  Brightshores ---
+[2026-03-03 11:18:22] [INFO] FAC 955: best candidate — https://www.brightshores.ca/about-us/strategic-plan (score: 5, is_pdf: FALSE)
+[2026-03-03 11:18:22] [INFO] FAC 955: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.brightshores.ca/about-us/strategic-plan
+[2026-03-03 11:18:27] [INFO] FAC 955: found 1 PDF link(s) on landing page — using top: https://www.brightshores.ca/wp/wp-content/uploads/2021/04/GBHS-Strategic-Plan-2023_2025.pdf
+[2026-03-03 11:18:27] [INFO] FAC 955: downloading PDF to roles/strategy/outputs/pdfs/955_GREY_BRUCE_HEALTH_SERVICES_BRIGHTSHORES/955_20260303.pdf
+[2026-03-03 11:18:29] [INFO] FAC 955 (GREY BRUCE HEALTH SERVICES  Brightshores) — SUCCESS | cost: $0.0000
+[2026-03-03 11:18:29] [INFO] --- Hospital 18/21: FAC 958 — OTTAWA THE OTTAWA HOSPITAL ---
+[2026-03-03 11:18:31] [ERROR] FAC 958 (OTTAWA THE OTTAWA HOSPITAL) — FAILURE | type: crawl_no_candidate | Crawler returned no scored candidates
+[2026-03-03 11:18:32] [INFO] --- Hospital 19/21: FAC 961 — OTTAWA HEART INSTITUTE ---
+[2026-03-03 11:19:23] [INFO] FAC 961: best candidate — https://www.ottawaheart.ca/sites/default/files/legacy/uploads/documents/Researchers/oracle-strategic-directions-2018-24.pdf (score: 4, is_pdf: TRUE)
+[2026-03-03 11:19:23] [INFO] FAC 961: downloading PDF to roles/strategy/outputs/pdfs/961_OTTAWA_HEART_INSTITUTE/961_20260303.pdf
+[2026-03-03 11:19:26] [INFO] FAC 961 (OTTAWA HEART INSTITUTE) — SUCCESS | cost: $0.0000
+[2026-03-03 11:19:26] [INFO] --- Hospital 20/21: FAC 963 — MOUNT FOREST NORTH WELLINGTON HC ---
+[2026-03-03 11:20:23] [INFO] FAC 963: best candidate — https://gmch.whca.ca/about-us (score: 2, is_pdf: FALSE)
+[2026-03-03 11:20:23] [INFO] FAC 963: top candidate is an HTML landing page — scanning for embedded PDF links: https://gmch.whca.ca/about-us
+[2026-03-03 11:20:25] [INFO] FAC 963: found 2 PDF link(s) on landing page — using top: https://gmch.whca.ca/_files/ugd/1c8d43_fc9433c380d04d11aa8ad88007555bb5.pdf
+[2026-03-03 11:20:25] [INFO] FAC 963: downloading PDF to roles/strategy/outputs/pdfs/963_MOUNT_FOREST_NORTH_WELLINGTON_HC/963_20260303.pdf
+[2026-03-03 11:20:27] [INFO] FAC 963 (MOUNT FOREST NORTH WELLINGTON HC) — SUCCESS | cost: $0.0000
+[2026-03-03 11:20:27] [INFO] --- Hospital 21/21: FAC 979 — TORONTO SCARBOROUGH HEALTH NETWORK ---
+[2026-03-03 11:20:31] [INFO] FAC 979: best candidate — https://www.shn.ca/about-us/strategic-plan-2018-23 (score: 5, is_pdf: FALSE)
+[2026-03-03 11:20:31] [INFO] FAC 979: top candidate is an HTML landing page — scanning for embedded PDF links: https://www.shn.ca/about-us/strategic-plan-2018-23
+[2026-03-03 11:20:34] [WARNING] FAC 979: could not fetch landing page — [38;5;232mHTTP 404 Not Found.[39m
+[2026-03-03 11:20:34] [ERROR] FAC 979 (TORONTO SCARBOROUGH HEALTH NETWORK) — FAILURE | type: no_pdf_found | No PDF located on top candidate page or in crawl results
+[2026-03-03 11:20:34] [INFO] ============================================================
+[2026-03-03 11:20:34] [INFO] STEP 4: Run complete
+========================================================================
+  RUN SUMMARY — role: strategy | run_id: 20260303_111139
+========================================================================
+  Attempted : 21
+  Succeeded : 12
+  Failed    : 9
+  Skipped   : 0
+  Success%  : 57.1%
+  Total cost: $0.0000
+  Elapsed   : 8.9 minutes
+  Log file  : logs/strategy/run_20260303_111139.log
+  Failures  : logs/strategy/failures_20260303_111139.csv
+========================================================================
+[2026-03-03 11:20:34] [WARNING] Success rate 57.1% is below the 80% threshold — review failure log: logs/strategy/failures_20260303_111139.csv

@@ -24,7 +24,8 @@ CRAWLER_CONFIG <- list(
   max_depth       = 2,     # Maximum link-follow depth from seed URL
   min_score       = 1,     # Minimum score for a candidate to be returned
   score_tier1     = 2,     # Points awarded for a tier-1 keyword match
-  score_tier2     = 1      # Points awarded for a tier-2 keyword match
+  score_tier2     = 1,
+  early_exit_score = 4 
 )
 
 # --- Internal helpers ---
@@ -146,8 +147,9 @@ crawl <- function(fac,
     final_url <- str_remove(result$metadata$final_url %||% "", "/$")
     if (nchar(final_url) > 0 && !final_url %in% visited) {
       visited <<- c(visited, final_url)
+      
     }
-    
+   
     # Only count successful fetches against the budget
     pages_visited <<- pages_visited + 1L
     
@@ -171,6 +173,13 @@ crawl <- function(fac,
     keepers <- links[links$score >= CRAWLER_CONFIG$min_score, ]
     if (!include_pdfs) keepers <- keepers[!keepers$is_pdf, ]
     if (nrow(keepers) > 0) candidates <<- c(candidates, list(keepers))
+    # Early exit: stop crawling if we already have a high-confidence candidate
+    if (nrow(keepers) > 0 && max(keepers$score) >= CRAWLER_CONFIG$early_exit_score) {
+      message(sprintf("[INFO] FAC %s: early exit — found candidate scoring %d at depth %d",
+                      fac, max(keepers$score), depth))
+      pages_visited <<- max_pages
+      return(invisible(NULL))
+    }
     
     # Follow non-PDF links at next depth:
     # - exclude already-visited URLs
