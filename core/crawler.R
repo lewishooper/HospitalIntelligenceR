@@ -93,7 +93,7 @@ CRAWLER_CONFIG <- list(
   )
   
   df <- df[!is.na(df$url), ]
-  df$is_pdf <- str_detect(tolower(df$url), "\\.pdf(\\?|$)")
+  df$is_pdf <- str_detect(tolower(df$url), "\\.pdf(\\?|/|$)")
   df
 }
 

@@ -163,7 +163,8 @@ log_info(sprintf("Hospitals to process: %d", length(hospitals)))
     labels <- labels[valid]
     
     # --- Pass 1: direct .pdf links (fast, no HTTP) ---
-    is_pdf   <- str_detect(tolower(urls), "\\.pdf(\\?|$)")
+  
+    is_pdf   <- str_detect(tolower(urls), "\\.pdf(\\?|/|$)") & !is.na(urls)
     pdf_urls <- urls[is_pdf]
     pdf_lbls <- labels[is_pdf]
     
@@ -232,6 +233,23 @@ for (i in seq_along(hospitals)) {
   fac           <- as.character(hospital$FAC)
   hospital_name <- hospital$name
   seed_url      <- hospital$base_url
+  strategy_url  <- hospital$status$strategy$strategy_url
+  skip_crawl    <- FALSE
+  best_url      <- NULL
+  best_is_pdf   <- FALSE
+  
+  if (!is.null(strategy_url) && nchar(trimws(strategy_url %||% "")) > 0) {
+    if (str_detect(tolower(strategy_url), "\\.pdf(\\?|/|$)")) {
+      log_info(sprintf("FAC %s: strategy_url is a direct PDF — bypassing crawl: %s",
+                       fac, strategy_url))
+      best_url   <- strategy_url
+      best_is_pdf <- TRUE
+      skip_crawl  <- TRUE
+    } else {
+      log_info(sprintf("FAC %s: using strategy_url as crawl seed: %s", fac, strategy_url))
+      seed_url <- strategy_url
+    }
+  }
 
   log_info(sprintf("--- Hospital %d/%d: FAC %s — %s ---",
                    i, length(hospitals), fac, hospital_name))
@@ -245,65 +263,72 @@ for (i in seq_along(hospitals)) {
   # STEP 3a: Single crawl — results used for all downstream decisions.
   # top_candidate() is NOT called; it would re-run the crawl internally.
   # ------------------------------------------------------------------
-
-  candidates <- tryCatch(
-    crawl(
-      fac            = fac,
-      seed_url       = seed_url,
-      hospital       = hospital,
-      keywords_tier1 = STRATEGY_CONFIG$keywords_tier1,
-      keywords_tier2 = STRATEGY_CONFIG$keywords_tier2,
-      max_depth      = STRATEGY_CONFIG$max_depth,
-      max_pages      = STRATEGY_CONFIG$max_pages,
-      include_pdfs   = TRUE
-    ),
-    error = function(e) {
-      log_warning(sprintf("FAC %s: crawl() threw an error — %s", fac, conditionMessage(e)))
-      data.frame()
+  # ------------------------------------------------------------------
+  # STEP 3a: Single crawl — results used for all downstream decisions.
+  # Skipped when strategy_url is a direct PDF (skip_crawl == TRUE).
+  # ------------------------------------------------------------------
+  
+  if (!skip_crawl) {
+    
+    candidates <- tryCatch(
+      crawl(
+        fac            = fac,
+        seed_url       = seed_url,
+        hospital       = hospital,
+        keywords_tier1 = STRATEGY_CONFIG$keywords_tier1,
+        keywords_tier2 = STRATEGY_CONFIG$keywords_tier2,
+        max_depth      = STRATEGY_CONFIG$max_depth,
+        max_pages      = STRATEGY_CONFIG$max_pages,
+        include_pdfs   = TRUE
+      ),
+      error = function(e) {
+        log_warning(sprintf("FAC %s: crawl() threw an error — %s", fac, conditionMessage(e)))
+        data.frame()
+      }
+    )
+    
+    if (nrow(candidates) == 0) {
+      log_outcome(fac, hospital_name, "failure",
+                  failure_type  = "crawl_no_candidate",
+                  error_message = "Crawler returned no scored candidates",
+                  url           = seed_url)
+      update_hospital_status(fac, "strategy", list(
+        extraction_status = "crawl_failed",
+        needs_review      = TRUE
+      ))
+      next
     }
-  )
-
-  if (nrow(candidates) == 0) {
-    log_outcome(fac, hospital_name, "failure",
-                failure_type  = "crawl_no_candidate",
-                error_message = "Crawler returned no scored candidates",
-                url           = seed_url)
-    update_hospital_status(fac, "strategy", list(
-      extraction_status = "crawl_failed",
-      needs_review      = TRUE
-    ))
-    next
-  }
-
-  # ------------------------------------------------------------------
-  # STEP 3b: Select best candidate from crawl results.
-  # Prefer the highest-scoring PDF; fall back to highest-scoring HTML
-  # page (likely a landing page with an embedded PDF download link).
-  # ------------------------------------------------------------------
-
-  top_score <- candidates$score[1]
-  top_tier  <- candidates[candidates$score == top_score, ]
-
-  # Tiebreaker: prefer URLs where a tier-1 keyword word appears in the path
-  keyword_words <- tolower(unique(unlist(str_split(STRATEGY_CONFIG$keywords_tier1, "\\s+"))))
-  url_matches   <- map_lgl(top_tier$url, function(u) {
-    any(str_detect(tolower(u), fixed(keyword_words)))
-  })
-  if (any(url_matches)) top_tier <- top_tier[url_matches, ]
-
-  # Among remaining candidates, prefer PDF over HTML
-  if (any(top_tier$is_pdf)) {
-    best_row <- top_tier[top_tier$is_pdf, ][1, ]
-  } else {
-    best_row <- top_tier[1, ]
-  }
-
-  best_url    <- best_row$url
-  best_is_pdf <- isTRUE(best_row$is_pdf)
-
-  log_info(sprintf("FAC %s: best candidate — %s (score: %d, is_pdf: %s)",
-                   fac, best_url, best_row$score, best_is_pdf))
-
+    
+    # ------------------------------------------------------------------
+    # STEP 3b: Select best candidate from crawl results.
+    # Prefer the highest-scoring PDF; fall back to highest-scoring HTML
+    # page (likely a landing page with an embedded PDF download link).
+    # ------------------------------------------------------------------
+    
+    top_score <- candidates$score[1]
+    top_tier  <- candidates[candidates$score == top_score, ]
+    
+    # Tiebreaker: prefer URLs where a tier-1 keyword word appears in the path
+    keyword_words <- tolower(unique(unlist(str_split(STRATEGY_CONFIG$keywords_tier1, "\\s+"))))
+    url_matches   <- map_lgl(top_tier$url, function(u) {
+      any(str_detect(tolower(u), fixed(keyword_words)))
+    })
+    if (any(url_matches)) top_tier <- top_tier[url_matches, ]
+    
+    # Among remaining candidates, prefer PDF over HTML
+    if (any(top_tier$is_pdf)) {
+      best_row <- top_tier[top_tier$is_pdf, ][1, ]
+    } else {
+      best_row <- top_tier[1, ]
+    }
+    
+    best_url    <- best_row$url
+    best_is_pdf <- isTRUE(best_row$is_pdf)
+    
+    log_info(sprintf("FAC %s: best candidate — %s (score: %d, is_pdf: %s)",
+                     fac, best_url, best_row$score, best_is_pdf))
+    
+  } # end if (!skip_crawl)
   # ------------------------------------------------------------------
   # STEP 3c: Resolve the final PDF URL.
   #

@@ -1,0 +1,7 @@
+"timestamp","fac","hospital_name","failure_type","error_message","url","context"
+"2026-03-17 13:14:09","907","TIMMINS & DISTRICT GENERAL","fetch_error","pdf_too_large","https://tadh.com/wp-content/uploads/2024/08/2022-2027-strategic-plan.pdf",""
+"2026-03-17 13:14:24","958","OTTAWA THE OTTAWA HOSPITAL","crawl_no_candidate","Crawler returned no scored candidates","https://www.ottawahospital.on.ca",""
+"2026-03-17 13:15:45","983","HURON PERTH HEALTHCARE ALLIANCE","fetch_error","Failed to perform HTTP request.
+[1mCaused by error in `curl::curl_fetch_memory()`:[22m
+[33m![39m URL using bad/illegal format or missing URL:
+URL rejected: Malformed input to a URL function","https://www.hpha.ca/uploads/AboutHPHA/2020 Multi-Year Accessibility Plan_2023-08.pdf",""
