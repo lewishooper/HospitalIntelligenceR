@@ -330,17 +330,17 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      strategy_url: https://cmh.ca/about-cmh/strategic-plan-to-2030-and-beyond
-      content_url: https://cmh.ca/about-cmh/strategic-plan-to-2030-and-beyond
-      content_type: html
-      local_folder: 624_Campbellford_Memorial_Hospital
-      local_filename: Strategy_202512_624_HTML.pdf
+      strategy_url: https://cmh.ca/document/cmh_strategic_plan
+      content_url: https://cmh.ca/document/cmh_strategic_plan
+      content_type: pdf
+      local_folder: 624_CAMPBELLFORD_MEMORIAL_HOSPITAL
+      local_filename: 624_20260320.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: needs_review
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 5 pages.
         URL: https://strategicplan.cmh.ca | HTML page converted to PDF on 2025-12-07'
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2980,15 +2980,15 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://2030.sickkids.ca
-      content_type: pdf
+      content_url: https://www.sickkids.ca/en/news/archive/2020/sickkids-launches-new-five-year-strategic-plan
+      content_type: html
       local_folder: 837_TORONTO_HOSPITAL_FOR_SICK_CHILDREN
       local_filename: Strategy_202601_837.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3018,18 +3018,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-07'
+      last_search_date: '2026-03-20'
       content_url: https://runnymedehc.ca/newsroom/strategic-plan/
       content_type: pdf
       local_folder: 850_TORONTO_RUNNYMEDE_HC
       local_filename: Strategy_202512_850_HTML.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: crawl_failed
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
         URL: https://runnymedehc.ca/newsroom/strategic-plan/ | HTML page converted
         to PDF on 2025-12-07'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3108,14 +3108,14 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: https://www.tehn.ca/sites/default/files/2025-04/MGH_StrategicPlan_2025-2035.pdf
+      last_search_date: '2026-03-20'
+      content_url: https://www.tehn.ca/documents/document/strategic-plan-2025-2035
       content_type: pdf
-      local_folder: 858_Michael_Garron_TORONTO_EAST_GENERAL
-      local_filename: Strategy_202601_858.pdf
+      local_folder: 858_MICHAEL_GARRON_TORONTO_EAST_GENERAL
+      local_filename: 858_20260320.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
     foundational:
@@ -3426,20 +3426,20 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-08'
-      content_url: https://riversidehealthcare.ca/mission-vision-values
-      content_type: html_image
+      last_search_date: '2026-03-20'
+      content_url: https://riversidehealthcare.ca/aboutus
+      content_type: html
       local_folder: 900_FORT_FRANCES_RIVERSIDE_HEALTH_CARE
       local_filename: Strategy_202512_900_HTML.pdf
       last_extraction_date: ''
-      extraction_status: manual_override
+      extraction_status: needs_review
       manual_override: yes
       override_reason: no_pdf_exists
       override_notes: Strategic plan content is a JPEG image embedded in HTML — no
         extractable PDF exists on site
       override_set_date: '2026-03-17'
       review_date: '2027-01-01'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3709,19 +3709,19 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: ''
+      last_search_date: '2026-03-20'
       content_url: ''
       content_type: ''
       local_folder: ''
       local_filename: ''
       last_extraction_date: ''
-      extraction_status: manual_override
+      extraction_status: crawl_failed
       manual_override: yes
       override_reason: plan_not_yet_published
       override_notes: First strategic plan under development; expected 2027
       override_set_date: '2026-03-17'
       review_date: '2027-01-01'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3791,18 +3791,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual download
+      last_search_date: '2026-03-20'
+      content_url: https://www.bruyere.org/en/strategic-plan
       content_type: html
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: URL using bad/illegal format or missing URL:
         URL rejected: Malformed input to a URL function
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4149,14 +4149,14 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
+      last_search_date: '2026-03-20'
+      content_url: http://www.sbghc.on.ca/wp-content/uploads/2025/10/Strategic-Plan-2026-2030.pdf
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 946_KINCARDINE_SOUTH_BRUCE_GREY
+      local_filename: 946_20260320.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
@@ -4907,18 +4907,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://www.ontarioshores.ca/about-us
+      content_type: html
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5147,18 +5147,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://www.thp.ca/strategy/Pages/default.aspx
+      content_type: html
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5348,17 +5348,17 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-05'
-      content_url: https://unityhealth.to/wp-content/uploads/2023/03/UnityHealth-Strat-Plan.pdf
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://unityhealth.to/about-unity-health/strategy-and-performance
+      content_type: html
       local_folder: 980_TORONTO_UNITY_HEALTH_TORONTO
       local_filename: Strategy_202512_980.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: no
       override_reason: 'Found on page (depth-1): https://unityhealth.to/about-unity-health/strategic-plan/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending

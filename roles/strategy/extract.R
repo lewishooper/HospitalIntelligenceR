@@ -242,15 +242,26 @@ for (i in seq_along(hospitals)) {
     if (str_detect(tolower(strategy_url), "\\.pdf(\\?|/|$)")) {
       log_info(sprintf("FAC %s: strategy_url is a direct PDF — bypassing crawl: %s",
                        fac, strategy_url))
-      best_url   <- strategy_url
+      best_url    <- strategy_url
       best_is_pdf <- TRUE
       skip_crawl  <- TRUE
     } else {
-      log_info(sprintf("FAC %s: using strategy_url as crawl seed: %s", fac, strategy_url))
-      seed_url <- strategy_url
+      detected_type <- tryCatch(
+        detect_url_content_type(strategy_url),
+        error = function(e) "unknown"
+      )
+      if (detected_type == "pdf") {
+        log_info(sprintf("FAC %s: strategy_url confirmed PDF via HEAD — bypassing crawl: %s",
+                         fac, strategy_url))
+        best_url    <- strategy_url
+        best_is_pdf <- TRUE
+        skip_crawl  <- TRUE
+      } else {
+        log_info(sprintf("FAC %s: using strategy_url as crawl seed: %s", fac, strategy_url))
+        seed_url <- strategy_url
+      }
     }
   }
-
   log_info(sprintf("--- Hospital %d/%d: FAC %s — %s ---",
                    i, length(hospitals), fac, hospital_name))
 
