@@ -132,10 +132,18 @@ log_info(sprintf("Hospitals to process: %d", length(hospitals)))
 
 .make_local_path <- function(fac, hospital_name) {
   folder_name <- .make_folder_name(fac, hospital_name)
-  pdf_name    <- .make_pdf_filename(fac)
-  file.path(STRATEGY_CONFIG$output_root, folder_name, pdf_name)
+  folder_path <- file.path(STRATEGY_CONFIG$output_root, folder_name)
+  base_name   <- sprintf("%s_%s", fac, format(Sys.Date(), "%Y%m%d"))
+  
+  # Never overwrite an existing file — append _v2, _v3, etc. if needed
+  candidate <- file.path(folder_path, paste0(base_name, ".pdf"))
+  version   <- 2L
+  while (file.exists(candidate)) {
+    candidate <- file.path(folder_path, sprintf("%s_v%d.pdf", base_name, version))
+    version   <- version + 1L
+  }
+  candidate
 }
-
 # Scan an already-fetched HTML page for PDF links.
 # Scores each PDF link against role keywords and returns them sorted
 # best-first. Returns character(0) if no PDF links are found.
