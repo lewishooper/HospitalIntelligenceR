@@ -1290,13 +1290,13 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: none
+      content_url: https://www.hornepaynecommunityhospital.ca/_files/ugd/626158_a9e5de97dbfb4640bdf33c796f0feac3.pdf
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 682_HORNEPAYNE_COMMUNITY
+      local_filename: 682_20260320.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Timeout was reached [none]:
         Connection timed out after 10016 milliseconds
@@ -1330,18 +1330,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-07'
-      content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan/
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan
+      content_type: html
       local_folder: 684_Rural_Roads_Health_servcies_INGERSOLL_ALEXANDRA
       local_filename: Strategy_202512_684_HTML.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
         URL: https://www.ruralroadshealthservices.ca/about/strategic-plan/ | HTML
         page converted to PDF on 2025-12-07'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1532,16 +1532,16 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: ''
+      last_search_date: '2026-03-20'
       content_url: ''
       content_type: unavailable
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending
+      extraction_status: crawl_failed
       manual_override: no
       override_reason: ''
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1611,11 +1611,11 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-03'
+      last_search_date: '2026-03-20'
       content_url: https://erie.bluelemonmedia.com/uploads/AboutESHC/Multi-Year%20Accessibility%20Plan-2024.pdf
       content_type: pdf
       local_folder: 704_ERIE_SHORES_LEAMINGTON
-      local_filename: 704_20260303.pdf
+      local_filename: 704_20260320.pdf
       last_extraction_date: .na.character
       extraction_status: downloaded
       manual_override: no
@@ -1812,18 +1812,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: email sent
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://www.mh.on.ca/aboutus
+      content_type: html
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: URL using bad/illegal format or missing URL:
         URL rejected: Malformed input to a URL function
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1892,19 +1892,19 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: ''
-      content_type: ''
+      last_search_date: '2026-03-20'
+      content_url: https://www.mattawahealth.ca/Mattawa-Hospital/Strategic-Plan
+      content_type: html
       local_folder: ''
       local_filename: ''
       last_extraction_date: ''
-      extraction_status: manual_override
+      extraction_status: needs_review
       manual_override: yes
       override_reason: email_only
       override_notes: Plan available by emailing communications@mattawahealth.ca
       override_set_date: '2026-03-17'
       review_date: '2027-01-01'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2095,11 +2095,11 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-03'
+      last_search_date: '2026-03-20'
       content_url: https://www.ndmh.ca/upload/documents/2025-10-30-ndmh-strategic-plan-2030-launch.pdf
       content_type: pdf
       local_folder: 739_NIPIGON_DISTRICT_MEMORIAL
-      local_filename: 739_20260303.pdf
+      local_filename: 739_20260320.pdf
       last_extraction_date: .na.character
       extraction_status: downloaded
       manual_override: no
@@ -2253,18 +2253,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
+      last_search_date: '2026-03-20'
+      content_url: https://www.pemreghos.org/strategicplan/index.html
       content_type: html
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2610,18 +2610,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-07'
-      content_url: https://hgh.ca/about-hgh/strategic-plan/
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://hgh.ca/about-hgh/strategic-plan
+      content_type: html
       local_folder: 800_HAWKESBURY_DISTRICT_GENERAL
       local_filename: Strategy_202512_800_HTML.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
         URL: https://hgh.ca/about-hgh/strategic-plan/ | HTML page converted to PDF
         on 2025-12-07'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2864,6 +2864,11 @@ hospitals:
         override_set_date: '2026-03-17'
         review_date: '2027-01-01'
         needs_review: no
+      last_search_date: '2026-03-20'
+      content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan
+      content_type: html
+      extraction_status: needs_review
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2932,19 +2937,19 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-18'
+      last_search_date: '2026-03-20'
       strategy_url: https://www.baycrest.org/wp-content/uploads/2025/12/hospital-apotex-strategic-plan-final.pdf
-      content_url: manual_download
+      content_url: https://www.baycrest.org/wp-content/uploads/2025/12/hospital-apotex-strategic-plan-final.pdf
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 827_TORONTO_BAYCREST_CTR_GERIATRIC_CARE
+      local_filename: 827_20260320.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: crawl_failed
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2974,7 +2979,7 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
+      last_search_date: '2026-03-20'
       content_url: https://2030.sickkids.ca
       content_type: pdf
       local_folder: 837_TORONTO_HOSPITAL_FOR_SICK_CHILDREN
