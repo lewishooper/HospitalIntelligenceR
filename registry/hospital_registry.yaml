@@ -88,11 +88,11 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-02'
+      last_search_date: '2026-03-18'
       content_url: https://www.stevensonhospital.ca/uploads/Stevenson%20HSP-PDF-Final-Novideos.pdf
       content_type: pdf
       local_folder: 596_ALLISTON_STEVENSON_MEMORIAL_HOSPITAL
-      local_filename: 596_20260302.pdf
+      local_filename: 596_20260318.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
@@ -128,13 +128,13 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-03'
-      content_url: https://www.mrha.ca/uploads/Common/MHR%20Strategic%20Plan%20Draft%20V4%20January%202023.pdf
+      last_search_date: '2026-03-18'
+      content_url: https://www.mrha.ca/uploads/Strategic%20Plan/2026-2030%20Strategic%20Plan%20-%20Final.pdf
       content_type: pdf
       local_folder: 597_ALMONTE_GENERAL
-      local_filename: Strategy_202512_597.pdf
+      local_filename: 597_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.mrha.ca/strategicplan?t=1
         (confidence: high)'
@@ -208,11 +208,11 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-03'
+      last_search_date: '2026-03-18'
       content_url: https://www.rvh.on.ca/wp-content/uploads/2024/06/RVH-Strategic-Plan-DOWNLOADABLE.pdf
       content_type: pdf
       local_folder: 606_BARRIE_ROYAL_VICTORIA_REG_HC
-      local_filename: 606_20260303.pdf
+      local_filename: 606_20260318.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
@@ -288,18 +288,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-07'
-      content_url: https://strategicplan.cmh.ca/5-year-priorities/
+      last_search_date: '2026-03-20'
+      content_url: https://www.brockvillegeneralhospital.ca/who-we-are/strategic-plan
       content_type: html
       local_folder: 619_BROCKVILLE_GENERAL
       local_filename: Strategy_202512_619_HTML.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
         URL: https://www.brockvillegeneralhospital.ca/who-we-are/strategic-plan/ |
         HTML page converted to PDF on 2025-12-07'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -329,17 +329,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-07'
-      content_url: https://strategicplan.cmh.ca
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      strategy_url: https://cmh.ca/about-cmh/strategic-plan-to-2030-and-beyond
+      content_url: https://cmh.ca/about-cmh/strategic-plan-to-2030-and-beyond
+      content_type: html
       local_folder: 624_Campbellford_Memorial_Hospital
       local_filename: Strategy_202512_624_HTML.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 5 pages.
         URL: https://strategicplan.cmh.ca | HTML page converted to PDF on 2025-12-07'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -409,18 +410,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
+      last_search_date: '2026-03-20'
       content_url: none
       content_type: pdf
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: crawl_failed
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: Timeout was reached [none]:
         Connection timed out after 10017 milliseconds
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -450,14 +451,15 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
+      last_search_date: '2026-03-20'
+      strategy_url: https://strategicplan.nygh.on.ca/wp-content/uploads/2025/05/NYGH_StrategicPlan_2025_05_28_v24.pdf
+      content_url: https://strategicplan.nygh.on.ca/wp-content/uploads/2025/05/NYGH_StrategicPlan_2025_05_28_v24.pdf
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 632_NORTH_YORK_GENERAL_HOSPITAL
+      local_filename: 632_20260320.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
@@ -491,14 +493,14 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
+      last_search_date: '2026-03-18'
       content_url: https://www.micsgroup.com/wp-content/uploads/2023/08/Strategic-Plan-2023-2026.pdf
       content_type: pdf
       local_folder: 638_MICS_GROUP_COCHRANE_LADY_MINTO
-      local_filename: Strategy_202601_638.pdf
+      local_filename: 638_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
     foundational:
@@ -969,13 +971,13 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-03'
+      last_search_date: '2026-03-18'
       content_url: https://www.cmh.org/sites/default/files/2023-09/cmh%202022%20strategic%20plan.pdf
       content_type: pdf
-      local_folder: 661_Cambridge_Memorial_Hospital
-      local_filename: Strategy_202512_661.pdf
+      local_folder: 661_CAMBRIDGE_MEMORIAL_HOSPITAL
+      local_filename: 661_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.cmh.org/hospital#stratplan
         (confidence: high)'
@@ -1129,16 +1131,16 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: https://www.sjhcg.ca/wp-content/uploads/2024/12/SJHCG_StratPlanBooklet_Final-2020-2023.pdf
-      content_type: pdf
+      last_search_date: '2026-03-20'
+      content_url: https://www.sjhcg.ca/strategic-plan-2
+      content_type: html
       local_folder: 666_GUELPH_ST_JOSEPH_S_HEALTH_CENTRE
       local_filename: Strategy_202601_666.pdf
       last_extraction_date: .na.character
-      extraction_status: pending_extraction
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1168,14 +1170,15 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: https://sjhs.ca/wp-content/uploads/2023/12/SJHS-Strategic-Plan_Care-Redefined.-Teams-Reimagined.pdf
+      last_search_date: '2026-03-20'
+      strategy_url: https://sjhs.ca/wp-content/uploads/2025/10/St.-Joes-Shared-Strat-Plan-2025-30-Final-Reader-Spreads-September-29.pdf
+      content_url: https://sjhs.ca/wp-content/uploads/2025/10/St.-Joes-Shared-Strat-Plan-2025-30-Final-Reader-Spreads-September-29.pdf
       content_type: pdf
       local_folder: 674_HAMILTON_ST_JOSEPH_S
-      local_filename: Strategy_202601_674.pdf
+      local_filename: 674_20260320.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
     foundational:
@@ -1207,13 +1210,13 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-03'
+      last_search_date: '2026-03-18'
       content_url: https://www.hanoverhospital.on.ca/uploads/Common/Strategic%20Plan%20-%20Detailed%20Version.pdf
       content_type: pdf
       local_folder: 676_HANOVER_DISTRICT
-      local_filename: Strategy_202512_676.pdf
+      local_filename: 676_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Direct PDF link found (depth-2): https://www.hanoverhospital.on.ca/uploads/Common/Strategic%20Plan%20-%20Detailed%20Version.pdf
         (confidence: high)'
@@ -1286,7 +1289,7 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
+      last_search_date: '2026-03-20'
       content_url: none
       content_type: pdf
       local_folder: ''
@@ -1448,14 +1451,14 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
+      last_search_date: '2026-03-18'
+      content_url: https://providencecare.ca/wp-content/uploads/2025/06/StrategicPlan-New-Mission-and-Vision-Statements-Final-2025-28.pdf
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 695_KINGSTON_PROVIDENCE_CARE_HOSPITAL
+      local_filename: 695_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
@@ -1568,13 +1571,13 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2025-12-03'
+      last_search_date: '2026-03-18'
       content_url: https://www.mackenziehealth.ca/about-us/reports-performance-and-plans/strategic-plan/mackenzie-health-strategic-plan-2025-28-booklet-final.pdf
       content_type: pdf
       local_folder: 701_RICHMOND_HILL_MACKENZIE_HEALTH
-      local_filename: Strategy_202512_701.pdf
+      local_filename: 701_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.mackenziehealth.ca/about-us/reports-performance-and-plans/strategic-plan
         (confidence: high)'
@@ -1728,14 +1731,14 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
-      content_url: manual_download
+      last_search_date: '2026-03-18'
+      content_url: https://www.sjhc.london.on.ca/media/15149/download
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 714_LONDON_ST_JOSEPHS
+      local_filename: 714_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
@@ -2929,18 +2932,19 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-01-19'
+      last_search_date: '2026-03-18'
+      strategy_url: https://www.baycrest.org/wp-content/uploads/2025/12/hospital-apotex-strategic-plan-final.pdf
       content_url: manual_download
       content_type: pdf
       local_folder: ''
       local_filename: ''
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: crawl_failed
       manual_override: yes
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3500,17 +3504,17 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-17'
+      last_search_date: '2026-03-18'
       content_url: https://tadh.com/wp-content/uploads/2024/08/2022-2027-strategic-plan.pdf
       content_type: pdf
       local_folder: 907_TIMMINS_DISTRICT_GENERAL
-      local_filename: Strategy_202512_907.pdf
+      local_filename: 907_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://tadh.com/about-us/strategic-plan/
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4501,16 +4505,17 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-17'
+      last_search_date: '2026-03-18'
+      strategy_url: https://www.ottawahospital.on.ca/en/about-us/strategic-plan/
       content_url: https://www.ottawahospital.on.ca/en/documents/2023/02/strategic-plan-and-priorities-2023-and-beyond.pdf/
       content_type: pdf
       local_folder: 958_OTTAWA_THE_OTTAWA_HOSPITAL
       local_filename: Strategy_202601_958.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: crawl_failed
+      extraction_status: complete
       manual_override: yes
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      override_reason: robots_blocked_not_pursuing
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5457,17 +5462,17 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-17'
-      content_url: https://www.hpha.ca/uploads/AboutHPHA/2020 Multi-Year Accessibility
-        Plan_2023-08.pdf
+      last_search_date: '2026-03-18'
+      strategy_url: https://www.hpha.ca/uploads/Common/Commitments%20to%20our%20Communities%20-%20Web.pdf
+      content_url: https://www.hpha.ca/uploads/Common/Commitments%20to%20our%20Communities%20-%20Web.pdf
       content_type: pdf
       local_folder: 983_HURON_PERTH_HEALTHCARE_ALLIANCE
-      local_filename: Strategy_202601_983.pdf
+      local_filename: 983_20260318.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
-      manual_override: yes
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      extraction_status: downloaded
+      manual_override: no
+      override_reason: ''
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending

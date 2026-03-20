@@ -17,7 +17,7 @@ FETCHER_CONFIG <- list(
   max_retries         = 3,      # Retry attempts on failure
   retry_wait_seconds  = 5,      # Wait between retries
   timeout_seconds     = 30,     # Request timeout
-  max_pdf_size_bytes  = 50e6,   # 50MB PDF size cap
+  max_pdf_size_bytes  = 75e6,   # 50MB PDF size cap
   user_agent          = "HospitalIntelligenceR/1.0 (Research project; contact: your@email.com)"
 )
 
@@ -76,7 +76,7 @@ FETCHER_CONFIG <- list(
   ct_header <- tryCatch(resp_content_type(resp), error = function(e) "")
   if (str_detect(ct_header, "pdf")) return("pdf")
   if (str_detect(ct_header, "html")) return("html")
-  if (str_detect(url, "\\.pdf(\\?|$)")) return("pdf")
+  if (str_detect(url, "\\.pdf(\\?|/|$)")) return("pdf")
   "unknown"
 }
 

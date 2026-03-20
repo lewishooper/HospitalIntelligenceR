@@ -11,3 +11,6 @@ dev/
 .RData
 .Ruserdata
 # Sensitive Config (api keys)
+roles/*/outputs/
+logs/
+*.log
