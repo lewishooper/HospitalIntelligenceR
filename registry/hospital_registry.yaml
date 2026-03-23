@@ -532,18 +532,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-03-22'
       content_url: https://cgmh.on.ca/uploads/files/CGMH Strategic Plan 2025-2030.pdf
       content_type: pdf
-      local_folder: ''
-      local_filename: ''
+      local_folder: 640_COLLINGWOOD_GENERAL_AND_MARINE_HOSP
+      local_filename: 640_20260322.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1410,18 +1410,16 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-03-22'
       content_url: https://ldhc.com/About-Us/Strategic-Plan
-      content_type: html
+      content_type: pdf
       local_folder: 686_WAWA_LADY_DUNN_HC
-      local_filename: Strategy_202512_686_HTML.pdf
-      last_extraction_date: '2026-02-03'
-      extraction_status: needs_review
-      manual_override: no
-      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
-        URL: https://ldhc.com/About-Us/Strategic-Plan | HTML page converted to PDF
-        on 2025-12-07'
-      needs_review: yes
+      local_filename: 686_20260322.pdf
+      last_extraction_date: '2026-03-22'
+      extraction_status: downloaded
+      manual_override: yes
+      override_reason: No public PDF link — obtained via email request to hospital
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2761,7 +2759,7 @@ hospitals:
       override_reason: ''
       needs_review: no
 - FAC: '813'
-  name: HPHA STRATFORD GENERAL
+  name: STRATFORD GENERAL
   hospital_type: Large Community Hospital
   base_url: https://www.hpha.ca
   base_url_validated: yes
@@ -2771,17 +2769,17 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
-      content_url: https://www.hpha.ca/uploads/AboutHPHA/2020 Multi-Year Accessibility
-        Plan_2023-08.pdf
+      last_search_date: '2026-03-22'
+      strategy_url: https://www.hpha.ca/uploads/Common/Publications/2025-2028%20HPHA%20Commitments%20to%20our%20Communities%20-%20Website.pdf
+      content_url: https://www.hpha.ca/uploads/Common/Publications/2025-2028%20HPHA%20Commitments%20to%20our%20Communities%20-%20Website.pdf
       content_type: pdf
-      local_folder: 813_HPHA_STRATFORD_GENERAL
-      local_filename: Strategy_202601_813.pdf
+      local_folder: 813_STRATFORD_GENERAL
+      local_filename: 813_20260322.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3054,13 +3052,14 @@ hospitals:
   hospital_type: Small Hospital
   base_url: https://www.torontograce.org
   base_url_validated: yes
-  robots_allowed: yes
+  robots_allowed: no
   last_validated: '2025-11-28'
   leadership_url: https://www.torontograce.org/about-tghc/senior-management-team/
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-03-22'
+      strategy_url: https://www.torontograce.org/wp-content/uploads/TGHC-Final-Strategic-Plan-2024-29.pdf
       content_url: https://www.torontograce.org/wp-content/uploads/TGHC-Final-Strategic-Plan-2024-29.pdf
       content_type: pdf
       local_folder: 854_TORONTO_SA_GRACE
@@ -3912,18 +3911,16 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-03-22'
       content_url: https://www.lhsc.on.ca/strategicplan
       content_type: html
       local_folder: ''
       local_filename: ''
-      last_extraction_date: '2026-02-03'
-      extraction_status: needs_review
+      last_extraction_date: ''
+      extraction_status: html_only
       manual_override: yes
-      override_reason: |-
-        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
-        Could not resolve host: manual_download
-      needs_review: yes
+      override_reason: Plan published as HTML only — no PDF available on site; email request pending
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4551,17 +4548,17 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
-      content_url: https://hsnsudbury.ca/Portals/1/About_Us/Accountability/HSN_ECDM
-        Report_2024.06.28_final_508c.pdf?ver=aEP4iaL7gozhDfo9oVBuRQ%3d%3d
+      last_search_date: '2026-03-22'
+      strategy_url: https://hsnsudbury.ca/Portals/1/About_Us/hsn-tfy2030-booklet-digital-en%20revised.pdf?ver=dafHQTB2VYu1B6dXBvtaiA%3d%3d
+      content_url: https://hsnsudbury.ca/Portals/1/About_Us/hsn-tfy2030-booklet-digital-en%20revised.pdf?ver=dafHQTB2VYu1B6dXBvtaiA%3d%3d
       content_type: pdf
       local_folder: 959_SUDBURY_HEALTH_SCIENCES_NORTH
-      local_filename: Strategy_202601_959.pdf
+      local_filename: 959_20260322.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4909,18 +4906,16 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
-      content_url: https://www.ontarioshores.ca/about-us
-      content_type: html
-      local_folder: ''
-      local_filename: ''
-      last_extraction_date: .na.character
-      extraction_status: needs_review
+      last_search_date: '2026-03-22'
+      content_url: https://www.ontarioshores.ca/strategic-plan
+      content_type: pdf
+      local_folder: 969_ONTARIO_SHORES
+      local_filename: 969_20260322.pdf
+      last_extraction_date: '2026-03-22'
+      extraction_status: downloaded
       manual_override: yes
-      override_reason: |-
-        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
-        Could not resolve host: manual_download
-      needs_review: yes
+      override_reason: PDF download button not crawlable — manually downloaded from strategic plan page
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5149,18 +5144,19 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
-      content_url: https://www.thp.ca/strategy/Pages/default.aspx
-      content_type: html
-      local_folder: ''
-      local_filename: ''
+      last_search_date: '2026-03-22'
+      strategy_url: https://strategy.thp.ca/wp-content/uploads/2025/10/THP_StrategicPlan_Booklet.pdf
+      content_url: https://strategy.thp.ca/wp-content/uploads/2025/10/THP_StrategicPlan_Booklet.pdf
+      content_type: pdf
+      local_folder: 975_MISSISSAUGA_TRILLIUM_HEALTH_PARTNER
+      local_filename: 975_20260322.pdf
       last_extraction_date: .na.character
-      extraction_status: needs_review
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5223,13 +5219,14 @@ hospitals:
   hospital_type: Small Hospital
   base_url: https://www.nosh.ca
   base_url_validated: yes
-  robots_allowed: yes
+  robots_allowed: no
   last_validated: '2025-11-28'
   leadership_url: https://www.nosh.ca/board-of-directors
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-03-22'
+      strategy_url: https://www.nosh.ca/upload/documents/board-portal/board-manual/3.-strategic-plan/final_nosh-strat-plan-2028-2026.pdf
       content_url: https://www.nosh.ca/upload/documents/board-portal/board-manual/3.-strategic-plan/final_nosh-strat-plan-2028-2026.pdf
       content_type: pdf
       local_folder: 977_TERRACE_BAY_NORTH_OF_SUPERIOR_HC
@@ -5350,17 +5347,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
-      content_url: https://unityhealth.to/about-unity-health/strategy-and-performance
-      content_type: html
+      last_search_date: '2026-03-22'
+      strategy_url: https://unityhealth.to/wp-content/uploads/2023/03/UnityHealth-Strat-Plan.pdf
+      content_url: https://unityhealth.to/wp-content/uploads/2023/03/UnityHealth-Strat-Plan.pdf
+      content_type: pdf
       local_folder: 980_TORONTO_UNITY_HEALTH_TORONTO
-      local_filename: Strategy_202512_980.pdf
+      local_filename: 980_20260322.pdf
       last_extraction_date: .na.character
-      extraction_status: needs_review
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://unityhealth.to/about-unity-health/strategic-plan/
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5470,7 +5468,7 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      strategy_url: https://www.hpha.ca/uploads/Common/Commitments%20to%20our%20Communities%20-%20Web.pdf
+      strategy_url: https://www.hpha.ca/uploads/Common/Publications/2025-2028%20HPHA%20Commitments%20to%20our%20Communities%20-%20Website.pdf
       content_url: https://www.hpha.ca/uploads/Common/Commitments%20to%20our%20Communities%20-%20Web.pdf
       content_type: pdf
       local_folder: 983_HURON_PERTH_HEALTHCARE_ALLIANCE

@@ -107,6 +107,7 @@ check_fetch_permitted <- function(hospital, url) {
 #' @param hospital  Hospital entry from registry (used for robots check)
 #' @returns Structured result list; content is an rvest html_document on success
 fetch_html <- function(fac, url, hospital) {
+  url <- gsub(" ", "%20", url, fixed = TRUE)   # ← ADD THIS LINE
   # Robots check
   if (!check_fetch_permitted(hospital, url)) {
     message(sprintf("[WARN] FAC %s: robots.txt disallows %s — skipping", fac, url))
@@ -157,6 +158,7 @@ fetch_html <- function(fac, url, hospital) {
 #' @returns Structured result; content is extracted text string if extract_text = TRUE,
 #'          otherwise the local file path
 fetch_pdf <- function(fac, url, hospital, local_path, extract_text = TRUE) {
+  url <- gsub(" ", "%20", url, fixed = TRUE)   # ← ADD THIS LINE
   # Robots check
   if (!check_fetch_permitted(hospital, url)) {
     message(sprintf("[WARN] FAC %s: robots.txt disallows %s — skipping", fac, url))
@@ -241,6 +243,7 @@ fetch_pdf <- function(fac, url, hospital, local_path, extract_text = TRUE) {
 #' @param url   URL to probe
 #' @returns "pdf", "html", or "unknown"
 detect_url_content_type <- function(url) {
+  url <- gsub(" ", "%20", url, fixed = TRUE)   # ← ADD THIS LINE
   tryCatch({
     resp <- request(url) |>
       req_user_agent(FETCHER_CONFIG$user_agent) |>
