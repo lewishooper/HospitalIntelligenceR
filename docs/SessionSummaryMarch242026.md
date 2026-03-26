@@ -112,6 +112,11 @@ FAC 763 (Pembroke) confirmed that `.ashx` handler URLs with spaces work correctl
 
 ### Priority 1 — Final Re-run
 Run `TARGET_MODE = "all"` to confirm clean run with all registry fixes in place. Verify the run summary reflects the true success rate with no false failures from manually-completed hospitals.
+Ask about implications for manual downloads Will it make changes to the yaml
+
+Also ask about tallying how many and who are missing from the folders.
+e.g. if we look at the yaml can we determine how many are html and awaiting that input how many are robotxt blocked and how many have no plan at this point in time.
+
 
 ### Priority 2 — Phase 2 Design Decisions
 Three decisions to make before building:
