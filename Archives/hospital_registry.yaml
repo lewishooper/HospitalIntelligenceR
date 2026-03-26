@@ -20,10 +20,6 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
-      phase2_status: extracted
-      phase2_date: '2026-03-26'
-      phase2_quality: full
-      phase2_n_dirs: 3
     foundational:
       last_extraction_date: '2026-03-01'
       extraction_status: pending_extraction
@@ -861,12 +857,12 @@ hospitals:
       content_url: https://espanolaregionalhospital.ca/about-erhhc/vision-mission-and-values
       content_type: html
       local_folder: 654_ESPANOLA_GENERAL
-      local_filename: 654_20260301.pdf
+      local_filename: Strategy_202601_654.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1139,12 +1135,12 @@ hospitals:
       content_url: https://www.sjhcg.ca/strategic-plan-2
       content_type: html
       local_folder: 666_GUELPH_ST_JOSEPH_S_HEALTH_CENTRE
-      local_filename: 666_20260326.pdf
+      local_filename: Strategy_202601_666.pdf
       last_extraction_date: .na.character
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1334,13 +1330,13 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-26'
+      last_search_date: '2026-03-20'
       content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan
       content_type: html
-      local_folder: 684_RURAL_ROADS_HEALTH_SERVICES_INGERSOLL_ALEXANDRA
-      local_filename: 684_20260119.txt
+      local_folder: 684_Rural_Roads_Health_servcies_INGERSOLL_ALEXANDRA
+      local_filename: Strategy_202512_684_HTML.pdf
       last_extraction_date: .na.character
-      extraction_status: complete
+      extraction_status: html_only
       manual_override: yes
       override_notes: merged with Tilsonberge 824 to for Rural Roads Health Services
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
@@ -1541,7 +1537,7 @@ hospitals:
       local_folder: ''
       local_filename: ''
       last_extraction_date: ''
-      extraction_status: not_yet_published
+      extraction_status: crawl_failed
       manual_override: yes
       override_reason: plan_not_yet_published
       override_notes: First strategic plan under development; expected 2027
@@ -1824,11 +1820,11 @@ hospitals:
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: not_published
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Plan referenced in board minutes but not published on website
         — email request sent 2026-03-24
-      needs_review: no
+      needs_review: yes
       review_date: '2026-06-01'
     foundational:
       last_extraction_date: ''
@@ -2305,12 +2301,12 @@ hospitals:
       content_url: https://www.sfmhosp.com/download.php?dl=YToyOntzOjI6ImlkIjtzOjI6IjQxIjtzOjM6ImtleSI7aTozO30=
       content_type: html
       local_folder: 768_BARRYS_BAY_ST_FRANCIS
-      local_filename: 768_20260101.pdf
+      local_filename: Strategy_202601_768.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2346,11 +2342,11 @@ hospitals:
       local_folder: 771_PETERBOROUGH_REGIONAL_HEALTH_CENTRE
       local_filename: Strategy_202512_771.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
-      manual_override: yes
+      extraction_status: downloaded
+      manual_override: no
       override_reason: 'Found on page (depth-1): https://www.prhc.on.ca/about-us/strategic-planning/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2463,12 +2459,12 @@ hospitals:
       content_url: https://www.mhc.on.ca/index.php?preview=1&option=com_dropfiles&format=&task=frontfile.download&catid=12&id=67&Itemid=1000000000000
       content_type: html
       local_folder: 784_LITTLE_CURRENT_MANITOULIN
-      local_filename: 784_20260101.pdf
+      local_filename: Strategy_202601_784.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2857,18 +2853,24 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-26'
+      strategy:
+        last_search_date: '2026-03-24'
+        content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan
+        content_type: html
+        local_folder: 824_Rural_Roads_Health_Services_TILLSONBURG_DISTRICT_MEMORIAL
+        local_filename: ''
+        last_extraction_date: ''
+        extraction_status: html_only
+        manual_override: yes
+        override_reason: Tillsonburg now integrated into Rural Roads Health Services
+          — plan published as HTML/image only at shared site, no PDF available
+        override_notes: 'merged with 684 to form Rural Roads  '
+        needs_review: no
+      last_search_date: '2026-03-24'
       content_url: https://www.ruralroadshealthservices.ca/about/strategic-plan
       content_type: html
-      local_folder: 824_RURAL_ROADS_HEALTH_SERVICES_TILLSONBURG_DISTRICT_MEMORIAL
-      local_filename: 824_20260119.txt
-      last_extraction_date: ''
-      extraction_status: complete
-      manual_override: yes
-      override_reason: Tillsonburg now integrated into Rural Roads Health Services
-        — plan published as HTML/image only at shared site, no PDF available
-      override_notes: 'merged with 684 to form Rural Roads  '
-      needs_review: no
+      extraction_status: needs_review
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2902,12 +2904,12 @@ hospitals:
       content_url: http://www.lwdh.on.ca//lwdh.on.ca/index.php/resources/new-documents/strategic-plan/648-lwdh-strategic-plan-2024/file.html
       content_type: html
       local_folder: 826_KENORA_LAKE_OF_THE_WOODS
-      local_filename: 826_20260101.pdf
+      local_filename: Strategy_202601_826.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2983,12 +2985,12 @@ hospitals:
       content_url: https://www.sickkids.ca/en/news/archive/2020/sickkids-launches-new-five-year-strategic-plan
       content_type: html
       local_folder: 837_TORONTO_HOSPITAL_FOR_SICK_CHILDREN
-      local_filename: 837_20260101.pdf
+      local_filename: Strategy_202601_837.pdf
       last_extraction_date: .na.character
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3391,12 +3393,12 @@ hospitals:
       content_url: https://www.redlakehospital.ca/aboutus
       content_type: html
       local_folder: 896_RED_LAKE_MARG_COCHENOUR_MEMORIAL
-      local_filename: 896_20260101.pdf
+      local_filename: Strategy_202601_896.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3430,16 +3432,16 @@ hospitals:
       content_url: https://riversidehealthcare.ca/aboutus
       content_type: html
       local_folder: 900_FORT_FRANCES_RIVERSIDE_HEALTH_CARE
-      local_filename: 900_20260326.txt
+      local_filename: Strategy_202512_900_HTML.pdf
       last_extraction_date: ''
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: no_pdf_exists
       override_notes: Strategic plan content is a JPEG image embedded in HTML — no
         extractable PDF exists on site
       override_set_date: '2026-03-17'
       review_date: '2027-01-01'
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3549,12 +3551,12 @@ hospitals:
   notes: ''
   status:
     strategy:
-      extraction_status: no_plan
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Confirmed via direct contact — organization does not have a
         strategic plan
       override_set_date: '2026-03-24'
-      needs_review: no
+      needs_review: yes
       last_search_date: '2026-03-24'
       content_url: https://caseyhouse.ca/about-us/accountability/annual-reports
       content_type: html
@@ -3712,7 +3714,7 @@ hospitals:
       local_folder: ''
       local_filename: ''
       last_extraction_date: ''
-      extraction_status: not_yet_published
+      extraction_status: crawl_failed
       manual_override: yes
       override_reason: plan_not_yet_published
       override_notes: First strategic plan under development; expected 2027
@@ -3788,7 +3790,7 @@ hospitals:
   notes: ''
   status:
     strategy:
-      extraction_status: html_only
+      extraction_status: needs_review
       content_url: https://www.bruyere.org/en/strategic-plan
       content_type: html
       local_folder: ''
@@ -3796,7 +3798,7 @@ hospitals:
       last_extraction_date: '2026-03-24'
       manual_override: yes
       override_reason: Plan published as HTML only — no PDF available on site
-      needs_review: no
+      needs_review: yes
       strategy_url: ''
       last_search_date: '2026-03-24'
     foundational:
@@ -3991,12 +3993,12 @@ hospitals:
       content_url: https://hollandbloorview.ca/about-us/about-holland-bloorview/mission-vision-values/shape-future-holland-bloorview/strategic
       content_type: html
       local_folder: 939_TORONTO_HOLLAND_BLOORVIEW_KIDS
-      local_filename: 939_20260101.pdf
+      local_filename: Strategy_202601_939.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4030,12 +4032,12 @@ hospitals:
       content_url: https://nhh.ca/AboutNHH/AboutNHH/strategic-plan-framework
       content_type: html
       local_folder: 940_COBOURG_NORTHUMBERLAND_HILLS
-      local_filename: 940_20260101.pdf
+      local_filename: Strategy_202601_940.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4873,7 +4875,7 @@ hospitals:
       extraction_status: complete
       manual_override: yes
       override_reason: pdf exceeded cap size-- Downloaded and compressed manually
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5027,12 +5029,12 @@ hospitals:
       content_url: https://www.waypointcentre.ca/about-waypoint/accountability-reporting-policies
       content_type: html
       local_folder: 972_PENETANGUISHENE_WAYPOINT
-      local_filename: 972_20260101.pdf
+      local_filename: Strategy_202601_972.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      extraction_status: needs_review
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
     foundational:
       last_extraction_date: ''
       extraction_status: pending
