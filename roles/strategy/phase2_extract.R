@@ -120,13 +120,13 @@ if (TARGET_MODE == "facs") {
 is_eligible <- function(h) {
   role_data  <- h$status$strategy
   if (is.null(role_data)) return(FALSE)
-
+  
   has_file   <- !is.null(role_data$local_filename) &&
-                nchar(trimws(as.character(role_data$local_filename))) > 0
-
+    nchar(trimws(as.character(role_data$local_filename))) > 0
+  
   is_html    <- !is.null(role_data$extraction_status) &&
-                identical(as.character(role_data$extraction_status), "html_only")
-
+    identical(as.character(role_data$extraction_status), "html_only")
+  
   has_file || is_html
 }
 
@@ -154,17 +154,17 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
 .read_content <- function(hospital) {
   role_data <- hospital$status$strategy
   fac       <- as.character(hospital$FAC)
-
+  
   # --- html_only path ---
   if (!is.null(role_data$extraction_status) &&
       identical(as.character(role_data$extraction_status), "html_only")) {
-
+    
     content_url <- role_data$content_url
     if (is.null(content_url) || nchar(trimws(content_url)) == 0) {
       return(list(text = NULL, source_type = "html",
                   error = "html_only but content_url is empty"))
     }
-
+    
     log_info(sprintf("FAC %s: fetching HTML from %s", fac, content_url))
     html_result <- tryCatch({
       page <- read_html(content_url)
@@ -179,25 +179,25 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
     })
     return(html_result)
   }
-
+  
   # --- File-based path ---
   local_folder   <- role_data$local_folder
   local_filename <- role_data$local_filename
-
+  
   if (is.null(local_filename) || nchar(trimws(local_filename)) == 0) {
     return(list(text = NULL, source_type = NA_character_,
                 error = "local_filename is empty"))
   }
-
+  
   file_path <- file.path(STRATEGY_CONFIG$output_root, local_folder, local_filename)
-
+  
   if (!file.exists(file_path)) {
     return(list(text = NULL, source_type = NA_character_,
                 error = sprintf("File not found on disk: %s", file_path)))
   }
-
+  
   ext <- tolower(tools::file_ext(local_filename))
-
+  
   if (ext == "pdf") {
     text <- tryCatch({
       pages <- pdf_text(file_path)
@@ -209,7 +209,7 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
     if (is.list(text)) return(text)   # caught an error above
     return(list(text = text, source_type = "pdf", error = NULL))
   }
-
+  
   if (ext %in% c("txt", "csv")) {
     text <- tryCatch({
       paste(readLines(file_path, warn = FALSE), collapse = "\n")
@@ -220,7 +220,7 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
     if (is.list(text)) return(text)
     return(list(text = text, source_type = "txt", error = NULL))
   }
-
+  
   list(text = NULL, source_type = ext,
        error = sprintf("Unrecognised file extension: %s", ext))
 }
@@ -250,7 +250,7 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
     "Extract the strategic plan information from the following document:\n\n",
     text
   )
-
+  
   tryCatch({
     result <- call_claude(
       user_message  = user_message,
@@ -280,14 +280,14 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
   if (is.null(response_text) || nchar(trimws(response_text)) == 0) {
     return(list(parsed = NULL, error = "Empty response from Claude API"))
   }
-
+  
   # Strip any accidental markdown fences Claude may have added
   clean <- response_text |>
     str_remove("^```json\\s*") |>
     str_remove("^```\\s*")     |>
     str_remove("\\s*```$")     |>
     trimws()
-
+  
   tryCatch({
     parsed <- fromJSON(clean, simplifyVector = FALSE)
     list(parsed = parsed, error = NULL)
@@ -306,25 +306,25 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
 # -----------------------------------------------------------------------------
 
 .build_rows <- function(parsed, fac, capture_date, source_type) {
-
+  
   # Plan-level fields (repeat per row)
   plan_level <- list(
-    fac                      = as.character(fac),
+    fac                         = as.character(fac),
     hospital_name_self_reported = .safe_str(parsed$hospital_name_self_reported),
-    plan_period_start        = .safe_str(parsed$plan_period_start),
-    plan_period_end          = .safe_str(parsed$plan_period_end),
-    vision                   = .safe_str(parsed$vision),
-    mission                  = .safe_str(parsed$mission),
-    values                   = .safe_str(parsed$values),
-    purpose                  = .safe_str(parsed$purpose),
-    extraction_quality       = .safe_str(parsed$extraction_quality),
-    extraction_notes         = .safe_str(parsed$extraction_notes),
-    source_type              = as.character(source_type),
-    extraction_date          = as.character(capture_date)
+    plan_period_start           = .safe_str(parsed$plan_period_start),
+    plan_period_end             = .safe_str(parsed$plan_period_end),
+    vision                      = .safe_str(parsed$vision),
+    mission                     = .safe_str(parsed$mission),
+    values                      = .safe_str(parsed$values),
+    purpose                     = .safe_str(parsed$purpose),
+    extraction_quality          = .safe_str(parsed$extraction_quality),
+    extraction_notes            = .safe_str(parsed$extraction_notes),
+    source_type                 = as.character(source_type),
+    extraction_date             = as.character(capture_date)
   )
-
+  
   directions <- parsed$directions
-
+  
   # If no directions, return a single summary row with no direction fields
   if (is.null(directions) || length(directions) == 0) {
     return(as.data.frame(c(plan_level, list(
@@ -335,7 +335,7 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
       key_actions           = NA_character_
     )), stringsAsFactors = FALSE))
   }
-
+  
   # One row per direction
   rows <- map(directions, function(d) {
     as.data.frame(c(plan_level, list(
@@ -346,7 +346,7 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
       key_actions           = .safe_str(d$key_actions)
     )), stringsAsFactors = FALSE)
   })
-
+  
   bind_rows(rows)
 }
 
@@ -359,6 +359,36 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
 .safe_int <- function(x) {
   if (is.null(x) || length(x) == 0) return(NA_integer_)
   suppressWarnings(as.integer(x[[1]]))
+}
+
+
+# -----------------------------------------------------------------------------
+# .build_thin_row(fac, source_type, capture_date, notes)
+# Constructs a single-row data frame with all fields NA and
+# extraction_quality = "thin". Used when text is too short to send to the API.
+# -----------------------------------------------------------------------------
+
+.build_thin_row <- function(fac, source_type, capture_date,
+                            notes = NA_character_) {
+  as.data.frame(list(
+    fac                         = as.character(fac),
+    hospital_name_self_reported = NA_character_,
+    plan_period_start           = NA_character_,
+    plan_period_end             = NA_character_,
+    vision                      = NA_character_,
+    mission                     = NA_character_,
+    values                      = NA_character_,
+    purpose                     = NA_character_,
+    extraction_quality          = "thin",
+    extraction_notes            = as.character(notes),
+    source_type                 = as.character(source_type),
+    extraction_date             = as.character(capture_date),
+    direction_number            = NA_integer_,
+    direction_name              = NA_character_,
+    direction_type              = NA_character_,
+    direction_description       = NA_character_,
+    key_actions                 = NA_character_
+  ), stringsAsFactors = FALSE)
 }
 
 
@@ -391,12 +421,12 @@ log_info("STEP 3: Processing hospitals")
 all_rows <- list()
 
 for (i in seq_along(hospitals)) {
-
+  
   hospital      <- hospitals[[i]]
   fac           <- as.character(hospital$FAC)
   hospital_name <- as.character(hospital$name)
   role_data     <- hospital$status$strategy
-
+  
   # Derive folder name for output — use local_folder from registry if available,
   # else fall back to FAC + sanitised name
   local_folder <- role_data$local_folder
@@ -404,17 +434,17 @@ for (i in seq_along(hospitals)) {
     local_folder <- sprintf("%s_%s", fac,
                             toupper(str_replace_all(hospital_name, "[^A-Z0-9a-z]+", "_")))
   }
-
+  
   log_info(sprintf("--- Hospital %d/%d: FAC %s — %s ---",
                    i, length(hospitals), fac, hospital_name))
-
-
+  
+  
   # ------------------------------------------------------------------
   # STEP 3a: Read document content
   # ------------------------------------------------------------------
-
+  
   content_result <- .read_content(hospital)
-
+  
   if (!is.null(content_result$error)) {
     log_outcome(fac, hospital_name, "failure",
                 failure_type  = "content_read_error",
@@ -425,32 +455,50 @@ for (i in seq_along(hospitals)) {
     ))
     next
   }
-
+  
   if (!.is_text_usable(content_result$text)) {
     log_warning(sprintf(
-      "FAC %s: extracted text is empty or too short — PDF may be image-based. Logging as thin.",
-      fac
+      "FAC %s: text too short or empty — writing thin result without API call", fac
     ))
-    # Don't skip — pass to Claude anyway; it will return extraction_quality = "thin"
-    # and we log it. Fine-tuning pass can handle image-mode retry.
-    log_warning(sprintf("FAC %s: proceeding with thin text — will flag in output", fac))
+    thin_df <- .build_thin_row(
+      fac         = fac,
+      source_type = content_result$source_type,
+      capture_date = Sys.Date(),
+      notes       = "Text too short or empty — skipped API call"
+    )
+    tryCatch(
+      .write_hospital_csv(thin_df, fac, local_folder),
+      error = function(e) log_warning(sprintf(
+        "FAC %s: failed to write thin CSV — %s", fac, conditionMessage(e)))
+    )
+    update_hospital_status(fac, "strategy", list(
+      phase2_status  = "extracted",
+      phase2_date    = as.character(Sys.Date()),
+      phase2_quality = "thin",
+      phase2_n_dirs  = 0L,
+      needs_review   = TRUE
+    ))
+    all_rows[[length(all_rows) + 1]] <- thin_df
+    log_outcome(fac, hospital_name, "success",
+                context = "quality: thin | skipped API — text too short")
+    next
   }
-
+  
   source_type <- content_result$source_type
   text        <- content_result$text %||% ""
-
+  
   log_info(sprintf("FAC %s: content read (%s) — %d characters",
                    fac, source_type, nchar(text)))
-
-
+  
+  
   # ------------------------------------------------------------------
   # STEP 3b: Call Claude API
   # ------------------------------------------------------------------
-
+  
   log_info(sprintf("FAC %s: calling Claude API", fac))
-
+  
   api_result <- .call_extraction_api(text, fac)
-
+  
   if (!is.null(api_result$error)) {
     log_outcome(fac, hospital_name, "failure",
                 failure_type  = "api_error",
@@ -461,20 +509,20 @@ for (i in seq_along(hospitals)) {
     ))
     next
   }
-
+  
   log_info(sprintf("FAC %s: API call complete — %d input tokens, %d output tokens, $%.4f",
                    fac,
                    api_result$input_tokens,
                    api_result$output_tokens,
                    api_result$cost))
-
-
+  
+  
   # ------------------------------------------------------------------
   # STEP 3c: Parse JSON response
   # ------------------------------------------------------------------
-
+  
   parse_result <- .parse_response(api_result$response_text, fac)
-
+  
   if (!is.null(parse_result$error)) {
     log_outcome(fac, hospital_name, "failure",
                 cost          = api_result$cost,
@@ -486,21 +534,21 @@ for (i in seq_along(hospitals)) {
     ))
     next
   }
-
+  
   parsed <- parse_result$parsed
-
-
+  
+  
   # ------------------------------------------------------------------
   # STEP 3d: Build long-format data frame
   # ------------------------------------------------------------------
-
+  
   df <- tryCatch({
     .build_rows(parsed, fac, Sys.Date(), source_type)
   }, error = function(e) {
     log_warning(sprintf("FAC %s: .build_rows() error — %s", fac, conditionMessage(e)))
     NULL
   })
-
+  
   if (is.null(df) || nrow(df) == 0) {
     log_outcome(fac, hospital_name, "failure",
                 cost          = api_result$cost,
@@ -512,12 +560,12 @@ for (i in seq_along(hospitals)) {
     ))
     next
   }
-
-
+  
+  
   # ------------------------------------------------------------------
   # STEP 3e: Write per-hospital CSV
   # ------------------------------------------------------------------
-
+  
   out_path <- tryCatch(
     .write_hospital_csv(df, fac, local_folder),
     error = function(e) {
@@ -525,7 +573,7 @@ for (i in seq_along(hospitals)) {
       NULL
     }
   )
-
+  
   if (is.null(out_path)) {
     log_outcome(fac, hospital_name, "failure",
                 cost          = api_result$cost,
@@ -533,15 +581,15 @@ for (i in seq_along(hospitals)) {
                 error_message = "Could not write per-hospital CSV")
     next
   }
-
-
+  
+  
   # ------------------------------------------------------------------
   # STEP 3f: Update registry and log success
   # ------------------------------------------------------------------
-
+  
   quality <- .safe_str(parsed$extraction_quality)
   n_dirs  <- if (!is.null(parsed$directions)) length(parsed$directions) else 0L
-
+  
   update_hospital_status(fac, "strategy", list(
     phase2_status    = "extracted",
     phase2_date      = as.character(Sys.Date()),
@@ -549,16 +597,16 @@ for (i in seq_along(hospitals)) {
     phase2_n_dirs    = n_dirs,
     needs_review     = identical(quality, "thin")
   ))
-
+  
   all_rows[[length(all_rows) + 1]] <- df
-
+  
   log_outcome(
     fac           = fac,
     hospital_name = hospital_name,
     outcome       = "success",
     cost          = api_result$cost,
     context       = sprintf("quality: %s | directions: %d | file: %s",
-                             quality, n_dirs, basename(out_path))
+                            quality, n_dirs, basename(out_path))
   )
 }
 
@@ -573,20 +621,24 @@ log_info("STEP 4: Assembling strategy_master.csv")
 if (length(all_rows) > 0) {
   master_df   <- bind_rows(all_rows)
   master_path <- file.path(extraction_root, "strategy_master.csv")
-
-  # If a master already exists, append new rows (union on fac + direction_number)
+  
+  # If a master already exists, merge — replace rows for re-processed FACs
   if (file.exists(master_path)) {
-    existing    <- read.csv(master_path, stringsAsFactors = FALSE)
+    # Read all columns as character to avoid type-inference mismatches,
+    # then restore direction_number to integer before binding
+    existing <- read.csv(master_path, stringsAsFactors = FALSE,
+                         colClasses = "character")
+    existing$direction_number <- suppressWarnings(as.integer(existing$direction_number))
     # Remove old rows for FACs we just re-processed
     processed_facs <- unique(master_df$fac)
-    existing    <- existing[!existing$fac %in% processed_facs, ]
-    master_df   <- bind_rows(existing, master_df)
+    existing       <- existing[!existing$fac %in% processed_facs, ]
+    master_df      <- bind_rows(existing, master_df)
     log_info(sprintf(
       "Merged with existing master: %d existing rows retained, %d new rows added",
       nrow(existing), nrow(bind_rows(all_rows))
     ))
   }
-
+  
   master_df <- arrange(master_df, fac, direction_number)
   write.csv(master_df, master_path, row.names = FALSE)
   log_info(sprintf("strategy_master.csv written: %d rows, %d hospitals — %s",

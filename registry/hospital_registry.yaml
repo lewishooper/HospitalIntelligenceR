@@ -21,7 +21,7 @@ hospitals:
       override_reason: Downloaded from manually provided URL
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-26'
+      phase2_date: '2026-03-28'
       phase2_quality: full
       phase2_n_dirs: 3
     foundational:
@@ -63,6 +63,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -103,6 +107,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.stevensonhospital.ca/strategic-plan
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -143,6 +151,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.mrha.ca/strategicplan?t=1
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -183,6 +195,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.arnpriorregionalhealth.ca/about-us/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -223,6 +239,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.rvh.on.ca/wp-content/uploads/2024/06/RVH-Strategic-Plan-DOWNLOADABLE.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -263,6 +283,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.nshn.care/strategicplan
         (confidence: high) | HTML page converted to PDF on 2025-12-07'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -294,16 +318,20 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://www.brockvillegeneralhospital.ca/who-we-are/strategic-plan
-      content_type: html
+      content_type: txt
       local_folder: 619_BROCKVILLE_GENERAL
-      local_filename: Strategy_202512_619_HTML.pdf
+      local_filename: Strategy_202512_619_Manual.txt
       last_extraction_date: .na.character
-      extraction_status: needs_review
+      extraction_status: complete
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
         URL: https://www.brockvillegeneralhospital.ca/who-we-are/strategic-plan/ |
         HTML page converted to PDF on 2025-12-07'
-      needs_review: yes
+      needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -345,6 +373,10 @@ hospitals:
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 5 pages.
         URL: https://strategicplan.cmh.ca | HTML page converted to PDF on 2025-12-07'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -385,6 +417,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.mrha.ca/strategicplan?t=1
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -426,6 +462,10 @@ hospitals:
       content_type: pdf
       local_folder: 627_CHAPLEAU_SER_DE_SANT_DE_CHAPLEAU
       local_filename: 627_20260324.pdf
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -468,6 +508,10 @@ hospitals:
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 10
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -507,6 +551,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -548,6 +596,10 @@ hospitals:
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -588,6 +640,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.cornwallhospital.ca/en/strategic-plan
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -628,6 +684,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.drdh.org/uploads/Common/2023-2027-DRDH%20Strategic%20Plan.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -668,6 +728,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.drhc.on.ca/strategic-plan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -707,7 +771,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.hwmh.ca/about-us/strategic-plan/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -747,7 +815,11 @@ hospitals:
       manual_override: no
       override_reason: 'Direct PDF link found (depth-2): https://sjghel.ca/wp-content/uploads/2022/11/SJGHEL-Strategic-Plan.pdf
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -788,6 +860,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.theroyal.ca/strategic-plan/
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -828,6 +904,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -867,6 +947,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 9
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -907,6 +991,10 @@ hospitals:
       override_reason: 'Found on page (depth-2): https://www.huronhealthsystem.ca/strategic-plan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -945,7 +1033,11 @@ hospitals:
       extraction_status: downloaded
       manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -986,6 +1078,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.cmh.org/hospital#stratplan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1026,6 +1122,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.geraldtondh.com/strategic-plan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1066,6 +1166,10 @@ hospitals:
       override_reason: 'Found on page (depth-2): https://www.huronhealthsystem.ca/strategic-plan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1106,6 +1210,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.gghorg.ca/achieving-our-goals/strategic-plan-2022-2027/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1144,7 +1252,11 @@ hospitals:
       extraction_status: complete
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1185,6 +1297,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1225,6 +1341,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.hanoverhospital.on.ca/uploads/Common/Strategic%20Plan%20-%20Detailed%20Version.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1264,6 +1384,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1304,7 +1428,11 @@ hospitals:
       override_reason: |-
         Manual PDF URL provided but download failed: Timeout was reached [none]:
         Connection timed out after 10016 milliseconds
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1347,6 +1475,10 @@ hospitals:
         URL: https://www.ruralroadshealthservices.ca/about/strategic-plan/ | HTML
         page converted to PDF on 2025-12-07'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1386,6 +1518,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1425,6 +1561,10 @@ hospitals:
       manual_override: yes
       override_reason: No public PDF link — obtained via email request to hospital
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1466,6 +1606,10 @@ hospitals:
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1506,6 +1650,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1588,6 +1736,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.mackenziehealth.ca/about-us/reports-performance-and-plans/strategic-plan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 8
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1628,7 +1780,11 @@ hospitals:
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1668,6 +1824,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1708,6 +1868,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://lwha.ca/news/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1749,6 +1913,10 @@ hospitals:
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1788,7 +1956,11 @@ hospitals:
       manual_override: no
       override_reason: 'Direct PDF link found (depth-1): https://www.josephbranthospital.ca/about-us/about-our-hospital/JBH-Strategic-Plan-2023-2026.pdf
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 11
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1869,6 +2041,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1911,6 +2087,10 @@ hospitals:
       override_set_date: '2026-03-17'
       review_date: '2027-01-01'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1951,6 +2131,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://gbgh.on.ca/our-strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1982,16 +2166,20 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://www.kdh.on.ca/about-kemptville-district-hospital/our-strategic-plan
-      content_type: html
+      content_type: txt
       local_folder: 732_KEMPTVILLE_DISTRICT
-      local_filename: Strategy_202512_732_HTML.pdf
+      local_filename: Strategy_202512_732_HTML.txt
       last_extraction_date: '2026-02-03'
-      extraction_status: needs_review
+      extraction_status: complete
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
         URL: https://www.kdh.on.ca/about-kemptville-district-hospital/our-strategic-plan/
         | HTML page converted to PDF on 2025-12-07'
       needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2032,6 +2220,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.whgh.ca/west-haldimand-general-hospital-unveils-2025-2028-strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2071,7 +2263,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://southlake.ca/foundation/about/strategic-plan-2019-2023/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2111,7 +2307,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.ndmh.ca/care-2030-strategic-plan
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2143,15 +2343,19 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://www.osmh.on.ca/ourplan
-      content_type: html
+      content_type: txt
       local_folder: 745_ORILLIA_SOLDIERS_MEMORIAL
-      local_filename: Strategy_202512_745_HTML.pdf
+      local_filename: Strategy_202512_745_HTML.txt
       last_extraction_date: '2026-02-03'
-      extraction_status: needs_review
+      extraction_status: complete
       manual_override: no
       override_reason: 'Strategy page found (depth-1) but no PDF. Checked 2 pages.
         URL: https://www.osmh.on.ca/ourplan/ | HTML page converted to PDF on 2025-12-07'
-      needs_review: yes
+      needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2191,6 +2395,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2230,6 +2438,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2272,6 +2484,10 @@ hospitals:
       manual_override: no
       override_reason: ''
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 7
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2311,6 +2527,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2344,13 +2564,17 @@ hospitals:
       content_url: https://www.prhc.on.ca/wp-content/uploads/2024/09/PRHC-Strat-Plan-Report-2024-Singles.pdf
       content_type: pdf
       local_folder: 771_PETERBOROUGH_REGIONAL_HEALTH_CENTRE
-      local_filename: Strategy_202512_771.pdf
+      local_filename: 771_20260323.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: complete
       manual_override: yes
       override_reason: 'Found on page (depth-1): https://www.prhc.on.ca/about-us/strategic-planning/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2391,6 +2615,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.qch.on.ca/TrueNorth (confidence:
         high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 9
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2430,6 +2658,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 7
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2469,6 +2701,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2509,6 +2745,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.renfrewhosp.com/strategic
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2548,6 +2788,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2588,6 +2832,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.stegh.on.ca/about-us/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 7
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2619,16 +2867,18 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://hgh.ca/about-hgh/strategic-plan
-      content_type: html
+      content_type: pdf
       local_folder: 800_HAWKESBURY_DISTRICT_GENERAL
-      local_filename: Strategy_202512_800_HTML.pdf
+      local_filename: 800_20260211.pdf
       last_extraction_date: .na.character
       extraction_status: needs_review
-      manual_override: no
-      override_reason: 'Strategy page found (depth-1) but no PDF. Checked 1 pages.
-        URL: https://hgh.ca/about-hgh/strategic-plan/ | HTML page converted to PDF
-        on 2025-12-07'
+      manual_override: yes
+      override_reason: 'Complex HTML, Email copy asked for and recieved. '
       needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2669,6 +2919,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.hgmh.on.ca/en/about-us-key/strategic-plan-leadership-and-board-of-directors
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2709,6 +2963,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.ngh.on.ca/wp-content/uploads/2025/02/NGH-Strategic-Plan-2024-2028_FA_Digital.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2749,6 +3007,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.srfhosp.ca/wp-content/uploads/2021/09/Strategic_Energy_Management_Plan_EN_2020-2023.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2789,6 +3051,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2828,6 +3094,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2869,6 +3139,10 @@ hospitals:
         — plan published as HTML/image only at shared site, no PDF available
       override_notes: 'merged with 684 to form Rural Roads  '
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2907,7 +3181,11 @@ hospitals:
       extraction_status: complete
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2950,6 +3228,10 @@ hospitals:
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2989,6 +3271,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 7
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3021,14 +3307,19 @@ hospitals:
       last_search_date: '2026-03-20'
       strategy_url: ''
       content_url: https://runnymedehc.ca/newsroom/strategic-plan/
-      content_type: html
+      content_type: txt
       local_folder: 850_TORONTO_RUNNYMEDE_HC
-      local_filename: Strategy_202512_850_HTML.pdf
+      local_filename: 850_20260327.txt
       last_extraction_date: .na.character
-      extraction_status: html_only
+      extraction_status: downloaded
       manual_override: yes
-      override_reason: Plan published as HTML/image only — no PDF available on site
+      override_reason: Plan published as image-embedded HTML — text captured manually
+        via snipping tool
+      phase2_status: extracted
       needs_review: no
+      phase2_date: '2026-03-28'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3063,22 +3354,17 @@ hospitals:
       content_url: https://www.torontograce.org/wp-content/uploads/TGHC-Final-Strategic-Plan-2024-29.pdf
       content_type: pdf
       local_folder: 854_TORONTO_SA_GRACE
-      local_filename: Strategy_202512_854.pdf
+      local_filename: 854_20260301.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
+      extraction_status: downloaded
       manual_override: yes
-      override_reason: robots_blocked_pending
-      override_notes: robots.txt blocked re-download. PDF obtained Dec 2025 still
-        valid. Outreach initiated to confirm ongoing permission.
-      override_set_date: '2026-03-17'
-      review_date: '2026-04-07'
-      robots_status: permission_pending
-      robots_outreach:
-        contact_name: Communications Department
-        contact_email: info@torontograce.org
-        outreach_date: '2026-03-17'
-        method: Email
-      needs_review: yes
+      override_reason: ~
+      override_notes: ~
+      needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3118,6 +3404,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3156,7 +3446,11 @@ hospitals:
       extraction_status: downloaded
       manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3198,6 +3492,10 @@ hospitals:
         URL: https://www.wngh.ca/about-wngh/vision/ | HTML page converted to PDF on
         2025-12-07'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3238,6 +3536,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.wdmh.on.ca/strategicplan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3278,6 +3580,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.temiskaming-hospital.com/strategic-planning
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3318,6 +3624,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://lwha.ca/news/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3357,7 +3667,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.woodstockhospital.ca/strategic-plan/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3397,6 +3711,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3439,7 +3757,11 @@ hospitals:
         extractable PDF exists on site
       override_set_date: '2026-03-17'
       review_date: '2027-01-01'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3480,6 +3802,10 @@ hospitals:
       manual_override: no
       override_reason: ''
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3519,7 +3845,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://tadh.com/about-us/strategic-plan/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3598,6 +3928,10 @@ hospitals:
       override_reason: 'Found on page (depth-2): https://www.headwatershealth.ca/who-we-are/purpose-and-goals/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3677,6 +4011,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://psfdh.on.ca/strategicplan
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3759,6 +4097,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.wpshc.com/wp-content/uploads/2025/02/WPSHC-Strat-Plan-2023-25.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3799,6 +4141,10 @@ hospitals:
       needs_review: no
       strategy_url: ''
       last_search_date: '2026-03-24'
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3878,6 +4224,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://tbrhsc.net/tbrhsc/strategic-plan-2026/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3918,6 +4268,10 @@ hospitals:
       override_reason: Plan published as HTML only — no PDF available on site; email
         request pending
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3949,15 +4303,19 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://www.hhhs.ca/governance/strategic-plan
-      content_type: html
+      content_type: pdf
       local_folder: 938_DYSART_ET_AL_HALIBURTON_HEALTH_SER
-      local_filename: Strategy_202512_938.pdf
+      local_filename: Strategy_202601_938.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: needs_review
-      manual_override: no
+      extraction_status: downloaded
+      manual_override: yes
       override_reason: 'Found on page (depth-2): https://www.hhhs.ca/about/strategic-plan
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3989,7 +4347,7 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://hollandbloorview.ca/about-us/about-holland-bloorview/mission-vision-values/shape-future-holland-bloorview/strategic
-      content_type: html
+      content_type: pdf
       local_folder: 939_TORONTO_HOLLAND_BLOORVIEW_KIDS
       local_filename: 939_20260101.pdf
       last_extraction_date: '2026-02-03'
@@ -3997,6 +4355,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4036,6 +4398,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4075,7 +4441,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.hrh.ca/who-we-are/about-us/strategic-plan/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4114,7 +4484,11 @@ hospitals:
       extraction_status: downloaded
       manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4155,7 +4529,11 @@ hospitals:
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4195,6 +4573,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4235,6 +4617,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.camh.ca/en/driving-change/about-camh/connected-camh-strategic-plan-2024-2030
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4275,6 +4661,10 @@ hospitals:
       manual_override: no
       override_reason: Manual PDF URL provided but download failed
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4315,6 +4705,10 @@ hospitals:
       override_reason: 'Found on page (depth-2): https://www.williamoslerhs.ca/en/who-we-are/strategic-plan.aspx
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 9
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4355,6 +4749,10 @@ hospitals:
       override_reason: 'Found on page (depth-2): https://www.lh.ca/about-us/our-future/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4395,6 +4793,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://sunnybrook.ca/content/?page=invent-2030-sunnybrook-strategic-plan
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 7
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4435,6 +4837,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.brightshores.ca/about-us/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4475,6 +4881,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://quintehealth.ca/wp-content/uploads/2024/06/Strategy-Booklet-Final-2024.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4516,6 +4926,10 @@ hospitals:
       override_reason: HTTP 403 blocks automated download — PDF downloaded manually
         via browser
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4555,7 +4969,11 @@ hospitals:
       extraction_status: downloaded
       manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4596,6 +5014,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.ottawaheart.ca/sites/default/files/legacy/uploads/documents/Researchers/oracle-strategic-directions-2018-24.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4636,6 +5058,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.niagarahealth.on.ca/site/strategic-plan
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4674,7 +5100,11 @@ hospitals:
       extraction_status: downloaded
       manual_override: no
       override_reason: Downloaded from manually provided URL
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4714,7 +5144,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://slmhc.on.ca/about/strategic-planning/
         (confidence: high)'
-      needs_review: no
+      needs_review: yes
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: thin
+      phase2_n_dirs: 0
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4755,6 +5189,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://sah.on.ca/about/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4834,6 +5272,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.cornwallhospital.ca/en/strategic-plan
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4874,6 +5316,10 @@ hospitals:
       manual_override: yes
       override_reason: pdf exceeded cap size-- Downloaded and compressed manually
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4907,13 +5353,17 @@ hospitals:
       content_url: https://www.ontarioshores.ca/strategic-plan
       content_type: pdf
       local_folder: 969_ONTARIO_SHORES
-      local_filename: 969_20260322.pdf
+      local_filename: 969_20260327.pdf
       last_extraction_date: '2026-03-22'
       extraction_status: downloaded
       manual_override: yes
       override_reason: PDF download button not crawlable — manually downloaded from
         strategic plan page
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4954,6 +5404,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.bchsys.org/en/about-us/Strategic_Plan.aspx
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4987,13 +5441,17 @@ hospitals:
       content_url: https://www.sjsudbury.com/wp-content/uploads/SJHCS-–-St-Josephs-Health-Centre-of-Sudbury-–-Strat-Plan-–-1-pager-Final_.pdf
       content_type: pdf
       local_folder: 971_SUDBURY_ST_JOSEPHS_CONTINUING_CARE
-      local_filename: Strategy_202512_971.pdf
+      local_filename: 971_20260327.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: complete
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.sjsudbury.com/index.php/st-josephs-health-centre/strategic-plan-sjhc/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5033,6 +5491,10 @@ hospitals:
       manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5073,6 +5535,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.waha.ca/about/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5113,6 +5579,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://nbrhc.on.ca/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: partial
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5155,6 +5625,10 @@ hospitals:
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5194,6 +5668,10 @@ hospitals:
       manual_override: no
       override_reason: Downloaded from manually provided URL
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 9
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5227,14 +5705,18 @@ hospitals:
       strategy_url: https://www.nosh.ca/upload/documents/board-portal/board-manual/3.-strategic-plan/final_nosh-strat-plan-2028-2026.pdf
       content_url: https://www.nosh.ca/upload/documents/board-portal/board-manual/3.-strategic-plan/final_nosh-strat-plan-2028-2026.pdf
       content_type: pdf
-      local_folder: 977_TERRACE_BAY_NORTH_OF_SUPERIOR_HC
-      local_filename: Strategy_202512_977.pdf
+      local_folder: 977_NORTH_OF_SUPERIOR
+      local_filename: 977_20260320.pdf
       last_extraction_date: '2026-02-03'
-      extraction_status: download_failed
+      extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.nosh.ca/strategic-plan
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-28'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5275,6 +5757,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://kingstonhsc.ca/about-khsc/our-strategy-2024-2027/our-strategic-directions
         (confidence: medium) - Please verify this is the correct strategic plan'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5316,6 +5802,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://www.shn.ca/about-us/strategic-plan-2024-2029/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5357,6 +5847,10 @@ hospitals:
       override_reason: 'Found on page (depth-1): https://unityhealth.to/about-unity-health/strategic-plan/
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 9
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5436,6 +5930,10 @@ hospitals:
       override_reason: 'Direct PDF link found (depth-2): https://www.blancheriverhealth.ca/about-us/our-organization/brh-operations-plan-vision-mission-values-strategic-directions.pdf
         (confidence: high)'
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 6
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5476,6 +5974,10 @@ hospitals:
       manual_override: no
       override_reason: ''
       needs_review: no
+      phase2_status: extracted
+      phase2_date: '2026-03-27'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
