@@ -1025,19 +1025,15 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_fc9433c380d04d11aa8ad88007555bb5.pdf
-      content_type: pdf
       local_folder: 656_WHCA_GROVE_COMMUNITY_HOSPITAL
-      local_filename: 656_20260320.pdf
-      last_extraction_date: '2026-02-03'
-      extraction_status: downloaded
-      manual_override: no
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      local_filename: 656_20260331.pdf
+      content_type: pdf
+      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_58e4dada3289489ea08b1cc968415b1d.pdf
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 5
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1244,19 +1240,15 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://www.sjhcg.ca/strategic-plan-2
-      content_type: html
+      content_type: pdf
       local_folder: 666_GUELPH_ST_JOSEPH_S_HEALTH_CENTRE
       local_filename: 666_20260326.pdf
-      last_extraction_date: .na.character
-      extraction_status: complete
-      manual_override: yes
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_58e4dada3289489ea08b1cc968415b1d.pdf
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 4
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -1947,20 +1939,20 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://www.josephbranthospital.ca/about-us/accountability/energy-management/strategic-energy-management-plan-jbh-2021-aug-26-21.pdf
+      content_url: https://www.josephbranthospital.ca/about-us/about-our-hospital/JBH-Strategic-Plan-2023-2026.pdf
       content_type: pdf
       local_folder: 718_BURLINGTON_JOSEPH_BRANT_HOSPITAL
-      local_filename: 718_20260320.pdf
+      local_filename: 718_20260331.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
       override_reason: 'Direct PDF link found (depth-1): https://www.josephbranthospital.ca/about-us/about-our-hospital/JBH-Strategic-Plan-2023-2026.pdf
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 11
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2254,20 +2246,20 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://southlake.ca/wp-content/uploads/2024/07/Southlake_Southlake-Foundation_2023-24-Annual-Report-Final.pdf
+      content_url: https://southlake.ca/wp-content/uploads/2024/11/SH_Strategy-Nov.28.2024.pdf
       content_type: pdf
       local_folder: 736_NEWMARKET_SOUTHLAKE_REGIONAL
-      local_filename: 736_20260320.pdf
+      local_filename: 736_20260331.pdf
       last_extraction_date: '2026-01-31'
       extraction_status: downloaded
-      manual_override: no
-      override_reason: 'Found on page (depth-1): https://southlake.ca/foundation/about/strategic-plan-2019-2023/
-        (confidence: high)'
-      needs_review: yes
+      manual_override: yes
+      override_reason: foundation report replaced with current strategic plan — Nov
+        2024
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 10
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3173,19 +3165,19 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: http://www.lwdh.on.ca//lwdh.on.ca/index.php/resources/new-documents/strategic-plan/648-lwdh-strategic-plan-2024/file.html
-      content_type: html
+      content_url: http://lwdh.on.ca/index.php/resources/new-documents/operational-review.html
+      content_type: pdf
       local_folder: 826_KENORA_LAKE_OF_THE_WOODS
       local_filename: 826_20260101.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: complete
       manual_override: yes
       override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3658,6 +3650,7 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
+      strategy_url: https://www.woodstockhospital.ca/wp-content/uploads/2025/05/Strategic-Plan-2025-2028-resized.pdf
       content_url: https://www.woodstockhospital.ca/wp-content/uploads/2025/05/Strategic-Plan-2025-2028-resized.pdf
       content_type: pdf
       local_folder: 890_WOODSTOCK_WOODSTOCK_HOSPITAL
@@ -3667,11 +3660,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.woodstockhospital.ca/strategic-plan/
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3845,11 +3838,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://tadh.com/about-us/strategic-plan/
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4476,19 +4469,19 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: http://hamiltonhealthsciences.ca/wp-content/uploads/2018/12/HHS-Accessibility-Plan-2026-2031.pdf
+      content_url: https://www.hamiltonhealthsciences.ca/wp-content/uploads/2026/02/HHS-2030-Booklet.pdf
       content_type: pdf
       local_folder: 942_HAMILTON_HEALTH_SCIENCES_CORP
-      local_filename: 942_20260320.pdf
+      local_filename: 942_20260331.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      override_reason: Vision 2030 booklet — detailed strategic plan
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4964,16 +4957,17 @@ hospitals:
       content_url: https://hsnsudbury.ca/Portals/1/About_Us/hsn-tfy2030-booklet-digital-en%20revised.pdf?ver=dafHQTB2VYu1B6dXBvtaiA%3d%3d
       content_type: pdf
       local_folder: 959_SUDBURY_HEALTH_SCIENCES_NORTH
-      local_filename: 959_20260322.pdf
+      local_filename: 959_20260322_v2.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
-      override_reason: Downloaded from manually provided URL
+      override_reason: Downloaded from manually provided URL — v2 is strategic plan,
+        original was energy mgmt plan
       needs_review: yes
       phase2_status: extracted
-      phase2_date: '2026-03-27'
+      phase2_date: '2026-03-31'
       phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_n_dirs: 1
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5092,19 +5086,15 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_fc9433c380d04d11aa8ad88007555bb5.pdf
-      content_type: pdf
       local_folder: 963_MOUNT_FOREST_NORTH_WELLINGTON_HC
-      local_filename: 963_20260320.pdf
-      last_extraction_date: '2026-02-03'
-      extraction_status: downloaded
-      manual_override: no
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      local_filename: 963_20260331.pdf
+      content_type: pdf
+      content_url: https://gmch.whca.ca/_files/ugd/1c8d43_58e4dada3289489ea08b1cc968415b1d.pdf
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 5
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5144,11 +5134,11 @@ hospitals:
       manual_override: no
       override_reason: 'Found on page (depth-1): https://slmhc.on.ca/about/strategic-planning/
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: full
+      phase2_n_dirs: 7
     foundational:
       last_extraction_date: ''
       extraction_status: pending

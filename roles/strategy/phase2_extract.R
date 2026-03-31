@@ -43,7 +43,10 @@ suppressPackageStartupMessages({
   library(jsonlite)
   library(pdftools)
   library(rvest)
+  library(png)
+  library(base64enc)
 })
+
 
 # --- Source core modules ---
 source("core/registry.R")
@@ -225,20 +228,66 @@ log_info(sprintf("Hospitals eligible for Phase 2: %d", length(hospitals)))
        error = sprintf("Unrecognised file extension: %s", ext))
 }
 
+# -----------------------------------------------------------------------------
+# .read_content_image(file_path)
+# Renders each page of a PDF to a PNG image and base64-encodes it.
+# Returns a list of image objects ready for call_claude_images().
+# Called only when .is_text_usable() returns FALSE for a PDF.
+# -----------------------------------------------------------------------------
+
+
+.read_content_image <- function(file_path, dpi = 150) {
+  tryCatch({
+    n_pages <- pdf_info(file_path)$pages
+    images  <- vector("list", n_pages)
+    
+    for (pg in seq_len(n_pages)) {
+      raw_png   <- pdf_render_page(file_path, page = pg, dpi = dpi, numeric = FALSE)
+      png_bytes <- png::writePNG(raw_png)
+      images[[pg]] <- list(
+        data       = base64enc::base64encode(png_bytes),
+        media_type = "image/png"
+      )
+    }
+    
+    list(images = images, n_pages = n_pages, dpi = dpi, error = NULL)
+  }, error = function(e) {
+    list(images = NULL, n_pages = 0L, dpi = dpi,
+         error  = sprintf("PDF render failed: %s", conditionMessage(e)))
+  })
+}
 
 # -----------------------------------------------------------------------------
-# .is_text_usable(text)
-# Quick check — returns FALSE if text is empty or clearly garbage
-# (happens when a PDF is entirely image-based and pdftools gets nothing)
+# .call_extraction_api_image(images, fac)
+# Image-mode equivalent of .call_extraction_api().
+# Sends rendered PDF page images to Claude via call_claude_images().
+# Returns the same list structure as .call_extraction_api().
 # -----------------------------------------------------------------------------
 
-.is_text_usable <- function(text) {
-  if (is.null(text) || length(text) == 0) return(FALSE)
-  cleaned <- gsub("\\s+", "", text)
-  nchar(cleaned) >= 200   # Fewer than 200 non-whitespace chars is useless
+.call_extraction_api_image <- function(images, fac) {
+  tryCatch({
+    result <- call_claude_images(
+      images        = images,
+      system_prompt = system_prompt,
+      model         = "claude-sonnet-4-20250514",
+      max_tokens    = STRATEGY_CONFIG$max_tokens,
+      temperature   = STRATEGY_CONFIG$temperature,
+      role          = STRATEGY_CONFIG$role,
+      fac           = fac
+    )
+    result
+  }, error = function(e) {
+    list(response_text  = NULL,
+         input_tokens   = 0L,
+         output_tokens  = 0L,
+         cost           = 0.0,
+         error          = conditionMessage(e))
+  })
 }
 
 
+# -----------------------------------------------------------------------------
+# .parse_response(response_text, fac)
 # -----------------------------------------------------------------------------
 # .call_extraction_api(text, fac)
 # Calls the Claude API with the document text and extraction prompt.
@@ -457,14 +506,186 @@ for (i in seq_along(hospitals)) {
   }
   
   if (!.is_text_usable(content_result$text)) {
+    
+    # Text path failed — attempt image-mode if this is a PDF
+    if (identical(content_result$source_type, "pdf")) {
+      
+      log_info(sprintf(
+        "FAC %s: text empty — attempting image-mode render", fac
+      ))
+      
+      image_result <- .read_content_image(
+        file.path(STRATEGY_CONFIG$output_root, local_folder,
+                  role_data$local_filename)
+      )
+      
+      if (!is.null(image_result$error)) {
+        # Render failed — fall through to thin
+        log_warning(sprintf(
+          "FAC %s: image render failed (%s) — writing thin result",
+          fac, image_result$error
+        ))
+        source_type <- "pdf"
+      } else {
+        log_info(sprintf(
+          "FAC %s: image-mode — %d pages rendered — calling Claude API",
+          fac, image_result$n_pages
+        ))
+        
+        api_result <- .call_extraction_api_image(image_result$images, fac)
+        
+    ## insert new here
+        # On HTTP 413, retry at progressively lower DPI before giving up
+        if (!is.null(api_result$error) &&
+            grepl("413", api_result$error, fixed = TRUE)) {
+          
+          fallback_dpis <- c(100L, 72L)
+          succeeded     <- FALSE
+          
+          for (fallback_dpi in fallback_dpis) {
+            log_info(sprintf(
+              "FAC %s: HTTP 413 — retrying image-mode at %d DPI", fac, fallback_dpi
+            ))
+            image_result <- .read_content_image(
+              file.path(STRATEGY_CONFIG$output_root, local_folder,
+                        role_data$local_filename),
+              dpi = fallback_dpi
+            )
+            if (!is.null(image_result$error)) next
+            
+            api_result <- .call_extraction_api_image(image_result$images, fac)
+            if (is.null(api_result$error)) {
+              log_info(sprintf(
+                "FAC %s: image-mode succeeded at %d DPI — %d tokens, $%.4f",
+                fac, fallback_dpi,
+                api_result$input_tokens + api_result$output_tokens,
+                api_result$cost
+              ))
+              succeeded <- TRUE
+              break
+            }
+          }
+          
+          if (!succeeded) {
+            log_outcome(fac, hospital_name, "failure",
+                        failure_type  = "api_error_image_mode",
+                        error_message = api_result$error)
+            update_hospital_status(fac, "strategy", list(
+              phase2_status = "api_failed",
+              needs_review  = TRUE
+            ))
+            next
+          }
+        } else if (!is.null(api_result$error)) {
+          log_outcome(fac, hospital_name, "failure",
+                      failure_type  = "api_error_image_mode",
+                      error_message = api_result$error)
+          update_hospital_status(fac, "strategy", list(
+            phase2_status = "api_failed",
+            needs_review  = TRUE
+          ))
+          next
+        }
+        
+        log_info(sprintf(
+          "FAC %s: image-mode API complete — %d input tokens, %d output tokens, $%.4f",
+          fac, api_result$input_tokens, api_result$output_tokens, api_result$cost
+        ))
+        
+        # Parse, build rows, write CSV — same flow as text-mode below
+        parse_result <- .parse_response(api_result$response_text, fac)
+        
+        if (!is.null(parse_result$error)) {
+          log_outcome(fac, hospital_name, "failure",
+                      cost          = api_result$cost,
+                      failure_type  = "parse_error_image_mode",
+                      error_message = parse_result$error)
+          update_hospital_status(fac, "strategy", list(
+            phase2_status = "parse_failed",
+            needs_review  = TRUE
+          ))
+          next
+        }
+        
+        parsed      <- parse_result$parsed
+        source_type <- "pdf_image"
+        
+        df <- tryCatch({
+          .build_rows(parsed, fac, Sys.Date(), source_type)
+        }, error = function(e) {
+          log_warning(sprintf(
+            "FAC %s: image-mode .build_rows() error — %s", fac, conditionMessage(e)))
+          NULL
+        })
+        
+        if (is.null(df) || nrow(df) == 0) {
+          log_outcome(fac, hospital_name, "failure",
+                      cost          = api_result$cost,
+                      failure_type  = "empty_result_image_mode",
+                      error_message = "build_rows returned empty data frame")
+          update_hospital_status(fac, "strategy", list(
+            phase2_status = "empty_result",
+            needs_review  = TRUE
+          ))
+          next
+        }
+        
+        out_path <- tryCatch(
+          .write_hospital_csv(df, fac, local_folder),
+          error = function(e) {
+            log_warning(sprintf(
+              "FAC %s: image-mode failed to write CSV — %s", fac, conditionMessage(e)))
+            NULL
+          }
+        )
+        
+        if (is.null(out_path)) {
+          log_outcome(fac, hospital_name, "failure",
+                      cost          = api_result$cost,
+                      failure_type  = "write_error",
+                      error_message = "Could not write per-hospital CSV (image-mode)")
+          next
+        }
+        
+        quality <- .safe_str(parsed$extraction_quality)
+        n_dirs  <- if (!is.null(parsed$directions)) length(parsed$directions) else 0L
+        
+        update_hospital_status(fac, "strategy", list(
+          phase2_status    = "extracted",
+          phase2_date      = as.character(Sys.Date()),
+          phase2_quality   = quality,
+          phase2_n_dirs    = n_dirs,
+          needs_review     = identical(quality, "thin")
+        ))
+        
+        all_rows[[length(all_rows) + 1]] <- df
+        
+        log_outcome(
+          fac           = fac,
+          hospital_name = hospital_name,
+          outcome       = "success",
+          cost          = api_result$cost,
+          context       = sprintf(
+            "quality: %s | directions: %d | mode: image | pages: %d | file: %s",
+            quality, n_dirs, image_result$n_pages, basename(out_path))
+        )
+        next
+      }
+      
+    } else {
+      # Non-PDF with unusable text — no image fallback available
+      source_type <- content_result$source_type
+    }
+    
+    # --- True thin fallback (non-PDF, or PDF render also failed) ---
     log_warning(sprintf(
-      "FAC %s: text too short or empty — writing thin result without API call", fac
+      "FAC %s: text too short or empty and no image fallback — writing thin result", fac
     ))
     thin_df <- .build_thin_row(
-      fac         = fac,
-      source_type = content_result$source_type,
+      fac          = fac,
+      source_type  = source_type,
       capture_date = Sys.Date(),
-      notes       = "Text too short or empty — skipped API call"
+      notes        = "Text too short or empty — no usable content"
     )
     tryCatch(
       .write_hospital_csv(thin_df, fac, local_folder),
@@ -480,7 +701,7 @@ for (i in seq_along(hospitals)) {
     ))
     all_rows[[length(all_rows) + 1]] <- thin_df
     log_outcome(fac, hospital_name, "success",
-                context = "quality: thin | skipped API — text too short")
+                context = "quality: thin | no usable content")
     next
   }
   
