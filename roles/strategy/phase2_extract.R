@@ -505,7 +505,9 @@ for (i in seq_along(hospitals)) {
     next
   }
   
-  if (!.is_text_usable(content_result$text)) {
+  force_image_mode <- isTRUE(role_data$force_image_mode)
+  
+  if (!.is_text_usable(content_result$text) || force_image_mode) {
     
     # Text path failed — attempt image-mode if this is a PDF
     if (identical(content_result$source_type, "pdf")) {

@@ -1753,7 +1753,7 @@ hospitals:
 - FAC: '704'
   name: Erie Shores Leamington
   hospital_type: Small Hospital
-  base_url: https://erie.bluelemonmedia.com
+  base_url: https://www.erieshoreshealthcare.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -1762,21 +1762,19 @@ hospitals:
   status:
     strategy:
       last_search_date: '2026-03-20'
-      content_url: https://erie.bluelemonmedia.com/uploads/AboutESHC/Multi-Year%20Accessibility%20Plan-2024.pdf
+      content_url: https://drive.google.com/file/d/15_I8XXkwWoaWF_UjMC8PRWn5jQ4GKQF9/view
       content_type: pdf
       local_folder: 704_ERIE_SHORES_LEAMINGTON
-      local_filename: 704_20260320.pdf
-      last_extraction_date: .na.character
+      local_filename: 704_20260331.pdf
+      last_extraction_date: ''
       extraction_status: downloaded
-      manual_override: no
-      override_reason: |-
-        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
-        Could not resolve host: manual_download
-      needs_review: yes
+      manual_override: yes
+      override_reason: Strategic plan hosted on Google Drive — manually downloaded
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-03-31'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4957,17 +4955,18 @@ hospitals:
       content_url: https://hsnsudbury.ca/Portals/1/About_Us/hsn-tfy2030-booklet-digital-en%20revised.pdf?ver=dafHQTB2VYu1B6dXBvtaiA%3d%3d
       content_type: pdf
       local_folder: 959_SUDBURY_HEALTH_SCIENCES_NORTH
-      local_filename: 959_20260322_v2.pdf
+      local_filename: 959_20260322.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
-      manual_override: no
-      override_reason: Downloaded from manually provided URL — v2 is strategic plan,
-        original was energy mgmt plan
-      needs_review: yes
+      force_image_mode: yes
+      manual_override: yes
+      override_reason: Downloaded from manually provided URL — v2 is strategic plan,original
+        was energy mgmt plan
       phase2_status: extracted
       phase2_date: '2026-03-31'
-      phase2_quality: thin
-      phase2_n_dirs: 1
+      phase2_quality: full
+      phase2_n_dirs: 5
+      needs_review: no
     foundational:
       last_extraction_date: ''
       extraction_status: pending
