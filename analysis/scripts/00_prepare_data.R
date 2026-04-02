@@ -42,6 +42,7 @@ suppressPackageStartupMessages({
   library(yaml)
   library(lubridate)
   library(readr)
+  library(purrr)
 })
 
 
@@ -94,16 +95,18 @@ cat("-- Parsing date fields ...\n")
 # "2022-01-01", "January 2022", or NA. We attempt numeric YYYYMMDD parse first,
 # then ISO, and retain the raw string for rows that fail both.
 .parse_plan_date <- function(x) {
-  # Attempt YYYYMMDD integer format (most common in our data)
-  parsed <- suppressWarnings(
-    as.Date(as.character(x), format = "%Y%m%d")
+  # Attempt YYYYMMDD integer format
+  parsed <- suppressWarnings(as.Date(as.character(x), format = "%Y%m%d"))
+  # Attempt ISO yyyy-mm-dd
+  iso_attempt <- suppressWarnings(as.Date(as.character(x), format = "%Y-%m-%d"))
+  # Attempt 4-digit year only — treat as Jan 1 of that year
+  year_only <- suppressWarnings(
+    ifelse(grepl("^\\d{4}$", as.character(x)),
+           as.character(as.Date(paste0(x, "-01-01"))),
+           NA)
   )
-  # Where that failed, attempt ISO yyyy-mm-dd
-  iso_attempt <- suppressWarnings(
-    as.Date(as.character(x), format = "%Y-%m-%d")
-  )
-  # Coalesce: prefer YYYYMMDD parse, fall back to ISO
-  dplyr::coalesce(parsed, iso_attempt)
+  year_only <- as.Date(year_only)
+  dplyr::coalesce(parsed, iso_attempt, year_only)
 }
 
 master <- master_raw %>%
@@ -156,7 +159,7 @@ if (!file.exists(PATHS$registry_yaml)) {
 registry_raw <- yaml.load_file(PATHS$registry_yaml)
 
 # Pull reference fields into a per-hospital data frame
-spine_registry <- map_dfr(registry_raw$hospitals, function(h) {
+spine_registry <- map(registry_raw$hospitals, function(h) {
   tibble(
     fac            = as.character(h$FAC),
     hospital_name  = as.character(h$name),
@@ -164,7 +167,7 @@ spine_registry <- map_dfr(registry_raw$hospitals, function(h) {
     robots_allowed = isTRUE(h$robots_allowed),
     base_url       = as.character(h$base_url %||% NA_character_)
   )
-})
+}) |> bind_rows()
 
 cat(sprintf("   Registry: %d hospitals loaded\n", nrow(spine_registry)))
 

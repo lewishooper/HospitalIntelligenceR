@@ -3153,7 +3153,7 @@ hospitals:
       needs_review: no
 - FAC: '826'
   name: KENORA LAKE OF THE WOODS
-  hospital_type: Medium Hospital
+  hospital_type: Small Hospital
   base_url: http://www.lwdh.on.ca
   base_url_validated: yes
   robots_allowed: yes
