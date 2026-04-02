@@ -71,7 +71,7 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 813,STRATFORD GENERAL,Large Community Hospital,TRUE,https://www.hpha.ca,Community — Large,NA,NA,3,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 814,Middlesex Hosptial Alliance  STRATHROY MIDDLESEX GENERAL,Large Community Hospital,TRUE,https://mhalliance.on.ca,Community — Large,NA,NA,3,full,2024-01-01,NA,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 824,Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL,Small Hospital,TRUE,https://www.ruralroadshealthservices.ca,Community — Small,NA,NA,4,partial,2024-01-01,2026-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,txt,2026-03-27,TRUE
-826,KENORA LAKE OF THE WOODS,Medium Hospital,TRUE,http://www.lwdh.on.ca,Community — Medium,NA,NA,5,full,2024-01-01,2028-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-03-31,TRUE
+826,KENORA LAKE OF THE WOODS,Small Hospital,TRUE,http://www.lwdh.on.ca,Community — Small,NA,NA,5,full,2024-01-01,2028-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-03-31,TRUE
 827,TORONTO BAYCREST CTR GERIATRIC CARE,Chronic/Rehab Hospital,TRUE,https://www.baycrest.org,Specialty,NA,NA,6,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 837,TORONTO HOSPITAL FOR SICK CHILDREN,Specialty Children Hospital,TRUE,https://www.sickkids.ca,Specialty,NA,NA,7,full,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 850,TORONTO RUNNYMEDE HC,Chronic/Rehab Hospital,TRUE,https://runnymedehc.ca,Specialty,NA,NA,4,partial,2020-01-01,2024-01-01,2020,TRUE,TRUE,FALSE,TRUE,FALSE,txt,2026-03-28,TRUE
