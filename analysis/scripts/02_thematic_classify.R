@@ -86,7 +86,7 @@ CLASSIFY_CONFIG <- list(
 )
 
 VALID_CODES <- c("WRK", "PAT", "ACC", "PAR", "FIN", "EDI",
-                 "INN", "INF", "RES", "ORG", "GOV")
+                 "INN", "INF", "RES", "ORG")
 
 
 # =============================================================================

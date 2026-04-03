@@ -16,7 +16,7 @@ Classify using ONLY these 11 themes. Use the exact code shown.
 | INF | Infrastructure & Operations | Facilities, capital planning, operational excellence, internal processes, efficiency as an operational goal. |
 | RES | Research & Academic Mission | Research programs, academic partnerships, teaching, medical education, scholarly activity. NOT staff professional development. |
 | ORG | Organizational Culture & Excellence | Organizational values, culture, identity, continuous improvement, organizational excellence, how the hospital operates as an institution. |
-| GOV | Governance & Leadership | Board governance, leadership pipelines, accountability structures, strategic oversight, leadership development at the executive level. |
+
 
 
 ## CLASSIFICATION RULES
