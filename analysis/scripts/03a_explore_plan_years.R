@@ -65,6 +65,10 @@ if (!exists("spine")) {
 
 cat(sprintf("Spine loaded: %d hospitals\n", nrow(spine)))
 
+# Ensure plan_start_year is integer regardless of how spine was loaded
+spine <- spine %>%
+  mutate(plan_start_year = suppressWarnings(as.integer(plan_start_year)))
+
 
 # =============================================================================
 # SECTION 2: Analytical cohort — same exclusions as 01a/01b

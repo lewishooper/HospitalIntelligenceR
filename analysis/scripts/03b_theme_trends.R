@@ -214,6 +214,8 @@ prevalence_long <- prevalence %>%
 
 cat("=== Theme prevalence by era (% of hospitals with >= 1 direction in theme) ===\n")
 prevalence_wide <- prevalence_long %>%
+  mutate(pct_hospitals = as.numeric(pct_hospitals)) %>%
+  select(-n_hospitals) %>%
   pivot_wider(names_from = era, values_from = pct_hospitals) %>%
   arrange(desc(`Pre-COVID`))
 print(as.data.frame(prevalence_wide))

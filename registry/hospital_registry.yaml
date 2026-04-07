@@ -1415,14 +1415,14 @@ hospitals:
       local_folder: 682_HORNEPAYNE_COMMUNITY
       local_filename: 682_20260320.pdf
       last_extraction_date: .na.character
-      extraction_status: downloaded
-      manual_override: no
-      override_reason: |-
-        Manual PDF URL provided but download failed: Timeout was reached [none]:
-        Connection timed out after 10016 milliseconds
-      needs_review: yes
-      phase2_status: extracted
-      phase2_date: '2026-03-27'
+      extraction_status: complete
+      manual_override: yes
+      override_reason: No strategic plan available. Captured document is unrelated
+        to strategy. Email outreach to hospital attempted with follow-up — no response
+        received. Excluded from analysis.
+      needs_review: no
+      phase2_status: no_plan
+      phase2_date: '2026-04-04'
       phase2_quality: thin
       phase2_n_dirs: 0
     foundational:
@@ -4520,11 +4520,12 @@ hospitals:
       override_reason: |-
         Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
         Could not resolve host: manual_download
-      needs_review: yes
+      needs_review: no
+      force_image_mode: yes
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-04-06'
+      phase2_quality: full
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending

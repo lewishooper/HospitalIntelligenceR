@@ -31,7 +31,14 @@ hospital_name_self_reported
   Extract the name the hospital uses to refer to itself in this document. Use the most complete formal version found (e.g., "Sunnybrook Health Sciences Centre", not just "Sunnybrook"). If the document uses multiple forms, use the most formal one. Return null if the hospital name cannot be identified from the text.
 
 plan_period_start and plan_period_end
-  Extract the plan period dates FROM THE DOCUMENT CONTENT — do not use file metadata. Look for ranges like "2023–2026", "April 2024 to March 2027", "FY2025–FY2028", etc. Return as "YYYY" for year-only, "YYYY-MM" for month-year, or "YYYY-MM-DD" for full dates. Return null if not found.
+  Extract the plan period dates FROM THE DOCUMENT CONTENT only — do not use file metadata, document creation date, or publication date.
+  Look for explicitly stated ranges like "2023–2026", "April 2024 to March 2027", "FY2025–FY2028", etc.
+  Return as "YYYY" for year-only, "YYYY-MM" for month-year, or "YYYY-MM-DD" for full dates.
+  Rules:
+    - If only the end year is stated (e.g. "Our plan to 2030", "Vision 2028"), return null for plan_period_start and the end year for plan_period_end.
+    - If only a single year is stated ambiguously, use your best judgement about whether it is a start or end year based on context; if uncertain, return null for both.
+    - Do not infer or calculate a start year from the document's publication date, approval date, or any other metadata.
+    - Do not guess. If not explicitly stated, return null.
 
 vision
   Extract the hospital's stated vision statement. Return the full exact text of the vision statement as a single string. Return null if not present.
