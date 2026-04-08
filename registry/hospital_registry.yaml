@@ -3162,18 +3162,18 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-04-08'
       content_url: http://lwdh.on.ca/index.php/resources/new-documents/operational-review.html
       content_type: pdf
       local_folder: 826_KENORA_LAKE_OF_THE_WOODS
-      local_filename: 826_20260101.pdf
-      last_extraction_date: '2026-02-03'
-      extraction_status: complete
+      local_filename: 826_20260401.pdf
+      last_extraction_date: ~
+      extraction_status: downloaded
       manual_override: yes
-      override_reason: Downloaded from manually provided URL
+      override_reason: recieved via email downloaded directly
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-31'
+      phase2_date: '2026-04-08'
       phase2_quality: full
       phase2_n_dirs: 5
     foundational:
