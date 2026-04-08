@@ -2,6 +2,9 @@
 ## Ontario Public Hospitals — Temporal Analysis
 *HospitalIntelligenceR | Analysis 03b | April 2026*
 
+
+note! document superseded by 03cTheme_by_era_type.md
+
 ---
 
 ## Overview
