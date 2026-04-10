@@ -8,7 +8,7 @@
 # Regenerable from Phase 1/2 runs.
 # -----------------------------------------------------------------------------
 roles/*/outputs/
-
+analysis/data/
 
 # -----------------------------------------------------------------------------
 # Logs — regenerable on every run, noisy in diffs, accumulate quickly
