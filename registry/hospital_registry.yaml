@@ -1895,18 +1895,16 @@ hospitals:
       content_url: https://www.sjhc.london.on.ca/media/15149/download
       content_type: pdf
       local_folder: 714_LONDON_ST_JOSEPHS
-      local_filename: 714_20260320.pdf
-      last_extraction_date: '2026-02-03'
+      local_filename: 714_20260409.pdf
+      last_extraction_date: ~
       extraction_status: downloaded
-      manual_override: no
-      override_reason: |-
-        Manual PDF URL provided but download failed: Could not resolve hostname [manual_download]:
-        Could not resolve host: manual_download
+      manual_override: yes
+      override_reason: ' api capture was news release'
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
       phase2_quality: full
       phase2_n_dirs: 3
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2289,19 +2287,18 @@ hospitals:
     strategy:
       last_search_date: '2026-03-20'
       content_url: https://www.ndmh.ca/upload/documents/2025-10-30-ndmh-strategic-plan-2030-launch.pdf
-      content_type: pdf
+      content_type: txt
       local_folder: 739_NIPIGON_DISTRICT_MEMORIAL
-      local_filename: 739_20260320.pdf
-      last_extraction_date: .na.character
+      local_filename: 739_20260409.txt
       extraction_status: downloaded
-      manual_override: no
-      override_reason: 'Found on page (depth-1): https://www.ndmh.ca/care-2030-strategic-plan
-        (confidence: high)'
-      needs_review: yes
+      manual_override: yes
+      override_reason: Image PDF embedded in HTML — manual OCR capture via Windows
+        Clip
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
+      phase2_quality: partial
       phase2_n_dirs: 3
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3167,15 +3164,15 @@ hospitals:
       content_type: pdf
       local_folder: 826_KENORA_LAKE_OF_THE_WOODS
       local_filename: 826_20260401.pdf
-      last_extraction_date: ~
+      last_extraction_date: ''
       extraction_status: downloaded
       manual_override: yes
       override_reason: recieved via email downloaded directly
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-04-08'
       phase2_quality: full
       phase2_n_dirs: 5
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3427,20 +3424,20 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-04-09'
       content_url: https://www.womenscollegehospital.ca/wp-content/uploads/2022/06/AFib-Cardioversion.pdf
       content_type: pdf
       local_folder: 862_TORONTO_WOMENS_COLLEGE
-      local_filename: 862_20260320.pdf
+      local_filename: 862_20260409.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
-      manual_override: no
-      override_reason: Downloaded from manually provided URL
-      needs_review: yes
+      manual_override: yes
+      override_reason: manually downloaded
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_quality: full
+      phase2_n_dirs: 3
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4426,17 +4423,16 @@ hospitals:
       content_url: https://www.hrh.ca/wp-content/uploads/2023/04/HRH_Strategic-Plan-2023-April-13-2023-Digital.pdf
       content_type: pdf
       local_folder: 941_HUMBER_RIVER_HOSPITAL
-      local_filename: 941_20260320.pdf
+      local_filename: 941_20260409.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
-      override_reason: 'Found on page (depth-1): https://www.hrh.ca/who-we-are/about-us/strategic-plan/
-        (confidence: high)'
-      needs_review: yes
+      override_reason: Downloaded Manually
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-28'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_quality: full
+      phase2_n_dirs: 4
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -4997,21 +4993,20 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
+      last_search_date: '2026-04-09'
       content_url: https://www.ottawaheart.ca/sites/default/files/legacy/uploads/documents/Researchers/oracle-strategic-directions-2018-24.pdf
       content_type: pdf
       local_folder: 961_OTTAWA_HEART_INSTITUTE
-      local_filename: 961_20260320.pdf
+      local_filename: 961_20260409.pdf
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
-      manual_override: no
-      override_reason: 'Direct PDF link found (depth-2): https://www.ottawaheart.ca/sites/default/files/legacy/uploads/documents/Researchers/oracle-strategic-directions-2018-24.pdf
-        (confidence: high)'
+      manual_override: yes
+      override_reason: downloaded manually
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
       phase2_quality: full
-      phase2_n_dirs: 4
+      phase2_n_dirs: 3
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5652,16 +5647,16 @@ hospitals:
       content_url: https://www.sinaihealth.ca/media/25246/download?inline=
       content_type: pdf
       local_folder: 976_TORONTO_SINAI_HEALTH_SYSTEM
-      local_filename: 976_20260320.pdf
-      last_extraction_date: '2026-02-03'
+      local_filename: 976_20260409.pdf
+      last_extraction_date: '2026-04-09'
       extraction_status: downloaded
-      manual_override: no
+      manual_override: yes
       override_reason: Downloaded from manually provided URL
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
       phase2_quality: full
-      phase2_n_dirs: 9
+      phase2_n_dirs: 4
+      phase2_date: '2026-04-10'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -5736,20 +5731,19 @@ hospitals:
   notes: ''
   status:
     strategy:
-      last_search_date: '2026-03-20'
-      content_url: https://kingstonhsc.ca/sites/default/files/documents/ACP%202025-26-Final%20FR.pdf
+      last_search_date: '2026-04-10'
+      content_url: https://kingstonhsc.ca/sites/default/files/documents/ACP%202025-26-Final%20EN.pdf
       content_type: pdf
       local_folder: 978_KINGSTON_KINGSTON_HEALTH_SCIENCES
-      local_filename: 978_20260320.pdf
-      last_extraction_date: '2026-02-03'
+      local_filename: 978_20260410.pdf
+      last_extraction_date: ''
       extraction_status: downloaded
       manual_override: no
-      override_reason: 'Found on page (depth-1): https://kingstonhsc.ca/about-khsc/our-strategy-2024-2027/our-strategic-directions
-        (confidence: medium) - Please verify this is the correct strategic plan'
+      override_reason: Manual Download
       needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-27'
-      phase2_quality: full
+      phase2_date: '2026-04-10'
+      phase2_quality: partial
       phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''

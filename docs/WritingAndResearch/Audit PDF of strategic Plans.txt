@@ -1,0 +1,19 @@
+
+
+714 St Joes Health care   we pickedup the Lawson Research Not the hospitals strategic plan
+739 NIPIGON Memorial we captured a news release
+Their PDF is an image And I have tried to use the windows clip and transpose function, but its a bit messy
+We need to figure out how to import this. 
+We could also attempt to pass the html as an image
+862 Womens college  wrong pdf right pdf  is downloaded as 862_20260409.pdf
+941  summary doc replaced with full plan as 941_20260409.pdf
+954 WE MISSED THIS ONE DUE TO AN ERROR SOMEWHERE ALONG THE Way.  The folder name is 954_TORONTO_SALVATION_ARMY_GRACE I have put the proper file in the folder the file name is 954_20260409.pdf  we will need to create a yaml structure for this one. 
+961 Heart institue has been an ongoing download problem  What we have is the research documenti have downloaded it and changed the file name to 961_20260409.pdf
+stopped for the night
+
+978 I downloaded the english language plan and changed the yaml file to 978_20260410.pdf
+
+We need to think about how to deal with duplicates  Maybe we should acknowledge the dupes and pull them out of hte straeam
+
+If we revise the strategy role, we need to consider the "research strategic plan" issue. 3 of the changes I made were to deal with "research Strategic plans" verusus the actual hospital strategic plan
+and where possible I think we should only use summary documents if the full documetn cant be found
