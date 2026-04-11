@@ -189,6 +189,14 @@ Low. Covered by the YAML registry reference document planned for the foundationa
 documents role phase.
 
 ---
+#9 Name of plan
+## Observation  
+currently we do not capture the name of the plan. This is somewhat problematic when we check to ensure the proper source material is downloadd
+And in the future we may need to distinguish between old plans and new plans 
+## Recommendation 
+Lets review this before next iteration
+### priority
+low. 
 
 ## Review Schedule
 

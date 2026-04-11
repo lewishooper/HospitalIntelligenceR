@@ -155,11 +155,15 @@ if (RUN_MODE == "sample") {
   cat("Hospital types in sample:\n")
   print(table(target_rows$hospital_type_group))
 
+} else if (RUN_MODE == "facs") {
+  target_rows <- eligible %>% filter(fac %in% TARGET_FACS)
+  cat(sprintf("RUN_MODE=facs: %d directions across FACs: %s\n",
+              nrow(target_rows), paste(TARGET_FACS, collapse = ", ")))
+  
 } else {
   target_rows <- eligible
   cat(sprintf("RUN_MODE=all: %d directions to classify\n", nrow(target_rows)))
 }
-
 
 # =============================================================================
 # SECTION 5: API call function
@@ -379,14 +383,27 @@ classifications <- bind_rows(results)
 api_log         <- bind_rows(api_log_rows)
 
 # Choose output path based on run mode
-out_path <- if (RUN_MODE == "all") {
+out_path <- if (RUN_MODE == "all" || RUN_MODE == "facs") {
   CLASSIFY_CONFIG$output_full
 } else {
   CLASSIFY_CONFIG$output_sample
 }
 
 dir.create("analysis/data", recursive = TRUE, showWarnings = FALSE)
-write_csv(classifications, out_path)
+
+if (RUN_MODE == "facs" && file.exists(out_path)) {
+  existing <- read_csv(out_path, col_types = cols(.default = col_character()),
+                       show_col_types = FALSE)
+  merged <- existing %>%
+    filter(!fac %in% TARGET_FACS) %>%
+    bind_rows(classifications)
+  write_csv(merged, out_path)
+  cat(sprintf("Merged: %d existing rows retained, %d rows updated/added\n",
+              nrow(existing) - sum(existing$fac %in% TARGET_FACS),
+              nrow(classifications)))
+} else {
+  write_csv(classifications, out_path)
+}
 write_csv(api_log, CLASSIFY_CONFIG$api_log, append = file.exists(CLASSIFY_CONFIG$api_log))
 
 cat(paste(rep("-", 50), collapse = ""), "\n")

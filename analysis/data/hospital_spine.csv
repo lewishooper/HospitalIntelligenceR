@@ -16,8 +16,8 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 644,Cornwall Hospital  CORNWALL HOTEL DIEU,Small Hospital,TRUE,https://www.cornwallhospital.ca,Community — Small,NA,NA,3,partial,2022-01-01,2027-01-01,2022,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 646,DEEP RIVER AND DISTRICT,Small Hospital,TRUE,https://www.drdh.org,Community — Small,NA,NA,3,full,2023-01-01,2027-01-01,2023,TRUE,TRUE,FALSE,TRUE,TRUE,pdf,2026-03-27,TRUE
 647,DRYDEN REGIONAL HEALTH CENTRE,Small Hospital,TRUE,https://www.drhc.on.ca,Community — Small,NA,NA,3,full,2023-01-01,2026-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
-648,DUNNVILLE HALDIMAND WAR MEMORIAL,Small Hospital,TRUE,https://www.hwmh.ca,Community — Small,NA,NA,0,thin,NA,NA,NA,FALSE,FALSE,FALSE,FALSE,FALSE,pdf,2026-03-28,TRUE
-650,ELLIOT LAKE ST JOSEPH'S,Small Hospital,TRUE,https://sjghel.ca,Community — Small,NA,NA,0,thin,NA,NA,NA,FALSE,FALSE,FALSE,FALSE,FALSE,pdf,2026-03-28,TRUE
+648,DUNNVILLE HALDIMAND WAR MEMORIAL,Small Hospital,TRUE,https://www.hwmh.ca,Community — Small,NA,NA,3,partial,2024-01-01,2028-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-04-11,TRUE
+650,ELLIOT LAKE ST JOSEPH'S,Small Hospital,TRUE,https://sjghel.ca,Community — Small,NA,NA,4,partial,2022-01-01,2026-01-01,2022,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-04-11,TRUE
 651,OTTAWA ROYAL OTTAWA (PSYCH),Specialty Mental Health Hospital,TRUE,https://www.theroyal.ca,Specialty,NA,NA,5,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 653,Blanche River ENGLEHART & DISTRICT,Small Hospital,TRUE,https://www.blancheriverhealth.ca,Community — Small,NA,NA,6,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 654,ESPANOLA GENERAL,Small Hospital,TRUE,https://espanolaregionalhospital.ca,Community — Small,NA,NA,9,full,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
@@ -31,7 +31,7 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 674,HAMILTON ST JOSEPH'S,Teaching Hospital,TRUE,https://www.stjoes.ca,Teaching,NA,NA,5,full,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 676,HANOVER & DISTRICT,Small Hospital,TRUE,https://www.hanoverhospital.on.ca,Community — Small,NA,NA,4,partial,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 681,HEARST NOTRE DAME,Small Hospital,TRUE,https://www.ndh.on.ca,Community — Small,NA,NA,4,full,2024-01-01,2027-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
-682,HORNEPAYNE COMMUNITY,Small Hospital,TRUE,https://www.hornepaynecommunityhospital.ca,Community — Small,NA,NA,0,thin,2011-01-01,2012-01-01,2011,TRUE,FALSE,FALSE,FALSE,TRUE,pdf,2026-03-27,TRUE
+682,HORNEPAYNE COMMUNITY,Small Hospital,TRUE,https://www.hornepaynecommunityhospital.ca,Community — Small,NA,NA,NA,no_data,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,FALSE
 684,Rural Roads Health servcies INGERSOLL ALEXANDRA,Small Hospital,TRUE,https://www.ruralroadshealthservices.ca,Community — Small,NA,NA,4,partial,2024-01-01,2026-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,txt,2026-03-27,TRUE
 685,MICS Group IROQUOIS FALLS ANSON GENERAL,Small Hospital,TRUE,https://www.micsgroup.com,Community — Small,NA,NA,5,full,2023-01-01,2026-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 686,WAWA LADY DUNN HC,Small Hospital,TRUE,https://ldhc.com,Community — Small,NA,NA,4,full,2022-01-01,2027-01-01,2022,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
@@ -51,7 +51,7 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 732,KEMPTVILLE DISTRICT,Small Hospital,TRUE,https://kdh.on.ca,Community — Small,NA,NA,5,thin,2022-01-01,2026-01-01,2022,TRUE,TRUE,FALSE,FALSE,FALSE,txt,2026-03-28,TRUE
 734,HALDIMAND WEST HALDIMAND GENERAL,Small Hospital,TRUE,https://www.whgh.ca,Community — Small,NA,NA,5,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 736,NEWMARKET SOUTHLAKE REGIONAL,Large Community Hospital,TRUE,https://southlake.ca,Community — Large,NA,NA,10,full,2025-01-01,2034-01-01,2025,TRUE,FALSE,FALSE,TRUE,TRUE,pdf,2026-03-31,TRUE
-739,NIPIGON DISTRICT MEMORIAL,Small Hospital,TRUE,https://www.ndmh.ca,Community — Small,NA,NA,3,partial,NA,NA,NA,FALSE,TRUE,FALSE,TRUE,TRUE,txt,2026-04-10,TRUE
+739,NIPIGON DISTRICT MEMORIAL,Small Hospital,TRUE,https://www.ndmh.ca,Community — Small,NA,NA,3,partial,2025-01-01,2030-01-01,2025,TRUE,TRUE,FALSE,TRUE,TRUE,txt,2026-04-10,TRUE
 745,ORILLIA SOLDIERS' MEMORIAL,Large Community Hospital,TRUE,https://www.osmh.on.ca,Community — Large,NA,NA,3,full,2021-01-01,2025-01-01,2021,TRUE,TRUE,TRUE,TRUE,TRUE,txt,2026-03-28,TRUE
 751,OTTAWA CHEO CTC,Specialty Children Hospital,TRUE,https://www.cheo.on.ca,Specialty,NA,NA,5,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 753,OTTAWA MONTFORT,Teaching Hospital,TRUE,https://hopitalmontfort.com,Teaching,NA,NA,5,full,2024-01-01,2028-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
@@ -64,7 +64,7 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 788,RENFREW VICTORIA,Small Hospital,TRUE,https://www.renfrewhosp.com,Community — Small,NA,NA,4,full,2021-01-01,2026-01-01,2021,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 790,ST CATHARINES HOTEL DIEU,Chronic/Rehab Hospital,TRUE,https://www.hoteldieushaver.org,Specialty,NA,NA,5,partial,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 793,ST THOMAS ELGIN GENERAL,Large Community Hospital,TRUE,https://www.stegh.on.ca,Community — Large,NA,NA,7,full,2024-01-01,2027-01-01,2024,TRUE,FALSE,FALSE,TRUE,FALSE,pdf,2026-03-27,TRUE
-800,HAWKESBURY & DISTRICT GENERAL,Small Hospital,TRUE,https://hgh.ca,Community — Small,NA,NA,0,thin,NA,NA,NA,FALSE,FALSE,FALSE,FALSE,FALSE,pdf,2026-03-28,TRUE
+800,HAWKESBURY & DISTRICT GENERAL,Small Hospital,TRUE,https://hgh.ca,Community — Small,NA,NA,5,full,2025-01-01,2029-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-04-11,TRUE
 802,ALEXANDRIA GLENGARRY,Small Hospital,TRUE,https://www.hgmh.on.ca,Community — Small,NA,NA,4,full,2023-01-01,2028-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 804,SIMCOE NORFOLK GENERAL,Large Community Hospital,TRUE,https://www.ngh.on.ca,Community — Large,NA,NA,3,full,2018-01-01,2023-01-01,2018,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 809,SMOOTH ROCK FALLS,Small Hospital,TRUE,https://www.srfhosp.ca,Community — Small,NA,NA,5,partial,2020-01-01,2023-01-01,2020,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
@@ -77,7 +77,7 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 850,TORONTO RUNNYMEDE HC,Chronic/Rehab Hospital,TRUE,https://runnymedehc.ca,Specialty,NA,NA,4,partial,2020-01-01,2024-01-01,2020,TRUE,TRUE,FALSE,TRUE,FALSE,txt,2026-03-28,TRUE
 854,TORONTO SA GRACE,Small Hospital,FALSE,https://www.torontograce.org,Community — Small,NA,NA,5,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-28,TRUE
 858,Michael Garron TORONTO EAST GENERAL,Large Community Hospital,TRUE,https://www.tehn.ca,Community — Large,NA,NA,5,full,2025-01-01,2035-01-01,2025,TRUE,TRUE,FALSE,TRUE,TRUE,pdf,2026-03-27,TRUE
-862,TORONTO WOMENS COLLEGE,Teaching Hospital,TRUE,https://www.womenscollegehospital.ca,Teaching,NA,NA,3,full,NA,2030-01-01,NA,FALSE,TRUE,TRUE,TRUE,FALSE,pdf,2026-04-10,TRUE
+862,TORONTO WOMENS COLLEGE,Teaching Hospital,TRUE,https://www.womenscollegehospital.ca,Teaching,NA,NA,3,full,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-04-10,TRUE
 881,STURGEON FALLS WEST NIPISSING,Small Hospital,TRUE,https://www.wngh.ca,Community — Small,NA,NA,5,partial,2024-01-01,2027-01-01,2024,TRUE,FALSE,FALSE,FALSE,FALSE,pdf,2026-03-27,TRUE
 882,WINCHESTER DISTRICT MEMORIAL,Large Community Hospital,TRUE,https://www.wdmh.on.ca,Community — Large,NA,NA,4,full,2019-01-01,2024-01-01,2019,TRUE,FALSE,FALSE,FALSE,FALSE,pdf,2026-03-27,TRUE
 888,NEW LISKEARD TEMISKAMING HOSPITAL,Small Hospital,TRUE,https://www.temiskaming-hospital.com,Community — Small,NA,NA,4,full,2022-01-01,2027-01-01,2022,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
@@ -108,7 +108,7 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 950,HALTON HEALTHCARE,Large Community Hospital,TRUE,https://www.haltonhealthcare.on.ca,Community — Large,NA,NA,4,full,2021-01-01,2026-01-01,2021,TRUE,TRUE,TRUE,TRUE,TRUE,pdf,2026-03-27,TRUE
 951,BRAMPTON WILLIAM OSLER,Large Community Hospital,TRUE,https://www.williamoslerhs.ca,Community — Large,NA,NA,9,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 952,Lakeridge Health,Large Community Hospital,TRUE,https://www.lh.ca,Community — Large,NA,NA,4,full,2019-01-01,2024-01-01,2019,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
-953,Sunnybrook Health Sciences Centre,Teaching Hospital,TRUE,https://sunnybrook.ca,Teaching,NA,NA,7,full,2030-01-01,NA,2030,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
+953,Sunnybrook Health Sciences Centre,Teaching Hospital,TRUE,https://sunnybrook.ca,Teaching,NA,NA,7,full,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 955,GREY BRUCE HEALTH SERVICES  Brightshores,Large Community Hospital,TRUE,https://www.brightshores.ca,Community — Large,NA,NA,4,full,2023-01-01,2025-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 957,BELLEVILLE QUINTE HEALTH CARE,Large Community Hospital,TRUE,https://quintehealth.ca,Community — Large,NA,NA,4,partial,2023-01-01,2028-01-01,2023,TRUE,TRUE,FALSE,TRUE,TRUE,pdf,2026-03-27,TRUE
 958,OTTAWA THE OTTAWA HOSPITAL,Teaching Hospital,TRUE,https://www.ottawahospital.on.ca,Teaching,NA,NA,4,full,2023-01-01,NA,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-28,TRUE

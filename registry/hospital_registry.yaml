@@ -766,16 +766,17 @@ hospitals:
       content_type: pdf
       local_folder: 648_DUNNVILLE_HALDIMAND_WAR_MEMORIAL
       local_filename: 648_20260320.pdf
+      force_image_mode: yes
       last_extraction_date: '2026-02-03'
       extraction_status: downloaded
       manual_override: no
       override_reason: 'Found on page (depth-1): https://www.hwmh.ca/about-us/strategic-plan/
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-28'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-04-11'
+      phase2_quality: partial
+      phase2_n_dirs: 3
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -811,15 +812,16 @@ hospitals:
       local_folder: 650_ELLIOT_LAKE_ST_JOSEPH_S
       local_filename: 650_20260320.pdf
       last_extraction_date: '2026-02-03'
+      force_image_mode: yes
       extraction_status: downloaded
       manual_override: no
       override_reason: 'Direct PDF link found (depth-2): https://sjghel.ca/wp-content/uploads/2022/11/SJGHEL-Strategic-Plan.pdf
         (confidence: high)'
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-28'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-04-11'
+      phase2_quality: partial
+      phase2_n_dirs: 4
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -2861,11 +2863,11 @@ hospitals:
       extraction_status: needs_review
       manual_override: yes
       override_reason: 'Complex HTML, Email copy asked for and recieved. '
-      needs_review: yes
+      needs_review: no
       phase2_status: extracted
-      phase2_date: '2026-03-28'
-      phase2_quality: thin
-      phase2_n_dirs: 0
+      phase2_date: '2026-04-11'
+      phase2_quality: full
+      phase2_n_dirs: 5
     foundational:
       last_extraction_date: ''
       extraction_status: pending
