@@ -1,6 +1,6 @@
 # Claude Working Preferences — HospitalIntelligenceR Project
 
-*Last Updated: February 2026*
+*Last Updated: April 2026*
 *Upload this document to the Claude Project knowledge repository for persistent reference.*
 
 ---
@@ -8,13 +8,36 @@
 ## 1. Document Output Standards
 
 ### Default: Markdown
-All discussion documents, summaries, notes, architecture writeups, and reference material are produced as **markdown (.md)** unless otherwise specified. Markdown is the default because it lives cleanly in the GitHub repository and renders well in the knowledge repository.
+All discussion documents, summaries, notes, architecture writeups, and reference
+material are produced as **markdown (.md)** unless otherwise specified. Markdown
+is the default because it lives cleanly in the GitHub repository and renders well
+in the knowledge repository.
 
 ### Exception: Formal Deliverables → .docx
-Word documents (.docx) are used **only when explicitly requested** — for example, documents intended for external sharing, formal reports, or knowledge repository uploads where rich formatting is needed. When .docx is requested, the docx skill is used.
+Word documents (.docx) are used **only when explicitly requested** — for example,
+documents intended for external sharing, formal reports, or knowledge repository
+uploads where rich formatting is needed. When .docx is requested, the docx skill
+is used.
 
 ### Code Files
-R scripts, YAML, and other code outputs are provided as code blocks in chat or written directly to files — never wrapped in a Word document.
+R scripts, YAML, and other code outputs are provided as code blocks in chat or
+written directly to files — never wrapped in a Word document.
+
+### Narrative Documents — Two-Pass Model
+Each completed analytical workstream produces two documents:
+
+- **Technical narrative** — methodologically complete, flat in tone. The
+  authoritative record of what was done and found. Lives in
+  `docs/writing_and_research/`. Triggered when the user asks to document,
+  write up, or record an analysis.
+- **Publication narrative** — practitioner-facing, written in Skip's voice.
+  Shorter, leads with findings, omits methodological detail. Lives in
+  `docs/writing_and_research/`. Triggered when the user asks for the
+  publication version, LinkedIn version, or practitioner-facing write-up.
+
+Before drafting any publication narrative, consult
+`docs/writing_and_research/style_guide.md`. These are distinct documents —
+a publication narrative is not a summary of the technical narrative.
 
 ---
 
@@ -22,14 +45,16 @@ R scripts, YAML, and other code outputs are provided as code blocks in chat or w
 
 - **Primary language:** R, using RStudio
 - **Project root:** `HospitalIntelligenceR/` (single R Project, single GitHub repo)
-- **User executes all code** in their own R/RStudio environment — Claude provides code snippets and guidance, not execution
+- **User executes all code** in their own R/RStudio environment — Claude provides
+  code snippets and guidance, not execution
 - **Working directory** assumed to be the project root unless stated otherwise
 - **API:** Claude API used for all content extraction roles
 
 ### R Code Preferences
 - Provide snippets for the user to integrate and run
 - Explain the reasoning behind an approach, not just the code
-- Focus on problem isolation — short diagnostic snippets over large rewrites when debugging
+- Focus on problem isolation — short diagnostic snippets over large rewrites
+  when debugging
 - When a clean baseline is more practical than patching, say so directly
 
 ---
@@ -41,7 +66,9 @@ R scripts, YAML, and other code outputs are provided as code blocks in chat or w
 3. User executes in their R environment and reports results
 4. Iterate until resolved
 
-This approach gives the user better insight into the troubleshooting logic and avoids blind copy-paste fixes. Claude should not attempt to "fix everything at once" — prefer targeted, testable changes.
+This approach gives the user better insight into the troubleshooting logic and
+avoids blind copy-paste fixes. Claude should not attempt to "fix everything at
+once" — prefer targeted, testable changes.
 
 ---
 
@@ -49,14 +76,17 @@ This approach gives the user better insight into the troubleshooting logic and a
 
 - **Do not produce documentation unless explicitly asked**
 - User controls documentation scope and timing
-- Exception: session summaries and working notes when specifically requested (as in this session)
-- When documentation is produced, it goes into `docs/` in the project structure unless directed elsewhere
+- Exception: session summaries and working notes when specifically requested
+- When documentation is produced, it goes into the appropriate `docs/` subfolder
+  (`programming_reference/` for technical reference, `writing_and_research/` for
+  narratives and writing aids, `session_summaries/` for session records)
 
 ---
 
 ## 5. YAML Formatting
 
-When writing or updating YAML for hospital registry entries, use **2-space indentation** to match R/RStudio conventions:
+When writing or updating YAML for hospital registry entries, use **2-space
+indentation** to match R/RStudio conventions:
 
 ```yaml
   - FAC: '592'
@@ -65,60 +95,113 @@ When writing or updating YAML for hospital registry entries, use **2-space inden
     base_url: https://web.lacgh.napanee.on.ca
 ```
 
-The registry YAML files are the single source of truth — treat them carefully. No script other than `core/registry.R` should write to them.
+The registry YAML is the single source of truth — treat it carefully. No script
+other than `core/registry.R` should write to it. For manual edits, follow the
+procedure in `docs/programming_reference/yaml_registry_reference.md` and close
+the file in RStudio before running any patch script.
 
 ---
 
-## 6. Communication Style
+## 6. R Code Conventions
+
+These patterns have caused recurring errors in this project. Apply them by
+default without waiting to be asked.
+
+- **List binding:** Use `bind_rows(lapply(...))` — not `map_dfr()`, which is
+  deprecated and causes silent failures
+- **Anonymous functions:** Use explicit `function(x)` style — not tilde-lambda
+  `~` syntax, which causes RStudio parser confusion in some contexts
+- **Claude API responses:** Strip markdown code fences with `gsub` before
+  parsing JSON (`gsub("```json|```", "", text)`); also sanitize control
+  characters before `toJSON()`
+- **purrr:** Must be explicitly loaded with `library(purrr)` — it is not
+  attached automatically by tidyverse in this project's loading pattern
+- **Logger:** Use `log_warning()` — not `log_warn()`, which does not exist in
+  the logger package version in use
+- **URL encoding:** Use `gsub(" ", "%20", url, fixed = TRUE)` — not
+  `URLencode()`, which corrupts query string delimiters
+
+---
+
+## 7. Communication Style
 
 - Lead with the answer or recommendation, then explain reasoning
 - Flag genuine tradeoffs or risks directly — don't bury concerns
-- When something will require a clean rebuild rather than a patch, say so clearly rather than attempting a workaround
-- Prefer prose over bullet lists for explanations — use bullets for enumerations and checklists only
+- When something will require a clean rebuild rather than a patch, say so clearly
+  rather than attempting a workaround
+- Prefer prose over bullet lists for explanations — use bullets for enumerations
+  and checklists only
 - Ask at most one clarifying question at a time before proceeding
 
 ---
 
-## 7. Project Architecture (Quick Reference)
+## 8. Project Architecture (Quick Reference)
 
 ```
 HospitalIntelligenceR/
+├── CLAUDE_WORKING_PREFERENCES.md   # This file
 ├── core/           # Shared infrastructure — registry, crawler, fetcher, claude_api, logger
+├── analysis/       # Strategy analytics layer — scripts, data, outputs
 ├── roles/
 │   ├── strategy/   # Strategic plan extraction (annual)
 │   ├── foundational/ # Vision/Mission/Values (on change)
 │   ├── executives/ # Executive team (monthly)
-│   └── board/      # Board of directors (6-month, post-September)
-├── registry/       # base_hospitals_validated.yaml — master hospital list (133 Ontario hospitals)
+│   ├── board/      # Board of directors (6-month, post-September)
+│   └── minutes/    # Board meeting minutes archive (monthly)
+├── registry/       # hospital_registry.yaml — single source of truth (129–133 hospitals)
+├── reference/      # cihi_fac_crosswalk.csv and other external reference data
 ├── orchestrate/    # Built last — ties roles together
-├── docs/           # Protocols, guidelines, this file
+├── docs/
+│   ├── programming_reference/   # Technical orientation documents
+│   ├── writing_and_research/    # Narratives, style guide, writing aids
+│   ├── prompts/                 # Tracked analytical prompt assets
+│   └── session_summaries/       # Per-session markdown summaries
 └── dev/            # Scratch/sandbox — gitignored
 ```
 
-**Build sequence:** `registry.R` and `fetcher.R` first (no dependencies), then `crawler.R`, `claude_api.R`, `logger.R`, then role modules starting with `strategy/`, then `orchestrate/` last.
+**Note:** `analysis/data/` is gitignored — intermediate analytical CSVs are
+local only and never in the repository.
+
+**Build sequence:** `registry.R` and `fetcher.R` first (no dependencies), then
+`crawler.R`, `claude_api.R`, `logger.R`, then role modules starting with
+`strategy/`, then `orchestrate/` last. For the analytics execution order, see
+`docs/programming_reference/StrategyPipelineReference.md`.
 
 ---
 
-## 8. Key Constraints to Keep in Mind
+## 9. Key Constraints to Keep in Mind
 
-- **FAC code** is the primary key across all data — every output record must carry it
-- **Manual overrides** are first-class, not exceptions — hospitals that can't be auto-scraped carry an explicit `manual_override` status in YAML
-- **robots.txt** is honoured by default; a per-hospital override flag exists for cases where permission has been obtained
-- **Cost awareness** — all Claude API calls are logged with token counts and cost; flag when an approach is likely to be expensive
-
----
-
-## 9. Session Startup Checklist
-
-For new sessions, reference the following to get up to speed quickly:
-
-- Review this file
-- Review `HospitalIntelligenceR_SessionSummary.md` (or .docx) for architecture decisions and build sequence
-- Check `registry/base_hospitals_validated.yaml` for current hospital status
-- Confirm which core module is currently being built or tested
+- **FAC code** is the primary key across all data — every output record must
+  carry it
+- **Manual overrides** are first-class, not exceptions — hospitals that can't
+  be auto-scraped carry an explicit `manual_override` status in YAML
+- **robots.txt** is honoured by default; a per-hospital override flag exists
+  for cases where permission has been obtained
+- **Cost awareness** — all Claude API calls are logged with token counts and
+  cost; flag when an approach is likely to be expensive
 
 ---
 
-## 10. Scope
+## 10. Session Startup
 
-This project covers **Ontario hospitals only** — currently 133 hospitals in the validated registry. No expansion to other provinces or health system entities without explicit discussion.
+At the start of each session, Claude should:
+
+1. Read this file
+2. Read the most recent session summary in `docs/session_summaries/`
+3. State the current priority and any open carry-forward items before asking
+   how to proceed
+4. If registry work is on the agenda, note the current state of
+   `registry/hospital_registry.yaml`
+5. If pipeline work is on the agenda, confirm the relevant step in
+   `docs/programming_reference/StrategyPipelineReference.md`
+
+This orientation should happen unprompted — do not wait for the user to
+reconstruct context.
+
+---
+
+## 11. Scope
+
+This project covers **Ontario hospitals only** — currently 129–133 hospitals in
+the validated registry. No expansion to other provinces or health system entities
+without explicit discussion.
