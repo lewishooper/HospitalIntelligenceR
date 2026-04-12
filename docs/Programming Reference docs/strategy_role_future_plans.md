@@ -189,14 +189,7 @@ Low. Covered by the YAML registry reference document planned for the foundationa
 documents role phase.
 
 ---
-#9 Name of plan
-## Observation  
-currently we do not capture the name of the plan. This is somewhat problematic when we check to ensure the proper source material is downloadd
-And in the future we may need to distinguish between old plans and new plans 
-## Recommendation 
-Lets review this before next iteration
-### priority
-low. 
+
 
 ## Review Schedule
 
@@ -206,3 +199,13 @@ This document should be reviewed:
 - When a new extraction failure pattern emerges that does not fit existing categories
 
 *Last updated: April 9, 2026*
+
+This is where I am going to put items that I have discovered after this document was written
+These will need to be formated etc at some point, but for now its being kept simple
+
+
+Capturing names. The system is designed to capture names from inside the pdf/strategic plan
+however in some cases thats not possible so it should default to capturing the names of the folders
+
+we should also capture the name of the plan if possible
+

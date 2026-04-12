@@ -378,9 +378,15 @@ for (i in seq_len(nrow(target_rows))) {
 # =============================================================================
 # SECTION 8: Assemble and write outputs
 # =============================================================================
+# =============================================================================
+# SECTION 8: Assemble and write outputs
+# =============================================================================
 
-classifications <- bind_rows(results)
-api_log         <- bind_rows(api_log_rows)
+classifications <- bind_rows(lapply(results, function(x) {
+  x$direction_number <- as.character(x$direction_number)
+  x
+}))
+api_log <- bind_rows(api_log_rows)
 
 # Choose output path based on run mode
 out_path <- if (RUN_MODE == "all" || RUN_MODE == "facs") {
@@ -391,24 +397,26 @@ out_path <- if (RUN_MODE == "all" || RUN_MODE == "facs") {
 
 dir.create("analysis/data", recursive = TRUE, showWarnings = FALSE)
 
+# facs mode: merge new rows into existing file rather than overwriting
 if (RUN_MODE == "facs" && file.exists(out_path)) {
-  existing <- read_csv(out_path, col_types = cols(.default = col_character()),
+  existing <- read_csv(out_path,
+                       col_types = cols(.default = col_character()),
                        show_col_types = FALSE)
   merged <- existing %>%
     filter(!fac %in% TARGET_FACS) %>%
     bind_rows(classifications)
   write_csv(merged, out_path)
-  cat(sprintf("Merged: %d existing rows retained, %d rows updated/added\n",
-              nrow(existing) - sum(existing$fac %in% TARGET_FACS),
-              nrow(classifications)))
+  cat(sprintf("facs mode: merged %d new rows into existing file (%d rows retained).\n",
+              nrow(classifications), nrow(existing) - sum(existing$fac %in% TARGET_FACS)))
 } else {
   write_csv(classifications, out_path)
 }
-write_csv(api_log, CLASSIFY_CONFIG$api_log, append = file.exists(CLASSIFY_CONFIG$api_log))
+
+write_csv(api_log, CLASSIFY_CONFIG$api_log,
+          append = file.exists(CLASSIFY_CONFIG$api_log))
 
 cat(paste(rep("-", 50), collapse = ""), "\n")
 cat(sprintf("Written: %s\n", out_path))
-
 
 # =============================================================================
 # SECTION 9: Run summary
