@@ -1986,12 +1986,12 @@ hospitals:
       local_folder: ''
       local_filename: ''
       last_extraction_date: .na.character
-      extraction_status: not_published
+      extraction_status: no_response_closed
+      review_date: 2026-12-01
       manual_override: yes
       override_reason: Plan referenced in board minutes but not published on website
         — email request sent 2026-03-24
       needs_review: no
-      review_date: '2026-06-01'
     foundational:
       last_extraction_date: ''
       extraction_status: pending
@@ -3869,7 +3869,8 @@ hospitals:
   notes: ''
   status:
     strategy:
-      extraction_status: no_plan
+      extraction_status: confirmed_no_plan
+      review_date: 2026-12-01
       manual_override: yes
       override_reason: Confirmed via direct contact — organization does not have a
         strategic plan
