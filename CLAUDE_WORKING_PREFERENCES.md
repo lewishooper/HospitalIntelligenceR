@@ -1,6 +1,6 @@
 # Claude Working Preferences — HospitalIntelligenceR Project
 
-*Last Updated: April 2026*
+*Last Updated: April 14, 2026*
 *Upload this document to the Claude Project knowledge repository for persistent reference.*
 
 ---
@@ -120,6 +120,13 @@ default without waiting to be asked.
   the logger package version in use
 - **URL encoding:** Use `gsub(" ", "%20", url, fixed = TRUE)` — not
   `URLencode()`, which corrupts query string delimiters
+- **FAC as character — always:** FAC codes are identifiers, not quantities.
+  They are stored, read, and joined as `character` throughout the entire
+  pipeline. Any script that loads FAC from a CSV or YAML must coerce
+  immediately: `fac = as.character(fac)`. Never store FAC as numeric or
+  integer. Numeric FAC causes ggplot continuous scale errors, silent join
+  mismatches, and leading-zero loss. This is a project-wide design rule with
+  no exceptions.
 
 ---
 
@@ -144,6 +151,7 @@ HospitalIntelligenceR/
 ├── analysis/       # Strategy analytics layer — scripts, data, outputs
 ├── roles/
 │   ├── strategy/   # Strategic plan extraction (annual)
+│   ├── hit/        # HIT financial import (annual MOH download)
 │   ├── foundational/ # Vision/Mission/Values (on change)
 │   ├── executives/ # Executive team (monthly)
 │   ├── board/      # Board of directors (6-month, post-September)
@@ -172,7 +180,7 @@ local only and never in the repository.
 ## 9. Key Constraints to Keep in Mind
 
 - **FAC code** is the primary key across all data — every output record must
-  carry it
+  carry it, always as character (see Section 6)
 - **Manual overrides** are first-class, not exceptions — hospitals that can't
   be auto-scraped carry an explicit `manual_override` status in YAML
 - **robots.txt** is honoured by default; a per-hospital override flag exists
@@ -205,3 +213,33 @@ reconstruct context.
 This project covers **Ontario hospitals only** — currently 129–133 hospitals in
 the validated registry. No expansion to other provinces or health system entities
 without explicit discussion.
+
+---
+
+## 12. Figure Conventions
+
+All publication figures follow `docs/figure_standards.md`. Key conventions:
+
+- **Base theme:** `theme_linedraw()` with sans-serif font throughout
+- **Palette:** Dark2 (ColorBrewer) for categorical data; fixed type group colour
+  mapping (teal/orange/purple/green) consistent across all figures
+- **Dimensions:** 7 × 5 in default; tall figures (ranked hospital lists) at
+  7 × 14 in; wide multi-panel at 10 × 5 or 10 × 6 in
+- **Resolution:** 300 DPI, PNG primary
+- **FAC on y-axis:** Always use a character label (e.g. `paste0("FAC ", fac)`)
+  — never pass raw FAC values to a ggplot aesthetic, as numeric FAC forces a
+  continuous scale on a discrete axis
+
+### Named graph types
+
+**Baseball graph** — a sorted horizontal lollipop used to show per-hospital
+ranked comparisons. Standard design:
+- Sorted greatest to least (largest change at top)
+- Two-colour lollipops: green (#1B9E77) above median, red (#CC3300) below
+- Median shown as a labelled dashed vertical reference line
+- Zero reference shown as a dotted grey vertical line
+- y-axis labels are character FAC labels (`"FAC 592"`) — never numeric
+- Caption notes any excluded hospitals (e.g. closed, merged)
+- Natural extension: facet by hospital type group for within-type comparison
+
+First used: HIT revenue change figure (`roles/hit/scripts/fig_hit_rev_change.R`)
