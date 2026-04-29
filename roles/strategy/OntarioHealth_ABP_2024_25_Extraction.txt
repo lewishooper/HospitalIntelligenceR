@@ -1,0 +1,609 @@
+```
+ONTARIO HEALTH - STRATEGIC PLAN EXTRACTION
+Reference Document: Annual Business Plan 2024/25
+Extraction Date: 2026-04
+Protocol: OH_ABP_Extraction_V1.0
+
+=====================================
+
+ORGANIZATION: Ontario Health
+DOCUMENT_TITLE: Annual Business Plan 2024/25
+PLAN_START: 2024
+PLAN_END: 2027
+PLAN_CLASSIFICATION: Current
+DOCUMENT_TYPE: Provincial Health Agency Strategic/Business Plan
+DOCUMENT_STRUCTURE: Annual Business Plan organized around Vision, Mission, Values, and 6 embedded
+delivery priorities, articulated through 7 Strategic Directions each with numbered sub-priorities
+(1.1 to 7.2), descriptive text, and key measures. Three-year planning horizon with Year 1 focus
+on 2024/25. Appendices contain operational, financial, HR, and demographic data (excluded from
+this extraction).
+DOCUMENT_ISSUES: None
+L2_PRESENT: Yes
+
+=====================================
+VISION / MISSION / VALUES
+=====================================
+
+VISION:
+Together, we will be a leader in health and wellness for all.
+
+MISSION:
+To connect the health system to drive improved and equitable health outcomes, experiences and value.
+
+VALUES:
+Integrity, Inspiration, Tenacity, Humility, and Care.
+
+=====================================
+EMBEDDED DELIVERY PRIORITIES
+(Cross-cutting framing applied across all strategic directions)
+=====================================
+
+EDP.1_TITLE: Reducing Health Inequities
+EDP.1_TEXT:
+Focused areas for reducing health inequities are outlined discretely, but this lens is applied
+to all areas of focus across the organization.
+
+---
+
+EDP.2_TITLE: Advancing the Right Care in the Right Place Through Transforming Care With the Person at the Centre
+EDP.2_TEXT:
+A person-centred approach is applied to advancing transformation initiatives of the ministries,
+with focus on areas that will fundamentally advance health system integration and care for
+patients and care partners.
+
+---
+
+EDP.3_TITLE: Advancing Faster Access to Care and Supporting Health Care Workers Through Health System
+Operational Management, Coordination, Performance Measurement and Management, and Integration
+EDP.3_TEXT:
+Focus areas will improve the experience of Ontarians in accessing time-sensitive care and support
+the front-line workforce.
+
+---
+
+EDP.4_TITLE: Enhancing Clinical Care and Service Excellence
+EDP.4_TEXT:
+As a clinical and quality-focused provincial agency, Ontario Health pursues delivery of
+best-in-class care through the experience and well-established success of its clinical programs.
+A clinical and quality lens is applied to all focused areas of improvement.
+
+---
+
+EDP.5_TITLE: Maximizing System Value by Applying Evidence
+EDP.5_TEXT:
+As an evidence and engagement-oriented agency, Ontario Health continuously strengthens its
+capacity to collect, share, integrate, analyze and react to data and evidence. This includes
+establishing Ontario Health as a core provincial data utility and working with the Ministry of
+Health to establish new data authorities.
+
+---
+
+EDP.6_TITLE: Strengthening Ontario Health's Ability to Lead
+EDP.6_TEXT:
+Ontario Health's team members are its strength. The organization continuously strengthens its
+organizational culture to unify and empower team members across the province.
+
+---
+
+=====================================
+STRATEGIC DIRECTION 1: REDUCE HEALTH INEQUITIES
+=====================================
+
+L1.1_TITLE: Reduce Health Inequities
+L1.1_TEXT:
+Through discrete strategies and across all areas of work, Ontario Health focuses on reducing
+health inequities and dismantling barriers to improve access and delivery of care. The
+overarching goals are to build capacity to understand and address discrimination and racism
+in the system; grow and promote expertise in providing culturally responsive care; expand and
+scale community-based health initiatives for underserved populations; and support emerging
+areas of health inequities across Ontario aligned with provincial priorities.
+
+---
+
+L2.1.1_TITLE: Improve Equitable Outcomes and Experience for Equity-Deserving Communities
+L2.1.1_TEXT:
+Ontario Health is committed to improving equitable health care by reducing health inequities
+and dismantling barriers to improve access and delivery of care. Work is organized around
+specific population groups: First Nations, Inuit, Métis and Urban Indigenous populations;
+Black communities; Francophone population; 2SLGBTQIA+ communities; refugee and asylum-seeking
+and housing-insecure populations; people living with disabilities; and communities with
+geographic disparities in access to care.
+KEY_MEASURES:
+- Number of initiatives with an aim to provide equitable access, experience, and health equity
+  outcomes, with specific efforts made to address racism in the health sector experienced by
+  equity-deserving populations.
+- Number of signed Relationship Agreements with First Nation, Inuit, Métis and Urban Indigenous
+  partners and Ontario Health.
+
+---
+
+L2.1.2_TITLE: Improve Access to Supportive Care in Housing
+L2.1.2_TEXT:
+Regional teams across the province work with delivery partners to support those requiring
+alternate level of care to the best level of care and most appropriate care settings. This
+includes expanding access and flow to community supports (assisted living services, supportive
+housing, adult day programs, respite supports) and long-term care across the province, with
+a focus on people living with disabilities and those who are vulnerably housed.
+KEY_MEASURES:
+- Increase capacity in assisted living services.
+
+---
+
+L2.1.3_TITLE: Advance Whole Person Care Experiences and Outcomes
+L2.1.3_TEXT:
+As part of commitment to the Quintuple Aim, activities include a focus on improved health
+system navigation and the collection and use of holistic outcome and experience measures.
+This includes enabling whole person care through comprehensive relationship-based primary care;
+improving people's ability to navigate the health system; implementing provincially coordinated
+patient-reported outcome and experience measurements (PROMs/PREMs); and enhancing Health811
+to enable streamlined information access, health system navigation, and secure health data viewing.
+KEY_MEASURES:
+- nf (cross-referenced to sections 2.1, 2.6, and 2.8)
+
+---
+
+=====================================
+STRATEGIC DIRECTION 2: ADVANCE THE RIGHT CARE IN THE RIGHT PLACE THROUGH
+TRANSFORMING CARE WITH THE PERSON AT THE CENTRE
+=====================================
+
+L1.2_TITLE: Transform Care With the Person at the Centre
+L1.2_TEXT:
+Ontario Health applies a person-centred approach to advancing transformation initiatives of
+the ministries. Focus areas will fundamentally advance health system integration and care for
+patients and care partners across primary health care, mental health and addictions, home and
+community care, aging care, access and flow, Ontario Health Teams, chronic disease, and
+digital services.
+
+---
+
+L2.2.1_TITLE: Primary Health Care
+L2.2.1_TEXT:
+A key focus is to improve access to comprehensive team-based primary care for more of the
+population. Ontario Health will support the expansion of interprofessional primary care teams
+with a focus on equity-deserving populations and communities. Work includes supporting Primary
+Care Networks within Ontario Health Teams (OHTs) and leveraging data-driven frameworks for
+planning, performance measurement and quality improvement.
+KEY_MEASURES:
+- Number of new or expanding interprofessional primary care teams funded with new investments.
+- Number of new people with access to team-based primary care.
+
+---
+
+L2.2.2_TITLE: Mental Health and Addictions Care
+L2.2.2_TEXT:
+The Mental Health and Addictions (MHA) Centre of Excellence supports Ontario in building a
+comprehensive and connected mental health and addictions system. It plays a critical role in
+overseeing the delivery and quality of MHA services and supports, including system management,
+supporting quality improvement, disseminating evidence and setting service expectations. The
+aim is to enhance access to, and quality of, mental health and addictions services and supports
+for people living in Ontario.
+KEY_MEASURES:
+- Number of people accessing Ontario Structured Psychotherapy (OSP).
+- Percent of clients with reliable improvement through the OSP program.
+
+---
+
+L2.2.3_TITLE: Home and Community Care
+L2.2.3_TEXT:
+To better support people in the community and realize the vision for a modernized and integrated
+home and community care sector, Ontario Health will execute in three key areas: supporting the
+integration of home and community care with the rest of the health system; enabling innovation
+through home care service provider organizations, health service providers and OHTs; and advising
+on enhanced Ministry investments. Actions will better connect home and community care with other
+elements of the health care system, implement new models of care coordination and delivery, and
+deploy new resources to improve equity, quality and access.
+KEY_MEASURES:
+- More home care access.
+- Lower wait times to care.
+
+---
+
+L2.2.4_TITLE: Aging Care Continuum, Including Long-Term Care
+L2.2.4_TEXT:
+Ontario Health is focused on enhancing the experience of care and quality of life of all older
+Ontarians. Working in collaboration with the Ministries of Health and Long-Term Care, health
+service providers and system partners, a population health approach will be taken to implementing
+an aging care continuum that aligns a comprehensive range of programs and services to support
+older adults living in the community and in long-term care homes.
+KEY_MEASURES:
+- Less avoidable ED visits from long-term care residents.
+
+---
+
+L2.2.5_TITLE: Access and Flow
+L2.2.5_TEXT:
+The focus on enhancing system access and flow aims to improve patient outcomes and streamline
+services across Ontario's health care spectrum, spanning hospital, supports in housing, home
+and community care, long-term care and primary care. Ontario Health is dedicated to optimizing
+access by ensuring quality care, allocating appropriate resources and fostering care integration
+among health providers. This approach emphasizes delivering more community-based care to decrease
+unnecessary ED visits and hospitalizations while minimizing hospital stays while waiting for
+alternative levels of care in more appropriate care settings.
+KEY_MEASURES:
+- Lower wait times for care in more appropriate settings (lower alternate level of care length of stay).
+
+---
+
+L2.2.6_TITLE: Ontario Health Teams (OHTs)
+L2.2.6_TEXT:
+OHTs provide an integrated approach to organizing and delivering care that is more connected
+to patients in their local communities. Under OHTs, health care and community providers work
+as one coordinated team regardless of where they provide care, using a population health
+management approach to improve how Ontarians experience and access care. Ontario Health
+supports OHTs to deliver high quality integrated care and plays a critical role in supporting
+the development and maturity of OHTs, including clinical, patient-facing and structural and
+digital OHT priorities.
+KEY_MEASURES:
+- Number of OHTs operating approved integrated clinical pathways.
+- Number of OHTs that have launched a home care leading project and/or have Ontario
+  Health-approved plans for home care.
+
+---
+
+L2.2.7_TITLE: Chronic Disease Care
+L2.2.7_TEXT:
+With Ontarians living longer than ever, reducing incidence and improving outcomes of chronic
+disease are critical to improving quality of life and building a sustainable health care system.
+Chronic disease programs, with an initial focus on diabetes, will improve equitable access to
+preventive care, early detection and chronic disease management services including remote care
+management. The Preventive Care Program aims to improve access to preventive care for
+equity-deserving and underserved populations, including personalized and culturally responsive
+health education, health coaching, preventive care planning and service navigation.
+KEY_MEASURES:
+- Number of sites that have implemented the preventive care program.
+- Percentage of patients with diabetes with up-to-date A1C and retinopathy screening.
+
+---
+
+L2.2.8_TITLE: Ontarians' Access to Digital Information and Services
+L2.2.8_TEXT:
+Providing Ontarians with digital access to health information and services is a priority.
+Ontario Health is focused on enhancing the availability and user experience of its products
+and services, including Health811 as the digital front door to the health system, providing
+secure access to provincial electronic health data and services, and enabling more convenient,
+connected patient journeys.
+KEY_MEASURES:
+- Health811 user satisfaction.
+- Health811 utilization.
+
+---
+
+=====================================
+STRATEGIC DIRECTION 3 & 4: ADVANCING FASTER ACCESS TO CARE AND SUPPORTING HEALTH CARE
+WORKERS THROUGH HEALTH SYSTEM OPERATIONAL MANAGEMENT, COORDINATION, PERFORMANCE
+MEASUREMENT AND MANAGEMENT, AND INTEGRATION
+=====================================
+
+L1.3_TITLE: Advance Faster Access to Care and Support Health Care Workers
+L1.3_TEXT:
+Ontario Health will improve the experience of Ontarians in accessing time-sensitive care and
+support the front-line workforce through health system operational management, coordination,
+performance measurement and management, and integration across emergency care, diagnostics,
+surgical care, digital tools, and data systems, as well as workforce training, recruitment,
+retention, and integrated capacity planning.
+
+---
+
+L2.3.1_TITLE: Emergency Care and Surge Response
+L2.3.1_TEXT:
+Ontario Health has established a strong foundation of provincial and regional emergency
+management and surge response, operationally embedded through a regional model of health
+system coordination and management. This includes developing an integrated critical care system
+and enhancing the role of an emergency services program that provides clinical leadership
+spanning the full spectrum of emergency services, developing standards and guidance, transferring
+and exchanging knowledge, implementing digital and virtual solutions, and measuring, monitoring
+and reporting performance.
+KEY_MEASURES:
+- Wait times to ED physician initial assessment.
+- Acute and critical care bed capacity throughout cyclical and seasonal surge periods.
+
+---
+
+L2.3.2_TITLE: Integration of Diagnostics and Surgical Care
+L2.3.2_TEXT:
+Ontario Health continues to work with the Ministry to implement strategies to ensure that
+patients receive care during clinically recommended wait times for procedures, imaging and
+surgery through maximizing capacity and innovation. This includes implementing partnerships
+between large and small hospitals or community clinics to support CT and MRI scanning, cataract
+surgeries and GI endoscopy, as well as working on strategies to increase access to procedures
+in community settings and advancing a pediatric strategy for comprehensive, integrated pediatric
+care.
+KEY_MEASURES:
+- Percentage of surgeries completed within clinically recommended wait times for pediatrics
+  and adults.
+- Volumes of CT and MRI scans for pediatrics and adults.
+
+---
+
+L2.3.3_TITLE: Provider Access to Digital Tools
+L2.3.3_TEXT:
+Actions to support clinicians include expanding and streamlining provider access to digital
+tools to reduce reliance on analog models such as fax machines. The Ministry's Patients Before
+Paperwork initiative aims to reduce administrative burden on providers, reduce delays in
+information sharing, support clinician wellbeing and improve patient safety and privacy, all
+while allowing more time with patients. Ontario Health advances this initiative as a digitally
+enabled clinical priority.
+KEY_MEASURES:
+- Number of sites onboarded and accessing provincial clinical viewers.
+
+---
+
+L2.3.4_TITLE: Data System Integration, Standardization and Security
+L2.3.4_TEXT:
+Ontario Health is prioritizing work to digitally unite providers and existing data stores
+containing billions of patient records critical to high-quality and timely care. This includes
+completing the Provincial Electronic Health Record (EHR), advancing data standardization and
+interoperability, and scaling provincial cyber and privacy supports. Underpinning these efforts
+are critical provincial cyber security supports to ensure security across the health care system.
+KEY_MEASURES:
+- Avoided or reduced cybersecurity breaches.
+
+---
+
+L2.3.5_TITLE: Use of Data and Analytics Services
+L2.3.5_TEXT:
+Accessing data for analytics and insights that improve system coordination and care delivery is
+core to the daily work of Ontario Health. Ontario Health is working with the Ministry to establish
+a modernized data authority model, including alignment of secure information management practices
+combining technology, people and processes. Actions include expanding insights generated to drive
+improvements in equity, clinical and quality outcomes, timely access to care, health system
+integration and provider performance.
+KEY_MEASURES:
+- New datasets added to the Analytics Data Hub and utilized for planning, informing quality and
+  clinical improvements, improving timely access and flow, and maintaining oversight and
+  performance management of the health system.
+
+---
+
+L2.4.1_TITLE: Workforce Training and Optimization
+L2.4.1_TEXT:
+Ontario Health will foster a system that adaptively responds to provider experience, resulting
+in the presence of a supported health workforce that enables better person-centred experiences
+and outcomes. This work includes ensuring supports are in place to build capacity, address
+training gaps, disseminate leading health workforce practices, and provide a more seamless
+process to transition learners into priority areas of the workforce.
+KEY_MEASURES:
+- Number of nurses retained and recruited through the Community Commitment Program for Nurses.
+- Number of nurses supported through the ED training program.
+
+---
+
+L2.4.2_TITLE: Recruitment, Retention and Distribution
+L2.4.2_TEXT:
+Improving provider experience includes increasing overall health system capacity through
+recruitment, retention and distribution initiatives. This includes integrating internationally
+educated health professionals into the health system, supporting overall recruitment and
+retention through incentive-based programs for nurses and personal support workers, and
+addressing distribution through rural and Northern supports such as relocation grants.
+KEY_MEASURES:
+- Number of internationally educated health professionals integrated and recruited into the
+  health care system.
+- Number of days of physician coverage provided to communities in need.
+- Number of PSWs hired in long-term care and home and community care through PSW Incentive Program.
+- Reduce avoidable ED shift closures for all HHR-related reasons.
+
+---
+
+L2.4.3_TITLE: Integrated Capacity Planning
+L2.4.3_TEXT:
+Capacity planning is a critical component to support prioritizing existing and future resources,
+identify system pressure points, and help ensure workforce planning meets future population needs.
+Ontario Health will support Ministry leadership in integrated capacity planning through data,
+analytics, and provincial program, regional, and local insights.
+KEY_MEASURES:
+- Finalization of an implementation framework for the Health System Integrated Capacity Plan
+  in partnership with the Ministry.
+- Comprehensive health workforce data in place across multiple sectors.
+
+---
+
+=====================================
+STRATEGIC DIRECTION 5: ENHANCE CLINICAL CARE AND SERVICE EXCELLENCE
+=====================================
+
+L1.5_TITLE: Enhance Clinical Care and Service Excellence
+L1.5_TEXT:
+As a clinical and quality-focused provincial agency, Ontario Health pursues the delivery of
+best-in-class care through the experience and well-established success of its clinical programs.
+Clinical programs span genetics, cancer, renal care, organ and tissue donation and transplants,
+cardiac, vascular and stroke care, palliative care, and laboratory medicine.
+
+---
+
+L2.5.1_TITLE: Expand Provincial Genetic Services
+L2.5.1_TEXT:
+Ontario Health's provincial genetics program is building a comprehensive and connected system
+for clinical genetic services in Ontario. This will provide access to timely, high-quality
+genetic services for the best possible health outcomes and ensure health care providers have
+the tools and resources they need to provide effective and coordinated genetic services.
+KEY_MEASURES:
+- Number of cancer tests performed (comprehensive biomarker and hereditary).
+- Number of rare and inherited genetic tests performed.
+
+---
+
+L2.5.2_TITLE: Improve Access and Quality in Cancer Care
+L2.5.2_TEXT:
+Ontario Health's vision is to be a leader in cancer care by continuing to improve the quality,
+safety and accessibility of cancer services from prevention through to long-term follow-up and
+end-of-life care. A focus on cancer screening, cancer care and survivorship programs aims to
+reduce the number of cancer diagnoses and to improve patient outcomes and experience.
+KEY_MEASURES:
+- Cancer screening participation rates (colorectal, cervical, breast).
+- Percent P3 CT scans and MRI scans complete within recommended wait time (adult and pediatric).
+
+---
+
+L2.5.3_TITLE: Improve Access and Quality in Renal Care
+L2.5.3_TEXT:
+Ontario Health is the government's advisor on chronic kidney disease and the renal care system,
+and also funds, coordinates and provides clinical guidance on the delivery of services to people
+with chronic kidney disease. Through collaborative efforts, Ontario Health is committed to
+advancing a high-quality and person-centred system of care for Ontarians with chronic kidney
+disease, with a focus on increasing kidney transplantation and home dialysis.
+KEY_MEASURES:
+- Increase the percentage of end-stage renal patients who received a living or deceased donor
+  kidney transplant.
+- Increase the percentage of chronic dialysis patients on a home dialysis modality.
+
+---
+
+L2.5.4_TITLE: Increase Life-Saving Organ and Tissue Donations and Transplants
+L2.5.4_TEXT:
+Ontario Health is responsible for delivering and coordinating organ and tissue donation and
+transplantation services across the province. Ontario Health helps save and enhance lives by
+maximizing organ and tissue donations in partnership with stakeholders. Public education and
+awareness initiatives support efforts to increase donor registration rates.
+KEY_MEASURES:
+- Net increase in registered donors.
+- Total living and deceased donor transplants.
+
+---
+
+L2.5.5_TITLE: Improve Access and Quality in Cardiac, Vascular, and Stroke Care
+L2.5.5_TEXT:
+Ontario Health provides clinical leadership to support priorities and initiatives that aim to
+improve equitable access to and quality of cardiac, stroke and vascular care for all Ontarians.
+The focus is on developing standards and guidance; defining evidence-based clinical pathways
+and models of care; knowledge transfer and exchange; developing strategies to reduce variations
+in services; assessing capacity and informing funding policy; and implementing performance
+measurement, monitoring and reporting frameworks.
+KEY_MEASURES:
+- Reduce heart failure admissions per 100 heart failure patients.
+- Increase endovascular Thrombectomy Treatment (EVT) for ischemic stroke.
+- Reduce non-traumatic major lower limb amputation (per 100,000).
+
+---
+
+L2.5.6_TITLE: Transform and Improve Access and Quality in Palliative Care
+L2.5.6_TEXT:
+Ontario Health aims to increase timely and equitable access to safe, high-quality and effective
+palliative care for people who are living with a serious illness and their care partners. A
+palliative approach to care, alongside curative treatment, offers improved quality of life and
+management of pain and other symptoms, including support to die in the individual's preferred
+location of death.
+KEY_MEASURES:
+- Number of community organizations implementing the model of care recommendations for adults
+  in the community.
+
+---
+
+L2.5.7_TITLE: Expand Ontario Laboratory Medicine Program
+L2.5.7_TEXT:
+The Ontario Laboratory Medicine Program (OLMP) will enable a unified provincial plan and
+integrated approach to laboratory medicine across the health system that is patient-centred,
+innovative and sustainable and delivers the greatest value for Ontarians. The OLMP will build
+on clinical expertise of its clinical and scientific advisory groups; focus on equitable access
+to testing alongside appropriate and coordinated tests and point-of-care testing; foster
+innovation and system responsiveness; support digital integration; and enable high-quality
+laboratory diagnostics for providers, patients and system surveillance.
+KEY_MEASURES:
+- End-to-end turnaround times of select provincial laboratory medicine and testing programs.
+
+---
+
+=====================================
+STRATEGIC DIRECTION 6: MAXIMIZE SYSTEM VALUE BY APPLYING EVIDENCE
+=====================================
+
+L1.6_TITLE: Maximize System Value by Applying Evidence
+L1.6_TEXT:
+Improving outcomes across emerging and high priority clinical areas requires a strong capacity
+for health care improvement and supporting knowledge exchange. Ontario Health works with
+patients, providers and organizations across the health system to improve outcomes, promote
+health equity and patient safety, standardize care, and enhance patient and provider experience.
+
+---
+
+L2.6.1_TITLE: Advance High-Quality and Safe Care Through Evidence and Continuous Quality Improvement
+L2.6.1_TEXT:
+Ontario Health drives health system and patient care improvements through clinical and quality
+standards that are reflective of Ministry and Ontario Health priorities. This includes developing
+and disseminating quality standards, advancing clinical adoption of evidence-based care,
+delivering Quality Improvement Plan guidance, facilitating continuous health care improvements
+through clinical quality initiatives, and advancing health technology assessments to inform
+public funding recommendations.
+KEY_MEASURES:
+- Rate of implementation and adoption of accepted health technology assessment recommendations.
+
+---
+
+L2.6.2_TITLE: Strengthen System Supports and Accountabilities
+L2.6.2_TEXT:
+Ontario Health continues to strengthen its partnerships with health system providers across the
+province, supporting the sustainment of health care system operations through the issuance and
+management of service accountability agreements with delivery partners that enforce system goals
+and enable strong system accountability and performance management best practices. Ontario Health
+also works closely with the Ministry in developing and implementing funding policy and innovative
+funding models and managing case-costing programs, aimed at leveraging funding to drive value
+and performance in the system.
+KEY_MEASURES:
+- nf
+
+---
+
+=====================================
+STRATEGIC DIRECTION 7: STRENGTHEN ONTARIO HEALTH'S ABILITY TO LEAD
+=====================================
+
+L1.7_TITLE: Strengthen Ontario Health's Ability to Lead
+L1.7_TEXT:
+Ontario Health is committed to engaging, informing and inspiring its workforce to enable them
+to do their best work. The organization continuously invests in people through wellness programs
+and learning and development programs that enable individual growth, and continuously embeds
+Ontario Health's vision, mission and values into its work.
+
+---
+
+L2.7.1_TITLE: Enhance Ontario Health's Organizational Effectiveness Through a Strong, Engaged, Connected,
+Diverse, and Accountable Workforce
+L2.7.1_TEXT:
+Ontario Health will invest in its people through wellness programs and learning and development
+programs that enable individual growth, and will continuously embed Ontario Health's vision,
+mission and values into work. This includes advancing a strong and engaged workforce through
+employee engagement and action plans, advancing return to workplace strategy, implementing
+communications strategy, and implementing organizational Equity, Inclusion, Diversity and
+Anti-Racism commitments.
+KEY_MEASURES:
+- Workforce turnover.
+- Workforce engagement and experience.
+
+---
+
+L2.7.2_TITLE: Support the Government's Plans for Supply Chain Centralization
+L2.7.2_TEXT:
+Ontario Health's supply chain delivers a critical role bringing vendor-based solutions and
+services that drive improved health care outcomes in various key programs such as screening,
+capital purchases for medical equipment and digitally enabled solutions. Working with key
+stakeholders including the Ministry and Supply Ontario on procurement strategy alignment will
+support enhanced value for money through best procurement contract outcomes.
+KEY_MEASURES:
+- Vendor performance is measured and monitored through key vendor contract management
+  mechanisms (e.g., service levels) to better ensure service expectations are being met.
+
+---
+
+=====================================
+QUALITY INDICATORS (Overall Document)
+=====================================
+SPECIFICITY: High
+SCOPE: Comprehensive
+OVERALL_QUALITY_NOTES: Highly detailed provincial-level business plan with clear strategic architecture.
+The document provides strong hierarchical structure with 7 strategic directions, 20 sub-priorities
+(L2), and measurable Key Performance Indicators for each. Vision, Mission, and Values are explicitly
+stated. The document is explicit about its accountability context - driven by the Ministry of Health's
+"Your Health" plan and Letter of Direction, the Ministry of Long-Term Care strategic priorities
+letter, and the Connected Care Act, 2019. Unlike individual hospital strategic plans, this document
+operates at the system integration and oversight level, not direct service delivery. Many priorities
+are framed as enabling or coordinating hospital and community sector performance rather than
+delivering care directly. The document includes extensive operational, financial, and HR appendices
+which have been excluded from this extraction as they are implementation rather than strategic
+content. Key themes running across all directions include: health equity and reducing inequities;
+digital transformation and data integration; Ontario Health Teams as the primary integration
+mechanism; workforce stabilization and development; and person-centred care. This document serves
+as the primary reference comparator for the Ontario Hospital concordance analysis project.
+=====================================
+END OF EXTRACTION - ONTARIO HEALTH ABP 2024/25
+=====================================
+```

@@ -1,0 +1,10 @@
+we seem to have had a diconnect somehome. The smarthomeproject_v4.dcocs delivered earlier this morning was not correct or upto date.  (asked for audits that have already been done) 
+Also didn't understand the document I posted to restart the project.
+I addition there were some network issues happening, and I think we had a mis queue somewhere some how
+
+Therefore lets start over. lease ignore the thread for today Called furniture placment options.
+
+Please review the following files in this order
+Smarthome_project_v3.docx
+SessionSummaryapril192026.docx
+HueAuditApril192026

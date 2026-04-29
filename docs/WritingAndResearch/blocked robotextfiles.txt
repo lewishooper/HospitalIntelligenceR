@@ -1,7 +1,4 @@
-FAC 854 — TORONTO SA GRACE
-FAC 927 — Windsor Hotel Dieu Grace
-FAC 933 — WINDSOR REGIONAL HOSPITAL
-FAC 966 — SARNIA BLUEWATER HEALTH
-FAC 971 — SUDBURY ST.JOSEPHS CONTINUING CARE
-FAC 977 — TERRACE BAY NORTH OF SUPERIOR HC
-FAC 981 — CHATHAM CHATHAM-KENT HEALTH ALLIANC
+"E:\HospitalIntelligenceR\roles\hit\source_data\FY2223YE_GL HIT Hosp fac Level.csv"		This is the older HIT file document that we need to add to the full ouput
+"E:\HospitalIntelligenceR\roles\hit\source_data\FY2526Q3_GL HIT Hosp fac Level.csv"		This is the newest HIT file that will be the initial input
+"E:\HospitalIntelligenceR\roles\hit\source_data\GlobalIndicatorLkup.rds"				This is the RDS file that contains a lookup for the indicators. 
+"E:\HospitalIntelligenceR\roles\hit\source_data\HIT_Global Indicator Manual_2425Q3_1_1.docx"This is the source document on the indicators. We will like not use it unless we need to verify an indicators
