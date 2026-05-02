@@ -2365,7 +2365,7 @@ hospitals:
       needs_review: no
 - FAC: '751'
   name: OTTAWA CHEO CTC
-  hospital_type: Specialty Children Hospital
+  hospital_type: Teaching Hospital
   base_url: https://www.cheo.on.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -3241,7 +3241,7 @@ hospitals:
       needs_review: no
 - FAC: '837'
   name: TORONTO HOSPITAL FOR SICK CHILDREN
-  hospital_type: Specialty Children Hospital
+  hospital_type: Teaching Hospital
   base_url: https://www.sickkids.ca
   base_url_validated: yes
   robots_allowed: yes
