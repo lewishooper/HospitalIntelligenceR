@@ -1,9 +1,6 @@
 # Strategic Theme Prevalence by Plan Era
 ## Ontario Public Hospitals — Temporal Analysis
-*HospitalIntelligenceR | Analysis 03b | April 2026*
-
-
-note! document superseded by 03cTheme_by_era_type.md
+*HospitalIntelligenceR | Analysis 03b | May 2026*
 
 ---
 
@@ -20,10 +17,10 @@ signature in how Ontario hospitals frame their strategic priorities.
 
 ## Data and Method
 
-**Cohort:** 114 Ontario public hospitals with full or partial quality strategic plan
+**Cohort:** 118 Ontario public hospitals with full or partial quality strategic plan
 extractions, robots-allowed, and a parseable plan start year falling within the 2018–2026
-window. Two hospitals with plan start years outside this window are excluded (FAC 973,
-historical 2015 plan; FAC 953, classified start year 2030 — a data artefact).
+window. One hospital with a plan start year outside this window is excluded (FAC 973,
+historical 2015 plan).
 
 **Unit of analysis:** Hospital. The metric reported is the percentage of hospitals in
 each era that have at least one strategic direction classified to a given theme. This
@@ -35,9 +32,9 @@ in Analysis 01b, which captures a theme's relative weight within an individual p
 
 | Era | Plan start years | n hospitals |
 |-----|-----------------|-------------|
-| Pre-COVID | 2018–2021 | 13 |
-| Early Recovery | 2022–2023 | 38 |
-| Current | 2024–2026 | 63 |
+| Pre-COVID | 2018–2021 | 12 |
+| Early Recovery | 2022–2023 | 41 |
+| Current | 2024–2026 | 65 |
 
 **Thematic taxonomy:** Ten active codes (GOV retired). Directions classified using
 the Claude Sonnet API against a structured 10-code taxonomy.
@@ -46,10 +43,9 @@ the Claude Sonnet API against a structured 10-code taxonomy.
 extraction prompt returned a null start year but a clear end year, a five-year horizon
 assumption was applied (start = end − 4) for six hospitals. For a further eight hospitals,
 dates were sourced from document titles, hospital websites, or direct email confirmation
-from hospitals. Four hospitals in the usable cohort remain without parseable plan
-dates and are excluded from this analysis.
+from hospitals.
 
-**Interpretive caution — Pre-COVID n:** The Pre-COVID group contains only 13 hospitals.
+**Interpretive caution — Pre-COVID n:** The Pre-COVID group contains only 12 hospitals.
 Point estimates for this era carry wide implicit uncertainty intervals. Directional
 patterns are plausible and consistent with the literature, but should not be treated
 as statistically robust. All temporal findings are framed as changing emphasis within
@@ -61,16 +57,16 @@ this cross-sectional dataset, not as causal trends.
 
 | Theme | Pre-COVID | Early Recovery | Current | Pre→Current shift |
 |-------|-----------|----------------|---------|-------------------|
-| WRK — Workforce & Culture | 69.2% | 92.1% | 91.9% | **+22.7 pp** |
-| PAT — Patient Experience & Quality | 69.2% | 81.6% | 75.8% | +6.6 pp |
-| PAR — Partnerships & Integration | 61.5% | 68.4% | 67.7% | +6.2 pp |
-| FIN — Financial Sustainability | 46.2% | 42.1% | 46.8% | +0.6 pp |
-| ACC — Access & Care Delivery | 30.8% | 31.6% | 35.5% | +4.7 pp |
-| RES — Research & Academic | 23.1% | 10.5% | 38.7% | **+15.6 pp** |
-| INN — Innovation & Digital Health | 23.1% | 21.1% | 33.9% | +10.8 pp |
-| INF — Infrastructure & Operations | 15.4% | 23.7% | 30.6% | **+15.2 pp** |
-| ORG — Organizational Culture | 15.4% | 7.9% | 14.5% | −0.9 pp |
-| EDI — Equity, Diversity & Inclusion | 7.7% | 31.6% | 21.0% | +13.3 pp |
+| WRK — Workforce & People | 75.0% | 92.7% | 90.8% | **+15.8 pp** |
+| PAT — Patient Care & Quality | 75.0% | 80.5% | 75.4% | +0.4 pp |
+| PAR — Partnerships & Community | 66.7% | 65.9% | 63.1% | −3.6 pp |
+| FIN — Financial Sustainability | 50.0% | 41.5% | 44.6% | −5.4 pp |
+| ACC — Access & Care Delivery | 33.3% | 31.7% | 40.0% | +6.7 pp |
+| INN — Innovation & Digital Health | 25.0% | 19.5% | 35.4% | +10.4 pp |
+| RES — Research & Academic | 16.7% | 14.6% | 40.0% | **+23.3 pp** |
+| INF — Infrastructure & Operations | 16.7% | 22.0% | 26.2% | +9.5 pp |
+| ORG — Organizational Culture | 16.7% | 9.8% | 10.8% | −5.9 pp |
+| EDI — Equity, Diversity & Inclusion | 8.3% | 31.7% | 23.1% | **+14.8 pp** |
 
 ---
 
@@ -80,9 +76,9 @@ this cross-sectional dataset, not as causal trends.
 
 The most striking finding is the sharp rise in workforce theme prevalence from the
 Pre-COVID era to Early Recovery, which is then sustained at near-identical levels
-into the Current era. In Pre-COVID plans, roughly seven in ten hospitals included
-at least one workforce direction. By Early Recovery, this had risen to more than nine
-in ten — and Current plans show virtually identical prevalence (91.9%).
+into the Current era. In Pre-COVID plans, three in four hospitals included at least
+one workforce direction. By Early Recovery, this had risen to more than nine in ten
+— and Current plans show virtually identical prevalence (90.8%).
 
 The pattern suggests a step-change rather than a gradual drift. Workforce moved from
 a common but not universal strategic priority to what is now effectively a sector-wide
@@ -95,12 +91,12 @@ not yet resolved these pressures and does not expect to in the near term.
 WRK is the only theme that can be characterized as near-universal in current Ontario
 hospital strategic planning.
 
-### 2. Rank stability at the top — PAT, PAR, FIN hold their positions
+### 2. Rank stability at the top — PAT, PAR, and FIN hold their positions
 
-While WRK moved dramatically, the next three themes — Patient Experience & Quality
-(PAT), Partnerships & Integration (PAR), and Financial Sustainability (FIN) — show
-remarkable rank stability across all three eras. They occupy positions 2, 3, and 4
-in every era, and none show a shift exceeding 7 percentage points in either direction.
+While WRK moved dramatically, the next three themes — Patient Care & Quality (PAT),
+Partnerships & Community (PAR), and Financial Sustainability (FIN) — show remarkable
+rank stability across all three eras. They occupy positions 2, 3, and 4 in every era,
+and none show a shift exceeding 7 percentage points in either direction.
 
 This stability is substantively meaningful. It suggests that the core of Ontario
 hospital strategic planning — patient experience, system partnerships, and financial
@@ -110,77 +106,72 @@ priorities. This is consistent with the accountability framework interpretation:
 Ontario Health agreements, and HSAA requirements create structural pressure to maintain
 PAT and FIN as strategic commitments regardless of the external environment.
 
-### 3. Research & Academic (RES) — A V-shaped recovery
+### 3. Research & Academic (RES) — The largest aggregate shift
 
-RES shows the most unusual temporal pattern in the dataset: a sharp dip in the Early
-Recovery era (10.5%) followed by a strong recovery in Current plans (38.7%). In the
-Pre-COVID era, roughly one in four hospitals included a research or academic direction.
-This fell to approximately one in ten in Early Recovery plans before rising to nearly
-two in five in the most current plans.
+RES shows the largest aggregate Pre-COVID → Current shift in the dataset at +23.3
+percentage points (16.7% → 40.0%), and also the most unusual temporal pattern: a
+modest dip in Early Recovery (14.6%) followed by a strong recovery in Current plans
+(40.0%).
 
-The Early Recovery dip is plausible on its face — hospitals under acute operational
-pressure from COVID-19 may have deprioritized research and academic activities in
-favour of stabilization priorities. The subsequent recovery in Current plans may reflect
-both the normalization of operations and the renewed strategic importance of clinical
-research partnerships, particularly given Ontario Health's emphasis on academic health
-networks and the Teaching hospital sector's expanded footprint in Current-era planning.
+At the aggregate level the trajectory appears to describe a V-shape. However, Analysis
+03c demonstrates that this aggregate pattern is a composition artefact and should not
+be read as a sector-wide trend. When disaggregated by hospital type, RES proves to be
+structurally stratified: near-universal in Teaching and Specialty hospitals across all
+eras, newly emerging in Community — Large hospitals in the Current era, and absent in
+Community — Small hospitals throughout. The aggregate fluctuation reflects which hospital
+types happen to be writing plans in each era, not a genuine sector-wide ebb and flow
+in research emphasis. The substantively correct interpretation of the RES finding is
+developed in 03c.
 
-It should be noted that RES is disproportionately a Teaching hospital theme, and the
-distribution of hospital types across eras is not perfectly balanced. Three of the four
-Teaching hospitals with parseable plan dates are in the Current era, which may
-contribute mechanically to the recovery in RES prevalence. This composition effect
-should be examined before drawing strong conclusions about the RES trajectory.
+### 4. Equity, Diversity & Inclusion (EDI) — A spike and partial retreat
 
-### 4. Infrastructure (INF) and Innovation (INN) — Gradual but consistent rise
+EDI shows a distinctive pattern: near-absent in Pre-COVID plans (8.3%), it spiked
+sharply in the Early Recovery era (31.7%), then retreated partially in Current plans
+(23.1%). The Pre-COVID → Current shift of +14.8 percentage points falls just below
+the 15-point threshold used here to identify major shifts, but the Early Recovery spike
+is the largest single-era movement of any theme in either direction.
 
-Both INF and INN show consistent upward trajectories from Pre-COVID through Current,
-though neither as dramatically as WRK. Infrastructure & Operations rises from 15.4%
-to 30.6% (+15.2 pp), and Innovation & Digital Health from 23.1% to 33.9% (+10.8 pp).
-
-The INF rise likely reflects a combination of post-COVID facility investment backlogs,
-digital infrastructure needs exposed by the rapid shift to virtual care during the
-pandemic, and Ontario Health's capital planning priorities. The INN rise is consistent
-with the broader digital health transformation narrative — electronic health records,
-virtual care platforms, and AI-enabled clinical decision support have moved from
-peripheral to mainstream strategic concerns in the sector.
-
-### 5. Equity, Diversity & Inclusion (EDI) — A spike and partial retreat
-
-EDI shows a distinctive pattern: near-absent in Pre-COVID plans (7.7%), it spiked
-sharply in the Early Recovery era (31.6%), then retreated partially in Current plans
-(21.0%). The Early Recovery spike aligns plausibly with the social equity conversation
-that intensified in 2020–2021 following both the COVID-19 pandemic's disproportionate
+The Early Recovery spike aligns plausibly with the social equity conversation that
+intensified in 2020–2021 following both the COVID-19 pandemic's disproportionate
 impact on racialized communities and the broader social movement context of that period.
+The partial retreat in Current plans does not necessarily indicate deprioritization.
+It may reflect normalization — equity commitments that were newly foregrounded in
+2022–2023 plans may now be embedded within other strategic directions (particularly
+PAT and WRK) rather than standing as separate named directions.
 
-The partial retreat in Current plans does not necessarily indicate that hospitals have
-deprioritized equity. It may reflect normalization — equity language and commitments
-that were newly foregrounded in 2022–2023 plans may now be embedded within other
-strategic directions (particularly PAT and WRK) rather than standing as separate
-named directions. This possibility warrants closer examination at the direction
-description level before concluding that equity emphasis has genuinely declined.
+### 5. Innovation (INN) and Infrastructure (INF) — Consistent upward trajectories
+
+Both INN and INF show consistent upward trajectories from Pre-COVID through Current,
+though neither as dramatically as WRK or RES. Innovation & Digital Health rises from
+25.0% to 35.4% (+10.4 pp), and Infrastructure & Operations from 16.7% to 26.2%
+(+9.5 pp). Both remain well below the sector-wide core themes in prevalence but have
+meaningfully broadened their reach across the cohort.
+
+The INN rise is consistent with the broader digital health transformation narrative
+across the Ontario health system. The INF rise likely reflects post-COVID facility
+investment backlogs and digital infrastructure needs exposed by the rapid shift to
+virtual care during the pandemic.
 
 ### 6. Organizational Culture (ORG) — Consistently low and stable
 
-ORG is the lowest-prevalence theme in every era and shows minimal change across the
-period (15.4% → 7.9% → 14.5%). This is consistent with the decision — previously
-noted — to consider retiring or consolidating ORG. Its low prevalence suggests that
-explicit organizational culture directions are not a common feature of Ontario hospital
-strategic planning, with culture more often addressed implicitly within WRK directions.
+ORG is the lowest-prevalence theme in every era and shows minimal net change across
+the period (16.7% → 9.8% → 10.8%). Explicit organizational culture directions are
+not a common feature of Ontario hospital strategic planning. Culture content is more
+often addressed implicitly within WRK directions rather than named as a standalone
+priority.
 
 ---
 
 ## Summary of Confirmed Shifts (Pre-COVID → Current)
 
-Three themes cross the 15 percentage point threshold from Pre-COVID to Current:
+Two themes cross the 15 percentage point threshold from Pre-COVID to Current:
 
-- **WRK +22.7 pp** — the clearest and most robust signal in the dataset
-- **INF +15.2 pp** — consistent upward trajectory across all three eras
-- **RES +15.6 pp** — V-shaped pattern; composition effects may contribute
+- **RES +23.3 pp** — the largest aggregate shift; interpret as type-composition effect (see 03c)
+- **WRK +15.8 pp** — sector-wide step-change; the most robust behavioural signal in the dataset
 
-Two additional themes show substantial but sub-threshold shifts worth narrative attention:
+One additional theme shows a substantial but sub-threshold shift worth narrative attention:
 
-- **EDI +13.3 pp** — spike in Early Recovery, partial retreat in Current
-- **INN +10.8 pp** — consistent upward trend, moderated from earlier estimates
+- **EDI +14.8 pp** — spike in Early Recovery, partial retreat in Current; net gain meaningful
 
 ---
 
@@ -192,16 +183,14 @@ Conclusions should be framed as "the thematic composition of plans written in [e
 differs from plans written in [era]" rather than "hospitals changed their strategic
 priorities over time."
 
-**Pre-COVID small n:** With 13 hospitals in the Pre-COVID group, percentage-point
-shifts from that baseline carry substantial uncertainty. The WRK finding (+22.7 pp)
+**Pre-COVID small n:** With 12 hospitals in the Pre-COVID group, percentage-point
+shifts from that baseline carry substantial uncertainty. The WRK finding (+15.8 pp)
 is robust enough that it would remain a large shift even with considerable sampling
-variability. RES and INF are more sensitive to the composition of the Pre-COVID group.
+variability. RES and EDI are more sensitive to the composition of the Pre-COVID group.
 
 **Five-year horizon assumption:** Six hospitals received imputed plan start years
-based on a five-year horizon from a known end year. These hospitals contribute to
-the Current era (five hospitals: 942, 959, 975, and others) and Early Recovery era
-(one hospital: 662). The assumption is consistent with standard Ontario hospital
-planning cycles and is documented in the patch log.
+based on a five-year horizon from a known end year. The assumption is consistent with
+standard Ontario hospital planning cycles and is documented in the patch log.
 
 **Plan date sourcing variation:** Plan dates derive from multiple sources of varying
 reliability — direct document extraction (most reliable), document titles, hospital
@@ -217,7 +206,7 @@ follow naturally:
 
 1. **Era × hospital type interaction** — do the WRK and RES trends hold uniformly
    across Teaching, Community Large, Community Small, and Specialty hospitals, or are
-   they concentrated in specific segments?
+   they concentrated in specific segments? (Addressed in Analysis 03c.)
 
 2. **CIHI linkage** — once the CIHI crosswalk is in place, test whether hospitals
    with explicit quality (PAT) and access (ACC) directions show different performance

@@ -160,6 +160,7 @@ registry_raw <- yaml.load_file(PATHS$registry_yaml)
 
 # Pull reference fields into a per-hospital data frame
 spine_registry <- map(registry_raw$hospitals, function(h) {
+  if (isTRUE(h$retired)) return(NULL)
   tibble(
     fac            = as.character(h$FAC),
     hospital_name  = as.character(h$name),
@@ -168,9 +169,6 @@ spine_registry <- map(registry_raw$hospitals, function(h) {
     base_url       = as.character(h$base_url %||% NA_character_)
   )
 }) |> bind_rows()
-
-cat(sprintf("   Registry: %d hospitals loaded\n", nrow(spine_registry)))
-
 
 # =============================================================================
 # SECTION 5: Derive hospital_type_group (collapsed grouping)
@@ -298,6 +296,14 @@ master_analytical <- master %>%
     direction_description,
     key_actions
   )
+# Drop rows for retired FACs (present in strategy_master but excluded from registry)
+n_before <- nrow(master_analytical)
+master_analytical <- master_analytical %>%
+  filter(!is.na(hospital_type_group))
+n_dropped <- n_before - nrow(master_analytical)
+if (n_dropped > 0) {
+  cat(sprintf("   Dropped %d rows for retired FACs (no registry match)\n", n_dropped))
+}
 
 cat(sprintf("   Analytical master: %d rows, %d columns\n",
             nrow(master_analytical), ncol(master_analytical)))

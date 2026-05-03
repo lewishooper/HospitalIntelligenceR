@@ -19,7 +19,6 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 648,DUNNVILLE HALDIMAND WAR MEMORIAL,Small Hospital,TRUE,https://www.hwmh.ca,Community — Small,NA,NA,3,partial,2024-01-01,2028-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-04-11,TRUE
 650,ELLIOT LAKE ST JOSEPH'S,Small Hospital,TRUE,https://sjghel.ca,Community — Small,NA,NA,4,partial,2022-01-01,2026-01-01,2022,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-04-11,TRUE
 651,OTTAWA ROYAL OTTAWA (PSYCH),Specialty Mental Health Hospital,TRUE,https://www.theroyal.ca,Specialty,NA,NA,5,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
-653,Blanche River ENGLEHART & DISTRICT,Small Hospital,TRUE,https://www.blancheriverhealth.ca,Community — Small,NA,NA,6,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 654,ESPANOLA GENERAL,Small Hospital,TRUE,https://espanolaregionalhospital.ca,Community — Small,NA,NA,9,full,2025-01-01,2030-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 655,Huron Health EXETER SOUTH HURON,Small Hospital,TRUE,https://www.huronhealthsystem.ca,Community — Small,NA,NA,4,full,2023-01-01,2026-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 656,WHCA Grove community hospital ,Small Hospital,TRUE,https://gmch.whca.ca,Community — Small,NA,NA,5,full,2023-01-01,2028-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-31,TRUE
@@ -36,7 +35,6 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 685,MICS Group IROQUOIS FALLS ANSON GENERAL,Small Hospital,TRUE,https://www.micsgroup.com,Community — Small,NA,NA,5,full,2023-01-01,2026-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 686,WAWA LADY DUNN HC,Small Hospital,TRUE,https://ldhc.com,Community — Small,NA,NA,4,full,2022-01-01,2027-01-01,2022,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 695,KINGSTON PROVIDENCE CARE HOSPITAL,Chronic/Rehab Hospital,TRUE,https://providencecare.ca,Specialty,NA,NA,5,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
-696,KIRKLAND & DISTRICT,Small Hospital,TRUE,https://www.blancheriverhealth.ca,Community — Small,NA,NA,6,full,2024-01-01,2029-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 699,WRHN-KITCHENER ST MARY'S,Large Community Hospital,TRUE,https://www.smgh.ca,Community — Large,NA,NA,NA,no_data,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,FALSE
 701,RICHMOND HILL MACKENZIE HEALTH,Large Community Hospital,TRUE,https://www.mackenziehealth.ca,Community — Large,NA,NA,8,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 704,Erie Shores Leamington,Small Hospital,TRUE,https://www.erieshoreshealthcare.ca,Community — Small,NA,NA,4,partial,2025-01-01,NA,2025,TRUE,TRUE,FALSE,TRUE,FALSE,pdf_image,2026-03-31,TRUE
@@ -68,7 +66,6 @@ fac,hospital_name,hospital_type,robots_allowed,base_url,hospital_type_group,cihi
 802,ALEXANDRIA GLENGARRY,Small Hospital,TRUE,https://www.hgmh.on.ca,Community — Small,NA,NA,4,full,2023-01-01,2028-01-01,2023,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 804,SIMCOE NORFOLK GENERAL,Large Community Hospital,TRUE,https://www.ngh.on.ca,Community — Large,NA,NA,3,full,2018-01-01,2023-01-01,2018,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 809,SMOOTH ROCK FALLS,Small Hospital,TRUE,https://www.srfhosp.ca,Community — Small,NA,NA,5,partial,2020-01-01,2023-01-01,2020,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
-813,STRATFORD GENERAL,Large Community Hospital,TRUE,https://www.hpha.ca,Community — Large,NA,NA,3,full,2025-01-01,2028-01-01,2025,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 814,Middlesex Hosptial Alliance  STRATHROY MIDDLESEX GENERAL,Large Community Hospital,TRUE,https://mhalliance.on.ca,Community — Large,NA,NA,3,full,2024-01-01,NA,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf,2026-03-27,TRUE
 824,Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL,Small Hospital,TRUE,https://www.ruralroadshealthservices.ca,Community — Small,NA,NA,4,partial,2024-01-01,2026-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,txt,2026-03-27,TRUE
 826,KENORA LAKE OF THE WOODS,Small Hospital,TRUE,http://www.lwdh.on.ca,Community — Small,NA,NA,5,full,2024-01-01,2028-01-01,2024,TRUE,TRUE,TRUE,TRUE,FALSE,pdf_image,2026-04-10,TRUE

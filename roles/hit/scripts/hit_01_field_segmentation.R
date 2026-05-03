@@ -86,6 +86,33 @@ hit_work <- hit_master %>%
 message(sprintf("\n  After filtering to %d working indicators (incl. ind56 ED visits): %d rows",
                 length(INDS_ALL), nrow(hit_work)))
 
+# -----------------------------------------------------------------------------
+# Step 1b — Scope filter: restrict to registry FACs only
+# hospital_spine.csv is the authoritative scope boundary — defines the study
+# population. HIT_ONLY entities and retired pre-merger FACs are excluded here
+# so they do not enter field median calculations or trajectory scoring.
+# hit_master.csv is never modified; the filter is applied at the analytics layer.
+# -----------------------------------------------------------------------------
+
+message("\nStep 1b — Applying registry scope filter")
+
+registry_facs <- read_csv(
+  "analysis/data/hospital_spine.csv",
+  col_types = cols(.default = col_character()),
+  show_col_types = FALSE
+) %>%
+  pull(fac)
+
+facs_before <- n_distinct(hit_work$fac)
+hit_work    <- hit_work %>% filter(fac %in% registry_facs)
+facs_after  <- n_distinct(hit_work$fac)
+
+message(sprintf("  Registry FACs:           %d", length(registry_facs)))
+message(sprintf("  FACs before scope filter: %d", facs_before))
+message(sprintf("  FACs after scope filter:  %d", facs_after))
+message(sprintf("  FACs removed:             %d (HIT-only + retired pre-merger)",
+                facs_before - facs_after))
+
 # Confirm all expected indicators are present
 inds_found   <- sort(unique(hit_work$indicator_code))
 inds_missing <- setdiff(INDS_ALL, inds_found)
@@ -283,14 +310,51 @@ message("\nStep 3 — Cumulating scores and classifying trajectories")
 # Uses all transitions where both rev and exp adj values are available
 # Tracks n_transitions so we know whose score rests on < 6 years
 # -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Amalgamation transition exclusions
+# These transitions are artefacts — the receiving FAC absorbed predecessor
+# hospital financials, producing a discontinuous jump not reflective of
+# performance. Excluded before cumulation; affected hospitals are flagged
+# in output. "to" year convention matches fiscal_year label in yoy_adj.
+# -----------------------------------------------------------------------------
 
-trajectory_scores <- yoy_adj %>%
+amalgamation_flags <- tribble(
+  ~fac,   ~fiscal_year,
+  "982",  "2021/2022",
+  "983",  "2024/2025"
+)
+
+# Structural outlier flags — hospitals excluded from quadrant classification.
+# Retained in hit_01_field_trajectories.csv with outlier_flag = TRUE.
+# FAC 854 (SA Grace) and FAC 971 (Sudbury St. Joseph's Continuing Care):
+# COVID-era funded expansion — transitional care / hospital-at-home programs
+# absorbing ALC and complex discharge patients from acute hospitals.
+# Revenue and expenses nearly tripled 2018-2025 driven by provincial funding.
+# Whether expansion is permanent is under investigation. Exclude from
+# quadrant distribution pending confirmation of program continuity.
+structural_outliers <- c("854", "971")
+
+
+yoy_adj_clean <- yoy_adj %>%
+  anti_join(amalgamation_flags, by = c("fac", "fiscal_year"))
+
+n_excluded <- nrow(yoy_adj) - nrow(yoy_adj_clean)
+message(sprintf("\n  Amalgamation transitions excluded from cumulation: %d rows",
+                n_excluded))
+message("  Affected FACs:")
+amalgamation_flags %>%
+  { message(sprintf("    FAC %s — transition %s excluded", .$fac, .$fiscal_year)); . } %>%
+  invisible()
+
+trajectory_scores <- yoy_adj_clean %>%
   filter(!is.na(adj_rev_yoy) & !is.na(adj_exp_yoy)) %>%
   group_by(fac) %>%
   summarise(
-    cum_adj_rev    = sum(adj_rev_yoy),
-    cum_adj_exp    = sum(adj_exp_yoy),
-    n_transitions  = n(),
+    cum_adj_rev        = sum(adj_rev_yoy),
+    cum_adj_exp        = sum(adj_exp_yoy),
+    n_transitions      = n(),
+    amalgamation_flag  = fac[1] %in% amalgamation_flags$fac,
+    outlier_flag       = fac[1] %in% structural_outliers,
     .groups = "drop"
   )
 
@@ -419,7 +483,8 @@ trajectories <- trajectory_scores %>%
       exp_improving & !rev_improving ~ "Expense-led",
       exp_worsening | rev_declining  ~ "Cost pressure",
       TRUE                           ~ "Neither"
-    )
+    ),
+    quadrant = if_else(outlier_flag, "Structural outlier", quadrant)
   )
 
 message("\n  Primary quadrant distribution:")
@@ -470,11 +535,13 @@ print(table(trajectories$exp_subclass, useNA = "ifany"))
 # Part E — Summary by quadrant
 # -----------------------------------------------------------------------------
 
+n_for_pct <- sum(!trajectories$outlier_flag)
+
 quadrant_summary <- trajectories %>%
   group_by(quadrant) %>%
   summarise(
     n_hospitals      = n(),
-    pct_hospitals    = round(n() / nrow(trajectories) * 100, 1),
+    pct_hospitals    = round(n() / n_for_pct * 100, 1),
     mean_cum_rev     = round(mean(cum_adj_rev), 1),
     mean_cum_exp     = round(mean(cum_adj_exp), 1),
     mean_transitions = round(mean(n_transitions), 1),

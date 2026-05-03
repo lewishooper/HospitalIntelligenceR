@@ -893,6 +893,9 @@ hospitals:
   last_validated: '2025-11-28'
   leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
   notes: ''
+  retired: true
+  merged_into: '982'
+  merger_hit_year: '2021/2022'
   status:
     strategy:
       last_search_date: '2026-03-20'
@@ -1631,6 +1634,9 @@ hospitals:
   last_validated: '2025-11-28'
   leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
   notes: ''
+  retired: true
+  merged_into: '982'
+  merger_hit_year: '2021/2022'
   status:
     strategy:
       last_search_date: '2026-03-20'
@@ -3027,6 +3033,9 @@ hospitals:
   last_validated: '2025-11-28'
   leadership_url: https://www.hpha.ca/ourorganization#accordion-38-2
   notes: ''
+  retired: true
+  merged_into: '983'
+  merger_hit_year: '2024/2025'
   status:
     strategy:
       last_search_date: '2026-03-22'
