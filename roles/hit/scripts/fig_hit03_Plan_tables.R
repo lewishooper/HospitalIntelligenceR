@@ -1,5 +1,5 @@
 # =============================================================================
-# roles/hit/scripts/fig_hit03_plan_tables.R
+# @roles/hit/scripts/fig_hit03_plan_tables.R
 # HospitalIntelligenceR — Publication Tables: Strategic Plan × Financial Trajectory
 #
 # Produces two publication-quality flextable PNGs per figure_standards.md §11:
