@@ -1,5 +1,5 @@
 # =============================================================================
-# roles/hit/scripts/hit_03_plan_comparison.R
+## roles/hit/scripts/hit_03_plan_comparison.R
 # HospitalIntelligenceR — Strategic Plan × Financial Trajectory Comparison
 #
 # Builds a year-level field-adjusted revenue/expense table and produces the

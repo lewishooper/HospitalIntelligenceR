@@ -373,8 +373,8 @@ for (i in seq_len(nrow(target_rows))) {
   # Polite pause between calls
   if (i < nrow(target_rows)) Sys.sleep(0.3)
 }
-
-
+#
+ 
 # =============================================================================
 # SECTION 8: Assemble and write outputs
 # =============================================================================

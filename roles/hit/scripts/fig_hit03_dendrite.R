@@ -2,7 +2,7 @@
 # fig_hit03_dendrite.R
 # Dendrite graph — hospital-level field-adjusted trajectories, plan-anchored
 #
-# Purpose:
+## Purpose:
 #   Visualise year-by-year field-adjusted revenue and expense changes for all
 #   55 with-plan hospitals, aligned to years since plan initiation rather than
 #   calendar fiscal year. Each hospital is one semi-transparent line. A group
