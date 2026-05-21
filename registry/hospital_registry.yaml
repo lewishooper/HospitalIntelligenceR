@@ -217,6 +217,51 @@ hospitals:
       manual_override: no
       override_reason: ''
       needs_review: no
+      
+- FAC: '600'
+  name: ATIKOKAN GENERAL
+  hospital_type: Small Hospital
+  base_url: https://www.aghospital.on.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2026-05-21'
+  leadership_url: ''
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-05-21'
+      content_url: https://www.aghospital.on.ca/mission-vision-values
+      content_type: html
+      local_folder: ''
+      local_filename: ''
+      last_extraction_date: ''
+      extraction_status: not_started
+      manual_override: yes
+      override_reason: URL manually identified — Mission, Vision, Values page (HTML); queued for fall 2026 run
+      needs_review: no
+      phase2_status: ''
+      phase2_date: ''
+      phase2_quality: ''
+      phase2_n_dirs: 0
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no     
+
 - FAC: '606'
   name: BARRIE ROYAL VICTORIA REG HC
   hospital_type: Large Community Hospital
@@ -1580,6 +1625,46 @@ hospitals:
       manual_override: no
       override_reason: ''
       needs_review: no
+
+- FAC: '687'
+  name: KAPUSKASING SENSENBRENNER
+  hospital_type: Small Hospital
+  base_url: https://www.senhosp.ca
+  base_url_validated: yes
+  robots_allowed: yes
+  last_validated: '2026-05-21'
+  leadership_url: ''
+  notes: ''
+  status:
+    strategy:
+      last_search_date: '2026-05-21'
+      extraction_status: confirmed_no_plan
+      review_date: '2026-12-01'
+      manual_override: yes
+      override_reason: No strategic plan discoverable after manual search
+      override_set_date: '2026-05-21'
+      content_url: ''
+      content_type: ''
+      needs_review: no
+    foundational:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    executives:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+    board:
+      last_extraction_date: ''
+      extraction_status: pending
+      manual_override: no
+      override_reason: ''
+      needs_review: no
+
 - FAC: '695'
   name: KINGSTON PROVIDENCE CARE HOSPITAL
   hospital_type: Chronic/Rehab Hospital
