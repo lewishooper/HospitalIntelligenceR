@@ -45,6 +45,7 @@ hospitals:
 - FAC: '593'
   name: Middlesex Hospital Alliance NEWBURY FOUR COUNTIES HEALTH SERV.
   hospital_type: Small Hospital
+  shared_plan_partners: ['814']
   base_url: https://mhalliance.on.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -132,6 +133,7 @@ hospitals:
 - FAC: '597'
   name: ALMONTE GENERAL
   hospital_type: Small Hospital
+  shared_plan_partners: ['626']
   base_url: https://www.mrha.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -443,6 +445,7 @@ hospitals:
 - FAC: '626'
   name: 'MRHA CARLETON PLACE & DISTRICT '
   hospital_type: Small Hospital
+  shared_plan_partners: ['597']
   base_url: https://www.mrha.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -578,6 +581,7 @@ hospitals:
 - FAC: '638'
   name: MICS GROUP COCHRANE LADY MINTO
   hospital_type: Small Hospital
+  shared_plan_partners: ['685','638','723']
   base_url: https://www.micsgroup.com
   base_url_validated: yes
   robots_allowed: yes
@@ -666,6 +670,7 @@ hospitals:
 - FAC: '644'
   name: Cornwall Hospital  CORNWALL HOTEL DIEU
   hospital_type: Small Hospital
+  shared_plan_partners: ['967']
   base_url: https://www.cornwallhospital.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -1022,6 +1027,7 @@ hospitals:
 - FAC: '655'
   name: Huron Health EXETER SOUTH HURON
   hospital_type: Small Hospital
+  shared_plan_partners: ['663']
   base_url: https://www.huronhealthsystem.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -1066,6 +1072,7 @@ hospitals:
 - FAC: '656'
   name: 'WHCA Grove community hospital '
   hospital_type: Small Hospital
+  shared_plan_partners: ['963']
   base_url: https://gmch.whca.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -1193,6 +1200,7 @@ hospitals:
 - FAC: '663'
   name: Huron HealthGODERICH ALEXANDRA MARINE & GEN
   hospital_type: Small Hospital
+  shared_plan_partners: ['655']
   base_url: https://www.huronhealthsystem.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -1496,6 +1504,7 @@ hospitals:
 - FAC: '684'
   name: Rural Roads Health servcies INGERSOLL ALEXANDRA
   hospital_type: Small Hospital
+  shared_plan_partners: ['824']
   base_url: https://www.ruralroadshealthservices.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -1542,6 +1551,7 @@ hospitals:
 - FAC: '685'
   name: MICS Group IROQUOIS FALLS ANSON GENERAL
   hospital_type: Small Hospital
+  shared_plan_partners: ['638','723']
   base_url: https://www.micsgroup.com
   base_url_validated: yes
   robots_allowed: yes
@@ -1932,6 +1942,7 @@ hospitals:
 - FAC: '709'
   name: Listowel Wingham LISTOWEL MEMORIAL
   hospital_type: Small Hospital
+  shared_plan_partners: ['889']
   base_url: https://lwha.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -2104,6 +2115,7 @@ hospitals:
 - FAC: '723'
   name: MATHESON BINGHAM MEMORIAL
   hospital_type: Small Hospital
+  shared_plan_partners: ['638',685]
   base_url: https://www.micsgroup.com
   base_url_validated: yes
   robots_allowed: yes
@@ -3159,6 +3171,7 @@ hospitals:
 - FAC: '814'
   name: Middlesex Hosptial Alliance  STRATHROY MIDDLESEX GENERAL
   hospital_type: Large Community Hospital
+  shared_plan_partners: ['593']
   base_url: https://mhalliance.on.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -3202,6 +3215,7 @@ hospitals:
 - FAC: '824'
   name: Rural Roads Health Services TILLSONBURG DISTRICT MEMORIAL
   hospital_type: Small Hospital
+  shared_plan_partners: ['684']
   base_url: https://www.ruralroadshealthservices.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -3688,6 +3702,7 @@ hospitals:
 - FAC: '889'
   name: WINGHAM & DISTRICT
   hospital_type: Small Hospital
+  shared_plan_partners: ['709']
   base_url: https://lwha.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -5169,6 +5184,7 @@ hospitals:
 - FAC: '963'
   name: MOUNT FOREST NORTH WELLINGTON HC
   hospital_type: Small Hospital
+  shared_plan_partners: ['656']
   base_url: https://gmch.whca.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -5335,6 +5351,7 @@ hospitals:
 - FAC: '967'
   name: CORNWALL COMMUNITY
   hospital_type: Large Community Hospital
+  shared_plan_partners: ['644']
   base_url: https://www.cornwallhospital.ca
   base_url_validated: yes
   robots_allowed: yes
