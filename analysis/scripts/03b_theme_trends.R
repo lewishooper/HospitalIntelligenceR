@@ -5,7 +5,7 @@
 # QUESTION:
 #   Has the thematic composition of Ontario hospital strategic plans shifted
 #   over time? Specifically, do plans written post-COVID differ in their
-#   strategic emphasis compared to pre-COVID plans?
+#   strategic emphasis compared to Pandemic Era plans?
 #
 # APPROACH:
 #   - Unit of analysis: hospital (one observation per hospital)
@@ -16,7 +16,7 @@
 #   - Same analytical cohort as 01a/01b
 #
 # ERA DEFINITIONS:
-#   Pre-COVID     2018–2021   Plans written before or during acute COVID period
+#   Pandemic Era     2018–2021   Plans written before or during acute COVID period
 #   Early Recovery 2022–2023  Plans written in immediate post-COVID period
 #   Current       2024–2026   Most recently written plans
 #
@@ -94,7 +94,7 @@ if (!exists("spine")) {
 
 ERA_BANDS <- tribble(
   ~era_label,        ~year_min, ~year_max,
-  "Pre-COVID",       2018,      2021,
+  "Pandemic Era",       2018,      2021,
   "Early Recovery",  2022,      2023,
   "Current",         2024,      2026
 )
@@ -102,14 +102,14 @@ ERA_BANDS <- tribble(
 # Helper: assign era from year
 .assign_era <- function(year) {
   case_when(
-    year >= 2018 & year <= 2021 ~ "Pre-COVID",
+    year >= 2018 & year <= 2021 ~ "Pandemic Era",
     year >= 2022 & year <= 2023 ~ "Early Recovery",
     year >= 2024 & year <= 2026 ~ "Current",
     TRUE                        ~ NA_character_
   )
 }
 
-ERA_LEVELS <- c("Pre-COVID", "Early Recovery", "Current")
+ERA_LEVELS <- c("Pandemic Era", "Early Recovery", "Current")
 
 
 # =============================================================================
@@ -217,7 +217,7 @@ prevalence_wide <- prevalence_long %>%
   mutate(pct_hospitals = as.numeric(pct_hospitals)) %>%
   select(-n_hospitals) %>%
   pivot_wider(names_from = era, values_from = pct_hospitals) %>%
-  arrange(desc(`Pre-COVID`))
+  arrange(desc(`Pandemic Era`))
 print(as.data.frame(prevalence_wide))
 cat("\n")
 
@@ -262,10 +262,10 @@ for (e in ERA_LEVELS) {
 cat("\n")
 
 # Notable shifts: themes where prevalence changes >= 15 pp across eras
-cat("=== Notable shifts (Pre-COVID → Current, >= 15 pp change) ===\n")
+cat("=== Notable shifts (Pandemic Era → Current, >= 15 pp change) ===\n")
 shifts <- prevalence_wide %>%
   mutate(
-    shift_pp = `Current` - `Pre-COVID`,
+    shift_pp = `Current` - `Pandemic Era`,
     direction = if_else(shift_pp > 0, "UP", "DOWN")
   ) %>%
   filter(abs(shift_pp) >= 15) %>%
@@ -273,15 +273,15 @@ shifts <- prevalence_wide %>%
 
 if (nrow(shifts) > 0) {
   for (i in seq_len(nrow(shifts))) {
-    cat(sprintf("  %-5s  %s %.0f pp  (Pre-COVID: %.0f%%  →  Current: %.0f%%)\n",
+    cat(sprintf("  %-5s  %s %.0f pp  (Pandemic Era: %.0f%%  →  Current: %.0f%%)\n",
                 shifts$theme[i], shifts$direction[i], abs(shifts$shift_pp[i]),
-                shifts$`Pre-COVID`[i], shifts$`Current`[i]))
+                shifts$`Pandemic Era`[i], shifts$`Current`[i]))
   }
 } else {
-  cat("  No themes show >= 15 pp shift from Pre-COVID to Current.\n")
+  cat("  No themes show >= 15 pp shift from Pandemic Era to Current.\n")
   cat("  Largest shifts:\n")
   prevalence_wide %>%
-    mutate(shift_pp = abs(`Current` - `Pre-COVID`)) %>%
+    mutate(shift_pp = abs(`Current` - `Pandemic Era`)) %>%
     arrange(desc(shift_pp)) %>%
     slice_head(n = 3) %>%
     { cat(paste0("    ", .$theme, ": ", round(.$shift_pp, 1), " pp\n")); . } %>%
@@ -367,7 +367,7 @@ p_heatmap <- ggplot(
     title    = "Strategic Theme Prevalence by Plan Era",
     subtitle = paste0(
       "% of Ontario hospitals with \u2265 1 direction classified to each theme\n",
-      "Pre-COVID = 2018\u20132021  |  Early Recovery = 2022\u20132023  |  Current = 2024\u20132026"
+      "Pandemic Era = 2018\u20132021  |  Early Recovery = 2022\u20132023  |  Current = 2024\u20132026"
     ),
     x       = NULL,
     y       = NULL,
@@ -472,4 +472,4 @@ ggsave(
 cat("Figure saved: 03b_top5_bottom5_facet.png\n")
 
 cat("\nDone. Review console output and figures before writing 03b narrative.\n")
-cat("Key question: do notable shifts hold up given Pre-COVID n is small?\n")
+cat("Key question: do notable shifts hold up given Pandemic Era n is small?\n")
