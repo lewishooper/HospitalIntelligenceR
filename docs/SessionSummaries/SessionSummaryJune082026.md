@@ -108,3 +108,7 @@ Build and validate `minutes_scrape.R` (Session 1 of the board minutes project pl
 ## Registry Path Reminder
 `hospital_registry.yaml` is at `E:/HospitalIntelligenceR/registry/hospital_registry.yaml`
 Always use `registry/hospital_registry.yaml` as the relative path in scripts (from project root).
+Update end of session 1
+Session 1 is complete. Final state:
+1,833 index rows | ~1,730 PDFs | 53/64 hospitals (83%)
+That exceeds the project plan target of 55–60 hospitals before Session 3 work.

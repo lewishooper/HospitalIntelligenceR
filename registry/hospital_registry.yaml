@@ -2116,13 +2116,14 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: https://www.josephbranthospital.ca/about-us/our-team/board-of-directors/agendas-and-summaries
-      access_flag: public
+      minutes_url: 'https://www.hdgh.org/hdghdirectors'   # real URL for 927
+      scrape_status: 'waf_blocked'
+      access_flag: 'public_waf_blocked'
       last_extraction_date: ''
       extraction_status: pending
-      manual_override: no
-      override_reason: ''
-      needs_review: no
+      manual_override: yes
+      override_reason: 'WAF blocks automated scraping; minutes publicly accessible via browser'
+      needs_review: yes
 - FAC: '719'
   name: MANITOUWADGE SANTE MANITOUWADGE
   hospital_type: Small Hospital
@@ -3427,7 +3428,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: http://lwdh.on.ca/index.php/resources/new-documents/board-of-directors/meeting-minutes/2026.html
+      minutes_url: http://lwdh.on.ca/index.php/resources/new-documents/board-of-directors/meeting-minutes
+      
       access_flag: public
       last_extraction_date: ''
       extraction_status: pending
@@ -4497,13 +4499,14 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: https://www.wrh.on.ca/WRHBoardMeetings
-      access_flag: public
+      minutes_url: 'https://www.wrh.on.ca/WRHBoardMeetings'   # real URL for 927
+      scrape_status: 'waf_blocked'
+      access_flag: 'public_waf_blocked'
       last_extraction_date: ''
       extraction_status: pending
-      manual_override: no
-      override_reason: ''
-      needs_review: no
+      manual_override: yes
+      override_reason: 'WAF blocks automated scraping; minutes publicly accessible via browser'
+      needs_review: yes
 - FAC: '935'
   name: Thunder Bay Regional Health Sciences Centre
   hospital_type: Teaching Hospital
@@ -5614,13 +5617,14 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: https://bluewaterhealth.ca/about-us/board-of-directors/board-meetings/
-      access_flag: public
+      minutes_url: 'https://bluewaterhealth.ca/about-us/board-of-directors/board-meetings/'   # real URL for 927
+      scrape_status: 'waf_blocked'
+      access_flag: 'public_waf_blocked'
       last_extraction_date: ''
       extraction_status: pending
-      manual_override: no
-      override_reason: ''
-      needs_review: no
+      manual_override: yes
+      override_reason: 'WAF blocks automated scraping; minutes publicly accessible via browser'
+      needs_review: yes
 - FAC: '967'
   name: CORNWALL COMMUNITY
   hospital_type: Large Community Hospital

@@ -290,7 +290,9 @@ run_minutes_scrape <- function(fac_filter = NULL) {
   # Load existing index if present (enables re-run / incremental)
   if (file.exists(MINUTES_CONFIG$index_file)) {
     index_existing <- read.csv(MINUTES_CONFIG$index_file, stringsAsFactors = FALSE)
-    index_existing$fac <- as.character(index_existing$fac)  # ensure character for bind_rows
+    index_existing$fac           <- as.character(index_existing$fac)
+    index_existing$download_date  <- as.character(index_existing$download_date)   # NA reads as logical without this
+    index_existing$file_size_kb   <- as.numeric(index_existing$file_size_kb)
     log_info("Existing index loaded: %d rows", nrow(index_existing))
   } else {
     index_existing <- NULL
@@ -452,7 +454,7 @@ run_minutes_scrape <- function(fac_filter = NULL) {
       }
     }
     
-    hosp_status <- if (cap_exceeded) "success_capped" else "success"
+    hosp_status <- if (cap_exceeded) "success_capped" else if (n_downloaded == 0) "zero_downloaded" else "success"
     log_info("FAC %s: %d/%d PDFs downloaded — status: %s",
              fac, n_downloaded, n_candidates, hosp_status)
     
@@ -477,7 +479,11 @@ run_minutes_scrape <- function(fac_filter = NULL) {
     if (!is.null(index_existing)) {
       # Coerce existing index to match — prevents bind_rows type conflicts
       index_existing <- index_existing |>
-        mutate(fac = as.character(fac), file_size_kb = as.numeric(file_size_kb))
+        mutate(
+          fac           = as.character(fac),
+          download_date = as.character(download_date),
+          file_size_kb  = as.numeric(file_size_kb)
+        )
       # Merge: keep existing rows for hospitals not re-run; replace rows for re-run hospitals
       run_facs      <- unique(targets$fac)
       index_kept    <- index_existing |> filter(!fac %in% run_facs)
@@ -532,3 +538,7 @@ run_minutes_scrape <- function(fac_filter = NULL) {
 #   results <- run_minutes_scrape(fac_filter = c("644", "736", "826", "858", "941"))
 #
 # fac_filter accepts any character or numeric vector of FAC codes.
+
+
+MINUTES_CONFIG$max_pdfs <- 150
+results <- run_minutes_scrape(fac_filter = c("661", "939"))
