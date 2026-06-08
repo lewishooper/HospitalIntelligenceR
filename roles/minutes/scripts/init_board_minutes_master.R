@@ -5,6 +5,7 @@
 # Run from: E:/HospitalIntelligenceR  (project root)
 # Output RDS: roles/minutes/outputs/Master_Board_Minutes_062026.rds
 # Output folders: roles/minutes/outputs/extracted/FAC_HOSPITALNAME/
+rm(list=ls())
 
 library(readxl)
 library(dplyr)
@@ -23,7 +24,8 @@ raw <- read_excel(
   col_types = "text",   # read everything as character; prevents date coercion
   trim_ws   = TRUE
 )
-
+## lets drop the 4 rows at the bottom
+raw<-raw[1:138,]
 cat("Rows read:", nrow(raw), "\n")
 cat("Columns:  ", paste(names(raw), collapse = ", "), "\n\n")
 
@@ -118,3 +120,4 @@ cat("Minutes URL present:  ", sum(!is.na(df$minutes_url) & df$minutes_url != "")
 cat("Searched:             ", sum(df$searched == "1", na.rm = TRUE), "\n")
 
 cat("\nDone. Inspect Master_Board_Minutes_062026.rds before proceeding.\n")
+

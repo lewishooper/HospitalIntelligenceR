@@ -38,8 +38,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://lacgh.napanee.on.ca/about/governance/#elementor-toc__heading-anchor-1'
-      access_flag: 'public'
+      minutes_url: https://lacgh.napanee.on.ca/about/governance/#elementor-toc__heading-anchor-1
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -86,7 +86,7 @@ hospitals:
       minutes_found: 'N'
       minutes_url: ''
       access_flag: ''
-      minutes_partners: ['814']
+      minutes_partners: '814'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -132,8 +132,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Stevenson - Meetings'
-      access_flag: 'withdrawn'
+      minutes_url: https://www.stevensonhospital.ca/board-meetings
+      access_flag: withdrawn
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -142,7 +142,7 @@ hospitals:
 - FAC: '597'
   name: ALMONTE GENERAL
   hospital_type: Small Hospital
-  base_url: https://www.mrha.ca
+  base_url: https://mrha.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -179,9 +179,9 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'MRHA - Meeting Dates and Minutes'
-      access_flag: 'public'
-      minutes_partners: ['626']
+      minutes_url: https://www.mrha.ca/meetingdatesminutes#accordion-38-1
+      access_flag: public
+      minutes_partners: '626'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -227,8 +227,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Attending a board meeting – Arnprior Regional Health'
-      access_flag: 'public'
+      minutes_url: https://www.arnpriorregionalhealth.ca/about-us/ourboard/attendingaboardmeeting/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -237,7 +237,7 @@ hospitals:
 - FAC: '606'
   name: BARRIE ROYAL VICTORIA REG HC
   hospital_type: Large Community Hospital
-  base_url: https://www.rvh.on.ca
+  base_url: https://rvh.on.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -417,8 +417,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors Open Meeting Minutes | Campbellford Memorial Hospital'
-      access_flag: 'public'
+      minutes_url: https://cmh.ca/board-of-directors-meeting-minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -464,8 +464,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'MRHA - Meeting Dates and Minutes'
-      access_flag: 'public'
+      minutes_url: https://www.mrha.ca/meetingdatesminutes#accordion-38-1
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -607,9 +607,11 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://www.micsgroup.com/governance/board-meetings/'
-      access_flag: 'public'
-      minutes_partners: ['685', '723']
+      minutes_url: https://www.micsgroup.com/governance/board-meetings/
+      access_flag: public
+      minutes_partners:
+      - '685'
+      - '723'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -703,9 +705,9 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Cornwall Community Hospital - Board of Directors'
-      access_flag: 'public'
-      minutes_partners: ['967']
+      minutes_url: https://www.cornwallhospital.ca/en/BoardofDirectors
+      access_flag: public
+      minutes_partners: '967'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -761,7 +763,7 @@ hospitals:
 - FAC: '647'
   name: DRYDEN REGIONAL HEALTH CENTRE
   hospital_type: Small Hospital
-  base_url: https://www.drhc.on.ca
+  base_url: https://drhc.on.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -798,8 +800,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Minutes of Board Meetings | Dryden Regional Health Centre'
-      access_flag: 'public'
+      minutes_url: https://www.drhc.on.ca/minutes-of-board-meetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -904,7 +906,7 @@ hospitals:
 - FAC: '651'
   name: OTTAWA ROYAL OTTAWA (PSYCH)
   hospital_type: Specialty Mental Health Hospital
-  base_url: https://www.theroyal.ca
+  base_url: https://theroyal.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -957,9 +959,9 @@ hospitals:
   last_validated: '2025-11-28'
   leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
   notes: ''
-  retired: true
+  retired: yes
   merged_into: '982'
-  merger_hit_year: '2021/2022'
+  merger_hit_year: 2021/2022
   status:
     strategy:
       last_search_date: '2026-03-20'
@@ -993,7 +995,9 @@ hospitals:
       minutes_found: 'N'
       minutes_url: ''
       access_flag: ''
-      minutes_partners: ['696', '982']
+      minutes_partners:
+      - '696'
+      - '982'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1085,9 +1089,9 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Huron Health System - Board Materials'
-      access_flag: 'public'
-      minutes_partners: ['663']
+      minutes_url: https://www.huronhealthsystem.ca/boardmaterials
+      access_flag: public
+      minutes_partners: '663'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1130,7 +1134,7 @@ hospitals:
       minutes_found: 'N'
       minutes_url: ''
       access_flag: ''
-      minutes_partners: ['963']
+      minutes_partners: '963'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1139,7 +1143,7 @@ hospitals:
 - FAC: '661'
   name: Cambridge Memorial Hospital
   hospital_type: Large Community Hospital
-  base_url: https://www.cmh.org
+  base_url: https://cmh.org
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -1176,8 +1180,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Hospital | Cambridge Memorial Hospital'
-      access_flag: 'public'
+      minutes_url: https://www.cmh.org/hospital#board
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1223,8 +1227,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Geraldton District Hospital - Board of Directors'
-      access_flag: 'public'
+      minutes_url: https://www.geraldtondh.com/board-of-directors#board-meetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1270,8 +1274,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Huron Health System - Board Materials'
-      access_flag: 'public'
+      minutes_url: https://www.huronhealthsystem.ca/boardmaterials
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1280,7 +1284,7 @@ hospitals:
 - FAC: '665'
   name: GUELPH GENERAL
   hospital_type: Large Community Hospital
-  base_url: https://www.gghorg.ca
+  base_url: https://sjhcg.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -1453,8 +1457,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Hanover & District Hospital - Board of Directors'
-      access_flag: 'public'
+      minutes_url: https://www.hanoverhospital.on.ca/board
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1598,7 +1602,7 @@ hospitals:
       minutes_found: 'N'
       minutes_url: ''
       access_flag: ''
-      minutes_partners: ['824']
+      minutes_partners: '824'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1643,8 +1647,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings – MICs Group of Health Services'
-      access_flag: 'public'
+      minutes_url: https://www.micsgroup.com/governance/board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1737,8 +1741,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors - Open Board Minutes - Providence Care Kingston Ontatio'
-      access_flag: 'public'
+      minutes_url: https://providencecare.ca/about-us/board-minutes/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1753,9 +1757,9 @@ hospitals:
   last_validated: '2025-11-28'
   leadership_url: https://www.blancheriverhealth.ca/about-us/leadership
   notes: ''
-  retired: true
+  retired: yes
   merged_into: '982'
-  merger_hit_year: '2021/2022'
+  merger_hit_year: 2021/2022
   status:
     strategy:
       last_search_date: '2026-03-20'
@@ -1842,7 +1846,7 @@ hospitals:
 - FAC: '701'
   name: RICHMOND HILL MACKENZIE HEALTH
   hospital_type: Large Community Hospital
-  base_url: https://www.mackenziehealth.ca
+  base_url: https://mackenziehealth.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -1879,8 +1883,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Minutes - Mackenzie Health'
-      access_flag: 'public'
+      minutes_url: https://www.mackenziehealth.ca/about-us/board-of-directors/minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -1971,8 +1975,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings | Ross Memorial Hospital'
-      access_flag: 'public'
+      minutes_url: https://rmh.org/about-ross-memorial/board-meetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2018,9 +2022,9 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Listowel Wingham Hospitals Alliance Board | Leadership Team'
-      access_flag: 'public'
-      minutes_partners: ['889']
+      minutes_url: https://lwha.ca/about/board/
+      access_flag: public
+      minutes_partners: '889'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2065,8 +2069,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: "St. Joseph's Board of Directors | St. Joseph's Health Care London"
-      access_flag: 'public'
+      minutes_url: https://www.sjhc.london.on.ca/about-us/st-josephs-health-care-london/board-of-directors
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2112,8 +2116,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Agendas and Summaries - Joseph Brant Hospital'
-      access_flag: 'public'
+      minutes_url: https://www.josephbranthospital.ca/about-us/our-team/board-of-directors/agendas-and-summaries
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2137,7 +2141,7 @@ hospitals:
       local_filename: ''
       last_extraction_date: .na.character
       extraction_status: no_response_closed
-      review_date: 2026-12-01
+      review_date: '2026-12-01'
       manual_override: yes
       override_reason: Plan referenced in board minutes but not published on website
         — email request sent 2026-03-24
@@ -2156,8 +2160,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://www.mh.on.ca/leadership#accordion-9-3'
-      access_flag: 'public'
+      minutes_url: https://www.mh.on.ca/leadership#accordion-9-3
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2202,8 +2206,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings – MICs Group of Health Services'
-      access_flag: 'public'
+      minutes_url: https://www.micsgroup.com/governance/board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2346,8 +2350,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors - KDH'
-      access_flag: 'public'
+      minutes_url: https://www.kdh.on.ca/about-kemptville-district-hospital/board-of-directors/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2440,8 +2444,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors - Southlake Health'
-      access_flag: 'public'
+      minutes_url: https://southlake.ca/about-southlake/board-of-directors/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2580,7 +2584,7 @@ hospitals:
     board:
       minutes_found: 'N'
       minutes_url: ''
-      access_flag: 'on_request'
+      access_flag: on_request
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2730,7 +2734,7 @@ hospitals:
 - FAC: '771'
   name: PETERBOROUGH REGIONAL HEALTH CENTRE
   hospital_type: Large Community Hospital
-  base_url: https://www.prhc.on.ca
+  base_url: https://prhc.on.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -2860,8 +2864,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://sjcg.net/aboutus/board-of-directors/main.aspx#minutes'
-      access_flag: 'public'
+      minutes_url: https://sjcg.net/aboutus/board-of-directors/main.aspx#minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2916,7 +2920,7 @@ hospitals:
 - FAC: '788'
   name: RENFREW VICTORIA
   hospital_type: Small Hospital
-  base_url: https://www.renfrewhosp.com
+  base_url: https://renfrewhosp.com
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -2954,7 +2958,7 @@ hospitals:
     board:
       minutes_found: 'N'
       minutes_url: ''
-      access_flag: 'withdrawn'
+      access_flag: withdrawn
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -2999,8 +3003,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Trustees | Hotel Dieu Shaver'
-      access_flag: 'public'
+      minutes_url: https://www.hoteldieushaver.org/site/board
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3249,9 +3253,9 @@ hospitals:
   last_validated: '2025-11-28'
   leadership_url: https://www.hpha.ca/ourorganization#accordion-38-2
   notes: ''
-  retired: true
+  retired: yes
   merged_into: '983'
-  merger_hit_year: '2024/2025'
+  merger_hit_year: 2024/2025
   status:
     strategy:
       last_search_date: '2026-03-22'
@@ -3283,8 +3287,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Huron Perth Healthcare Alliance - Board of Directors'
-      access_flag: 'public'
+      minutes_url: https://www.hpha.ca/boardofdirectors#accordion-25-1
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3387,7 +3391,7 @@ hospitals:
 - FAC: '826'
   name: KENORA LAKE OF THE WOODS
   hospital_type: Small Hospital
-  base_url: http://www.lwdh.on.ca
+  base_url: https://lwdh.on.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -3423,8 +3427,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: '2026 - Lake of the Woods District Hospital'
-      access_flag: 'public'
+      minutes_url: http://lwdh.on.ca/index.php/resources/new-documents/board-of-directors/meeting-minutes/2026.html
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3433,7 +3437,7 @@ hospitals:
 - FAC: '827'
   name: TORONTO BAYCREST CTR GERIATRIC CARE
   hospital_type: Chronic/Rehab Hospital
-  base_url: https://www.baycrest.org
+  base_url: https://baycrest.org
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -3624,7 +3628,7 @@ hospitals:
 - FAC: '858'
   name: Michael Garron TORONTO EAST GENERAL
   hospital_type: Large Community Hospital
-  base_url: https://www.tehn.ca
+  base_url: https://tehn.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -3660,8 +3664,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meeting Dates and Summaries | Michael Garron Hospital, Toronto East Health Network (MGH/TEHN)'
-      access_flag: 'public'
+      minutes_url: https://www.tehn.ca/about-us/our-team/board-directors/board-meeting-dates-and-summaries
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3705,9 +3709,9 @@ hospitals:
       override_reason: ''
       needs_review: no
     board:
-      minutes_found: 'Y'
-      minutes_url: 'https://www.womenscollegehospital.ca/who-we-are/board-of-directors/'
-      access_flag: 'public'
+      minutes_found: 'N'
+      minutes_url: https://www.womenscollegehospital.ca/who-we-are/board-of-directors/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3754,8 +3758,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'WNGH Board of Directors 2026 -2027 – West Nipissing General Hospital'
-      access_flag: 'public'
+      minutes_url: https://www.wngh.ca/about-wngh/board/#gsc.tab=0
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3848,8 +3852,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors — Temiskaming Hospital'
-      access_flag: 'public'
+      minutes_url: https://www.temiskaming-hospital.com/board-of-directors
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3895,8 +3899,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Listowel Wingham Hospitals Alliance Board | Leadership Team'
-      access_flag: 'public'
+      minutes_url: https://lwha.ca/about/board/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -3943,8 +3947,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings – Woodstock Hospital'
-      access_flag: 'public'
+      minutes_url: https://www.woodstockhospital.ca/board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4039,8 +4043,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Riverside - Board Meeting Agenda Packages'
-      access_flag: 'public'
+      minutes_url: https://riversidehealthcare.ca/board-meeting-agenda-packages
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4086,8 +4090,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Oak Valley Health | Board of Directors meetings - Oak Valley Health'
-      access_flag: 'public'
+      minutes_url: https://www.oakvalleyhealth.ca/about-us/meet-our-team/board-of-directors/board-of-directors-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4152,7 +4156,7 @@ hospitals:
   status:
     strategy:
       extraction_status: confirmed_no_plan
-      review_date: 2026-12-01
+      review_date: '2026-12-01'
       manual_override: yes
       override_reason: Confirmed via direct contact — organization does not have a
         strategic plan
@@ -4175,7 +4179,7 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'N'
-      minutes_url: 'Membership:'
+      minutes_url: https://caseyhouse.ca/accountability/#1623785791880-9624b729-6d4d21bc-9620
       access_flag: ''
       last_extraction_date: ''
       extraction_status: pending
@@ -4264,8 +4268,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'HDGH - Board of Directors'
-      access_flag: 'public'
+      minutes_url: https://www.hdgh.org/hdghdirectors
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4311,8 +4315,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Perth & Smiths Falls - Meeting Dates & Minutes'
-      access_flag: 'public'
+      minutes_url: https://psfdh.on.ca/boardmeetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4321,7 +4325,7 @@ hospitals:
 - FAC: '930'
   name: WRHN-KITCHENER GRAND RIVER
   hospital_type: Large Community Hospital
-  base_url: https://www.grhosp.on.ca
+  base_url: https://www.wrhn.ca/about-us/leadership
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -4358,7 +4362,7 @@ hospitals:
       minutes_found: 'N'
       minutes_url: ''
       access_flag: ''
-      minutes_partners: ['699']
+      minutes_partners: '699'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4493,8 +4497,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Windsor Regional Hospital - WRH Board Meetings'
-      access_flag: 'public'
+      minutes_url: https://www.wrh.on.ca/WRHBoardMeetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4540,8 +4544,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: '» Open Board Meetings'
-      access_flag: 'public'
+      minutes_url: https://tbrhsc.net/tbrhsc/board-of-directors/open-board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4587,8 +4591,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://www.lhsc.on.ca/about-lhsc/meeting-minutes'
-      access_flag: 'public'
+      minutes_url: https://www.lhsc.on.ca/about-lhsc/meeting-minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4597,7 +4601,7 @@ hospitals:
 - FAC: '938'
   name: DYSART ET AL HALIBURTON HEALTH SER
   hospital_type: Small Hospital
-  base_url: https://www.hhhs.ca
+  base_url: https://hhhs.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -4634,8 +4638,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'HHHS Board of Directors Mtg'
-      access_flag: 'public'
+      minutes_url: https://hhhs.ca/governance/board-meeting-agenda-and-minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4680,8 +4684,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors | Holland Bloorview'
-      access_flag: 'public'
+      minutes_url: https://hollandbloorview.ca/about-us/about-holland-bloorview/governance-and-leadership/board-directors
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4726,8 +4730,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings'
-      access_flag: 'public'
+      minutes_url: https://nhh.ca/AboutNHH/BoardMeetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4736,7 +4740,7 @@ hospitals:
 - FAC: '941'
   name: Humber River Hospital
   hospital_type: Large Community Hospital
-  base_url: https://www.hrh.ca
+  base_url: https://hrh.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -4772,8 +4776,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Governance & Leadership - Hennick Humber Hospital'
-      access_flag: 'public'
+      minutes_url: https://www.hrh.ca/who-we-are/accountability/governance-leadership/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4782,7 +4786,7 @@ hospitals:
 - FAC: '942'
   name: HAMILTON HEALTH SCIENCES CORP
   hospital_type: Teaching Hospital
-  base_url: https://www.hamiltonhealthsciences.ca
+  base_url: https://hamiltonhealthsciences.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -4818,8 +4822,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors - Hamilton Health Sciences'
-      access_flag: 'public'
+      minutes_url: https://www.hamiltonhealthsciences.ca/about-us/our-organization/board-of-directors/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -4867,8 +4871,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meeting Schedule & Minutes – South Bruce Grey Health Centre'
-      access_flag: 'public'
+      minutes_url: https://www.sbghc.on.ca/about-us/board-meeting-schedule-minutes/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5054,8 +5058,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors - William Osler Health System'
-      access_flag: 'public'
+      minutes_url: https://www.williamoslerhs.ca/en/who-we-are/board-of-directors.aspx
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5101,8 +5105,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Agendas and Board Minutes | Lakeridge Health'
-      access_flag: 'public'
+      minutes_url: https://www.lh.ca/about-us/leadership-team/board-of-trustees/board-agendas-and-board-minutes/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5148,8 +5152,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Governance & Leadership'
-      access_flag: 'public'
+      minutes_url: https://sunnybrook.ca/about-sunnybrook/governance-leadership/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5242,8 +5246,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://quintehealth.ca/about-quinte-health/board-of-directors/board-meetings/'
-      access_flag: 'public'
+      minutes_url: https://quintehealth.ca/about-quinte-health/board-of-directors/board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5291,7 +5295,7 @@ hospitals:
     board:
       minutes_found: 'N'
       minutes_url: ''
-      access_flag: 'on_request'
+      access_flag: on_request
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5339,8 +5343,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://hsnsudbury.ca/en/About-Us/Leadership-at-HSN/Board-of-Directors/Board-meetings'
-      access_flag: 'public'
+      minutes_url: https://hsnsudbury.ca/en/About-Us/Leadership-at-HSN/Board-of-Directors/Board-meetings
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5432,8 +5436,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Niagara Health Board Meeting Schedule'
-      access_flag: 'public'
+      minutes_url: https://www.niagarahealth.on.ca/site/board-meeting-schedule
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5521,8 +5525,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors – Sioux Lookout Meno Ya Win Health Centre'
-      access_flag: 'public'
+      minutes_url: https://slmhc.on.ca/about/board-of-directors/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5610,8 +5614,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings – Bluewater Health'
-      access_flag: 'public'
+      minutes_url: https://bluewaterhealth.ca/about-us/board-of-directors/board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5657,8 +5661,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Cornwall Community Hospital - Board of Directors'
-      access_flag: 'public'
+      minutes_url: https://www.cornwallhospital.ca/en/BoardofDirectors
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5704,8 +5708,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meetings | Muskoka Algonquin Healthcare'
-      access_flag: 'public'
+      minutes_url: https://www.mahc.ca/about-us/board-of-directors/board-meetings/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5751,8 +5755,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Meeting Minutes | Ontario Shores Centre for Mental Health Sciences'
-      access_flag: 'public'
+      minutes_url: https://www.ontarioshores.ca/board-meeting-minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -5995,7 +5999,7 @@ hospitals:
 - FAC: '975'
   name: MISSISSAUGA TRILLIUM HEALTH PARTNER
   hospital_type: Large Community Hospital
-  base_url: https://www.thp.ca
+  base_url: https://thp.ca
   base_url_validated: yes
   robots_allowed: yes
   last_validated: '2025-11-28'
@@ -6034,8 +6038,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors'
-      access_flag: 'public'
+      minutes_url: https://www.thp.ca/aboutus/Pages/Board.aspx
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -6080,8 +6084,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board Minutes, Dates and Documents | Sinai Health'
-      access_flag: 'public'
+      minutes_url: https://www.sinaihealth.ca/about-sinai-health/sinai-health-board-of-directors/board-minutes-dates-and-documents
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -6128,8 +6132,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'North of Superior Healthcare Group - Board Meeting Minutes'
-      access_flag: 'public'
+      minutes_url: https://www.nosh.ca/minutes
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -6174,8 +6178,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board related documents | KHSC Kingston Health Sciences Centre'
-      access_flag: 'public'
+      minutes_url: https://kingstonhsc.ca/about-khsc/board-directors/board-related-documents
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -6222,8 +6226,8 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Board of Directors – Scarborough Health Network'
-      access_flag: 'public'
+      minutes_url: https://www.shn.ca/about-us/board-of-directors/
+      access_flag: public
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no
@@ -6406,9 +6410,9 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'Huron Perth Healthcare Alliance - Board of Directors'
-      access_flag: 'public'
-      minutes_partners: ['813']
+      minutes_url: https://www.hpha.ca/boardofdirectors#accordion-25-1
+      access_flag: public
+      minutes_partners: '813'
       last_extraction_date: ''
       extraction_status: pending
       manual_override: no

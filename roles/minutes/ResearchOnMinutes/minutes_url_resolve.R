@@ -18,7 +18,9 @@
 # Run from RStudio with working directory set to the folder below, OR
 # just source the file — paths are set explicitly.
 
-library(httr2)
+library
+library(tidyverse)
+library(readxl)
 library(rvest)
 library(robotstxt)
 library(stringr)
