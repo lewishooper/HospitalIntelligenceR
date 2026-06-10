@@ -132,18 +132,22 @@ extract_pdf_links <- function(html_content, base_url) {
 # Detects Joomla folder structure by presence of hrefs matching:
 #   {minutes_url}/\w+\.html  (i.e. subpaths of the minutes URL ending in .html)
 
+# ── Joomla folder-navigation scraper (FAC 826) ────────────────────────────────
+# For sites where minutes are organised into year-subfolders, each a separate page.
+# Strategy:
+#   1. Fetch the parent minutes page — extract all year-folder hrefs
+#   2. For each folder page, fetch via httr2 (explicit HTTP, no SSL upgrade)
+#   3. Extract all /file.html download links, keep the descriptive title row
+#   4. Return a tibble in the same format as extract_pdf_links()
+
 scrape_joomla_folders <- function(parent_html, base_url, minutes_url, fac) {
   
   # Step 1: Extract year-folder hrefs from parent page
-  # Match hrefs that are subpaths of the minutes URL and end in .html
-  # e.g. /index.php/resources/.../meeting-minutes/2026.html
-  #      /index.php/resources/.../meeting-minutes/archives.html
   minutes_path <- str_extract(minutes_url, "(?<=https?://[^/]{1,100})/.+")
   
   folder_nodes <- parent_html |> html_elements("a[href]")
   folder_hrefs <- html_attr(folder_nodes, "href")
   
-  # Keep hrefs that extend the minutes path with a .html suffix
   folder_hrefs <- folder_hrefs[
     !is.na(folder_hrefs) &
       str_detect(folder_hrefs, fixed(minutes_path)) &
@@ -153,47 +157,47 @@ scrape_joomla_folders <- function(parent_html, base_url, minutes_url, fac) {
   folder_hrefs <- unique(folder_hrefs)
   
   if (length(folder_hrefs) == 0) {
-    log_warn("FAC %s [Joomla]: no year-folder links found on parent page", fac)
+    log_warning("FAC %s [Joomla]: no year-folder links found on parent page", fac)
     return(tibble())
   }
   
-  # Resolve to full URLs
-  scheme <- str_extract(base_url, "https?")
+  # Resolve to full URLs — always use http:// (site does not support HTTPS)
   domain <- str_extract(base_url, "https?://[^/]+")
+  domain <- str_replace(domain, "^https://", "http://")  # force http
   
   folder_urls <- ifelse(
-    str_starts(folder_hrefs, "http"), folder_hrefs,
+    str_starts(folder_hrefs, "http"),
+    str_replace(folder_hrefs, "^https://", "http://"),  # downgrade if absolute
     paste0(domain, folder_hrefs)
   )
-  # Preserve original scheme — site may not support HTTPS
-  folder_urls <- str_replace(folder_urls, "^https?", scheme)
   
   log_info("FAC %s [Joomla]: found %d year-folders — fetching each", fac, length(folder_urls))
   
-  # Step 2: For each folder page, extract file.html download links
+  # Step 2: Fetch each folder page and extract file.html links
   all_links <- list()
-  hospital_stub <- make_hospital_stub()
-  #
+  
   for (folder_url in folder_urls) {
-    Sys.sleep(0.5)  # polite delay between folder fetches
+    Sys.sleep(0.5)
     
-    page <- tryCatch(
-      read_html(folder_url),
-      error = function(e) {
-        log_warn("FAC %s [Joomla]: failed to fetch folder %s — %s", fac, folder_url, conditionMessage(e))
-        NULL
-      }
-    )
+    # Use httr2 directly — avoids any SSL upgrade that fetch_html() may apply
+    page <- tryCatch({
+      resp <- httr2::request(folder_url) |>
+        httr2::req_options(ssl_verifypeer = FALSE, ssl_verifyhost = FALSE) |>
+        httr2::req_timeout(20) |>
+        httr2::req_perform()
+      read_html(httr2::resp_body_string(resp))
+    }, error = function(e) {
+      log_warning("FAC %s [Joomla]: failed to fetch folder %s — %s", fac, folder_url, conditionMessage(e))
+      NULL
+    })
+    
     if (is.null(page)) next
     
-    # Extract all anchor nodes from this folder page
-    nodes     <- page |> html_elements("a[href]")
-    hrefs     <- html_attr(nodes, "href")
-    texts     <- str_squish(html_text(nodes))
+    nodes <- page |> html_elements("a[href]")
+    hrefs <- html_attr(nodes, "href")
+    texts <- str_squish(html_text(nodes))
     
-    # Keep only /file.html download links
     is_file <- str_ends(hrefs, "/file.html") & !is.na(hrefs)
-    
     if (!any(is_file)) {
       log_info("FAC %s [Joomla]: no file.html links in %s", fac, folder_url)
       next
@@ -202,13 +206,12 @@ scrape_joomla_folders <- function(parent_html, base_url, minutes_url, fac) {
     file_hrefs <- hrefs[is_file]
     file_texts <- texts[is_file]
     
-    # Resolve to full URLs
+    # Resolve file URLs to full http:// paths
     file_urls <- ifelse(
-      str_starts(file_hrefs, "http"), file_hrefs,
+      str_starts(file_hrefs, "http"),
+      str_replace(file_hrefs, "^https://", "http://"),
       paste0(domain, file_hrefs)
     )
-    file_urls <- str_replace(file_urls, "^https?", scheme)
-    
     
     log_info("FAC %s [Joomla]: %d file links in %s", fac, length(file_urls), folder_url)
     
@@ -222,9 +225,19 @@ scrape_joomla_folders <- function(parent_html, base_url, minutes_url, fac) {
   
   if (length(all_links) == 0) return(tibble())
   
-  bind_rows(all_links) |> distinct(href_full, .keep_all = TRUE)
+  result <- bind_rows(all_links)
+  
+  # Each minute appears 3x (icon "pdf", title text, "Download (pdf, NNN KB)")
+  # Keep the descriptive title row — longest non-"Download" link text per URL
+  result <- result |>
+    group_by(href_full) |>
+    arrange(desc(nchar(link_text))) |>
+    filter(!str_starts(link_text, "Download")) |>
+    slice(1) |>
+    ungroup()
+  
+  result
 }
-
 
 
 

@@ -4044,13 +4044,17 @@ hospitals:
       override_reason: ''
       needs_review: no
     board:
-      minutes_found: 'Y'
+      minutes_found: 'N'
       minutes_url: https://riversidehealthcare.ca/board-meeting-agenda-packages
-      access_flag: public
+      access_flag: no_public_index
       last_extraction_date: ''
-      extraction_status: pending
-      manual_override: no
-      override_reason: ''
+      extraction_status: deferred
+      manual_override: yes
+      override_reason: no_public_index
+      override_notes: Blue Lemon CMS with no public minutes index page. PDFs appear
+        Google-indexed at /data/documents/<id>/ but no listing exists. Harvesting
+        without permission not appropriate. Deferred indefinitely.
+      override_set_date: '2026-06-10'
       needs_review: no
 - FAC: '905'
   name: OAK VALLEY HEALTH

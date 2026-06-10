@@ -1,6 +1,6 @@
-# Claude Working Preferences — HospitalIntelligenceR Project
+# claude working preferences — HospitalIntelligenceR project
 
-*Last Updated: April 14, 2026*
+*Last Updated: June 10, 2026*
 *Upload this document to the Claude Project knowledge repository for persistent reference.*
 
 ---
@@ -44,11 +44,26 @@ a publication narrative is not a summary of the technical narrative.
 ## 2. Development Environment
 
 - **Primary language:** R, using RStudio
-- **Project root:** `HospitalIntelligenceR/` (single R Project, single GitHub repo)
+- **Project root:** `E:/HospitalIntelligenceR/` — canonical full path (Windows, forward slashes in R)
 - **User executes all code** in their own R/RStudio environment — Claude provides
   code snippets and guidance, not execution
 - **Working directory** assumed to be the project root unless stated otherwise
 - **API:** Claude API used for all content extraction roles
+
+### Path Conventions — Critical
+
+All `source()` calls and file path references in scripts use paths **relative to
+the project root**, not relative to the script's own folder. Claude must always
+write paths this way in any code provided.
+
+- Correct: `source("core/registry.R")`
+- Wrong: `source("../../core/registry.R")`
+
+When specifying where a file lives or should be saved, always anchor to the full
+canonical path for clarity — e.g. `E:/HospitalIntelligenceR/roles/minutes/` not
+just `roles/minutes/`. Scripts in role subfolders (e.g. `roles/minutes/`) are
+client-side files that Claude cannot edit directly; provide change instructions
+or a downloadable file instead.
 
 ### R Code Preferences
 - Provide snippets for the user to integrate and run
@@ -146,7 +161,7 @@ default without waiting to be asked.
 
 ```
 HospitalIntelligenceR/
-├── CLAUDE_WORKING_PREFERENCES.md   # This file
+├── claude_working_preferences.md   # This file
 ├── core/           # Shared infrastructure — registry, crawler, fetcher, claude_api, logger
 ├── analysis/       # Strategy analytics layer — scripts, data, outputs
 ├── roles/
@@ -156,7 +171,7 @@ HospitalIntelligenceR/
 │   ├── executives/ # Executive team (monthly)
 │   ├── board/      # Board of directors (6-month, post-September)
 │   └── minutes/    # Board meeting minutes archive (monthly)
-├── registry/       # hospital_registry.yaml — single source of truth (129–133 hospitals)
+├── registry/       # hospital_registry.yaml — single source of truth (~137 hospitals)
 ├── reference/      # cihi_fac_crosswalk.csv and other external reference data
 ├── orchestrate/    # Built last — ties roles together
 ├── docs/
@@ -167,8 +182,9 @@ HospitalIntelligenceR/
 └── dev/            # Scratch/sandbox — gitignored
 ```
 
-**Note:** `analysis/data/` is gitignored — intermediate analytical CSVs are
-local only and never in the repository.
+**Note:** `analysis/data/` is **tracked in git** as a curated analytical asset —
+intermediate CSVs are committed as part of the analytical record. `analysis/outputs/`
+is gitignored. Do not add `analysis/data/` to `.gitignore`.
 
 **Build sequence:** `registry.R` and `fetcher.R` first (no dependencies), then
 `crawler.R`, `claude_api.R`, `logger.R`, then role modules starting with
@@ -192,25 +208,44 @@ local only and never in the repository.
 
 ## 10. Session Startup
 
-At the start of each session, Claude should:
+Each working session runs in a fresh thread. At the start of each session, Claude should:
 
 1. Read this file
 2. Read the most recent session summary in `docs/session_summaries/`
-3. State the current priority and any open carry-forward items before asking
-   how to proceed
-4. If registry work is on the agenda, note the current state of
+3. Within the summary, read the **"Next Session" block first** — this is the
+   tactical handoff and takes priority over the session narrative
+4. State the current priority, the first action to take, and any open
+   carry-forward items before asking how to proceed
+5. Note any "watch out for" items from the summary as active constraints
+6. Pull any specific project files named in the summary (e.g. a script that
+   was modified, a reference document for the next workstream) before generating
+   any code or analysis
+7. If registry work is on the agenda, note the current state of
    `registry/hospital_registry.yaml`
-5. If pipeline work is on the agenda, confirm the relevant step in
+8. If pipeline work is on the agenda, confirm the relevant step in
    `docs/programming_reference/StrategyPipelineReference.md`
 
 This orientation should happen unprompted — do not wait for the user to
 reconstruct context.
 
+### What a session summary contains
+
+Session summaries are structured markdown files with the following sections:
+- **Next Session — Start Here** (top of file): priority, first command, carry-forwards, watch-out items
+- **Session Objectives**: what the session was trying to accomplish
+- **Work Completed**: what was actually done, with bug/fix tables where relevant
+- **Key Design Decisions**: durable choices that affect future sessions
+- **Files Produced / Modified**: table of changed files with locations
+- **Session End Checklist**: upload/commit tasks for the user
+
+The "Next Session" block is always the most operationally important part.
+Read it first; use the rest of the summary as supporting context.
+
 ---
 
 ## 11. Scope
 
-This project covers **Ontario hospitals only** — currently 129–133 hospitals in
+This project covers **Ontario hospitals only** — currently ~137 hospitals in
 the validated registry. No expansion to other provinces or health system entities
 without explicit discussion.
 
