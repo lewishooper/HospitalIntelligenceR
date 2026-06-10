@@ -4499,7 +4499,7 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://www.wrh.on.ca/WRHBoardMeetings'   # real URL for 927
+      minutes_url: 'https://www.wrh.on.ca/WRHBoardMeetings'   #
       scrape_status: 'waf_blocked'
       access_flag: 'public_waf_blocked'
       last_extraction_date: ''
@@ -5617,7 +5617,7 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
-      minutes_url: 'https://bluewaterhealth.ca/about-us/board-of-directors/board-meetings/'   # real URL for 927
+      minutes_url: 'https://bluewaterhealth.ca/about-us/board-of-directors/board-meetings/'   # 
       scrape_status: 'waf_blocked'
       access_flag: 'public_waf_blocked'
       last_extraction_date: ''

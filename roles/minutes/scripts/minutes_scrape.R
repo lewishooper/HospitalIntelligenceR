@@ -32,7 +32,7 @@ MINUTES_CONFIG <- list(
   index_file     = "roles/minutes/outputs/minutes_index.csv",
   log_file       = "roles/minutes/outputs/logs/minutes_scrape_log.csv",
   rate_limit_pdf = 1,     # seconds between PDF downloads within a hospital
-  max_pdfs       = 100,   # hard cap per hospital — flag if exceeded
+  max_pdfs       = 250,   # hard cap per hospital — flag if exceeded
   
   # PDF links whose href contains any of these strings are candidates
   include_keywords = c(
@@ -104,20 +104,129 @@ extract_pdf_links <- function(html_content, base_url) {
         TRUE                      ~ paste0(str_extract(base_url, "https?://[^/]+/.*?(?=/[^/]*$)|https?://[^/]+"), "/", href)
       ),
       href_full = gsub(" ", "%20", href_full, fixed = TRUE),
-      # PDF detection:
+      # PDF detection — five patterns:
       # (1) .pdf in href URL
-      # (2) .pdf in link title attribute (Drupal canonical links: /documents/document/...)
-      # (3) Drupal /documents/document/ path pattern regardless of extension
-      is_pdf_href   = str_detect(str_to_lower(href_full), "\\.pdf(\\?|/|$)"),
-      is_pdf_title  = !is.na(title_attr) & str_detect(str_to_lower(title_attr), "\\.pdf"),
-      is_drupal_doc = str_detect(href_full, "/documents/document/")
+      is_pdf_href    = str_detect(str_to_lower(href_full), "\\.pdf(\\?|/|$)"),
+      # (2) .pdf in link title attribute (Drupal canonical links)
+      is_pdf_title   = !is.na(title_attr) & str_detect(str_to_lower(title_attr), "\\.pdf"),
+      # (3) Drupal /documents/document/ path pattern
+      is_drupal_doc  = str_detect(href_full, "/documents/document/"),
+      # (4) /media/<id>/download — Umbraco and Drupal 10 pattern (FACs 714, 936, 969)
+      is_media_dl    = str_detect(href_full, "/media/\\d+/download"),
+      # (5) /document/<slug> — custom CMS vendor pattern (FACs 707, 938, 940)
+      is_doc_slug    = str_detect(href_full, "/document/[a-z0-9]")
     ) |>
-    filter(is_pdf_href | is_pdf_title | is_drupal_doc) |>
-    select(-is_pdf_href, -is_pdf_title, -is_drupal_doc)
+    filter(is_pdf_href | is_pdf_title | is_drupal_doc | is_media_dl | is_doc_slug) |>
+    select(-is_pdf_href, -is_pdf_title, -is_drupal_doc, -is_media_dl, -is_doc_slug)
   # title_attr is retained — used downstream for date inference on Drupal links
   
   all_links
 }
+# ── Joomla folder-navigation scraper (FAC 826) ────────────────────────────────
+# For sites where minutes are organised into year-subfolders, each a separate page.
+# Strategy:
+#   1. Fetch the parent minutes page — extract all year-folder hrefs
+#   2. For each folder page, extract all /file.html download links
+#   3. Return a tibble in the same format as extract_pdf_links()
+#
+# Detects Joomla folder structure by presence of hrefs matching:
+#   {minutes_url}/\w+\.html  (i.e. subpaths of the minutes URL ending in .html)
+
+scrape_joomla_folders <- function(parent_html, base_url, minutes_url, fac) {
+  
+  # Step 1: Extract year-folder hrefs from parent page
+  # Match hrefs that are subpaths of the minutes URL and end in .html
+  # e.g. /index.php/resources/.../meeting-minutes/2026.html
+  #      /index.php/resources/.../meeting-minutes/archives.html
+  minutes_path <- str_extract(minutes_url, "(?<=https?://[^/]{1,100})/.+")
+  
+  folder_nodes <- parent_html |> html_elements("a[href]")
+  folder_hrefs <- html_attr(folder_nodes, "href")
+  
+  # Keep hrefs that extend the minutes path with a .html suffix
+  folder_hrefs <- folder_hrefs[
+    !is.na(folder_hrefs) &
+      str_detect(folder_hrefs, fixed(minutes_path)) &
+      str_ends(folder_hrefs, ".html") &
+      folder_hrefs != minutes_path
+  ]
+  folder_hrefs <- unique(folder_hrefs)
+  
+  if (length(folder_hrefs) == 0) {
+    log_warn("FAC %s [Joomla]: no year-folder links found on parent page", fac)
+    return(tibble())
+  }
+  
+  # Resolve to full URLs
+  scheme <- str_extract(base_url, "https?")
+  domain <- str_extract(base_url, "https?://[^/]+")
+  
+  folder_urls <- ifelse(
+    str_starts(folder_hrefs, "http"), folder_hrefs,
+    paste0(domain, folder_hrefs)
+  )
+  # Preserve original scheme — site may not support HTTPS
+  folder_urls <- str_replace(folder_urls, "^https?", scheme)
+  
+  log_info("FAC %s [Joomla]: found %d year-folders — fetching each", fac, length(folder_urls))
+  
+  # Step 2: For each folder page, extract file.html download links
+  all_links <- list()
+  hospital_stub <- make_hospital_stub()
+  #
+  for (folder_url in folder_urls) {
+    Sys.sleep(0.5)  # polite delay between folder fetches
+    
+    page <- tryCatch(
+      read_html(folder_url),
+      error = function(e) {
+        log_warn("FAC %s [Joomla]: failed to fetch folder %s — %s", fac, folder_url, conditionMessage(e))
+        NULL
+      }
+    )
+    if (is.null(page)) next
+    
+    # Extract all anchor nodes from this folder page
+    nodes     <- page |> html_elements("a[href]")
+    hrefs     <- html_attr(nodes, "href")
+    texts     <- str_squish(html_text(nodes))
+    
+    # Keep only /file.html download links
+    is_file <- str_ends(hrefs, "/file.html") & !is.na(hrefs)
+    
+    if (!any(is_file)) {
+      log_info("FAC %s [Joomla]: no file.html links in %s", fac, folder_url)
+      next
+    }
+    
+    file_hrefs <- hrefs[is_file]
+    file_texts <- texts[is_file]
+    
+    # Resolve to full URLs
+    file_urls <- ifelse(
+      str_starts(file_hrefs, "http"), file_hrefs,
+      paste0(domain, file_hrefs)
+    )
+    file_urls <- str_replace(file_urls, "^https?", scheme)
+    
+    
+    log_info("FAC %s [Joomla]: %d file links in %s", fac, length(file_urls), folder_url)
+    
+    all_links[[length(all_links) + 1]] <- tibble(
+      href       = file_hrefs,
+      title_attr = NA_character_,
+      link_text  = file_texts,
+      href_full  = file_urls
+    )
+  }
+  
+  if (length(all_links) == 0) return(tibble())
+  
+  bind_rows(all_links) |> distinct(href_full, .keep_all = TRUE)
+}
+
+
+
 
 # ── Keyword filtering ──────────────────────────────────────────────────────────
 # Returns TRUE for links that look like minutes (not agendas, reports, etc.)
@@ -336,9 +445,18 @@ run_minutes_scrape <- function(fac_filter = NULL) {
     }
     
     # ── Step 2: Extract all PDF links (including hidden accordion content) ──
-    pdf_links <- extract_pdf_links(fetch_result$content, url)
-    log_info("FAC %s: %d raw PDF links found on page", fac, nrow(pdf_links))
+    # For Joomla folder-nav sites, dispatch to specialist two-level crawler
+    joomla_facs <- c("826")  # extend if more Joomla folder sites discovered
     
+    if (fac %in% joomla_facs) {
+      pdf_links <- scrape_joomla_folders(
+        fetch_result$content, row$base_url, url, fac
+      )
+      log_info("FAC %s [Joomla]: %d total file links across all folders", fac, nrow(pdf_links))
+    } else {
+      pdf_links <- extract_pdf_links(fetch_result$content, url)
+    }
+    log_info("FAC %s: %d raw PDF links found on page", fac, nrow(pdf_links))
     # ── Step 3: Keyword filter ───────────────────────────────────────────────
     if (nrow(pdf_links) > 0) {
       pdf_links <- pdf_links |>
@@ -538,7 +656,3 @@ run_minutes_scrape <- function(fac_filter = NULL) {
 #   results <- run_minutes_scrape(fac_filter = c("644", "736", "826", "858", "941"))
 #
 # fac_filter accepts any character or numeric vector of FAC codes.
-
-
-MINUTES_CONFIG$max_pdfs <- 150
-results <- run_minutes_scrape(fac_filter = c("661", "939"))
