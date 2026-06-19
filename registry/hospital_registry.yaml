@@ -668,6 +668,9 @@ hospitals:
 - FAC: '644'
   name: Cornwall Hospital  CORNWALL HOTEL DIEU
   hospital_type: Small Hospital
+  governance:
+    partnership_facs: ['967']
+    partnership_notes: 'Joint board with FAC 967 Cornwall Community. Defer to FAC 967 for minutes analysis.'
   base_url: https://www.cornwallhospital.ca
   base_url_validated: yes
   robots_allowed: yes
@@ -705,6 +708,7 @@ hospitals:
       needs_review: no
     board:
       minutes_found: 'Y'
+      board_highlights_format: true
       minutes_url: https://www.cornwallhospital.ca/en/BoardofDirectors
       access_flag: public
       minutes_partners: '967'
@@ -5589,6 +5593,9 @@ hospitals:
 - FAC: '966'
   name: SARNIA BLUEWATER HEALTH
   hospital_type: Large Community Hospital
+  governance:
+    partnership_facs: ['644']
+    partnership_notes: 'Joint board with FAC 644 Cornwall Hotel Dieu. Primary FAC for minutes analysis.'
   base_url: https://www.bluewaterhealth.ca
   base_url_validated: no
   robots_allowed: no
@@ -5622,6 +5629,7 @@ hospitals:
     board:
       minutes_found: 'Y'
       minutes_url: 'https://bluewaterhealth.ca/about-us/board-of-directors/board-meetings/'   # 
+      board_highlights_format: true
       scrape_status: 'waf_blocked'
       access_flag: 'public_waf_blocked'
       last_extraction_date: ''

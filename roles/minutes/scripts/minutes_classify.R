@@ -30,7 +30,7 @@ library(dplyr)
 library(stringr)
 library(pdftools)
 
-source("core/logger.R")
+source("E:/HospitalIntelligenceR/core/logger.R")
 init_logger(role = "minutes")
 # ── Config ─────────────────────────────────────────────────────────────────────
 EXTRACT_DIR  <- "roles/minutes/outputs/extracted"
@@ -176,11 +176,18 @@ detect_report_lead <- function(text) {
 # Keyword match on the header region. "special" before "regular" to avoid
 # "regular" matching inside "irregularly scheduled special meeting" etc.
 extract_meeting_type <- function(text) {
-  head_text <- str_to_lower(str_sub(text, 1, 1500))
-  if (str_detect(head_text, "annual general meeting|agm|annual meeting of"))  return("annual")
+  head_text  <- str_to_lower(str_sub(text, 1, 1500))
+  title_text <- str_to_lower(str_sub(text, 1, 300))
+  
+  if (str_detect(head_text, "annual general meeting|agm|annual meeting of")) return("annual")
   if (str_detect(head_text, "special meeting|called meeting"))                return("special")
   if (str_detect(head_text, "regular meeting|regular board"))                 return("regular")
-  if (str_detect(head_text, "in.camera|in camera|closed session"))            return("in_camera")
+  
+  # In-camera: title zone only, and only if no open-session signal present
+  in_camera_signal  <- str_detect(title_text, "in[- ]camera|closed session")
+  open_session_signal <- str_detect(title_text, "open session|public session")
+  if (in_camera_signal && !open_session_signal)                               return("in_camera")
+  
   return("unknown")
 }
 
