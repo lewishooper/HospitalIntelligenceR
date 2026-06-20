@@ -294,8 +294,8 @@ Parameters: FAC, N_SAMPLE, N_WORDS, SEED.
 
 ## Session End Checklist
 
-- [ ] Upload `SessionSummaryJune192026_PM.md` to knowledge repository
-- [ ] Commit ReviewFile.R to GitHub
+- [x] Upload `SessionSummaryJune192026_PM.md` to knowledge repository
+- [x] Commit ReviewFile.R to GitHub
 - [ ] New thread: begin with design session for extract_minutes.R keyword lists
 - [ ] Execute Board Highlights classifier patch (code ready — morning session)
 - [ ] Execute FAC 644 corpus exclusion patch after Board Highlights fix confirmed
