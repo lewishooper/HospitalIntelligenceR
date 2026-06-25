@@ -190,8 +190,8 @@ Revised prompt results require scoring at next session start.
 
 ## Session End Checklist
 
-- [ ] Confirm `llm_validate_run1.R` saved to `roles/minutes/scripts/` with revised prompt
-- [ ] Confirm `llm_run1_validation_results.csv` written to `roles/minutes/outputs/`
-- [ ] Save revised prompt results to `llm_run1_validation_results_rev1.csv` if `results` still in memory
-- [ ] Upload `SessionSummaryJune252026.md` to knowledge repository
-- [ ] Commit to `docs/session_summaries/` on GitHub
+- [x] Confirm `llm_validate_run1.R` saved to `roles/minutes/scripts/` with revised prompt
+- [x] Confirm `llm_run1_validation_results.csv` written to `roles/minutes/outputs/`
+- [x] Save revised prompt results to `llm_run1_validation_results_rev1.csv` if `results` still in memory
+- [x] Upload `SessionSummaryJune252026.md` to knowledge repository
+- [x] Commit to `docs/session_summaries/` on GitHub
