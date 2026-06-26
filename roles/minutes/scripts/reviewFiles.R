@@ -15,7 +15,7 @@ library(stringr)
 library(pdftools)
 rm(list=ls())
 # ── Parameters — adjust these ──────────────────────────────────────────────────
-FAC      <- "935"   # FAC code to review (character)
+FAC      <- "714"   # FAC code to review (character)
 N_SAMPLE <- 3       # Number of files to sample (set to Inf to see all)
 N_WORDS  <- 500     # Number of words to extract from the start of each PDF
 SEED     <- 42      # Random seed for reproducibility (change to reshuffle)
