@@ -15,10 +15,13 @@ library(stringr)
 library(pdftools)
 rm(list=ls())
 # ── Parameters — adjust these ──────────────────────────────────────────────────
-FAC      <- "714"   # FAC code to review (character)
-N_SAMPLE <- 3       # Number of files to sample (set to Inf to see all)
-N_WORDS  <- 500     # Number of words to extract from the start of each PDF
-SEED     <- 42      # Random seed for reproducibility (change to reshuffle)
+FAC           <- "858"   # FAC code to review (character)
+N_SAMPLE      <- 3       # Number of files to sample (set to Inf to see all)
+N_WORDS       <- 500     # Number of words to extract from the start of each PDF
+SEED          <- 42      # Random seed for reproducibility (change to reshuffle)
+SPECIFIC_FILE <- "file:///E:/HospitalIntelligenceR/roles/minutes/outputs/extracted/935_THUNDER_BAY_REGIONAL_HEALTH_SCIENCES_CENTRE/2024-10-02_board_minutes.pdf"   # Set to a full file path to review one specific file,
+# e.g. "E:/HospitalIntelligenceR/roles/minutes/outputs/extracted/661_CAMBRIDGE_MEMORIAL_HOSPITAL/2012-03-20_board_minutes.pdf"
+# When set, FAC, N_SAMPLE, and SEED are ignored.
 # ──────────────────────────────────────────────────────────────────────────────
 
 EXTRACT_DIR <- "E:/HospitalIntelligenceR/roles/minutes/outputs/extracted"
@@ -28,39 +31,39 @@ AUDIT_FILE  <- "E:/HospitalIntelligenceR/roles/minutes/outputs/minutes_corpus_au
 audit <- read.csv(AUDIT_FILE, stringsAsFactors = FALSE) |>
   mutate(fac = as.character(fac))
 
-# ── Find extraction folder for this FAC ───────────────────────────────────────
-all_folders <- list.dirs(EXTRACT_DIR, full.names = FALSE, recursive = FALSE)
-fac_folders <- all_folders[str_starts(all_folders, paste0(FAC, "_"))]
-
-if (length(fac_folders) == 0) {
-  stop(sprintf("No extraction folder found for FAC %s", FAC))
+# ── Resolve file list ─────────────────────────────────────────────────────────
+if (!is.null(SPECIFIC_FILE)) {
+  # Single-file mode — derive FAC and filename from the path
+  sampled_files <- basename(SPECIFIC_FILE)
+  fac_folder    <- basename(dirname(SPECIFIC_FILE))
+  FAC           <- str_extract(fac_folder, "^\\d+")
+  cat(sprintf("Single-file mode — FAC %s\n", FAC))
+  cat(sprintf("File: %s\n\n", sampled_files))
+  cat(strrep("=", 80), "\n\n")
+} else {
+  # FAC folder mode — find folder, sample N files
+  all_folders <- list.dirs(EXTRACT_DIR, full.names = FALSE, recursive = FALSE)
+  fac_folders <- all_folders[str_starts(all_folders, paste0(FAC, "_"))]
+  
+  if (length(fac_folders) == 0) stop(sprintf("No extraction folder found for FAC %s", FAC))
+  
+  folder_counts <- sapply(fac_folders, function(f) length(list.files(file.path(EXTRACT_DIR, f))))
+  fac_folder    <- fac_folders[which.max(folder_counts)]
+  
+  cat(sprintf("FAC %s — folder: %s\n", FAC, fac_folder))
+  
+  all_files <- list.files(file.path(EXTRACT_DIR, fac_folder), pattern = "\\.pdf$")
+  if (length(all_files) == 0) stop(sprintf("No PDF files found in folder: %s", fac_folder))
+  
+  cat(sprintf("Total PDFs in folder: %d\n", length(all_files)))
+  
+  set.seed(SEED)
+  n <- min(N_SAMPLE, length(all_files))
+  sampled_files <- sample(all_files, n)
+  
+  cat(sprintf("Sampling %d file(s) — seed %d\n\n", n, SEED))
+  cat(strrep("=", 80), "\n\n")
 }
-
-# Use the folder with the most files if duplicates exist
-folder_counts <- sapply(fac_folders, function(f) {
-  length(list.files(file.path(EXTRACT_DIR, f)))
-})
-fac_folder <- fac_folders[which.max(folder_counts)]
-
-cat(sprintf("FAC %s — folder: %s\n", FAC, fac_folder))
-
-# ── Get file list ─────────────────────────────────────────────────────────────
-all_files <- list.files(file.path(EXTRACT_DIR, fac_folder), pattern = "\\.pdf$")
-
-if (length(all_files) == 0) {
-  stop(sprintf("No PDF files found in folder: %s", fac_folder))
-}
-
-cat(sprintf("Total PDFs in folder: %d\n", length(all_files)))
-
-# ── Sample ────────────────────────────────────────────────────────────────────
-set.seed(SEED)
-n <- min(N_SAMPLE, length(all_files))
-sampled_files <- sample(all_files, n)
-
-cat(sprintf("Sampling %d file(s) — seed %d\n\n", n, SEED))
-cat(strrep("=", 80), "\n\n")
-
 # ── Process each sampled file ─────────────────────────────────────────────────
 for (fname in sampled_files) {
   
