@@ -33,7 +33,7 @@ library(magick)
 library(readxl)
 library(dplyr)
 library(stringr)
-
+`%||%` <- function(a, b) if (!is.null(a)) a else b
 source("core/logger.R")
 init_logger(role = "minutes")
 
@@ -124,6 +124,68 @@ prepare_for_llm <- function(text, max_words = MAX_WORDS) {
   cutoff_end   <- cutoff_start + attr(word_positions, "match.length")[max_words] - 1
 
   substr(text_trimmed, 1, cutoff_end)
+}
+# ── 1b2. prescreen_document() ─────────────────────────────────────────────────
+# R-side pre-classifier that runs on raw OCR text BEFORE the LLM call.
+# Detects two high-confidence SomethingElse signals deterministically:
+#
+#   Signal 1 — Standalone AGENDA heading:
+#     The word AGENDA appears on a line by itself (possibly with whitespace)
+#     within the first 300 words. This is characteristic of agenda packages
+#     and never observed as a standalone heading in genuine board minutes.
+#
+#   Signal 2 — Numbered line compression:
+#     Four or more consecutive short lines (≤80 chars) each beginning with a
+#     number (e.g. "1.", "1.1", "2.0") within the first 40 lines. This detects
+#     agenda tables that lack an explicit AGENDA heading.
+#
+# Args:
+#   text : raw OCR text (character, pre-trim)
+#
+# Returns:
+#   "SomethingElse" if a signal fires, with a reason attribute
+#   NULL if no signal — proceed to LLM
+#
+# Note: prescreen operates on raw text (not squished) to preserve line structure.
+#       It is called before prepare_for_llm() trimming in extract_and_classify().
+
+prescreen_document <- function(text) {
+  
+  lines_all  <- str_trim(str_split(text, "\n")[[1]])
+  lines_head <- head(lines_all, 40)
+  
+  # ── Positive guard: document declares itself as minutes ──────────────────────
+  # If both a MINUTES heading and an attendance label appear in the first 40
+  # lines, the document has identified itself as minutes. Skip all negative
+  # signals and pass directly to LLM.
+  has_minutes_heading  <- any(str_detect(lines_head,
+                                         regex("\\bMINUTES\\b", ignore_case = TRUE)))
+  has_attendance_label <- any(str_detect(lines_head,
+                                         regex("^(Present|In Attendance|Members Present|
+                                       Directors Present|Attendance)\\s*:",
+                                               ignore_case = TRUE, comments = TRUE)))
+  
+  if (has_minutes_heading && has_attendance_label) {
+    return(NULL)  # confirmed minutes signals — pass to LLM
+  }
+  
+  # ── Signal 1: Standalone AGENDA heading ─────────────────────────────────────
+  # A line containing only the word AGENDA (case-insensitive) within the first
+  # 40 lines. Characteristic of agenda packages; never observed as a standalone
+  # heading in genuine board minutes across the validation set.
+  # NOTE: Compression signal removed from Stage 1 — reserved for Stage 2 where
+  # it can be applied with fuller document context.
+  agenda_line <- any(str_detect(lines_head, regex("^AGENDA[:\\s]*$",
+                                                  ignore_case = TRUE)))
+  
+  if (agenda_line) {
+    result <- "SomethingElse"
+    attr(result, "prescreen_reason") <- "standalone AGENDA heading detected"
+    return(result)
+  }
+  
+  # ── No signal — pass to LLM ─────────────────────────────────────────────────
+  NULL
 }
 
 
@@ -274,23 +336,43 @@ classify_document_llm <- function(text) {
 # Returns: list with filename, text_preview (first 200 chars), word_count,
 #          classification, confidence, reasoning, ocr_time_s, llm_time_s
 
+
 extract_and_classify <- function(pdf_path, dpi = OCR_DPI) {
-
+  
   fname <- basename(pdf_path)
-
+  
   # OCR
   t_ocr_start <- proc.time()["elapsed"]
   raw_text    <- extract_text_ocr(pdf_path, dpi = dpi)
   ocr_time_s  <- round(proc.time()["elapsed"] - t_ocr_start, 2)
-
+  
   trimmed_text <- prepare_for_llm(raw_text)
   word_count   <- str_count(str_squish(trimmed_text), "\\S+")
-
-  # LLM classification
+  
+  # ── R-side pre-screen (runs before LLM) ────────────────────────────────────
+  prescreen_result <- prescreen_document(raw_text)
+  
+  if (!is.null(prescreen_result)) {
+    reason <- attr(prescreen_result, "prescreen_reason") %||% "R prescreen"
+    log_info("  PRESCREEN → SomethingElse (%s): %s", reason, fname)
+    return(list(
+      filename       = fname,
+      text_preview   = str_sub(str_squish(raw_text), 1, 200),
+      word_count     = word_count,
+      classification = "SomethingElse",
+      confidence     = "high",
+      reasoning      = sprintf("R prescreen: %s", reason),
+      raw_response   = "",
+      ocr_time_s     = ocr_time_s,
+      llm_time_s     = 0
+    ))
+  }
+  
+  # ── LLM classification ─────────────────────────────────────────────────────
   t_llm_start <- proc.time()["elapsed"]
   result      <- classify_document_llm(trimmed_text)
   llm_time_s  <- round(proc.time()["elapsed"] - t_llm_start, 2)
-
+  
   list(
     filename       = fname,
     text_preview   = str_sub(str_squish(raw_text), 1, 200),
@@ -303,7 +385,6 @@ extract_and_classify <- function(pdf_path, dpi = OCR_DPI) {
     llm_time_s     = llm_time_s
   )
 }
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SECTION 2 — Connectivity check
