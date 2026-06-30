@@ -232,7 +232,7 @@ Next: spot-check corpus sample, begin Stage 2 design.
 
 ## Session End Checklist
 
-- [ ] Upload `SessionSummaryJune302026_AM.md` to knowledge repository
-- [ ] Upload `minutes_stage1_narrative.md` to knowledge repository
-- [ ] Commit and push all files listed above to GitHub
-- [ ] Confirm `llm_run1_results.csv` and `llm_run1_missing.csv` show as tracked in git status
+- [x] Upload `SessionSummaryJune302026_AM.md` to knowledge repository
+- [x] Upload `minutes_stage1_narrative.md` to knowledge repository
+- [x] Commit and push all files listed above to GitHub
+- [x] Confirm `llm_run1_results.csv` and `llm_run1_missing.csv` show as tracked in git status
