@@ -8,6 +8,12 @@
 # Regenerable from Phase 1/2 runs.
 # -----------------------------------------------------------------------------
 roles/*/outputs/
+# -----------------------------------------------------------------------------
+# Exception: LLM classification results are expensive to regenerate (11+ hr
+# Ollama run) and are a tracked analytical asset, not raw scrape output.
+# -----------------------------------------------------------------------------
+!roles/minutes/outputs/llm_run1_results.csv
+!roles/minutes/outputs/llm_run1_missing.csv
 analysis/data/
 
 # -----------------------------------------------------------------------------
