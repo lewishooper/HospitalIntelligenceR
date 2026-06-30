@@ -623,22 +623,25 @@ cat(sprintf("  Projected full corpus (1,732 docs): %.0f min  (%.1f hr)\n",
 # ── Pass / Fail banner ────────────────────────────────────────────────────────
 cat("\n")
 cat("══════════════════════════════════════════════════════\n")
-
-pass_high_acc  <- length(high_acc)  > 0 && high_acc  >= 95
+# Stage 1 criteria: ≥95% high-confidence accuracy + zero false negatives.
+# Zero false positives is a Stage 2 criterion — Stage 1 false positives
+# flow into Stage 2 for a second classification pass.
+pass_high_acc  <- length(high_acc) > 0 && high_acc >= 95
 pass_combined  <- hi_med_acc >= 90
-pass_no_fp     <- nrow(false_positives) == 0
+pass_no_fn     <- nrow(false_negatives) == 0
 
-if (pass_high_acc && pass_combined && pass_no_fp) {
-  cat("  RESULT: *** PASS *** — Run 1 meets all criteria\n")
+if (pass_high_acc && pass_combined && pass_no_fn) {
+  cat("  RESULT: *** PASS *** — Stage 1 criteria met\n")
+  cat(sprintf("  False positives: %d (flow to Stage 2 — not a Stage 1 failure)\n",
+              nrow(false_positives)))
   cat("  Proceed to: llm_run1_classify.R (full corpus build)\n")
 } else {
-  cat("  RESULT: *** FAIL / REVIEW *** — criteria not met\n")
-  if (!pass_high_acc)  cat(sprintf("    High-confidence accuracy below 95%% (got %.1f%%)\n", high_acc))
-  if (!pass_combined)  cat(sprintf("    High+medium accuracy below 90%% (got %.1f%%)\n", hi_med_acc))
-  if (!pass_no_fp)     cat(sprintf("    %d false positive(s) — SomethingElse classified as MinutesOnly\n",
-                                   nrow(false_positives)))
+  cat("  RESULT: *** FAIL / REVIEW *** — Stage 1 criteria not met\n")
+  if (!pass_high_acc) cat(sprintf("    High-confidence accuracy below 95%% (got %.1f%%)\n", high_acc))
+  if (!pass_combined) cat(sprintf("    High+medium accuracy below 90%% (got %.1f%%)\n", hi_med_acc))
+  if (!pass_no_fn)    cat(sprintf("    %d false negative(s) — MinutesOnly missed entirely\n",
+                                  nrow(false_negatives)))
   cat("  Next: review misclassifications above, revise prompt, re-run\n")
-  cat("  After 2 failed revision rounds: revert to keyword extractor\n")
 }
 
 cat("══════════════════════════════════════════════════════\n\n")
