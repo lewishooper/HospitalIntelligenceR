@@ -347,13 +347,11 @@ log_info("Index: %d total rows, %d files present on disk",
 # high-volume hospitals (e.g. large teaching centres with 50+ files) from
 # dominating the random stratum.
 set.seed(SEED_RANDOM)
-
 stratum_random <- index_exists |>
   filter(!fac %in% HARD_FACS) |>
   group_by(fac) |>
   slice_sample(n = 1) |>
   ungroup()
-
 n_random_draw  <- min(N_RANDOM, nrow(stratum_random))
 stratum_random <- stratum_random |>
   slice_sample(n = n_random_draw) |>
@@ -370,7 +368,6 @@ stratum_hard <- index_exists |>
   group_by(fac) |>
   slice_sample(n = 1) |>
   ungroup()
-
 n_hard_draw  <- min(N_HARD, nrow(stratum_hard))
 stratum_hard <- stratum_hard |>
   slice_sample(n = n_hard_draw) |>
