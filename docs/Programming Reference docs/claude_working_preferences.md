@@ -1,6 +1,6 @@
-# claude working preferences — HospitalIntelligenceR project
+# Claude Working Preferences — HospitalIntelligenceR Project
 
-*Last Updated: June 10, 2026*
+*Last Updated: June 30, 2026*
 *Upload this document to the Claude Project knowledge repository for persistent reference.*
 
 ---
@@ -35,16 +35,18 @@ Each completed analytical workstream produces two documents:
   `docs/writing_and_research/`. Triggered when the user asks for the
   publication version, LinkedIn version, or practitioner-facing write-up.
 
-Before drafting any publication narrative, consult
-`docs/writing_and_research/style_guide.md`. These are distinct documents —
-a publication narrative is not a summary of the technical narrative.
+Before drafting any publication narrative, consult `style_guide.md`
+(`docs/writing_and_research/style_guide.md` — read from knowledge repository).
+These are distinct documents — a publication narrative is not a summary of the
+technical narrative.
 
 ---
 
 ## 2. Development Environment
 
 - **Primary language:** R, using RStudio
-- **Project root:** `E:/HospitalIntelligenceR/` — canonical full path (Windows, forward slashes in R)
+- **Project root:** `E:/HospitalIntelligenceR/` — canonical full path (Windows,
+  forward slashes in R)
 - **User executes all code** in their own R/RStudio environment — Claude provides
   code snippets and guidance, not execution
 - **Working directory** assumed to be the project root unless stated otherwise
@@ -52,18 +54,18 @@ a publication narrative is not a summary of the technical narrative.
 
 ### Path Conventions — Critical
 
-All `source()` calls and file path references in scripts use paths **relative to
-the project root**, not relative to the script's own folder. Claude must always
-write paths this way in any code provided.
+All `source()` calls and file path references in scripts use paths **relative
+to the project root**, not relative to the script's own folder. Claude must
+always write paths this way in any code provided.
 
 - Correct: `source("core/registry.R")`
 - Wrong: `source("../../core/registry.R")`
 
-When specifying where a file lives or should be saved, always anchor to the full
-canonical path for clarity — e.g. `E:/HospitalIntelligenceR/roles/minutes/` not
-just `roles/minutes/`. Scripts in role subfolders (e.g. `roles/minutes/`) are
-client-side files that Claude cannot edit directly; provide change instructions
-or a downloadable file instead.
+When specifying where a file lives or should be saved, always anchor to the
+full canonical path for clarity — e.g. `E:/HospitalIntelligenceR/roles/minutes/`
+not just `roles/minutes/`. Scripts in role subfolders (e.g. `roles/minutes/`)
+are client-side files that Claude cannot edit directly; provide precise change
+instructions with location anchors, or produce a downloadable file instead.
 
 ### R Code Preferences
 - Provide snippets for the user to integrate and run
@@ -96,6 +98,60 @@ once" — prefer targeted, testable changes.
   (`programming_reference/` for technical reference, `writing_and_research/` for
   narratives and writing aids, `session_summaries/` for session records)
 
+### File Versioning Convention
+
+Project documents use **single canonical filenames** — no version suffixes.
+`CLAUDE_WORKING_PREFERENCES.md` is always the current version.
+`HitProjectGuidelines.md` is always the current version. And so on.
+
+When a document is updated, replace it in the knowledge repository under the
+same filename and commit the updated file to GitHub. GitHub holds the full
+revision history — version suffixes in filenames (`_Rev2`, `_v2`, `(5)`) are
+not needed and create confusion about which copy is current.
+
+**Exception:** A document being deliberately archived as a named snapshot —
+for example, a methodology document that was the basis for a published paper —
+may use a dated suffix (e.g. `HitProjectGuidelines_May2026_publication.md`).
+This is an archival act, not routine updating, and should be rare.
+
+**When cleaning up the knowledge repository:** If a versioned file exists
+alongside its canonical version (e.g. `HitProjectGuidelinesRev2.md` alongside
+`HitProjectGuidelines.md`), delete the versioned copy. Never leave multiple
+versions of the same document in the repository simultaneously — Claude cannot
+reliably determine which is current.
+
+### How Claude Accesses Project Documents
+
+**Claude cannot read the local file system (`E:/HospitalIntelligenceR/`) or
+GitHub directly.** All `docs/` paths in this file describe where documents live
+on the local system and in the repository — they are the canonical reference
+paths, not paths Claude can open.
+
+Claude reads project documents from two sources only:
+
+- **Knowledge repository** — documents uploaded by the user; this is the
+  primary source for all reference files, templates, style guides, pipeline
+  references, and session summaries
+- **Session context** — files explicitly attached or pasted into the current
+  session
+
+When this file references a document by its local path (e.g.
+`docs/writing_and_research/style_guide.md`), Claude should search the knowledge
+repository for it by filename. **If a required document is not found in the
+knowledge repository, Claude must flag this explicitly at session startup**,
+stating which document is missing and what it is needed for, rather than
+silently proceeding without it.
+
+The user is responsible for keeping the knowledge repository current by
+uploading revised documents at session end (per the session end checklist).
+
+### Session Summaries
+Session summaries are always `.md` files. Use the template at
+`docs/session_summaries/session_summary_template.md` (knowledge repository).
+Filename convention: `SessionSummary[MonthDDYYYY].md`. Upload to the knowledge
+repository and commit to `docs/session_summaries/` on GitHub at session end.
+See Section 13 for full standards.
+
 ---
 
 ## 5. YAML Formatting
@@ -112,8 +168,9 @@ indentation** to match R/RStudio conventions:
 
 The registry YAML is the single source of truth — treat it carefully. No script
 other than `core/registry.R` should write to it. For manual edits, follow the
-procedure in `docs/programming_reference/yaml_registry_reference.md` and close
-the file in RStudio before running any patch script.
+procedure in `yaml_registry_reference.md`
+(`docs/programming_reference/yaml_registry_reference.md`). Close the file in
+RStudio before running any patch script.
 
 ---
 
@@ -125,14 +182,14 @@ default without waiting to be asked.
 - **List binding:** Use `bind_rows(lapply(...))` — not `map_dfr()`, which is
   deprecated and causes silent failures
 - **Anonymous functions:** Use explicit `function(x)` style — not tilde-lambda
-  `~` syntax, which causes RStudio parser confusion in some contexts
-- **Claude API responses:** Strip markdown code fences with `gsub` before
-  parsing JSON (`gsub("```json|```", "", text)`); also sanitize control
-  characters before `toJSON()`
-- **purrr:** Must be explicitly loaded with `library(purrr)` — it is not
-  attached automatically by tidyverse in this project's loading pattern
-- **Logger:** Use `log_warning()` — not `log_warn()`, which does not exist in
-  the logger package version in use
+  (`~`) syntax, which causes silent failures in some pipeline contexts
+- **JSON fence stripping:** When parsing Claude API responses with `fromJSON()`,
+  always strip markdown fences first — the model may add them even when
+  instructed not to
+- **Logger format strings:** `log_info()` does not accept `sprintf()`-style
+  format arguments directly. Always wrap format strings first:
+  `log_info(sprintf("Rows: %d", nrow(df)))` — not `log_info("Rows: %d", nrow(df))`.
+  Passing format arguments directly causes a silent failure or error.
 - **URL encoding:** Use `gsub(" ", "%20", url, fixed = TRUE)` — not
   `URLencode()`, which corrupts query string delimiters
 - **FAC as character — always:** FAC codes are identifiers, not quantities.
@@ -161,7 +218,7 @@ default without waiting to be asked.
 
 ```
 HospitalIntelligenceR/
-├── claude_working_preferences.md   # This file
+├── CLAUDE_WORKING_PREFERENCES.md   # This file
 ├── core/           # Shared infrastructure — registry, crawler, fetcher, claude_api, logger
 ├── analysis/       # Strategy analytics layer — scripts, data, outputs
 ├── roles/
@@ -171,7 +228,7 @@ HospitalIntelligenceR/
 │   ├── executives/ # Executive team (monthly)
 │   ├── board/      # Board of directors (6-month, post-September)
 │   └── minutes/    # Board meeting minutes archive (monthly)
-├── registry/       # hospital_registry.yaml — single source of truth (~137 hospitals)
+├── registry/       # hospital_registry.yaml — single source of truth (137 hospitals)
 ├── reference/      # cihi_fac_crosswalk.csv and other external reference data
 ├── orchestrate/    # Built last — ties roles together
 ├── docs/
@@ -182,14 +239,15 @@ HospitalIntelligenceR/
 └── dev/            # Scratch/sandbox — gitignored
 ```
 
-**Note:** `analysis/data/` is **tracked in git** as a curated analytical asset —
-intermediate CSVs are committed as part of the analytical record. `analysis/outputs/`
-is gitignored. Do not add `analysis/data/` to `.gitignore`.
+**Note:** `analysis/data/` is git-tracked — analytical CSVs are committed to
+the repository. (`CLAUDE_WORKING_PREFERENCES.md` previously stated this folder
+was gitignored; that was an error.)
 
 **Build sequence:** `registry.R` and `fetcher.R` first (no dependencies), then
 `crawler.R`, `claude_api.R`, `logger.R`, then role modules starting with
 `strategy/`, then `orchestrate/` last. For the analytics execution order, see
-`docs/programming_reference/StrategyPipelineReference.md`.
+`StrategyPipelineReference.md`
+(`docs/programming_reference/StrategyPipelineReference.md`).
 
 ---
 
@@ -208,52 +266,46 @@ is gitignored. Do not add `analysis/data/` to `.gitignore`.
 
 ## 10. Session Startup
 
-Each working session runs in a fresh thread. At the start of each session, Claude should:
+At the start of each session, Claude should:
 
 1. Read this file
 2. Read the most recent session summary in `docs/session_summaries/`
-3. Within the summary, read the **"Next Session" block first** — this is the
-   tactical handoff and takes priority over the session narrative
+3. Within the summary, read the **"Next Session — Start Here" block first** —
+   it is the tactical handoff and takes priority over the session narrative
 4. State the current priority, the first action to take, and any open
    carry-forward items before asking how to proceed
 5. Note any "watch out for" items from the summary as active constraints
 6. Pull any specific project files named in the summary (e.g. a script that
    was modified, a reference document for the next workstream) before generating
    any code or analysis
-7. If registry work is on the agenda, note the current state of
-   `registry/hospital_registry.yaml`
-8. If pipeline work is on the agenda, confirm the relevant step in
-   `docs/programming_reference/StrategyPipelineReference.md`
+7. If registry work is on the agenda, search the knowledge repository for
+   `hospital_registry.yaml` and note its current state
+8. If pipeline work is on the agenda, search the knowledge repository for
+   `StrategyPipelineReference.md` (`docs/programming_reference/StrategyPipelineReference.md`)
+
+**Missing documents:** If any document required for the session's planned work
+is not found in the knowledge repository, flag it by name at startup — stating
+what it is needed for — before proceeding. Do not silently work around a missing
+reference document.
 
 This orientation should happen unprompted — do not wait for the user to
 reconstruct context.
-
-### What a session summary contains
-
-Session summaries are structured markdown files with the following sections:
-- **Next Session — Start Here** (top of file): priority, first command, carry-forwards, watch-out items
-- **Session Objectives**: what the session was trying to accomplish
-- **Work Completed**: what was actually done, with bug/fix tables where relevant
-- **Key Design Decisions**: durable choices that affect future sessions
-- **Files Produced / Modified**: table of changed files with locations
-- **Session End Checklist**: upload/commit tasks for the user
-
-The "Next Session" block is always the most operationally important part.
-Read it first; use the rest of the summary as supporting context.
 
 ---
 
 ## 11. Scope
 
-This project covers **Ontario hospitals only** — currently ~137 hospitals in
-the validated registry. No expansion to other provinces or health system entities
+This project covers **Ontario hospitals only** — 137 hospitals in the registry,
+aligned with the MOH HIT tool universe of acute and non-acute hospitals under
+provincial oversight. No expansion to other provinces or health system entities
 without explicit discussion.
 
 ---
 
 ## 12. Figure Conventions
 
-All publication figures follow `docs/figure_standards.md`. Key conventions:
+All publication figures follow the figure standards documented in
+`figure_standards.md` (`docs/figure_standards.md`). Key conventions:
 
 - **Base theme:** `theme_linedraw()` with sans-serif font throughout
 - **Palette:** Dark2 (ColorBrewer) for categorical data; fixed type group colour
@@ -278,3 +330,135 @@ ranked comparisons. Standard design:
 - Natural extension: facet by hospital type group for within-type comparison
 
 First used: HIT revenue change figure (`roles/hit/scripts/fig_hit_rev_change.R`)
+
+---
+
+## 13. Session Summary Standards
+
+Session summaries are the continuity mechanism across sessions. A missing or
+malformed summary forces the next session to reconstruct context from scratch.
+
+### Format and filename
+- **Always `.md`** — never `.docx`, `.txt`, or any other format. The working
+  preferences Section 1 is explicit on this; `.docx` is a format violation.
+- **Filename:** `SessionSummary[MonthDDYYYY].md`
+  - Example: `SessionSummaryJune212026.md`
+  - Two sessions in one day: append `_AM` / `_PM`
+
+### Template
+The template lives at `docs/session_summaries/session_summary_template.md` on
+the local system and in GitHub. Claude reads it from the knowledge repository.
+If it is not found there, flag it at session startup. Do not invent a new
+structure.
+
+### Required section order
+The **"Next Session — Start Here"** block must appear first — immediately after
+the title, before any session narrative. It is the tactical handoff. Burying
+next steps at the bottom of a numbered narrative means the next session must
+read the entire document to find its starting point.
+
+Required order:
+1. Next Session — Start Here
+2. Session Objectives
+3. Work Completed
+4. Key Design Decisions
+5. Files Produced or Modified
+6. GitHub Commit Instructions
+7. Session End Checklist
+
+### At session end
+- Upload to Claude Project knowledge repository
+- Commit to `docs/session_summaries/` on GitHub
+
+---
+
+## 14. Data Storage Standard
+
+### Primary format: R dataframes saved as `.rds`
+
+Analytical data is stored as **R dataframes in `.rds` format** by default.
+This is the project standard because `.rds` files are directly loadable in R
+(`readRDS()` / `saveRDS()`), preserve column types (including character FAC),
+and are easier to inspect interactively than CSVs. The canonical location for
+analytical dataframes is `roles/minutes/outputs/` for the minutes role and
+`analysis/data/` for cross-role analytical outputs.
+
+**When CSV is acceptable:**
+- Outputs intended for human review or manual editing (e.g. review lists,
+  patch logs, validation exports)
+- Outputs shared with collaborators who may not use R
+- Intermediate pipeline logs (scrape logs, classification logs)
+
+**Never use CSV as the primary store for a dataframe that will be joined,
+filtered, or analysed in R** — type coercion on read is a recurring source of
+errors (especially FAC as numeric, date columns as character).
+
+### Analytical master files
+
+Each role that produces a corpus for analysis maintains a single
+**analytical master dataframe** (see `minutes_analytical_master` below).
+All workstream scripts source from this master — never from raw pipeline outputs
+directly. This ensures consistent hospital and document counts across all
+analyses within a role.
+
+### Versioning for publications
+
+When a paper goes to submission, snapshot the relevant master dataframe with a
+dated suffix (e.g. `minutes_analytical_master_v1_jun2026.rds`). This is an
+archival act. The live master retains its canonical name. All figures and tables
+in the submitted paper are reproducible against the named snapshot.
+
+### Annual refresh and provenance
+
+The minutes corpus is designed for annual refresh — new hospitals added,
+new minutes appended each December. To support this:
+
+- Every record in every analytical dataframe carries a `scrape_date` field
+  (date the document was downloaded) in addition to `doc_date` (date of the
+  meeting, extracted from document content)
+- `scrape_date` enables cohort identification when results span multiple
+  annual refresh cycles
+- If external data (e.g., the LH prior corpus, or data contributed by
+  individual hospitals) is integrated, it carries a `data_source` field
+  identifying its origin
+
+---
+
+## 15. Minutes Analytical Master (`minutes_analytical_master`)
+
+The `minutes_analytical_master` is the single analytical spine for all
+board minutes workstreams. It lives at:
+
+`E:/HospitalIntelligenceR/roles/minutes/outputs/minutes_analytical_master.rds`
+
+**One row per document.** It is built after Stage 2 classification is complete
+and before any analytical workstream begins.
+
+### Mandatory columns
+
+| Column | Type | Description |
+|---|---|---|
+| `fac` | character | FAC code — always character, never numeric |
+| `hospital_name` | character | Display name from registry |
+| `hospital_type_group` | character | Teaching / Community—Large / Community—Small / Specialty |
+| `folder_name` | character | Subfolder in extracted archive |
+| `filename` | character | PDF filename |
+| `local_path` | character | Full path to PDF on disk |
+| `tier` | character | `MinutesOnly` / `MinutesSummary` / `SomethingElse` |
+| `doc_date` | Date | Meeting date extracted from document content (not scraper) |
+| `scrape_date` | Date | Date PDF was downloaded |
+| `data_source` | character | `scrape_current` / `lh_prior` / `hospital_contributed` |
+| `in_foci_corpus` | logical | Eligible for board foci / riverbed analysis |
+| `in_sentiment_corpus` | logical | Eligible for NRC EmoLex sentiment analysis |
+| `in_topic_corpus` | logical | Eligible for LDA topic mining |
+| `in_strategy_corpus` | logical | Has matched strategy plan (Part A alignment) |
+| `in_strategy_linked_corpus` | logical | Strategy plan is time-contingent with minutes (Part B) |
+| `exclusion_reason` | character | NA if included; reason string if excluded from all corpora |
+
+### Governance rules
+
+- No workstream script defines its own inclusion logic — all filter from this master
+- When a document's tier or eligibility changes, update the master and re-run
+  affected workstream scripts
+- Commit the master to GitHub with a meaningful message every time it changes
+- Snapshot before each paper submission (see Section 14)

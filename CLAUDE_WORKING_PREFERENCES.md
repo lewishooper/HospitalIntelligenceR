@@ -1,6 +1,6 @@
 # Claude Working Preferences — HospitalIntelligenceR Project
 
-*Last Updated: June 21, 2026*
+*Last Updated: June 30, 2026*
 *Upload this document to the Claude Project knowledge repository for persistent reference.*
 
 ---
@@ -182,17 +182,10 @@ default without waiting to be asked.
 - **List binding:** Use `bind_rows(lapply(...))` — not `map_dfr()`, which is
   deprecated and causes silent failures
 - **Anonymous functions:** Use explicit `function(x)` style — not tilde-lambda
-  `~` syntax, which causes RStudio parser confusion in some contexts
-- **Claude API responses:** Strip markdown code fences with `gsub` before
-  parsing JSON (`gsub("```json|```", "", text)`); also sanitize control
-  characters before `toJSON()`
-- **purrr:** Must be explicitly loaded with `library(purrr)` — it is not
-  attached automatically by tidyverse in this project's loading pattern
-- **Logger:** Use `log_warning()` — not `log_warn()`, which does not exist in
-  the logger package version in use
-- **Logger init:** `init_logger()` requires the `role` argument — always call
-  as `init_logger(role = "minutes")` (or the relevant role name). The bare
-  `init_logger()` call will fail.
+  (`~`) syntax, which causes silent failures in some pipeline contexts
+- **JSON fence stripping:** When parsing Claude API responses with `fromJSON()`,
+  always strip markdown fences first — the model may add them even when
+  instructed not to
 - **Logger format strings:** `log_info()` does not accept `sprintf()`-style
   format arguments directly. Always wrap format strings first:
   `log_info(sprintf("Rows: %d", nrow(df)))` — not `log_info("Rows: %d", nrow(df))`.
@@ -376,3 +369,96 @@ Required order:
 ### At session end
 - Upload to Claude Project knowledge repository
 - Commit to `docs/session_summaries/` on GitHub
+
+---
+
+## 14. Data Storage Standard
+
+### Primary format: R dataframes saved as `.rds`
+
+Analytical data is stored as **R dataframes in `.rds` format** by default.
+This is the project standard because `.rds` files are directly loadable in R
+(`readRDS()` / `saveRDS()`), preserve column types (including character FAC),
+and are easier to inspect interactively than CSVs. The canonical location for
+analytical dataframes is `roles/minutes/outputs/` for the minutes role and
+`analysis/data/` for cross-role analytical outputs.
+
+**When CSV is acceptable:**
+- Outputs intended for human review or manual editing (e.g. review lists,
+  patch logs, validation exports)
+- Outputs shared with collaborators who may not use R
+- Intermediate pipeline logs (scrape logs, classification logs)
+
+**Never use CSV as the primary store for a dataframe that will be joined,
+filtered, or analysed in R** — type coercion on read is a recurring source of
+errors (especially FAC as numeric, date columns as character).
+
+### Analytical master files
+
+Each role that produces a corpus for analysis maintains a single
+**analytical master dataframe** (see `minutes_analytical_master` below).
+All workstream scripts source from this master — never from raw pipeline outputs
+directly. This ensures consistent hospital and document counts across all
+analyses within a role.
+
+### Versioning for publications
+
+When a paper goes to submission, snapshot the relevant master dataframe with a
+dated suffix (e.g. `minutes_analytical_master_v1_jun2026.rds`). This is an
+archival act. The live master retains its canonical name. All figures and tables
+in the submitted paper are reproducible against the named snapshot.
+
+### Annual refresh and provenance
+
+The minutes corpus is designed for annual refresh — new hospitals added,
+new minutes appended each December. To support this:
+
+- Every record in every analytical dataframe carries a `scrape_date` field
+  (date the document was downloaded) in addition to `doc_date` (date of the
+  meeting, extracted from document content)
+- `scrape_date` enables cohort identification when results span multiple
+  annual refresh cycles
+- If external data (e.g., the LH prior corpus, or data contributed by
+  individual hospitals) is integrated, it carries a `data_source` field
+  identifying its origin
+
+---
+
+## 15. Minutes Analytical Master (`minutes_analytical_master`)
+
+The `minutes_analytical_master` is the single analytical spine for all
+board minutes workstreams. It lives at:
+
+`E:/HospitalIntelligenceR/roles/minutes/outputs/minutes_analytical_master.rds`
+
+**One row per document.** It is built after Stage 2 classification is complete
+and before any analytical workstream begins.
+
+### Mandatory columns
+
+| Column | Type | Description |
+|---|---|---|
+| `fac` | character | FAC code — always character, never numeric |
+| `hospital_name` | character | Display name from registry |
+| `hospital_type_group` | character | Teaching / Community—Large / Community—Small / Specialty |
+| `folder_name` | character | Subfolder in extracted archive |
+| `filename` | character | PDF filename |
+| `local_path` | character | Full path to PDF on disk |
+| `tier` | character | `MinutesOnly` / `MinutesSummary` / `SomethingElse` |
+| `doc_date` | Date | Meeting date extracted from document content (not scraper) |
+| `scrape_date` | Date | Date PDF was downloaded |
+| `data_source` | character | `scrape_current` / `lh_prior` / `hospital_contributed` |
+| `in_foci_corpus` | logical | Eligible for board foci / riverbed analysis |
+| `in_sentiment_corpus` | logical | Eligible for NRC EmoLex sentiment analysis |
+| `in_topic_corpus` | logical | Eligible for LDA topic mining |
+| `in_strategy_corpus` | logical | Has matched strategy plan (Part A alignment) |
+| `in_strategy_linked_corpus` | logical | Strategy plan is time-contingent with minutes (Part B) |
+| `exclusion_reason` | character | NA if included; reason string if excluded from all corpora |
+
+### Governance rules
+
+- No workstream script defines its own inclusion logic — all filter from this master
+- When a document's tier or eligibility changes, update the master and re-run
+  affected workstream scripts
+- Commit the master to GitHub with a meaningful message every time it changes
+- Snapshot before each paper submission (see Section 14)
