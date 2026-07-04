@@ -27,20 +27,56 @@
 #         a motions-summary document, and a slide deck (CMH 661, TBay 935 x2),
 #         and a fully spurious extraction from a document (Holland Bloorview)
 #         that is agenda-only with no embedded minutes at all.
-#     (3) Fix: start detection now anchors on "called to order" co-occurring
-#         with an actual clock time within ~150 characters — a real minutes
-#         narrative sentence has this; an agenda line item, slide deck, or
-#         motions-summary document does not.
+#     (3) Fix attempted July 2: start detection anchored on "called to order"
+#         co-occurring with an actual clock time within ~150 characters, used
+#         alone as the sole start gate. This was designed but never run.
+#     (4) Fix applied July 3 (this version): call-to-order+time alone was
+#         judged too thin a foundation — a single untested signal carrying
+#         the entire start gate. Start detection is now a STRICT, SAME-PAGE
+#         combination of three independent structural signals, matching the
+#         real sequence of a minutes document's opening block:
+#           - detect_header_page(): header phrase (e.g. "minutes of",
+#             "board of directors") co-occurring with an actual date on the
+#             page — a bare header phrase with no date is not sufficient
+#             (agenda cover pages carry header phrases too).
+#           - detect_name_list_near(): an attendance keyword ("present",
+#             "in attendance", "regrets", etc.) with a real run of proper
+#             names nearby — not just the bare keyword, which matched agenda
+#             item titles like "Regrets" with zero surrounding names.
+#             min_names = 5. Matches BOTH full-name format ("Patricia Lang")
+#             and initial-based format ("L.Woeller", "Dr. W. Lee") — the
+#             initial-based pattern was added after CMH testing showed the
+#             full-name-only pattern found zero names on a page with 13 real
+#             attendees, because CMH lists attendees by initial, not full
+#             first name.
+#           - detect_call_to_order_page(): "call(ed) to order" co-occurring
+#             with a clock time within ~150 characters. Time pattern covers
+#             colon+am/pm ("5:06 p.m."), military with "h"/"hrs"/"hours"
+#             suffix ("1700h", "1700 hours"), and bare HH:MM. The matching
+#             window also normalizes a lowercase "o" sitting between two
+#             digits (or a digit and "h") back to "0" — CMH's source PDF has
+#             a font-substitution issue (missing 'AmsiPro' font) that causes
+#             tesseract to sporadically misread "1700h" as "170oh"; this
+#             normalization is scoped to the narrow time-matching window only,
+#             so it can't affect anything else on the page.
+#         All three must fire on the SAME page. This is deliberately strict:
+#         false positives across three separate documents (agenda pages, a
+#         motions-summary doc, a slide deck) motivate requiring independent
+#         confirmation from header, attendance, and call-to-order structure
+#         rather than trusting any single signal.
 # - No EOF fallback on close detection. If no close is found, the document is
 #   flagged for manual review rather than silently extracted to EOF.
-# - attendance_nearby is carried as an INFORMATIONAL column only (not a gate)
-#   for spot-checking the new start anchor without reintroducing attendance
-#   as a false-positive-prone gate.
+# - attendance_nearby is carried as an INFORMATIONAL column (bare-keyword
+#   detect_attendance_page(), not the stricter name-list version) for
+#   spot-checking, kept separate from the new name-list gate itself.
 #
-# STATUS AS OF JULY 2, 2026: Call-to-order anchor is untested against the
-# five known failure cases (CMH 661 x2, TBay 935 x2, Holland Bloorview).
-# Run single-document tests on all five via TEST_FAC before trusting a full
-# batch run. See "Next Session — Start Here" in the July 2 session summary.
+# STATUS AS OF JULY 3, 2026: Strict same-page three-signal start gate
+# VALIDATED — 6/6 single-document tests passed (both start and end page
+# confirmed correct against manual PDF review): CMH 661 (2024-03-06,
+# 2026-06-03), TBay 935 (2024-10-02, 2025-10-01), plus 2 additional documents
+# from hospitals not previously tested. Holland Bloorview 939 correctly
+# flagged no_start_detected (true negative — agenda-only, no embedded
+# minutes). Cleared for full 35-document batch run.
 #
 # Run from: E:/HospitalIntelligenceR (project root)
 # Input:    roles/minutes/outputs/llm_run1_fulltext_scan.csv (bucket == "agenda_prescreen")
@@ -64,6 +100,9 @@ RESULTS_FILE <- "roles/minutes/outputs/llm_run1_results.csv"
 OUTPUT_FILE  <- "roles/minutes/outputs/minutes_extract_prescreen_results.rds"
 PROJECT_ROOT <- "E:/HospitalIntelligenceR"
 OCR_DPI      <- 300
+MIN_NAMES    <- 5   # minimum Title-Case name-pattern hits near an attendance
+# keyword to count as a real name list (see
+# detect_name_list_near). Tune against test-case output.
 
 # Single-document test mode — set TEST_FAC to a FAC code (character) to run
 # extraction on just that document instead of the full 35. Leave NULL for a
@@ -142,8 +181,8 @@ detect_attendance <- function(text) {
   )
 }
 
-# Page-level attendance detector — informational only (see detect_call_to_order_page
-# note below on why attendance is no longer used as a start gate).
+# Page-level attendance detector — informational only. Bare keyword, no name
+# check. See detect_name_list_near() below for the stricter gating version.
 detect_attendance_page <- function(page_text) {
   str_detect(
     str_to_lower(page_text),
@@ -194,29 +233,143 @@ detect_close_page <- function(page_text) {
   )
 }
 
-# Call-to-order anchor — replaces header+attendance as the start gate.
+# ── New (July 3): date detector — header must co-occur with an actual date ────
+detect_date_page <- function(page_text) {
+  date_pattern <- paste0(
+    "(january|february|march|april|may|june|july|august|september|october|",
+    "november|december)\\s+\\d{1,2},?\\s+\\d{4}",
+    "|\\d{4}-\\d{2}-\\d{2}",
+    "|\\d{1,2}/\\d{1,2}/\\d{2,4}"
+  )
+  str_detect(str_to_lower(page_text), date_pattern)
+}
+
+# ── New (July 3): page-level header — phrase + date, same page ────────────────
+# A bare header phrase (detect_header() above) matches agenda cover pages too.
+# Requiring a co-occurring date narrows this to an actual opening-block page.
+detect_header_page <- function(page_text) {
+  has_header_phrase <- str_detect(
+    str_to_lower(page_text),
+    paste0(
+      "minutes of|", "board of directors|", "board meeting|", "open session|",
+      "meeting of the board|", "regular meeting|", "special meeting|",
+      "annual meeting|", "annual general meeting"
+    )
+  )
+  has_header_phrase && detect_date_page(page_text)
+}
+
+# ── New (July 3): name-list detector — attendance keyword + real names ────────
+# Operates on ORIGINAL-CASE page_text (not lowered) since Title-Case matching
+# needs case preserved; keyword search uses inline case-insensitive character
+# classes for the same reason. Round 2 (July 2) found the bare attendance
+# keyword alone matches agenda item titles ("Regrets" as a line-item label)
+# with zero names attached — this is the fix: require a real run of
+# Title-Case two-word sequences within `window` characters of the keyword.
+detect_name_list_near <- function(page_text, min_names = MIN_NAMES, window = 600) {
+  kw_positions <- str_locate_all(
+    page_text,
+    paste0(
+      "[Mm]embers [Pp]resent|", "[Bb]oard [Mm]embers [Pp]resent|",
+      "[Dd]irectors [Pp]resent|", "[Ii]n [Aa]ttendance|",
+      "[Aa]lso [Ii]n [Aa]ttendance|[Rr]egrets|[Pp]resent:"
+    )
+  )[[1]]
+  if (nrow(kw_positions) == 0) return(FALSE)
+  
+  # Broadened July 3 (post-Cambridge test): the original pattern only
+  # recognized full first+last names ("Patricia Lang"), which is Thunder
+  # Bay's format. Cambridge lists attendees as initial+period+surname, often
+  # with zero space ("L.Woeller", "Dr. W. Lee") — none of which matched a
+  # full-word-pair pattern, so a page with 13 real attendees registered as
+  # zero names found.
+  name_pattern <- paste0(
+    "(?:Dr\\.?\\s*)?[A-Z]\\.\\s?[A-Z][a-z]+",  # initial-based: L.Woeller, Dr. W. Lee
+    "|",
+    "[A-Z][a-z]+\\s[A-Z][a-z]+"                 # full name: Patricia Lang
+  )
+  
+  for (i in seq_len(nrow(kw_positions))) {
+    win_start <- kw_positions[i, "start"]
+    win_end   <- min(nchar(page_text), win_start + window)
+    win_text  <- str_sub(page_text, win_start, win_end)
+    n_names   <- length(str_extract_all(win_text, name_pattern)[[1]])
+    if (n_names >= min_names) return(TRUE)
+  }
+  FALSE
+}
+
+# Call-to-order anchor — one of three signals in the combined start gate.
 # Requires "call(ed) to order" to co-occur with an actual clock time within
 # ~150 characters. A real minutes narrative sentence has this ("called the
 # meeting to order at 6:32 p.m."); an agenda line item ("1. Call to Order"),
-# slide deck, or motions-summary document does not. header+attendance
-# co-occurrence was tried first and rejected — both signals proved too
-# promiscuous (agenda title boilerplate satisfies header; agenda item titles
-# like "Regrets" or "Attendance" satisfy the bare attendance regex with zero
-# surrounding context).
+# slide deck, or motions-summary document does not.
 detect_call_to_order_page <- function(page_text) {
   text_lower <- str_to_lower(page_text)
   positions  <- str_locate_all(text_lower, "call(ed)? to order")[[1]]
   if (nrow(positions) == 0) return(FALSE)
   
-  time_pattern <- "\\d{1,2}:\\d{2}\\s*(a\\.?m\\.?|p\\.?m\\.?)"
+  # Broadened July 3 (post-Cambridge test): the original pattern only
+  # recognized colon+am/pm formats ("5:06p.m."). Cambridge uses military
+  # time with no colon and an "h" suffix ("1700h"), which matched nothing
+  # and caused a false no_start_detected despite "called to order" being
+  # present on the page.
+  time_pattern <- paste0(
+    "\\d{1,2}:\\d{2}\\s*(a\\.?m\\.?|p\\.?m\\.?)",  # 5:06 p.m.
+    "|\\d{3,4}\\s*h(rs|ours)?\\b",                  # 1700h, 1700hrs, 1700 hours
+    "|\\d{1,2}:\\d{2}\\s*h(rs|ours)?\\b",           # 17:00h
+    "|\\b\\d{1,2}:\\d{2}\\b"                        # bare HH:MM fallback
+  )
   
   for (i in seq_len(nrow(positions))) {
     win_start <- max(1, positions[i, "start"] - 150)
     win_end   <- min(nchar(text_lower), positions[i, "end"] + 150)
     window    <- str_sub(text_lower, win_start, win_end)
+    
+    # OCR fix (July 3, round 3): the 'AmsiPro' font substitution warnings on
+    # this document line up with sporadic 0/O digit misreads — "1700h" comes
+    # through as "170oh" on some pages of the same PDF and correctly as
+    # "1700h" on others. Normalize only within this already-narrow window,
+    # only where an 'o' sits between a digit and another digit-or-h, so this
+    # can't accidentally rewrite unrelated text elsewhere on the page.
+    window <- str_replace_all(window, "(?<=[0-9])o(?=[0-9]|h)", "0")
+    
     if (str_detect(window, time_pattern)) return(TRUE)
   }
   FALSE
+}
+
+# ── New (July 3): combined strict start gate — all three signals, same page ───
+# header+date, attendance+name-list, and call-to-order+time must ALL fire on
+# the same page. Deliberately strict: single-signal gates (header+attendance
+# in Round 1, call-to-order alone as designed July 2) both proved insufficient
+# or went untested. Requiring independent confirmation from all three
+# structural elements of a real minutes opening block is the July 3 fix.
+detect_minutes_start_page <- function(page_text) {
+  detect_header_page(page_text) &&
+    detect_name_list_near(page_text) &&
+    detect_call_to_order_page(page_text)
+}
+
+# ── New (July 3, round 2): diagnostic helper — test mode only ─────────────────
+# Prints, per page, which of the three gate signals fired plus a raw text
+# snippet — using the ACTUAL tesseract OCR output, not a manual transcription.
+# Added because the 2024-03-06 CMH doc passed with visible OCR misreads
+# ("8. Alvarado" for "S. Alvarado", "|. Morgan" for "J. Morgan") while the
+# 2026-06-03 CMH doc failed — the only way to tell whether that's a genuine
+# threshold miss on real OCR artifacts (vs. a still-missing pattern case) is
+# to look at what OCR actually produced, not a hand-typed reference passage.
+print_page_diagnostics <- function(pages) {
+  for (i in seq_along(pages)) {
+    hdr <- detect_header_page(pages[i])
+    nms <- detect_name_list_near(pages[i])
+    cto <- detect_call_to_order_page(pages[i])
+    cat(sprintf("\n--- Page %d ---  header=%s  names=%s  call_to_order=%s\n",
+                i, hdr, nms, cto))
+    if (hdr || nms || cto) {
+      cat(str_sub(pages[i], 1, 800), "\n")
+    }
+  }
 }
 
 classify_document <- function(text, word_count) {
@@ -283,17 +436,17 @@ process_document <- function(row) {
     return(make_result(qa_flag = "ocr_failed"))
   }
   
-  # ── Start detection: call-to-order + time anchor ──────────────────────────────
-  call_hits <- vapply(pages, detect_call_to_order_page, logical(1))
-  start_idx <- which(call_hits)[1]
+  # ── Start detection: strict same-page combination of header+date, ────────────
+  # attendance+name-list, and call-to-order+time.
+  start_hits <- vapply(pages, detect_minutes_start_page, logical(1))
+  start_idx  <- which(start_hits)[1]
   
   if (is.na(start_idx)) {
     return(make_result(qa_flag = "no_start_detected"))
   }
   
-  # Informational only — not a gate. Records whether an attendance-style match
-  # also appears near the confirmed start, for spot-checking without
-  # reintroducing attendance as a false-positive-prone gate.
+  # Informational only — bare-keyword attendance (not the name-list version),
+  # for spot-checking without duplicating the gating logic.
   attendance_hits  <- vapply(pages, detect_attendance_page, logical(1))
   att_window_end   <- min(start_idx + 1, n_pages)
   attendance_nearby <- any(attendance_hits[start_idx:att_window_end])
@@ -353,6 +506,15 @@ results_list <- vector("list", nrow(target))
 for (i in seq_len(nrow(target))) {
   row <- target[i, ]
   cat(sprintf("[%2d/%d] FAC %-4s  %s\n", i, nrow(target), row$fac, row$filename))
+  
+  if (!is.null(TEST_FAC)) {
+    cat(sprintf("\n════ DIAGNOSTICS (raw OCR, actual tesseract output): FAC %s  %s ════\n",
+                row$fac, row$filename))
+    diag_pages <- extract_pages(row$local_path_abs)
+    print_page_diagnostics(diag_pages)
+    cat("\n════ END DIAGNOSTICS ════\n\n")
+  }
+  
   results_list[[i]] <- process_document(row)
   cat(sprintf("        doc_class=%-15s corpus_include=%-5s attendance_nearby=%-5s qa_flag=%s\n",
               results_list[[i]]$doc_class, results_list[[i]]$corpus_include,

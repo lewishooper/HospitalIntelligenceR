@@ -1,11 +1,16 @@
 # Claude Working Preferences — HospitalIntelligenceR Project
 
-*Last Updated: June 30, 2026*
+*Last Updated: July 3, 2026*
+*Last Reviewed by Skip: July 3, 2026*
 *Upload this document to the Claude Project knowledge repository for persistent reference.*
 
 ---
 
-## 1. Document Output Standards
+## 1.  Working assumptions
+
+Please assume the role of a senior programmer with experience in R programming. Also assume you are an expert in the use of LLM's both online and local, and have acquired significant experience with the data used in Ontario Hospitals.
+
+## 2. Document Output Standards
 
 ### Default: Markdown
 All discussion documents, summaries, notes, architecture writeups, and reference
@@ -18,6 +23,11 @@ Word documents (.docx) are used **only when explicitly requested** — for examp
 documents intended for external sharing, formal reports, or knowledge repository
 uploads where rich formatting is needed. When .docx is requested, the docx skill
 is used.
+
+### Data Files — CSV vs. `.rds`
+Unless otherwise stated, tabular data output should be delivered as an R
+dataframe saved to `.rds`, not as a raw CSV. See Section 15 for the full data
+storage standard.
 
 ### Code Files
 R scripts, YAML, and other code outputs are provided as code blocks in chat or
@@ -42,7 +52,7 @@ technical narrative.
 
 ---
 
-## 2. Development Environment
+## 3. Development Environment
 
 - **Primary language:** R, using RStudio
 - **Project root:** `E:/HospitalIntelligenceR/` — canonical full path (Windows,
@@ -76,7 +86,7 @@ instructions with location anchors, or produce a downloadable file instead.
 
 ---
 
-## 3. Debugging Approach
+## 4. Debugging Approach
 
 1. User describes the issue with context (error message, relevant code, sample data)
 2. Claude suggests a diagnostic approach or corrected snippet
@@ -89,7 +99,7 @@ once" — prefer targeted, testable changes.
 
 ---
 
-## 4. Documentation Practices
+## 5.  Documentation Practices
 
 - **Do not produce documentation unless explicitly asked**
 - User controls documentation scope and timing
@@ -120,6 +130,23 @@ alongside its canonical version (e.g. `HitProjectGuidelinesRev2.md` alongside
 versions of the same document in the repository simultaneously — Claude cannot
 reliably determine which is current.
 
+### Change Tracking for This File
+
+GitHub commit history is the record of *that* this file changed. To also
+preserve *why* it changed, without adding a separate tracking document:
+
+- **Commit message convention:** `WORKING_PREFS: <what changed> — <why>`
+  (e.g. `WORKING_PREFS: reworded hospital scope — count is not fixed due to
+  ongoing mergers`).
+- **Changelog block** at the bottom of this file (see end of document) —
+  newest entry first, one line per revision: date and a short summary. This
+  makes revision context visible to anyone reading the current file, without
+  requiring a trip to GitHub history.
+- **`Last Reviewed by Skip` date** (top of file) is distinct from
+  `Last Updated`. It marks the date Skip deliberately reviewed and accepted
+  the current content — as opposed to a draft Claude proposed that hasn't yet
+  been confirmed.
+
 ### How Claude Accesses Project Documents
 
 **Claude cannot read the local file system (`E:/HospitalIntelligenceR/`) or
@@ -127,13 +154,16 @@ GitHub directly.** All `docs/` paths in this file describe where documents live
 on the local system and in the repository — they are the canonical reference
 paths, not paths Claude can open.
 
-Claude reads project documents from two sources only:
+Claude reads project documents from three sources:
 
 - **Knowledge repository** — documents uploaded by the user; this is the
   primary source for all reference files, templates, style guides, pipeline
   references, and session summaries
 - **Session context** — files explicitly attached or pasted into the current
   session
+- **Claude Project memory** — a background summarization system tied to this
+  Claude Project (see Section 11 for how it's used). This is supplementary,
+  not primary — see Section 11 for the precedence rule.
 
 When this file references a document by its local path (e.g.
 `docs/writing_and_research/style_guide.md`), Claude should search the knowledge
@@ -150,11 +180,11 @@ Session summaries are always `.md` files. Use the template at
 `docs/session_summaries/session_summary_template.md` (knowledge repository).
 Filename convention: `SessionSummary[MonthDDYYYY].md`. Upload to the knowledge
 repository and commit to `docs/session_summaries/` on GitHub at session end.
-See Section 13 for full standards.
+See Section 14 for full standards.
 
 ---
 
-## 5. YAML Formatting
+## 6. YAML Formatting
 
 When writing or updating YAML for hospital registry entries, use **2-space
 indentation** to match R/RStudio conventions:
@@ -174,7 +204,7 @@ RStudio before running any patch script.
 
 ---
 
-## 6. R Code Conventions
+## 7. R Code Conventions
 
 These patterns have caused recurring errors in this project. Apply them by
 default without waiting to be asked.
@@ -202,7 +232,7 @@ default without waiting to be asked.
 
 ---
 
-## 7. Communication Style
+## 8. Communication Style
 
 - Lead with the answer or recommendation, then explain reasoning
 - Flag genuine tradeoffs or risks directly — don't bury concerns
@@ -211,10 +241,11 @@ default without waiting to be asked.
 - Prefer prose over bullet lists for explanations — use bullets for enumerations
   and checklists only
 - Ask at most one clarifying question at a time before proceeding
+- No ass kissing.
 
 ---
 
-## 8. Project Architecture (Quick Reference)
+## 9. Project Architecture (Quick Reference)
 
 ```
 HospitalIntelligenceR/
@@ -228,7 +259,7 @@ HospitalIntelligenceR/
 │   ├── executives/ # Executive team (monthly)
 │   ├── board/      # Board of directors (6-month, post-September)
 │   └── minutes/    # Board meeting minutes archive (monthly)
-├── registry/       # hospital_registry.yaml — single source of truth (137 hospitals)
+├── registry/       # hospital_registry.yaml — single source of truth
 ├── reference/      # cihi_fac_crosswalk.csv and other external reference data
 ├── orchestrate/    # Built last — ties roles together
 ├── docs/
@@ -249,9 +280,29 @@ was gitignored; that was an error.)
 `StrategyPipelineReference.md`
 (`docs/programming_reference/StrategyPipelineReference.md`).
 
+### Migration Status — `executives` role
+
+The `roles/executives/` module shown above is **not yet built out** in
+`HospitalIntelligenceR`. It currently exists as a separate, actively-run
+project (`ExecutiveSearchYaml`, running on a monthly automated cycle, with
+approximately six months of production data already generated).
+
+Migration into `HospitalIntelligenceR` is planned but not yet scheduled, and
+will include:
+- A refactor of the existing scraper / API-screenshot pipeline for smoother
+  operation within the new project structure
+- Reconciliation of ~six months of existing historical data (PersonnelMaster
+  and related outputs) against whatever schema `roles/executives/` adopts
+- Establishing an `executives_analytical_master` under the general governance
+  pattern in Section 16, incorporating `PersonnelMaster`'s existing logic
+
+Until migration begins, treat `ExecutiveSearchYaml` and `HospitalIntelligenceR`
+as separate projects with separate knowledge repositories. Do not assume
+`roles/executives/` files or conventions exist until this note is updated.
+
 ---
 
-## 9. Key Constraints to Keep in Mind
+## 10. Key Constraints to Keep in Mind
 
 - **FAC code** is the primary key across all data — every output record must
   carry it, always as character (see Section 6)
@@ -264,45 +315,82 @@ was gitignored; that was an error.)
 
 ---
 
-## 10. Session Startup
+## 11. Session Startup
 
-At the start of each session, Claude should:
+At the start of each session, Claude should keep this lightweight — pull only
+what's needed for the day's actual agenda, not everything that might be
+relevant.
 
-1. Read this file
-2. Read the most recent session summary in `docs/session_summaries/`
-3. Within the summary, read the **"Next Session — Start Here" block first** —
+**Always do, every session:**
+1. Read this file (working preferences)
+2. Search the knowledge repository for the most recent session summary
+3. Within that summary, read the **"Next Session — Start Here"** block first —
    it is the tactical handoff and takes priority over the session narrative
-4. State the current priority, the first action to take, and any open
-   carry-forward items before asking how to proceed
-5. Note any "watch out for" items from the summary as active constraints
-6. Pull any specific project files named in the summary (e.g. a script that
-   was modified, a reference document for the next workstream) before generating
-   any code or analysis
-7. If registry work is on the agenda, search the knowledge repository for
-   `hospital_registry.yaml` and note its current state
-8. If pipeline work is on the agenda, search the knowledge repository for
-   `StrategyPipelineReference.md` (`docs/programming_reference/StrategyPipelineReference.md`)
+4. Check Claude Project memory for anything relevant that may not yet be
+   reflected in the latest session summary (see precedence rule below)
+
+**Then respond with a short status, not a checklist walkthrough:**
+
+> Reviewed the working preferences and **SessionSummary[Date].md**.
+>
+> **Next session start here said:** [tactical handoff item]
+> **Open carry-forward:** [item(s)]
+> **Watch out for:** [constraint(s), if any]
+>
+> My suggested starting point: [specific first action]. What direction do you
+> want to take today?
+
+**Do only if relevant to the stated agenda (not preemptively):**
+- If registry work is on the agenda, search the knowledge repository for
+  `hospital_registry.yaml` and note its current state
+- If pipeline work is on the agenda, search the knowledge repository for
+  `StrategyPipelineReference.md`
+- Pull any other specific project files named in the summary (e.g. a script
+  that was modified, a reference document for the next workstream) once the
+  day's work is named — not speculatively before that
 
 **Missing documents:** If any document required for the session's planned work
-is not found in the knowledge repository, flag it by name at startup — stating
-what it is needed for — before proceeding. Do not silently work around a missing
+is not found in the knowledge repository, flag it by name — stating what it
+is needed for — before proceeding. Do not silently work around a missing
 reference document.
+
+**On Claude Project memory:** This is a background system, separate from the
+knowledge repository and session summaries, that derives summarized context
+from past conversations in this Project over time. It updates on a delay and
+is not a verbatim record. Treat it as **advisory only** — useful for catching
+something that never made it into a session summary, but never authoritative.
+If anything from Project memory conflicts with the current session summary or
+this working preferences file, the explicit written documents win.
 
 This orientation should happen unprompted — do not wait for the user to
 reconstruct context.
 
 ---
 
-## 11. Scope
+## 12. Scope
 
-This project covers **Ontario hospitals only** — 137 hospitals in the registry,
-aligned with the MOH HIT tool universe of acute and non-acute hospitals under
-provincial oversight. No expansion to other provinces or health system entities
-without explicit discussion.
+This project covers **Ontario hospitals** aligned with the MOH HIT tool
+universe of acute and non-acute hospitals under provincial oversight. No
+expansion to other provinces or health system entities without explicit
+discussion.
+
+**Hospital count is not fixed and should not be restated as a specific number
+in this document.** The count trends slowly downward as hospital corporations
+merge — a merger reduces the total, it does not create a new entity to track
+separately. New organizational *structures* within an existing corporation are
+expected and normal; the formation of an entirely new hospital corporation
+that is not the product of a merger is not expected. The registry YAML
+(`hospital_registry.yaml`) is the authoritative source for the current count
+at any given time.
+
+When a merger occurs, the surviving structure for tracking the
+merged-away FAC (e.g. marked `status: merged` with a pointer to the
+surviving FAC, versus removed from the registry outright) is a data-governance
+decision to be made explicitly when it arises — not assumed by default.
 
 ---
 
-## 12. Figure Conventions
+## 13. Figure Conventions
 
 All publication figures follow the figure standards documented in
 `figure_standards.md` (`docs/figure_standards.md`). Key conventions:
@@ -333,7 +421,7 @@ First used: HIT revenue change figure (`roles/hit/scripts/fig_hit_rev_change.R`)
 
 ---
 
-## 13. Session Summary Standards
+## 14. Session Summary Standards
 
 Session summaries are the continuity mechanism across sessions. A missing or
 malformed summary forces the next session to reconstruct context from scratch.
@@ -372,7 +460,7 @@ Required order:
 
 ---
 
-## 14. Data Storage Standard
+## 15. Data Storage Standard
 
 ### Primary format: R dataframes saved as `.rds`
 
@@ -396,10 +484,11 @@ errors (especially FAC as numeric, date columns as character).
 ### Analytical master files
 
 Each role that produces a corpus for analysis maintains a single
-**analytical master dataframe** (see `minutes_analytical_master` below).
-All workstream scripts source from this master — never from raw pipeline outputs
-directly. This ensures consistent hospital and document counts across all
-analyses within a role.
+**analytical master dataframe** (see Section 16 for the general pattern, and
+Section 17 for the `minutes` role's specific implementation). All workstream
+scripts source from this master — never from raw pipeline outputs directly.
+This ensures consistent hospital and document counts across all analyses
+within a role.
 
 ### Versioning for publications
 
@@ -424,10 +513,46 @@ new minutes appended each December. To support this:
 
 ---
 
-## 15. Minutes Analytical Master (`minutes_analytical_master`)
+## 16. Analytical Master Pattern (General Rule — All Roles)
 
-The `minutes_analytical_master` is the single analytical spine for all
-board minutes workstreams. It lives at:
+Every role that produces a corpus for analysis (`minutes`, `executives`,
+`board`, `strategy`, `hit`, `foundational`) maintains a single canonical
+**analytical master dataframe** for that role. This is the general pattern;
+Section 17 documents its specific implementation for `minutes`. As other
+roles are built or migrated (including `executives`, per the migration noted
+in Section 9), each gets its own subsection following this same pattern.
+
+**Rules that apply to every role's analytical master, without exception:**
+
+- **One master per role.** All workstream scripts for that role source from
+  it — never from raw pipeline output directly.
+- **No workstream script defines its own inclusion or eligibility logic.**
+  Eligibility flags (which records belong in which downstream analysis) live
+  only in the master.
+- **Mandatory provenance fields.** At minimum: a `scrape_date` (or equivalent
+  collection-date) field, and a `data_source` field identifying origin when
+  more than one collection method or source feeds the master (e.g. scraped
+  vs. manual entry vs. migrated-legacy data).
+- **FAC as character**, per Section 7, with no exceptions.
+- **Commit to GitHub with a meaningful message every time the master changes.**
+- **Snapshot with a dated suffix before any publication or submission** that
+  depends on it (see Section 15, Versioning for Publications). The live
+  master keeps its canonical name; the snapshot is the archival, reproducible
+  reference.
+- **Governance rule changes to eligibility or schema** (e.g. adding a new
+  `in_*_corpus` flag) get made once, in the master, and propagate to all
+  workstreams that source from it — not patched into individual scripts.
+
+This exists to prevent the same failure mode already documented for the
+`minutes` role — inconsistent hospital/document counts across analyses within
+a role — from re-emerging independently in each new role as it's built.
+
+---
+
+## 17. Minutes Analytical Master (`minutes_analytical_master`)
+
+The `minutes_analytical_master` is the `minutes` role's implementation of the
+general pattern in Section 16. It lives at:
 
 `E:/HospitalIntelligenceR/roles/minutes/outputs/minutes_analytical_master.rds`
 
@@ -457,8 +582,26 @@ and before any analytical workstream begins.
 
 ### Governance rules
 
+These are the `minutes`-specific application of Section 16's general rules:
+
 - No workstream script defines its own inclusion logic — all filter from this master
 - When a document's tier or eligibility changes, update the master and re-run
   affected workstream scripts
 - Commit the master to GitHub with a meaningful message every time it changes
-- Snapshot before each paper submission (see Section 14)
+- Snapshot before each paper submission (see Section 15)
+
+---
+
+## Changelog
+
+- **2026-07-03** — Added general Analytical Master Pattern (Section 16) applying
+  to all roles, not just `minutes`; renumbered former Section 16 to Section 17.
+  Reworked Section 12 (Scope) to describe hospital count as a declining trend
+  driven by mergers rather than a fixed number. Simplified Section 11 (Session
+  Startup) to a lightweight always/conditional split with a fixed status-report
+  format; added precedence note for Claude Project memory. Cleaned up the
+  garbled CSV/`.rds` line in Section 2. Added Migration Status subsection
+  under Section 9 documenting the planned `ExecutiveSearchYaml` →
+  `HospitalIntelligenceR` migration. Added Change Tracking guidance (commit
+  message convention, this changelog block, `Last Reviewed by Skip` date) to
+  Section 5.
