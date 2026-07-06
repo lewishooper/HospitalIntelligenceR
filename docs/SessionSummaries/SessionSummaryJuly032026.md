@@ -146,8 +146,8 @@ no_start_detected flagged for manual review, 0 no_close_detected.
 
 ## Session End Checklist
 
-- [ ] Save as `SessionSummaryJuly032026.md` — confirm `.md` extension before closing
-- [ ] Upload to Claude Project knowledge repository
-- [ ] Commit to `docs/session_summaries/` on GitHub
+- [x] Save as `SessionSummaryJuly032026.md` — confirm `.md` extension before closing
+- [x] Upload to Claude Project knowledge repository
+- [x] Commit to `docs/session_summaries/` on GitHub
 - [ ] Pull the FAC/filename list for the 6 `no_start_detected` documents (snippet above) and classify each before starting new work next session
 - [ ] Spot-check 3–5 of the 29 `corpus_include TRUE` extractions against source PDFs

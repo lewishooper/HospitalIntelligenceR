@@ -110,9 +110,9 @@ MIN_NAMES    <- 5   # minimum Title-Case name-pattern hits near an attendance
 # multiple agenda_prescreen docs), TEST_FILENAME narrows it further.
 # Test mode writes to a separate output file so it never clobbers a prior
 # full-batch result.
-TEST_FAC      <- NULL   # e.g. "661" for CMH, "935" for Thunder Bay
-TEST_FILENAME <- NULL   # e.g. "2024-11-06_board_minutes.pdf" — narrows TEST_FAC
-
+#TEST_FAC      <- "933"
+#TEST_FILENAME <- "2024-07-01_board_minutes_v4.pdf"
+TEST_FAC <- NULL; TEST_FILENAME <- NULL
 # ── 1. Load scan output, filter to agenda_prescreen bucket ────────────────────
 scan <- read.csv(SCAN_FILE, stringsAsFactors = FALSE) |>
   mutate(fac = as.character(fac)) |>
@@ -267,32 +267,27 @@ detect_header_page <- function(page_text) {
 # with zero names attached — this is the fix: require a real run of
 # Title-Case two-word sequences within `window` characters of the keyword.
 detect_name_list_near <- function(page_text, min_names = MIN_NAMES, window = 600) {
+  text_lower <- str_to_lower(page_text)
   kw_positions <- str_locate_all(
-    page_text,
+    text_lower,
     paste0(
-      "[Mm]embers [Pp]resent|", "[Bb]oard [Mm]embers [Pp]resent|",
-      "[Dd]irectors [Pp]resent|", "[Ii]n [Aa]ttendance|",
-      "[Aa]lso [Ii]n [Aa]ttendance|[Rr]egrets|[Pp]resent:"
+      "members present|", "board members present|",
+      "directors present|", "in attendance|",
+      "also in attendance|regrets|present:"
     )
   )[[1]]
   if (nrow(kw_positions) == 0) return(FALSE)
   
-  # Broadened July 3 (post-Cambridge test): the original pattern only
-  # recognized full first+last names ("Patricia Lang"), which is Thunder
-  # Bay's format. Cambridge lists attendees as initial+period+surname, often
-  # with zero space ("L.Woeller", "Dr. W. Lee") — none of which matched a
-  # full-word-pair pattern, so a page with 13 real attendees registered as
-  # zero names found.
   name_pattern <- paste0(
-    "(?:Dr\\.?\\s*)?[A-Z]\\.\\s?[A-Z][a-z]+",  # initial-based: L.Woeller, Dr. W. Lee
+    "(?:Dr\\.?\\s*)?[A-Z]\\.\\s?[A-Z][a-z]+",
     "|",
-    "[A-Z][a-z]+\\s[A-Z][a-z]+"                 # full name: Patricia Lang
+    "[A-Z][a-z]+\\s[A-Z][a-z]+"
   )
   
   for (i in seq_len(nrow(kw_positions))) {
     win_start <- kw_positions[i, "start"]
     win_end   <- min(nchar(page_text), win_start + window)
-    win_text  <- str_sub(page_text, win_start, win_end)
+    win_text  <- str_sub(page_text, win_start, win_end)  # original-case page_text, not text_lower
     n_names   <- length(str_extract_all(win_text, name_pattern)[[1]])
     if (n_names >= min_names) return(TRUE)
   }
@@ -528,7 +523,6 @@ for (i in seq_len(nrow(target))) {
   }
 }
 
-results <- bind_rows(results_list)
 saveRDS(results, OUTPUT_FILE_ACTUAL)
 log_info(sprintf("Extraction complete — %d documents written to %s", nrow(results), OUTPUT_FILE_ACTUAL))
 
