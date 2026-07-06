@@ -51,7 +51,7 @@ OCR_DPI      <- 300
 SUMMARY_FACS <- c("905", "967", "644", "736")
 
 # Single-document test mode — same convention as minutes_extract_prescreen.R
-TEST_FAC <-"736"; TEST_FILENAME <- NULL
+TEST_FAC <-NULL; TEST_FILENAME <- NULL
 
 # ── 1. Target set ────────────────────────────────────────────────────────────
 results_all <- read.csv(RESULTS_FILE, stringsAsFactors = FALSE) |>

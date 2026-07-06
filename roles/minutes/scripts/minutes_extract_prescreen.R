@@ -84,18 +84,20 @@
 # Output:   roles/minutes/outputs/minutes_extract_prescreen_results.rds
 #           (or minutes_extract_prescreen_TEST.rds in single-document test mode)
 
-rm(list = ls())
+#rm(list = ls())
 
 library(dplyr)
 library(stringr)
 library(pdftools)
 library(tesseract)
 
+
 source("core/logger.R")
 init_logger(role = "minutes")
 
 # ── Config ───────────────────────────────────────────────────────────────────
 SCAN_FILE    <- "roles/minutes/outputs/llm_run1_fulltext_scan.csv"
+
 RESULTS_FILE <- "roles/minutes/outputs/llm_run1_results.csv"
 OUTPUT_FILE  <- "roles/minutes/outputs/minutes_extract_prescreen_results.rds"
 PROJECT_ROOT <- "E:/HospitalIntelligenceR"
@@ -112,7 +114,7 @@ MIN_NAMES    <- 5   # minimum Title-Case name-pattern hits near an attendance
 # full-batch result.
 #TEST_FAC      <- "933"
 #TEST_FILENAME <- "2024-07-01_board_minutes_v4.pdf"
-TEST_FAC <- NULL; TEST_FILENAME <- NULL
+TEST_FAC <- "957"; TEST_FILENAME <- NULL
 # ── 1. Load scan output, filter to agenda_prescreen bucket ────────────────────
 scan <- read.csv(SCAN_FILE, stringsAsFactors = FALSE) |>
   mutate(fac = as.character(fac)) |>

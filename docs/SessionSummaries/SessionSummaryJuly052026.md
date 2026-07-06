@@ -165,7 +165,7 @@ against source PDFs — that is the first item for the next session.
 1. **Load the results and pull a small sample per hospital.**
    ```r
    results <- readRDS("roles/minutes/outputs/minutes_extract_summary_results.rds")
-
+   
    sample_905 <- results |> filter(fac == "905", corpus_include) |> slice_sample(n = 3)
    sample_736 <- results |> filter(fac == "736", corpus_include) |> slice_sample(n = 3)
    ```
@@ -186,9 +186,9 @@ If all of the above look clean on the sampled documents, the four-hospital summa
 
 ## Session End Checklist
 
-- [ ] Save as `SessionSummaryJuly052026.md` — confirm `.md` extension before closing
-- [ ] Upload to Claude Project knowledge repository
-- [ ] Commit `minutes_extract_summary.R` to GitHub per instructions above
+- [x] Save as `SessionSummaryJuly052026.md` — confirm `.md` extension before closing
+- [x] Upload to Claude Project knowledge repository
+- [x] Commit `minutes_extract_summary.R` to GitHub per instructions above
 - [x] Spot-check 905 and 736 samples per the protocol above before trusting the full output — resolved via bug fix, see July 6 doc
 - [x] Fill in the FAC 905/736/644 rows of the results table above once console output is reviewed
-- [ ] Resume paused carry-forward items: FAC 644 registry-level duplicate tag, `MinutesSummary` tier resolution, Quinte (957) remainder-batch test — see `SessionSummaryJuly062026.md`
+- [x] Resume paused carry-forward items: FAC 644 registry-level duplicate tag, `MinutesSummary` tier resolution, Quinte (957) remainder-batch test — see `SessionSummaryJuly062026.md`
