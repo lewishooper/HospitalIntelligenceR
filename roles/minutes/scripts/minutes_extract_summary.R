@@ -1,8 +1,23 @@
 # minutes_extract_summary.R
 # Purpose: Extract and flag summary/highlights minutes for FAC 905 (Oak Valley),
 # 736 (Newmarket Southlake), 967 (Cornwall Community, primary), 644 (Cornwall
-# Hotel Dieu, duplicate_of 967). SomethingElse-bucket documents containing
-# genuine but abbreviated board-highlights/meeting-summary content.
+# Hotel Dieu, duplicate_of 967), and 858 (Michael Garron, added July 7).
+# SomethingElse-bucket documents containing genuine but abbreviated
+# board-highlights/meeting-summary content.
+#
+# STATUS AS OF JULY 7, 2026: FAC 858 added to SUMMARY_FACS. Confirmed by
+# manual spot-check during the SomethingElse remainder-batch diagnostic that
+# 858's documents carry genuine summary-minutes content (header phrase
+# "SUMMARY OF THE BOARD OF DIRECTORS", active-voice call-to-order "Chair
+# called the meeting to order at 1605H") but never a full attendee name
+# list — the same profile as the other four hospitals in this tier, not a
+# detection gap. Existing detection functions already cover 858's phrasing
+# (header-summary phrase list already matches "summary of the board"; the
+# call-to-order regex is already the active-voice-tolerant version) — this
+# is a target-set addition, not a logic change. TEST_FAC is set to "858" for
+# verification before a full run. Skip-logic added this same session so
+# adding 858 doesn't force re-OCR of the other four hospitals' already-
+# confirmed 197 documents.
 #
 # Start gate: header+summary-phrase+date AND (call-to-order+time OR narrative
 # meeting-held+date). Name-list dropped — summary docs don't reliably carry a
@@ -48,10 +63,16 @@ OUTPUT_FILE  <- "roles/minutes/outputs/minutes_extract_summary_results.rds"
 PROJECT_ROOT <- "E:/HospitalIntelligenceR"
 OCR_DPI      <- 300
 
-SUMMARY_FACS <- c("905", "967", "644", "736")
+SUMMARY_FACS <- c("905", "967", "644", "736", "858")
 
 # Single-document test mode — same convention as minutes_extract_prescreen.R
-TEST_FAC <-NULL; TEST_FILENAME <- NULL
+# Set per July 7 handoff: 858 (Michael Garron) is a verification run before
+# trusting this against a full pass. Detection logic itself is not expected
+# to need changes — the header-summary phrase list already matches "summary
+# of the board" and the call-to-order regex is already the active-voice-
+# tolerant version — this is primarily a target-set addition. Revert to NULL
+# once confirmed.
+TEST_FAC <- NULL ; TEST_FILENAME <- NULL
 
 # ── 1. Target set ────────────────────────────────────────────────────────────
 results_all <- read.csv(RESULTS_FILE, stringsAsFactors = FALSE) |>
@@ -250,6 +271,27 @@ OUTPUT_FILE_ACTUAL <- if (!is.null(TEST_FAC)) {
   "roles/minutes/outputs/minutes_extract_summary_TEST.rds"
 } else OUTPUT_FILE
 
+# ── 5b. Skip already-processed documents ──────────────────────────────────────
+# Added July 7 (adding FAC 858 to SUMMARY_FACS): without this, adding a new
+# hospital to the target set meant re-OCRing all previously-confirmed
+# documents from scratch — pure wasted cost with no benefit, since a document
+# already in the output file doesn't need re-extraction just because a
+# sibling hospital was added. Same anti-join pattern used for crash-resume in
+# minutes_extract_prescreen.R, applied here to the "new hospital added" case
+# instead. In TEST mode this is skipped, since TEST always targets a fresh
+# subset deliberately.
+existing_results <- data.frame()
+if (is.null(TEST_FAC) && file.exists(OUTPUT_FILE_ACTUAL)) {
+  existing_results <- readRDS(OUTPUT_FILE_ACTUAL) |> mutate(fac = as.character(fac))
+  log_info(sprintf("Existing output found — %d documents already processed, skipping those",
+                   nrow(existing_results)))
+  before_n <- nrow(target)
+  target <- target |>
+    anti_join(existing_results |> select(fac, filename), by = c("fac", "filename"))
+  log_info(sprintf("After excluding already-processed documents: %d remaining (was %d)",
+                   nrow(target), before_n))
+}
+
 # ── 6. Run loop ────────────────────────────────────────────────────────────────
 results_list <- vector("list", nrow(target))
 for (i in seq_len(nrow(target))) {
@@ -264,12 +306,12 @@ for (i in seq_len(nrow(target))) {
               results_list[[i]]$corpus_include,
               ifelse(is.na(results_list[[i]]$qa_flag), "none", results_list[[i]]$qa_flag)))
   if (i %% 10 == 0L) {
-    saveRDS(bind_rows(results_list[1:i]), OUTPUT_FILE_ACTUAL)
+    saveRDS(bind_rows(existing_results, bind_rows(results_list[1:i])), OUTPUT_FILE_ACTUAL)
     log_info(sprintf("Checkpoint at %d/%d", i, nrow(target)))
   }
 }
 
-results <- bind_rows(results_list)
+results <- bind_rows(existing_results, bind_rows(results_list))
 saveRDS(results, OUTPUT_FILE_ACTUAL)
 
 cat("\n══════ SUMMARY-MINUTES EXTRACTION — RESULTS ══════\n")
