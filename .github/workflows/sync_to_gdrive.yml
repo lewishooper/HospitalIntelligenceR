@@ -17,5 +17,5 @@ jobs:
         with:
           credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
           parent_folder_id: 'Obsidian-Coding-Sync'
-          target: '.' 
+          target: '**/*.md' # Grabs all markdown files recursively across your repo
           override: true
