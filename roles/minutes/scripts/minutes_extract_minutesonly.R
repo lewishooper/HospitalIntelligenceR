@@ -62,7 +62,7 @@ MIN_WORD_COUNT <- 150   # below this, flag for manual review rather than trust S
 # three extraction scripts. MUST be run before the full ~1,879-document
 # batch, since this script's core assumption (MinutesOnly = trustworthy,
 # no gating needed) has not yet been spot-checked against real output.
-TEST_FAC      <- "957"   # placeholder — replace with a hospital you can manually verify quickly before the overnight run
+TEST_FAC      <- NULL  # placeholder — replace with a hospital you can manually verify quickly before the overnight run
 TEST_FILENAME <- NULL
 
 # ── 1. Target set ──────────────────────────────────────────────────────────────
