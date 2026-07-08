@@ -1,0 +1,21 @@
+name: Sync Summaries to Google Drive
+
+on:
+  push:
+    branches:
+      - main  # Change to 'master' if your repo uses the old master naming
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sync Files to Google Drive
+        uses: adityassarkar/gdrive-upload-action@v2
+        with:
+          credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
+          folderId:  'Obsidian-Coding-Sync'
+          filename: '.' # Mirror your existing folder layouts
+          overwrite: true
