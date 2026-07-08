@@ -1,9 +1,10 @@
+YAML
 name: Sync Summaries to Google Drive
 
 on:
   push:
     branches:
-      - main  # Change to 'master' if your repo uses the old master naming
+      - main  # Change to 'master' if your repo uses the old master naming convention
 
 jobs:
   sync:
@@ -13,9 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sync Files to Google Drive
-        uses: adityassarkar/gdrive-upload-action@v2
+        uses: Jumbo810/Upload_Github_Artifacts_TO_GDrive@v2.3.5
         with:
           credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
-          folderId:  'Obsidian-Coding-Sync'
-          filename: '.' # Mirror your existing folder layouts
-          overwrite: true
+          parent_folder_id: 'Obsidian-Coding-Sync'
+          target: '.' 
+          override: true
