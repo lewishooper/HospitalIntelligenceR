@@ -1,4 +1,3 @@
-YAML
 name: Sync Summaries to Google Drive
 
 on:
