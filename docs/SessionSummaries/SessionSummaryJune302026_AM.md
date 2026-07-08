@@ -232,6 +232,7 @@ Next: spot-check corpus sample, begin Stage 2 design.
 
 ## Session End Checklist
 
+
 - [x] Upload `SessionSummaryJune302026_AM.md` to knowledge repository
 - [x] Upload `minutes_stage1_narrative.md` to knowledge repository
 - [x] Commit and push all files listed above to GitHub
