@@ -3,7 +3,7 @@ name: Sync Summaries to Google Drive
 on:
   push:
     branches:
-      - main  # Change to 'master' if your repo uses the old master naming convention
+      - main 
 
 jobs:
   sync:
@@ -16,6 +16,6 @@ jobs:
         uses: Jumbo810/Upload_Github_Artifacts_TO_GDrive@v2.3.5
         with:
           credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
-          parent_folder_id: '1vD2pugBBwmnXYG-uqmKaWTOzQPnY8wOz'
-          target: '**/*.md' # Grabs all markdown files recursively across your repo
-          override: true
+          parent_folder_id: '1Zg9OW29nYIG-n_slTTCv0OHK1VhDCB7y'
+          target: '**/*.md' 
+          override: false
